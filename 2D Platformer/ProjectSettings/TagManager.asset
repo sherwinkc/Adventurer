@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - KillPlane
+  - Checkpoint
+  - MovingPlatform
+  - Enemy
+  - Enemy_Parent
+  - Chest
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Player
+  - Enemies
+  - BlootSplats
+  - Background
+  - Enemy_Body
+  - Trees
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2425895179
+    locked: 0
+  - name: Trees
+    uniqueID: 1543770791
+    locked: 0
+  - name: World Objects
+    uniqueID: 2669132281
+    locked: 0
+  - name: Locked Doors
+    uniqueID: 3372789943
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Enemies
+    uniqueID: 1750281027
+    locked: 0
+  - name: Player
+    uniqueID: 1004513093
+    locked: 0
+  - name: Foreground
+    uniqueID: 2896836795
+    locked: 0
