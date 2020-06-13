@@ -7069,6 +7069,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1470125229 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3242590907083699903, guid: 2b92fcea7db71f44b91d0a46df867cc5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1729507564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1478581290
 GameObject:
   m_ObjectHideFlags: 0
@@ -8260,6 +8266,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7128154179106794175, guid: 2b92fcea7db71f44b91d0a46df867cc5,
+        type: 3}
+      propertyPath: upgradeSFX
+      value: 
+      objectReference: {fileID: 1470125229}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b92fcea7db71f44b91d0a46df867cc5, type: 3}
 --- !u!4 &1729507565 stripped
@@ -9743,6 +9754,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockNextJumpSpeed
       objectReference: {fileID: 0}
+    - target: {fileID: 1342917715735376518, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186838721}
+    - target: {fileID: 1342917715735376518, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextAttackRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781121487155522384, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186838721}
+    - target: {fileID: 1781121487155522384, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextAttackTime
+      objectReference: {fileID: 0}
     - target: {fileID: 1793818363336360223, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: slider
@@ -9788,6 +9819,16 @@ PrefabInstance:
       propertyPath: playerCombat
       value: 
       objectReference: {fileID: 1729507567}
+    - target: {fileID: 3815192165958200707, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186838721}
+    - target: {fileID: 3815192165958200707, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextSuperRechargeRate
+      objectReference: {fileID: 0}
     - target: {fileID: 3816804504189442387, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -9843,6 +9884,16 @@ PrefabInstance:
       propertyPath: upgrades
       value: 
       objectReference: {fileID: 186838721}
+    - target: {fileID: 5645339958028473596, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186838721}
+    - target: {fileID: 5645339958028473596, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextAttackDamage
+      objectReference: {fileID: 0}
     - target: {fileID: 7006301993884637996, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -9857,6 +9908,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048107921542770666, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186838721}
+    - target: {fileID: 8048107921542770666, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextSuperReturnedValue
       objectReference: {fileID: 0}
     - target: {fileID: 8110951271656003154, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}

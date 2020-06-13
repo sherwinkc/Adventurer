@@ -34,7 +34,7 @@ public class ButtonScript : MonoBehaviour
             errorSFX.Play();
         }
 
-        //double jump
+        /*//double jump
         if (upgrades.doubleJumpUnlocked == true)
         {
             button.enabled = false;
@@ -60,6 +60,6 @@ public class ButtonScript : MonoBehaviour
         if (playerMovement.dashCooldownAmount == upgrades.dashCooldownUpgradeT3)
         {
             button.enabled = false;
-        }
+        }*/
     }
 }
