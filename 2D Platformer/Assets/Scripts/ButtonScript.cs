@@ -28,14 +28,38 @@ public class ButtonScript : MonoBehaviour
 
     public void DisableButton()
     {
-        if (playerMovement.moveSpeed == upgrades.moveUpgradeT3 || upgrades.doubleJumpUnlocked == true)
-        {
-            button.enabled = false;
-        }
-        
+        //no skill points
         if(levelManager.skillPoints <= 0)
         {
             errorSFX.Play();
+        }
+
+        //double jump
+        if (upgrades.doubleJumpUnlocked == true)
+        {
+            button.enabled = false;
+        }
+
+        //move speed
+        if (playerMovement.moveSpeed == upgrades.moveUpgradeT3)
+        {
+            button.enabled = false;
+        }
+
+        //jump speed
+        if (playerMovement.jumpSpeed == upgrades.jumpUpgradeT3)
+        {
+            button.enabled = false;
+        }
+
+        if (playerMovement.dashSpeed == upgrades.dashSpeedUpgradeT3)
+        {
+            button.enabled = false;
+        }
+
+        if (playerMovement.dashCooldownAmount == upgrades.dashCooldownUpgradeT3)
+        {
+            button.enabled = false;
         }
     }
 }

@@ -14,8 +14,11 @@ public class Upgrades : MonoBehaviour
     //jump
     public bool doubleJumpUnlocked;
 
-    //movement
+    //upgrades
     public float moveUpgradeDefault, moveUpgradeT1, moveUpgradeT2, moveUpgradeT3;
+    public float jumpUpgradeDefault, jumpUpgradeT1, jumpUpgradeT2, jumpUpgradeT3;
+    public float dashSpeedUpgradeDefault, dashSpeedUpgradeT1, dashSpeedUpgradeT2, dashSpeedUpgradeT3;
+    public float dashCooldownUpgradeDefault, dashCooldownUpgradeT1, dashCooldownUpgradeT2, dashCooldownUpgradeT3;
 
 
     public float superAmountReturned;
@@ -29,6 +32,24 @@ public class Upgrades : MonoBehaviour
         moveUpgradeT1 = moveUpgradeDefault * 1.1f;
         moveUpgradeT2 = moveUpgradeDefault * 1.2f;
         moveUpgradeT3 = moveUpgradeDefault * 1.3f;
+
+        //jump
+        jumpUpgradeDefault = 10f;
+        jumpUpgradeT1 = jumpUpgradeDefault * 1.05f;
+        jumpUpgradeT2 = jumpUpgradeDefault * 1.1f;
+        jumpUpgradeT3 = jumpUpgradeDefault * 1.15f;
+
+        //dash speed
+        dashSpeedUpgradeDefault = 11f;
+        dashSpeedUpgradeT1 = dashSpeedUpgradeDefault * 1.1f;
+        dashSpeedUpgradeT2 = dashSpeedUpgradeDefault * 1.2f;
+        dashSpeedUpgradeT3 = dashSpeedUpgradeDefault * 1.3f;
+
+        //dash cooldown
+        dashCooldownUpgradeDefault = 3f;
+        dashCooldownUpgradeT1 = dashCooldownUpgradeDefault * 0.8f;
+        dashCooldownUpgradeT2 = dashCooldownUpgradeDefault * 0.5f;
+        dashCooldownUpgradeT3 = dashCooldownUpgradeDefault * 0.33f;
     }
 
     void Start()
@@ -38,7 +59,7 @@ public class Upgrades : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
 
         //jump
-        playerMovement.jumpSpeed = 10f; //10 Default
+        playerMovement.jumpSpeed = jumpUpgradeDefault; //10 Default
 
         //canDoubleJump
         doubleJumpUnlocked = false;
@@ -47,8 +68,8 @@ public class Upgrades : MonoBehaviour
         playerMovement.moveSpeed = moveUpgradeDefault; // 5f Default
 
         //dash
-        playerMovement.dashSpeed = 12f; //12 Default
-        playerMovement.dashCooldownAmount = 3f;
+        playerMovement.dashSpeed = dashSpeedUpgradeDefault; //11 Default
+        playerMovement.dashCooldownAmount = dashCooldownUpgradeDefault; //3 default
         //playerMovement.dashCounter; // 1.5 default
 
         //attack
@@ -109,4 +130,65 @@ public class Upgrades : MonoBehaviour
             levelManager.skillPoints -= 1;
         }
     }
+
+    public void UnlockNextJumpSpeed()
+    {
+        if (levelManager.skillPoints >= 1 && playerMovement.jumpSpeed == jumpUpgradeDefault)
+        {
+            playerMovement.jumpSpeed = jumpUpgradeT1;
+            levelManager.skillPoints -= 1;
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.jumpSpeed == jumpUpgradeT1)
+        {
+            playerMovement.jumpSpeed = jumpUpgradeT2;
+            levelManager.skillPoints -= 1;
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.jumpSpeed == jumpUpgradeT2)
+        {
+            playerMovement.jumpSpeed = jumpUpgradeT3;
+            levelManager.skillPoints -= 1;
+        }
+    }
+
+    public void UnlockNextDashSpeed()
+    {
+        if (levelManager.skillPoints >= 1 && playerMovement.dashSpeed == dashSpeedUpgradeDefault)
+        {
+            playerMovement.dashSpeed = dashSpeedUpgradeT1;
+            levelManager.skillPoints -= 1;
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.dashSpeed == dashSpeedUpgradeT1)
+        {
+            playerMovement.dashSpeed = dashSpeedUpgradeT2;
+            levelManager.skillPoints -= 1;
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.dashSpeed == dashSpeedUpgradeT2)
+        {
+            playerMovement.dashSpeed = dashSpeedUpgradeT3;
+            levelManager.skillPoints -= 1;
+        }
+    }
+
+    public void UnlockNextDashCooldown()
+    {
+        if (levelManager.skillPoints >= 1 && playerMovement.dashCooldownAmount == dashCooldownUpgradeDefault)
+        {
+            playerMovement.dashCooldownAmount = dashCooldownUpgradeT1;
+            playerMovement.dashCounter = dashCooldownUpgradeT1;
+            levelManager.skillPoints -= 1;
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.dashCooldownAmount == dashCooldownUpgradeT1)
+        {
+            playerMovement.dashCooldownAmount = dashCooldownUpgradeT2;
+            playerMovement.dashCounter = dashCooldownUpgradeT2;
+            levelManager.skillPoints -= 1;
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.dashCooldownAmount == dashCooldownUpgradeT3)
+        {
+            playerMovement.dashCooldownAmount = dashCooldownUpgradeT3;
+            playerMovement.dashCounter = dashCooldownUpgradeT3;
+            levelManager.skillPoints -= 1;
+        }
+    }
+
 }

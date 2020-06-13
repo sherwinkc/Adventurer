@@ -9733,6 +9733,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockMovementSpeedT3
       objectReference: {fileID: 0}
+    - target: {fileID: 827320305074211373, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186838721}
+    - target: {fileID: 827320305074211373, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextJumpSpeed
+      objectReference: {fileID: 0}
     - target: {fileID: 1793818363336360223, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: slider
@@ -9763,6 +9773,16 @@ PrefabInstance:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 155833166}
+    - target: {fileID: 3129124215285658924, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186838721}
+    - target: {fileID: 3129124215285658924, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextDashCooldown
+      objectReference: {fileID: 0}
     - target: {fileID: 3783978140081635216, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: playerCombat
@@ -9972,6 +9992,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023944084620266691, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186838721}
+    - target: {fileID: 9023944084620266691, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextDashSpeed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68052065c05385b40a73bfce7f298382, type: 3}
