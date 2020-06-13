@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
+    public PlayerMovement playerMovement;
+    public Upgrades upgrades;
     public LevelManager levelManager;
     public Button button;
 
@@ -14,6 +16,8 @@ public class ButtonScript : MonoBehaviour
     void Start()
     {
         levelManager = FindObjectOfType<LevelManager>();
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        upgrades = FindObjectOfType<Upgrades>();
     }
 
     // Update is called once per frame
@@ -24,7 +28,7 @@ public class ButtonScript : MonoBehaviour
 
     public void DisableButton()
     {
-        if(levelManager.skillPoints >= 1)
+        if (playerMovement.moveSpeed == upgrades.moveUpgradeT3 || upgrades.doubleJumpUnlocked == true)
         {
             button.enabled = false;
         }
