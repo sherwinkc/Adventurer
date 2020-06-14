@@ -12,7 +12,7 @@ public class LevelEnd : MonoBehaviour
     private LevelManager theLevelManager;
     public Animator animator;
     public FadeToBlack fadeToBlack;
-
+    public Upgrades upgrades;
 
     public string levelToLoad;
     public float waitToMove, waitToLoad;
@@ -102,7 +102,33 @@ public class LevelEnd : MonoBehaviour
         PlayerPrefs.SetInt("PlayerLives", theLevelManager.currentLives);
         //skill points
         PlayerPrefs.SetInt("SkillPoints", theLevelManager.skillPoints);
+
         //Upgrades
+        //double jump
+        //PlayerPrefs.SetInt("DoubleJump", upgrades.doubleJumpUnlocked); //TODO convert bool to int
+
+        //Move speed
+        PlayerPrefs.SetFloat("PlayerMoveSpeed", playerMovement.moveSpeed);
+
+        //jump speed
+        PlayerPrefs.SetFloat("PlayerJumpSpeed", playerMovement.jumpSpeed);
+
+        //dash speed
+        PlayerPrefs.SetFloat("PlayerDashSpeed", playerMovement.dashSpeed);
+
+        //dash cooldown
+        
+        //Attack damage
+
+        //attack time
+
+        //attack range
+
+        //super recharge rate
+
+        //super amount returned
+
+
 
     }
 }

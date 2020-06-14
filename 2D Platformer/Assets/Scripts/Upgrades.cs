@@ -101,7 +101,14 @@ public class Upgrades : MonoBehaviour
         doubleJumpUnlocked = false;
 
         //movement
-        playerMovement.moveSpeed = moveUpgradeDefault; // 5f Default
+        if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
+        {
+            playerMovement.moveSpeed = PlayerPrefs.GetInt("PlayerMoveSpeed");
+        } 
+        else
+        {
+            playerMovement.moveSpeed = moveUpgradeDefault; // 5f Default
+        }
 
         //dash
         playerMovement.dashSpeed = dashSpeedUpgradeDefault; //11 Default

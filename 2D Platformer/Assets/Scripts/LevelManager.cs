@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     public PlayerMovement playerMovement;
     public PlayerCombat playerCombat;
     public CinemachineVirtualCamera virtualCamera;
+    public Upgrades upgrades;
 
     public GameObject deathSplosion;
 
@@ -66,6 +67,7 @@ public class LevelManager : MonoBehaviour
         //virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
+        upgrades = FindObjectOfType<Upgrades>();
 
         //check if player prefs has been set
         PlayerPrefsChecks();
@@ -107,8 +109,6 @@ public class LevelManager : MonoBehaviour
         livesText.text = "Lives x" + currentLives;
         skillPointsText.text = "Skill Points: " + skillPoints;
         superText.text = "Super %: " + playerCombat.superAmount;
-
-        Debug.Log(SceneManager.GetActiveScene().name);
     }
 
     public void PlayerPrefsChecks()
@@ -146,7 +146,14 @@ public class LevelManager : MonoBehaviour
 
     public void PlayerPrefChecksUpgrades()
     {
-
+        if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
+        {
+            playerMovement.moveSpeed = PlayerPrefs.GetInt("PlayerMoveSpeed");
+        }
+        /*else
+        {
+            playerMovement.moveSpeed = upgrades.moveUpgradeDefault;
+        }*/
     }
 
     //Created function
