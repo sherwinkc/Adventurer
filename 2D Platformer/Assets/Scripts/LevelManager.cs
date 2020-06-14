@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -49,6 +50,14 @@ public class LevelManager : MonoBehaviour
 
     public bool respawnCoActive;
 
+    private void Awake()
+    {
+        //delete existing player prefs in the first level
+       if(SceneManager.GetActiveScene().name == "Level1_1")
+        {
+            PlayerPrefs.DeleteAll();
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -58,25 +67,22 @@ public class LevelManager : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
 
+        //check if player prefs has been set
+        PlayerPrefsChecks();
+        PlayerPrefChecksUpgrades();
+
         //start game with full health
         healthCount = maxHealth;
 
         //set up an array to put all objects that need to reset on respawn
         objectsToReset = FindObjectsOfType<ResetOnRespawn>();
 
-        //sets the amount of starting lives and updates the UI.
-        currentLives = startingLives;
-        livesText.text = "Lives x" + currentLives;
-
         //skillpoints
-        skillPoints = startingSkillPoints;
-        skillPointsText.text = "Skill Points: " + skillPoints;
+        //skillPoints = startingSkillPoints;
+        //skillPointsText.text = "Skill Points: " + skillPoints;
 
         superText.text = "Super %: " + playerCombat.superAmount;
-        
-        //Not currently used
-        //starting coin count is 0
-        //coinText.text = "Coins: " + coinCount;
+
     }
 
     // Update is called once per frame
@@ -102,9 +108,45 @@ public class LevelManager : MonoBehaviour
         skillPointsText.text = "Skill Points: " + skillPoints;
         superText.text = "Super %: " + playerCombat.superAmount;
 
-        //Debug.Log("thePlayer.respawnPosition =" + thePlayer.respawnPosition);
-        //Debug.Log("virtualCamera name =" + virtualCamera);
-        //Debug.Log("virtualCamera.transform.position =" + virtualCamera.transform.position);
+        Debug.Log(SceneManager.GetActiveScene().name);
+    }
+
+    public void PlayerPrefsChecks()
+    {
+        if (PlayerPrefs.HasKey("OrbCount"))
+        {
+            coinCount = PlayerPrefs.GetInt("OrbCount");
+        }
+        //starting coin count is 0
+        coinText.text = "Coins: " + coinCount;
+
+        //Player Lives
+        if (PlayerPrefs.HasKey("PlayerLives"))
+        {
+            currentLives = PlayerPrefs.GetInt("PlayerLives");
+        }
+        else
+        {
+            //sets the amount of starting lives and updates the UI.
+            currentLives = startingLives;
+        }
+        //starting lives = 5
+        livesText.text = "Lives x" + currentLives;
+
+        //skill points
+        if (PlayerPrefs.HasKey("SkillPoints"))
+        {
+            skillPoints = PlayerPrefs.GetInt("SkillPoints");
+        }
+        //starting skill points is 0
+        skillPointsText.text = "Skill Points: " + skillPoints;
+
+
+    }
+
+    public void PlayerPrefChecksUpgrades()
+    {
+
     }
 
     //Created function
@@ -165,7 +207,7 @@ public class LevelManager : MonoBehaviour
         keyCountText.text = "Keys: " + keyCount;
 
         //reset orb count and bonus life count to zero and update UI
-        coinCount = 0;
+        coinCount /= 2;
         coinText.text = "Orbs: " + coinCount;
         coinBonusLifeCount = 0;
 

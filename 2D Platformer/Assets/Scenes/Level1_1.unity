@@ -6533,6 +6533,11 @@ PrefabInstance:
       propertyPath: levelUpSound
       value: 
       objectReference: {fileID: 1476051982}
+    - target: {fileID: 3290980256496980843, guid: 6d43b0927ca38994e85e8e3a4fcad32b,
+        type: 3}
+      propertyPath: bonusLifeThreshold
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
 --- !u!82 &1476051982 stripped

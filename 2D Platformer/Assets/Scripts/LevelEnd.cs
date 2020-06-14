@@ -74,6 +74,9 @@ public class LevelEnd : MonoBehaviour
 
         playerMovement.myRigidbody.velocity = Vector3.zero;
 
+        //Set Player Prefs here
+        SetPlayerPrefs();
+
         yield return new WaitForSeconds(waitToMove);
 
         movePlayer = true;
@@ -89,5 +92,17 @@ public class LevelEnd : MonoBehaviour
         SceneManager.LoadScene(levelToLoad);
 
         yield return null;
+    }
+
+    public void SetPlayerPrefs()
+    {
+        //Orb Count
+        PlayerPrefs.SetInt("OrbCount", theLevelManager.coinCount);
+        //Lives
+        PlayerPrefs.SetInt("PlayerLives", theLevelManager.currentLives);
+        //skill points
+        PlayerPrefs.SetInt("SkillPoints", theLevelManager.skillPoints);
+        //Upgrades
+
     }
 }
