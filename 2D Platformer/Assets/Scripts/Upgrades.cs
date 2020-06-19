@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Upgrades : MonoBehaviour
 {
@@ -31,8 +32,30 @@ public class Upgrades : MonoBehaviour
 
     private void Awake()
     {
+        playerMovement = GetComponent<PlayerMovement>();
+        playerCombat = GetComponent<PlayerCombat>();
+        levelManager = FindObjectOfType<LevelManager>();
+
+        //delete existing player prefs in the first level
+        if (SceneManager.GetActiveScene().name == "Level1_1")
+        {
+            Debug.Log("Deleting existing player prefs");
+            PlayerPrefs.DeleteAll();
+        }
+
         //movement
-        moveUpgradeDefault = 5f;
+        if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
+        {
+            Debug.Log("Setting Player Move from player pref");
+            playerMovement.moveSpeed = PlayerPrefs.GetFloat("PlayerMoveSpeed");
+        }
+        else
+        {
+            moveUpgradeDefault = 5f;
+            playerMovement.moveSpeed = moveUpgradeDefault;
+            Debug.Log("Setting Player Move from default");
+        }
+            
         moveUpgradeT1 = moveUpgradeDefault * 1.1f;
         moveUpgradeT2 = moveUpgradeDefault * 1.2f;
         moveUpgradeT3 = moveUpgradeDefault * 1.3f;
@@ -90,10 +113,6 @@ public class Upgrades : MonoBehaviour
 
     void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
-        playerCombat = GetComponent<PlayerCombat>();
-        levelManager = FindObjectOfType<LevelManager>();
-
         //jump
         playerMovement.jumpSpeed = jumpUpgradeDefault; //10 Default
 
@@ -101,14 +120,14 @@ public class Upgrades : MonoBehaviour
         doubleJumpUnlocked = false;
 
         //movement
-        if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
+        /*if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
         {
             playerMovement.moveSpeed = PlayerPrefs.GetInt("PlayerMoveSpeed");
         } 
         else
         {
             playerMovement.moveSpeed = moveUpgradeDefault; // 5f Default
-        }
+        }*/
 
         //dash
         playerMovement.dashSpeed = dashSpeedUpgradeDefault; //11 Default

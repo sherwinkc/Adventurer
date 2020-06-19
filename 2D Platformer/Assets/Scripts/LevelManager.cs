@@ -53,11 +53,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        //delete existing player prefs in the first level
-       if(SceneManager.GetActiveScene().name == "Level1_1")
-        {
-            PlayerPrefs.DeleteAll();
-        }
+
     }
 
     // Start is called before the first frame update
@@ -146,14 +142,11 @@ public class LevelManager : MonoBehaviour
 
     public void PlayerPrefChecksUpgrades()
     {
-        if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
+        /*if(PlayerPrefs.HasKey("PlayerMoveSpeed"))
         {
             playerMovement.moveSpeed = PlayerPrefs.GetInt("PlayerMoveSpeed");
-        }
-        /*else
-        {
-            playerMovement.moveSpeed = upgrades.moveUpgradeDefault;
         }*/
+
     }
 
     //Created function
