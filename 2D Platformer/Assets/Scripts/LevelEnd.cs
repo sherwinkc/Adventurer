@@ -109,29 +109,34 @@ public class LevelEnd : MonoBehaviour
 
         //Move speed
         PlayerPrefs.SetFloat("PlayerMoveSpeed", playerMovement.moveSpeed);
-        Debug.Log("PP - PlayerMoveSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerMoveSpeed"));
+        //Debug.Log("PP - PlayerMoveSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerMoveSpeed"));
 
         //jump speed
         PlayerPrefs.SetFloat("PlayerJumpSpeed", playerMovement.jumpSpeed);
-        Debug.Log("PP - PlayerMoveSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
+        //Debug.Log("PP - PlayerMoveSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
 
         //dash speed
         PlayerPrefs.SetFloat("PlayerDashSpeed", playerMovement.dashSpeed);
-        Debug.Log("PP - PlayerJumpSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerDashSpeed"));
+        //Debug.Log("PP - PlayerJumpSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerDashSpeed"));
 
         //dash cooldown
+        PlayerPrefs.SetFloat("PlayerDashCooldown", playerMovement.dashCooldownAmount);
 
         //Attack damage
+        PlayerPrefs.SetInt("PlayerAttackDamage", playerCombat.attackDamage);
 
         //attack time
+        PlayerPrefs.SetFloat("PlayerAttackTime", playerCombat.attackRate);
 
         //attack range
+        PlayerPrefs.SetFloat("PlayerAttackRange", playerCombat.attackRange);
 
         //super recharge rate
+        PlayerPrefs.SetFloat("PlayerSuperRecharge", playerCombat.superRechargeRate);
 
         //super amount returned
-
-
-
+        //Debug.Log("superamountreturned (before) = " + upgrades.superAmountReturned);
+        //PlayerPrefs.SetFloat("PlayerSuperReturned", upgrades.superAmountReturned);
+        //Debug.Log("superamountreturned (after) = " + upgrades.superAmountReturned);
     }
 }

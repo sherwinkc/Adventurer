@@ -90,6 +90,7 @@ public class Upgrades : MonoBehaviour
 
         //Super Amount returned
         superAmountReturnedDefault = 10f;
+        superAmountReturned = superAmountReturnedDefault;
         superAmountReturnedT1 = superAmountReturnedDefault * 1.25f;
         superAmountReturnedT2 = superAmountReturnedDefault * 1.5f;
         superAmountReturnedT3 = superAmountReturnedDefault * 1.8f;
@@ -102,21 +103,8 @@ public class Upgrades : MonoBehaviour
         //canDoubleJump
         doubleJumpUnlocked = false;
 
-        //dash       
-        playerMovement.dashCooldownAmount = dashCooldownUpgradeDefault; //3 default
-
-        //attack
-        playerCombat.attackRange = attackRangeUpgradeDefault; //0.8 default
-        playerCombat.attackDamage = attackDamageUpgradeDefault; //40 default
-        playerCombat.attackRate = attackTimeUpgradeDefault; //1.75 default // the higher the quicker between attacks
-        //playerCombat.nextAttackTime;
-
         //super
         playerCombat.superAmount = 0;
-        playerCombat.superRechargeRate = superRechargeRateDefault;
-
-        //amount of super energy returned from killing enemies
-        superAmountReturned = superAmountReturnedDefault;
 
         //stamina
         playerCombat.staminaMax = 100f;
@@ -135,9 +123,9 @@ public class Upgrades : MonoBehaviour
     {
         //Debug
         //Move Speed
-        Debug.Log("PP - PlayerMoveSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerMoveSpeed"));
-        Debug.Log("PP - PlayerJumpSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
-        Debug.Log("PP - PlayerDashSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerDashSpeed"));
+        //Debug.Log("PP - PlayerMoveSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerMoveSpeed"));
+        //Debug.Log("PP - PlayerJumpSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
+        Debug.Log("superamountreturned = " + superAmountReturned);
     }
     void DeleteExistingPlayerPrefs()
     {
@@ -168,27 +156,90 @@ public class Upgrades : MonoBehaviour
         if (PlayerPrefs.HasKey("PlayerJumpSpeed"))
         {
             playerMovement.jumpSpeed = PlayerPrefs.GetFloat("PlayerJumpSpeed");
-            //Debug.Log("Setting Player Move from player pref");
         }
         else
         {
             playerMovement.jumpSpeed = jumpUpgradeDefault; 
             PlayerPrefs.SetFloat("PlayerJumpSpeed", playerMovement.jumpSpeed);
-            //Debug.Log("Setting Player Move from default");
         }
 
         //dash speed
         if (PlayerPrefs.HasKey("PlayerDashSpeed"))
         {
             playerMovement.dashSpeed = PlayerPrefs.GetFloat("PlayerDashSpeed");
-            //Debug.Log("Setting Player Move from player pref");
         }
         else
         {
             playerMovement.dashSpeed = dashSpeedUpgradeDefault; //11 Default
             PlayerPrefs.SetFloat("PlayerDashSpeed", playerMovement.dashSpeed);
-            //Debug.Log("Setting Player Move from default");
         }
+
+        //dash cooldown
+        if (PlayerPrefs.HasKey("PlayerDashCooldown"))
+        {
+            playerMovement.dashCooldownAmount = PlayerPrefs.GetFloat("PlayerDashCooldown");
+        }
+        else
+        {
+            playerMovement.dashCooldownAmount = dashCooldownUpgradeDefault; //3 default
+            PlayerPrefs.SetFloat("PlayerDashCooldown", playerMovement.dashCooldownAmount);
+        }
+
+        //Attack Damage
+        if (PlayerPrefs.HasKey("PlayerAttackDamage"))
+        {
+            playerCombat.attackDamage = PlayerPrefs.GetInt("PlayerAttackDamage");
+        }
+        else
+        {
+            playerCombat.attackDamage = attackDamageUpgradeDefault; //40 default   
+            PlayerPrefs.SetInt("PlayerAttackDamage", playerCombat.attackDamage);
+        }
+
+        //attack time
+        if (PlayerPrefs.HasKey("PlayerAttackTime"))
+        {
+            playerCombat.attackRate = PlayerPrefs.GetFloat("PlayerAttackTime");
+        }
+        else
+        {
+            playerCombat.attackRate = attackTimeUpgradeDefault; //1.75 default // the higher the quicker between attacks
+            PlayerPrefs.SetFloat("PlayerAttackTime", playerCombat.attackRate);
+        }
+
+        //attack range
+        if (PlayerPrefs.HasKey("PlayerAttackRange"))
+        {
+            playerCombat.attackRange = PlayerPrefs.GetFloat("PlayerAttackRange");
+        }
+        else
+        {
+            playerCombat.attackRange = attackRangeUpgradeDefault; //0.8 default
+            PlayerPrefs.SetFloat("PlayerAttackRange", playerCombat.attackRange);
+        }
+
+        //Super recharge
+        if (PlayerPrefs.HasKey("PlayerSuperRecharge"))
+        {
+            playerCombat.superRechargeRate = PlayerPrefs.GetFloat("PlayerSuperRecharge");
+        }
+        else
+        {
+            playerCombat.superRechargeRate = superRechargeRateDefault;
+            PlayerPrefs.SetFloat("PlayerSuperRecharge", playerCombat.superRechargeRate);
+        }
+
+        //Super Amount returned
+        if (PlayerPrefs.HasKey("PlayerSuperReturned"))
+        {
+            superAmountReturned = PlayerPrefs.GetFloat("PlayerSuperReturned");
+        }
+        else
+        {
+            superAmountReturned = superAmountReturnedDefault; //amount of super energy returned from killing enemies
+            PlayerPrefs.SetFloat("PlayerSuperReturned", superAmountReturned);
+        }
+
     }
 
     public void DeductSkillPointsAndAudio()
