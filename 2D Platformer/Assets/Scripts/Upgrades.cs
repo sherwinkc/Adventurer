@@ -36,26 +36,10 @@ public class Upgrades : MonoBehaviour
         playerCombat = GetComponent<PlayerCombat>();
         levelManager = FindObjectOfType<LevelManager>();
 
-        //delete existing player prefs in the first level
-        if (SceneManager.GetActiveScene().name == "Level1_1")
-        {
-            Debug.Log("Deleting existing player prefs");
-            PlayerPrefs.DeleteAll();
-        }
+        DeleteExistingPlayerPrefs();
 
-        //movement
-        if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
-        {
-            Debug.Log("Setting Player Move from player pref");
-            playerMovement.moveSpeed = PlayerPrefs.GetFloat("PlayerMoveSpeed");
-        }
-        else
-        {
-            moveUpgradeDefault = 5f;
-            playerMovement.moveSpeed = moveUpgradeDefault;
-            Debug.Log("Setting Player Move from default");
-        }
-            
+        //move
+        moveUpgradeDefault = 5f;
         moveUpgradeT1 = moveUpgradeDefault * 1.1f;
         moveUpgradeT2 = moveUpgradeDefault * 1.2f;
         moveUpgradeT3 = moveUpgradeDefault * 1.3f;
@@ -109,30 +93,17 @@ public class Upgrades : MonoBehaviour
         superAmountReturnedT1 = superAmountReturnedDefault * 1.25f;
         superAmountReturnedT2 = superAmountReturnedDefault * 1.5f;
         superAmountReturnedT3 = superAmountReturnedDefault * 1.8f;
+
+        PlayerPrefsLoadingFunction();
     }
 
     void Start()
     {
-        //jump
-        playerMovement.jumpSpeed = jumpUpgradeDefault; //10 Default
-
         //canDoubleJump
         doubleJumpUnlocked = false;
 
-        //movement
-        /*if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
-        {
-            playerMovement.moveSpeed = PlayerPrefs.GetInt("PlayerMoveSpeed");
-        } 
-        else
-        {
-            playerMovement.moveSpeed = moveUpgradeDefault; // 5f Default
-        }*/
-
-        //dash
-        playerMovement.dashSpeed = dashSpeedUpgradeDefault; //11 Default
+        //dash       
         playerMovement.dashCooldownAmount = dashCooldownUpgradeDefault; //3 default
-        //playerMovement.dashCounter; // 1.5 default
 
         //attack
         playerCombat.attackRange = attackRangeUpgradeDefault; //0.8 default
@@ -162,7 +133,62 @@ public class Upgrades : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug
+        //Move Speed
+        Debug.Log("PP - PlayerMoveSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerMoveSpeed"));
+        Debug.Log("PP - PlayerJumpSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
+        Debug.Log("PP - PlayerDashSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerDashSpeed"));
+    }
+    void DeleteExistingPlayerPrefs()
+    {
+        //delete existing player prefs in the first level
+        if (SceneManager.GetActiveScene().name == "Level1_1")
+        {
+            Debug.Log("Deleting existing player prefs");
+            PlayerPrefs.DeleteAll();
+        }
+    }
 
+    void PlayerPrefsLoadingFunction()
+    {
+        //movement
+        if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
+        {
+            playerMovement.moveSpeed = PlayerPrefs.GetFloat("PlayerMoveSpeed");
+            //Debug.Log("Setting Player Move from player pref");
+        }
+        else
+        {
+            playerMovement.moveSpeed = moveUpgradeDefault;
+            PlayerPrefs.SetFloat("PlayerMoveSpeed", playerMovement.moveSpeed);
+            // Debug.Log("Setting Player Move from default");
+        }
+
+        //jump speed
+        if (PlayerPrefs.HasKey("PlayerJumpSpeed"))
+        {
+            playerMovement.jumpSpeed = PlayerPrefs.GetFloat("PlayerJumpSpeed");
+            //Debug.Log("Setting Player Move from player pref");
+        }
+        else
+        {
+            playerMovement.jumpSpeed = jumpUpgradeDefault; 
+            PlayerPrefs.SetFloat("PlayerJumpSpeed", playerMovement.jumpSpeed);
+            //Debug.Log("Setting Player Move from default");
+        }
+
+        //dash speed
+        if (PlayerPrefs.HasKey("PlayerDashSpeed"))
+        {
+            playerMovement.dashSpeed = PlayerPrefs.GetFloat("PlayerDashSpeed");
+            //Debug.Log("Setting Player Move from player pref");
+        }
+        else
+        {
+            playerMovement.dashSpeed = dashSpeedUpgradeDefault; //11 Default
+            PlayerPrefs.SetFloat("PlayerDashSpeed", playerMovement.dashSpeed);
+            //Debug.Log("Setting Player Move from default");
+        }
     }
 
     public void DeductSkillPointsAndAudio()
@@ -368,4 +394,5 @@ public class Upgrades : MonoBehaviour
             DeductSkillPointsAndAudio();
         }
     }
+
 }

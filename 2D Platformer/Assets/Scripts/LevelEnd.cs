@@ -109,15 +109,18 @@ public class LevelEnd : MonoBehaviour
 
         //Move speed
         PlayerPrefs.SetFloat("PlayerMoveSpeed", playerMovement.moveSpeed);
+        Debug.Log("PP - PlayerMoveSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerMoveSpeed"));
 
         //jump speed
         PlayerPrefs.SetFloat("PlayerJumpSpeed", playerMovement.jumpSpeed);
+        Debug.Log("PP - PlayerMoveSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
 
         //dash speed
         PlayerPrefs.SetFloat("PlayerDashSpeed", playerMovement.dashSpeed);
+        Debug.Log("PP - PlayerJumpSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerDashSpeed"));
 
         //dash cooldown
-        
+
         //Attack damage
 
         //attack time
