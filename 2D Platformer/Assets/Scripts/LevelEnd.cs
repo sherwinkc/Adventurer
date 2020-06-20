@@ -26,6 +26,7 @@ public class LevelEnd : MonoBehaviour
         playerCombat = FindObjectOfType<PlayerCombat>();
         theLevelManager = FindObjectOfType<LevelManager>();
         animator = GetComponent<Animator>();
+        upgrades = FindObjectOfType<Upgrades>();
         //virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
 
         fadeToBlack = FindObjectOfType<FadeToBlack>();
@@ -135,8 +136,7 @@ public class LevelEnd : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerSuperRecharge", playerCombat.superRechargeRate);
 
         //super amount returned
-        //Debug.Log("superamountreturned (before) = " + upgrades.superAmountReturned);
-        //PlayerPrefs.SetFloat("PlayerSuperReturned", upgrades.superAmountReturned);
-        //Debug.Log("superamountreturned (after) = " + upgrades.superAmountReturned);
+        PlayerPrefs.SetFloat("PlayerSuperReturned", upgrades.superAmountReturned);
+
     }
 }
