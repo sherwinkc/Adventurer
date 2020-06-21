@@ -16,6 +16,7 @@ public class Upgrades : MonoBehaviour
 
     //jump
     public bool doubleJumpUnlocked;
+    public int doubleJumpInt;
 
     //upgrades
     public float moveUpgradeDefault, moveUpgradeT1, moveUpgradeT2, moveUpgradeT3;
@@ -44,6 +45,9 @@ public class Upgrades : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         playerCombat = GetComponent<PlayerCombat>();
         levelManager = FindObjectOfType<LevelManager>();
+
+        //double jump unlocked 0 = false, 1 = true;
+        doubleJumpUnlocked = false;
 
         //move
         moveUpgradeDefault = 5f;
@@ -77,7 +81,7 @@ public class Upgrades : MonoBehaviour
         attackDamageT4 = attackDamageUpgradeDefault + 40;
         attackDamageT5 = attackDamageUpgradeDefault + 50;
 
-        //attack time
+        //attack time // the higher the quicker between attacks
         attackTimeUpgradeDefault = 1.75f;
         attackTimeT1 = attackTimeUpgradeDefault * 1.25f;
         attackTimeT2 = attackTimeUpgradeDefault * 1.5f;
@@ -109,48 +113,50 @@ public class Upgrades : MonoBehaviour
         staminaMaxT3 = staminaMaxUpgradeDefault * 1.75f;
 
         //stamina recharge rate
-        //staminaRechargeRateDefault, staminaRechargeRateT1, staminaRechargeRateT2, staminaRechargeRateT3;
+        staminaRechargeRateDefault = 10f;
+        staminaRechargeRateT1 = staminaRechargeRateDefault * 1.25f;
+        staminaRechargeRateT2 = staminaRechargeRateDefault * 1.5f;
+        staminaRechargeRateT3 = staminaRechargeRateDefault * 2f;
 
         //stamina attack cost
-        //staminaAttackCostDefault, staminaAttackCostT1, staminaAttackCostT2, staminaAttackCostT3;
+        staminaAttackCostDefault = 30f;
+        staminaAttackCostT1 = staminaAttackCostDefault * 0.8f;
+        staminaAttackCostT2 = staminaAttackCostDefault * 0.6f;
+        staminaAttackCostT3 = staminaAttackCostDefault * 0.4f;
 
         //stamina jump cost
-        //staminaJumpCostDefault, staminaJumpCostT1, staminaJumpCostT2, staminaJumpCostT3;
+        staminaJumpCostDefault = 25f;
+        staminaJumpCostT1 = staminaJumpCostDefault * 0.8f;
+        staminaJumpCostT2 = staminaJumpCostDefault * 0.6f;
+        staminaJumpCostT3 = staminaJumpCostDefault * 0.4f;
 
         //stamina dash cost
-        //staminaDashCostDefault, staminaDashCostT1, staminaDashCostT2, staminaDashCostT3;
+        staminaDashCostDefault = 20f;
+        staminaDashCostT1 = staminaDashCostDefault * 0.75f;
+        staminaDashCostT2 = staminaDashCostDefault * 0.6f;
+        staminaDashCostT3 = staminaDashCostDefault * 0.4f;
 
         PlayerPrefsLoadingFunction();
     }
 
     void Start()
     {
-        //canDoubleJump
-        doubleJumpUnlocked = false;
-
         //super
         playerCombat.superAmount = 0;
 
-        //stamina        
-        playerCombat.staminaRechargeRate = 15f;
+        //stamina       
         playerCombat.currentStamina = playerCombat.staminaMax; // setting the bar full
-        playerCombat.attackCost = 20f;
 
-        playerMovement.jumpCost = 20f;
-        playerMovement.rollCost = 10f;
-
-        //Distance which orbs are drawn to the player??
+        //Distance which orbs are drawn to the player //TODO
     }
 
     // Update is called once per frame
     void Update()
     {
         //Debug
-        //Move Speed
-        //Debug.Log("PP - PlayerMoveSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerMoveSpeed"));
-        //Debug.Log("PP - PlayerJumpSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
-        //Debug.Log("superamountreturned = " + superAmountReturned);
+        //Debug.Log("Double Jump PP = " + PlayerPrefs.GetInt("DoubleJump"));
     }
+
     void DeleteExistingPlayerPrefs()
     {
         //delete existing player prefs in the first level
@@ -163,6 +169,20 @@ public class Upgrades : MonoBehaviour
 
     void PlayerPrefsLoadingFunction()
     {
+        //Double Jump check
+        if (PlayerPrefs.HasKey("DoubleJump"))
+        {
+            if (PlayerPrefs.GetInt("DoubleJump") == 1)
+            {
+                doubleJumpUnlocked = true;
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("DoubleJump", 0);
+            doubleJumpUnlocked = false;
+        }
+
         //movement
         if (PlayerPrefs.HasKey("PlayerMoveSpeed"))
         {
@@ -227,7 +247,7 @@ public class Upgrades : MonoBehaviour
         }
         else
         {
-            playerCombat.attackRate = attackTimeUpgradeDefault; //1.75 default // the higher the quicker between attacks
+            playerCombat.attackRate = attackTimeUpgradeDefault; 
             PlayerPrefs.SetFloat("PlayerAttackTime", playerCombat.attackRate);
         }
 
@@ -260,7 +280,7 @@ public class Upgrades : MonoBehaviour
         }
         else
         {
-            superAmountReturned = superAmountReturnedDefault; //amount of super energy returned from killing enemies
+            superAmountReturned = superAmountReturnedDefault; 
             PlayerPrefs.SetFloat("PlayerSuperReturned", superAmountReturned);
         }
 
@@ -276,13 +296,48 @@ public class Upgrades : MonoBehaviour
         }
 
         //stamina recharge rate
+        if (PlayerPrefs.HasKey("StaminaRechargeRate"))
+        {
+            playerCombat.staminaRechargeRate = PlayerPrefs.GetFloat("StaminaRechargeRate");
+        }
+        else
+        {
+            playerCombat.staminaRechargeRate = staminaRechargeRateDefault;
+            PlayerPrefs.SetFloat("StaminaRechargeRate", playerCombat.staminaRechargeRate);
+        }
 
         //stamina attack cost
+        if (PlayerPrefs.HasKey("StaminaAttackCost"))
+        {
+            playerCombat.attackCost = PlayerPrefs.GetFloat("StaminaAttackCost");
+        }
+        else
+        {
+            playerCombat.attackCost = staminaAttackCostDefault;
+            PlayerPrefs.SetFloat("StaminaAttackCost", playerCombat.attackCost);
+        }
 
         //stamina jump cost
+        if (PlayerPrefs.HasKey("StaminaJumpCost"))
+        {
+            playerMovement.jumpCost = PlayerPrefs.GetFloat("StaminaJumpCost");
+        }
+        else
+        {
+            playerMovement.jumpCost = staminaJumpCostDefault;
+            PlayerPrefs.SetFloat("StaminaJumpCost", playerMovement.jumpCost);
+        }
 
         //stamina dash cost
-
+        if (PlayerPrefs.HasKey("StaminaDashCost"))
+        {
+            playerMovement.rollCost = PlayerPrefs.GetFloat("StaminaDashCost");
+        }
+        else
+        {
+            playerMovement.rollCost = staminaDashCostDefault;
+            PlayerPrefs.SetFloat("StaminaDashCost", playerMovement.rollCost);
+        }
 
     }
 
@@ -302,6 +357,7 @@ public class Upgrades : MonoBehaviour
         if (levelManager.skillPoints >= 1)
         {
             doubleJumpUnlocked = true;
+            PlayerPrefs.SetInt("DoubleJump", 1);
             DeductSkillPointsAndAudio();
         }
     }
@@ -508,6 +564,82 @@ public class Upgrades : MonoBehaviour
         {
             playerCombat.staminaMax = staminaMaxT3;
             playerCombat.currentStamina = playerCombat.staminaMax;
+            DeductSkillPointsAndAudio();
+        }
+    }
+
+    public void UnlockNextStaminaRechargeRate()
+    {
+        if (levelManager.skillPoints >= 1 && playerCombat.staminaRechargeRate == staminaRechargeRateDefault)
+        {
+            playerCombat.staminaRechargeRate = staminaRechargeRateT1;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerCombat.staminaRechargeRate == staminaRechargeRateT1)
+        {
+            playerCombat.staminaRechargeRate = staminaRechargeRateT2;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerCombat.staminaRechargeRate == staminaRechargeRateT2)
+        {
+            playerCombat.staminaRechargeRate = staminaRechargeRateT3;
+            DeductSkillPointsAndAudio();
+        }
+    }
+
+    public void UnlockNextAttackCost()
+    {
+        if (levelManager.skillPoints >= 1 && playerCombat.attackCost == staminaAttackCostDefault)
+        {
+            playerCombat.attackCost = staminaAttackCostT1;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerCombat.attackCost == staminaAttackCostT1)
+        {
+            playerCombat.attackCost = staminaAttackCostT2;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerCombat.attackCost == staminaAttackCostT2)
+        {
+            playerCombat.attackCost = staminaAttackCostT3;
+            DeductSkillPointsAndAudio();
+        }
+    }
+
+    public void UnlockNextJumpCost()
+    {
+        if (levelManager.skillPoints >= 1 && playerMovement.jumpCost == staminaJumpCostDefault)
+        {
+            playerMovement.jumpCost = staminaJumpCostT1;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.jumpCost == staminaJumpCostT1)
+        {
+            playerMovement.jumpCost = staminaJumpCostT2;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.jumpCost == staminaJumpCostT2)
+        {
+            playerMovement.jumpCost = staminaJumpCostT3;
+            DeductSkillPointsAndAudio();
+        }
+    }
+
+    public void UnlockNextDashCost()
+    {
+        if (levelManager.skillPoints >= 1 && playerMovement.rollCost == staminaDashCostDefault)
+        {
+            playerMovement.rollCost = staminaDashCostT1;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.rollCost == staminaDashCostT1)
+        {
+            playerMovement.rollCost = staminaDashCostT2;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerMovement.rollCost == staminaDashCostT2)
+        {
+            playerMovement.rollCost = staminaDashCostT3;
             DeductSkillPointsAndAudio();
         }
     }

@@ -9768,6 +9768,16 @@ PrefabInstance:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 1032227375}
+    - target: {fileID: 1643292579034639105, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 356769014}
+    - target: {fileID: 1643292579034639105, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextJumpCost
+      objectReference: {fileID: 0}
     - target: {fileID: 1781121487155522384, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -9973,6 +9983,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7290634257847570120, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 356769014}
+    - target: {fileID: 7290634257847570120, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextStaminaRechargeRate
+      objectReference: {fileID: 0}
     - target: {fileID: 8048107921542770666, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10113,6 +10133,26 @@ PrefabInstance:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 1032227375}
+    - target: {fileID: 8361644921439264441, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 356769014}
+    - target: {fileID: 8361644921439264441, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextAttackCost
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649227823101990410, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 356769014}
+    - target: {fileID: 8649227823101990410, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextDashCost
+      objectReference: {fileID: 0}
     - target: {fileID: 8803747285546268315, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: levelManager

@@ -106,7 +106,7 @@ public class LevelEnd : MonoBehaviour
 
         //Upgrades
         //double jump
-        //PlayerPrefs.SetInt("DoubleJump", upgrades.doubleJumpUnlocked); //TODO convert bool to int
+        //PlayerPrefs.SetInt("DoubleJump", 0);
 
         //Move speed
         PlayerPrefs.SetFloat("PlayerMoveSpeed", playerMovement.moveSpeed);
