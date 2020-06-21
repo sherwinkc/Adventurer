@@ -9808,6 +9808,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2613034799129393416, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 356769014}
+    - target: {fileID: 2613034799129393416, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockNextStaminaMax
+      objectReference: {fileID: 0}
     - target: {fileID: 3129124215285658924, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

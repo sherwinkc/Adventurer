@@ -114,11 +114,9 @@ public class LevelEnd : MonoBehaviour
 
         //jump speed
         PlayerPrefs.SetFloat("PlayerJumpSpeed", playerMovement.jumpSpeed);
-        //Debug.Log("PP - PlayerMoveSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
 
         //dash speed
         PlayerPrefs.SetFloat("PlayerDashSpeed", playerMovement.dashSpeed);
-        //Debug.Log("PP - PlayerJumpSpeed (Level End Script) = " + PlayerPrefs.GetFloat("PlayerDashSpeed"));
 
         //dash cooldown
         PlayerPrefs.SetFloat("PlayerDashCooldown", playerMovement.dashCooldownAmount);
@@ -138,5 +136,19 @@ public class LevelEnd : MonoBehaviour
         //super amount returned
         PlayerPrefs.SetFloat("PlayerSuperReturned", upgrades.superAmountReturned);
 
+        //stamina max
+        PlayerPrefs.SetFloat("StaminaMax", playerCombat.staminaMax);
+
+        //stamina recharge rate
+        PlayerPrefs.SetFloat("StaminaRechargeRate", playerCombat.staminaRechargeRate);
+
+        //stamina attack cost
+        PlayerPrefs.SetFloat("StaminaAttackCost", playerCombat.attackCost);
+
+        //stamina jump cost
+        PlayerPrefs.SetFloat("StaminaJumpCost", playerMovement.jumpCost);
+
+        //stamina dash cost
+        PlayerPrefs.SetFloat("StaminaDashCost", playerMovement.rollCost);
     }
 }

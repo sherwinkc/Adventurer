@@ -22,21 +22,28 @@ public class Upgrades : MonoBehaviour
     public float jumpUpgradeDefault, jumpUpgradeT1, jumpUpgradeT2, jumpUpgradeT3;
     public float dashSpeedUpgradeDefault, dashSpeedUpgradeT1, dashSpeedUpgradeT2, dashSpeedUpgradeT3;
     public float dashCooldownUpgradeDefault, dashCooldownUpgradeT1, dashCooldownUpgradeT2, dashCooldownUpgradeT3;
+    
     public int attackDamageUpgradeDefault, attackDamageT1, attackDamageT2, attackDamageT3, attackDamageT4, attackDamageT5;
     public float attackTimeUpgradeDefault, attackTimeT1, attackTimeT2, attackTimeT3;
     public float attackRangeUpgradeDefault, attackRangeT1, attackRangeT2, attackRangeT3;
     public float superRechargeRateDefault, superRechargeT1, superRechargeT2, superRechargeT3;
     public float superAmountReturned, superAmountReturnedDefault, superAmountReturnedT1, superAmountReturnedT2, superAmountReturnedT3;
 
+    public float staminaMaxUpgradeDefault, staminaMaxT1, staminaMaxT2, staminaMaxT3;
+    public float staminaRechargeRateDefault, staminaRechargeRateT1, staminaRechargeRateT2, staminaRechargeRateT3;
+    public float staminaAttackCostDefault, staminaAttackCostT1, staminaAttackCostT2, staminaAttackCostT3;
+    public float staminaJumpCostDefault, staminaJumpCostT1, staminaJumpCostT2, staminaJumpCostT3;
+    public float staminaDashCostDefault, staminaDashCostT1, staminaDashCostT2, staminaDashCostT3;
+
     // Start is called before the first frame update
 
     private void Awake()
     {
+        DeleteExistingPlayerPrefs();
+
         playerMovement = GetComponent<PlayerMovement>();
         playerCombat = GetComponent<PlayerCombat>();
         levelManager = FindObjectOfType<LevelManager>();
-
-        DeleteExistingPlayerPrefs();
 
         //move
         moveUpgradeDefault = 5f;
@@ -95,6 +102,24 @@ public class Upgrades : MonoBehaviour
         superAmountReturnedT2 = superAmountReturnedDefault * 1.5f;
         superAmountReturnedT3 = superAmountReturnedDefault * 1.8f;
 
+        //stamina max
+        staminaMaxUpgradeDefault = 100f;
+        staminaMaxT1 = staminaMaxUpgradeDefault * 1.25f;
+        staminaMaxT2 = staminaMaxUpgradeDefault * 1.5f;
+        staminaMaxT3 = staminaMaxUpgradeDefault * 1.75f;
+
+        //stamina recharge rate
+        //staminaRechargeRateDefault, staminaRechargeRateT1, staminaRechargeRateT2, staminaRechargeRateT3;
+
+        //stamina attack cost
+        //staminaAttackCostDefault, staminaAttackCostT1, staminaAttackCostT2, staminaAttackCostT3;
+
+        //stamina jump cost
+        //staminaJumpCostDefault, staminaJumpCostT1, staminaJumpCostT2, staminaJumpCostT3;
+
+        //stamina dash cost
+        //staminaDashCostDefault, staminaDashCostT1, staminaDashCostT2, staminaDashCostT3;
+
         PlayerPrefsLoadingFunction();
     }
 
@@ -106,10 +131,9 @@ public class Upgrades : MonoBehaviour
         //super
         playerCombat.superAmount = 0;
 
-        //stamina
-        playerCombat.staminaMax = 100f;
+        //stamina        
         playerCombat.staminaRechargeRate = 15f;
-        playerCombat.currentStamina = playerCombat.staminaMax;
+        playerCombat.currentStamina = playerCombat.staminaMax; // setting the bar full
         playerCombat.attackCost = 20f;
 
         playerMovement.jumpCost = 20f;
@@ -125,14 +149,14 @@ public class Upgrades : MonoBehaviour
         //Move Speed
         //Debug.Log("PP - PlayerMoveSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerMoveSpeed"));
         //Debug.Log("PP - PlayerJumpSpeed (Upgrades Script) = " + PlayerPrefs.GetFloat("PlayerJumpSpeed"));
-        Debug.Log("superamountreturned = " + superAmountReturned);
+        //Debug.Log("superamountreturned = " + superAmountReturned);
     }
     void DeleteExistingPlayerPrefs()
     {
         //delete existing player prefs in the first level
         if (SceneManager.GetActiveScene().name == "Level1_1")
         {
-            Debug.Log("Deleting existing player prefs");
+            //Debug.Log("Deleting existing player prefs");
             PlayerPrefs.DeleteAll();
         }
     }
@@ -239,6 +263,26 @@ public class Upgrades : MonoBehaviour
             superAmountReturned = superAmountReturnedDefault; //amount of super energy returned from killing enemies
             PlayerPrefs.SetFloat("PlayerSuperReturned", superAmountReturned);
         }
+
+        //stamina max
+        if (PlayerPrefs.HasKey("StaminaMax"))
+        {
+            playerCombat.staminaMax = PlayerPrefs.GetFloat("StaminaMax");
+        }
+        else
+        {
+            playerCombat.staminaMax = staminaMaxUpgradeDefault;
+            PlayerPrefs.SetFloat("StaminaMax", playerCombat.staminaMax);
+        }
+
+        //stamina recharge rate
+
+        //stamina attack cost
+
+        //stamina jump cost
+
+        //stamina dash cost
+
 
     }
 
@@ -442,6 +486,28 @@ public class Upgrades : MonoBehaviour
         else if (levelManager.skillPoints >= 1 && superAmountReturned == superAmountReturnedT2)
         {
             superAmountReturned = superAmountReturnedT3;
+            DeductSkillPointsAndAudio();
+        }
+    }
+
+    public void UnlockNextStaminaMax()
+    {
+        if (levelManager.skillPoints >= 1 && playerCombat.staminaMax == staminaMaxUpgradeDefault)
+        {
+            playerCombat.staminaMax = staminaMaxT1;
+            playerCombat.currentStamina = playerCombat.staminaMax;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerCombat.staminaMax == staminaMaxT1)
+        {
+            playerCombat.staminaMax = staminaMaxT2;
+            playerCombat.currentStamina = playerCombat.staminaMax;
+            DeductSkillPointsAndAudio();
+        }
+        else if (levelManager.skillPoints >= 1 && playerCombat.staminaMax == staminaMaxT2)
+        {
+            playerCombat.staminaMax = staminaMaxT3;
+            playerCombat.currentStamina = playerCombat.staminaMax;
             DeductSkillPointsAndAudio();
         }
     }
