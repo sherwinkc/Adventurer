@@ -54,7 +54,7 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         //Delete - this is so the player starts with skill points
-        skillPoints = 20;
+        //skillPoints = 20;
     }
 
     // Start is called before the first frame update

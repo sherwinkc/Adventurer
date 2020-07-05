@@ -9,6 +9,7 @@ public class GreenWiggleController : MonoBehaviour
     public float moveSpeed;
 
     private Rigidbody2D myRigidbody;
+    public Animator animator;
 
     public bool movingRight;
 
@@ -16,6 +17,7 @@ public class GreenWiggleController : MonoBehaviour
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,14 +36,33 @@ public class GreenWiggleController : MonoBehaviour
         //moving right is true or false, move in the opposite direction
         if(movingRight)
         {
-            myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
-            transform.localScale = new Vector3(3.5f, 3.5f, 1f);
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("GreenWiggleHit"))
+            {
+                myRigidbody.velocity = new Vector3(-2f, myRigidbody.velocity.y, 0f);
+                transform.localScale = new Vector3(3.5f, 3.5f, 1f);
+            }
+            else
+            {
+                myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0f);
+                transform.localScale = new Vector3(3.5f, 3.5f, 1f);
+            }
         }
         else
         {
-            myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
-            transform.localScale = new Vector3(-3.5f, 3.5f, 1f);
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("GreenWiggleHit"))
+            {
+                myRigidbody.velocity = new Vector3(2f, myRigidbody.velocity.y, 0f);
+                transform.localScale = new Vector3(3.5f, 3.5f, 1f);
+            }
+            else
+            {
+                myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
+                transform.localScale = new Vector3(-3.5f, 3.5f, 1f);
+
+            }
         }
-            
+
+
+
     }
 }

@@ -7,20 +7,25 @@ public class SpiderController : MonoBehaviour
     public float moveSpeed;
     public bool canMove = false;
     public bool isKnockback = false;
-
+    
+    public Animator animator;
     public Rigidbody2D myRigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponentInParent<Rigidbody2D>();
+        animator = GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if in vicinity of the player, move to the left (y and z stay the same)
-        if (canMove)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderHurt"))
+        {
+            myRigidbody.velocity = new Vector3(2f, myRigidbody.velocity.y, 0f);
+        } 
+        else if (canMove) //if in vicinity of the player, move to the left (y and z stay the same)
         {
             myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
         }

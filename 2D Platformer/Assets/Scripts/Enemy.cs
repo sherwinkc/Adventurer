@@ -26,9 +26,7 @@ public class Enemy : MonoBehaviour
 
     //Camera Shake
     public CameraShake cameraShake;
-    public bool findCameraUsed;
-
-    
+    public bool findCameraUsed;    
 
 
     // Start is called before the first frame update
