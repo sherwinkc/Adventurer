@@ -119,25 +119,7 @@ public class PlayerCombat : MonoBehaviour
                 //play an attack animation
                 animator.SetTrigger(randomAttack);
                 StartCoroutine(cameraShake.Shake(0.3f, 1f, 100f));
-                SwordSipe();
-
-                //detect enemies in range of attack
-                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-                //damage them
-                foreach (Collider2D enemy in hitEnemies)
-                {
-                    //Debug.Log("We hit " + enemy.name);
-                    //Checking if the enemy script is on the same object as the enemy or the hitBox
-                    if (enemy.GetComponentInParent<Enemy>() != null)
-                    {
-                        enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                    }
-                    else if (enemy.GetComponent<Enemy>() != null)
-                    {
-                        enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-                    }
-                }                
+                SwordSipe();          
                 nextAttackTime = Time.time + 1f / attackRate;
                 currentStamina -= attackCost;
             }
@@ -147,26 +129,29 @@ public class PlayerCombat : MonoBehaviour
                     animator.SetTrigger("airAttack");
                     StartCoroutine(cameraShake.Shake(0.3f, 1f, 100f));
                     SwordSipe();
-
-                    //detect enemies in range of attack
-                    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-                    //damage them
-                    foreach (Collider2D enemy in hitEnemies)
-                    {
-                        //Debug.Log("We hit " + enemy.name);
-                        //Checking if the enemy script is on the same object as the enemy or the hitBox
-                        if (enemy.GetComponentInParent<Enemy>() != null)
-                        {
-                            enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                        }
-                        else if (enemy.GetComponent<Enemy>() != null)
-                        {
-                            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-                        }
-                    }
                     nextAttackTime = Time.time + 1f / attackRate;
                     currentStamina -= attackCost;
+            }
+        }
+    }
+
+    void SwordAttackLogic()
+    {
+        //detect enemies in range of attack
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        //damage them
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            //Debug.Log("We hit " + enemy.name);
+            //Checking if the enemy script is on the same object as the enemy or the hitBox
+            if (enemy.GetComponentInParent<Enemy>() != null)
+            {
+                enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+            }
+            else if (enemy.GetComponent<Enemy>() != null)
+            {
+                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
             }
         }
     }
