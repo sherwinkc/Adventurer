@@ -327,5 +327,4 @@ public class PlayerMovement : MonoBehaviour
     {
         controls.PlayerGameplay.Disable();
     }
-
 }
