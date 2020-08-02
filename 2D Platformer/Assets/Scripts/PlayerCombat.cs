@@ -148,12 +148,26 @@ public class PlayerCombat : MonoBehaviour
             if (enemy.GetComponentInParent<Enemy>() != null)
             {
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+                StartCoroutine(SlowTimeCo());
             }
             else if (enemy.GetComponent<Enemy>() != null)
             {
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+                StartCoroutine(SlowTimeCo());
             }
         }
+    }
+
+    public IEnumerator SlowTimeCo()
+    {
+        Debug.Log("SlowTimeCo Activated");
+        Time.timeScale = 0.01f;
+
+        yield return new WaitForSeconds(0.001f);
+
+        Time.timeScale = 1f;
+
+        yield return null;           
     }
 
     void SuperAttack()
