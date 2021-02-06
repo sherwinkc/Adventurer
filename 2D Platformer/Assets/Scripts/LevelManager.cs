@@ -7,49 +7,51 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public float waitToRespawn;
+    #region Variables
     public PlayerController thePlayer;
     public PlayerMovement playerMovement;
     public PlayerCombat playerCombat;
     public CinemachineVirtualCamera virtualCamera;
     public Upgrades upgrades;
 
+    //Game Objects
     public GameObject deathSplosion;
+    public GameObject gameOverScreen;
 
     public int coinCount;
     private int coinBonusLifeCount;
     public int bonusLifeThreshold;
 
     public int keyCount;
-
     public Text coinText;
     public Text keyCountText;
+    public Text superText;    
 
     // variables for the heart/Player health UI
     public Image heart1, heart2, heart3;
     public Sprite heartFull, heartHalf, heartEmpty;
     public int maxHealth, healthCount;
 
+    //Respawn
+    public float waitToRespawn;
     private bool respawning;
-
     public ResetOnRespawn[] objectsToReset;
+    public bool respawnCoActive;
 
     public bool invincible = false;
 
+    //Lives
     public Text livesText;
     public int startingLives, currentLives;
 
+    //Skill Points
     public Text skillPointsText;
-    public int skillPoints, startingSkillPoints;
-
-    public Text superText;    
-
-    public GameObject gameOverScreen;
+    public int skillPoints, startingSkillPoints;    
 
     // Audio
     public AudioSource coinSound, levelMusic, gameOverMusic, hurtSound, levelUpSound;
 
-    public bool respawnCoActive;
+    #endregion
 
     private void Awake()
     {
@@ -60,8 +62,8 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Find Components
         thePlayer = FindObjectOfType<PlayerController>();
-        //virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
         upgrades = FindObjectOfType<Upgrades>();
@@ -108,6 +110,7 @@ public class LevelManager : MonoBehaviour
         superText.text = "Super %: " + playerCombat.superAmount;
     }
 
+    //Check Player Prefs
     public void PlayerPrefsChecks()
     {
         if (PlayerPrefs.HasKey("OrbCount"))
@@ -163,7 +166,7 @@ public class LevelManager : MonoBehaviour
             if (currentLives > 0)
             {
                 respawning = true;
-                StartCoroutine("RespawnCo");
+                StartCoroutine(RespawnCo());
             }
             else
             {

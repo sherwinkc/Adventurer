@@ -161,7 +161,7 @@ public class PlayerCombat : MonoBehaviour
 
     public IEnumerator SlowTimeCo()
     {
-        Debug.Log("SlowTimeCo Activated");
+        //Debug.Log("SlowTimeCo Activated");
         Time.timeScale = 0.01f;
 
         yield return new WaitForSeconds(0.001f);

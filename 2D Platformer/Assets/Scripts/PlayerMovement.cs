@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    #region Variables
     //Components
     public Animator animator;
     public Rigidbody2D myRigidbody;
@@ -36,9 +37,6 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     public float moveSpeed;
 
-    //Audio
-    public AudioSource runSound, jumpSound, rollSound;
-
     //knockback
     public float knockbackForce, knockbackLength;
     public float knockbackCounter;
@@ -62,11 +60,14 @@ public class PlayerMovement : MonoBehaviour
 
     //chests
     public ChestScript chest;
-    
+
+    //Audio
+    public AudioSource runSound, jumpSound, rollSound;
+    #endregion
 
     void Awake()
     {
-        //initialise control scheme
+        //Initialise control scheme
         controls = new PlayerControls();
 
         //Jump
@@ -173,35 +174,7 @@ public class PlayerMovement : MonoBehaviour
             //set invincible to false as knockback is false
             levelManager.invincible = false; //TODO this is overwriting Locked Door script as it's in update loop
         } // end of knockback
-
-        //Set animator parameters         //mathf ensures the value is always positive
-        animator.SetFloat("Speed", Mathf.Abs(myRigidbody.velocity.x));
-        animator.SetBool("Grounded", isGrounded);
-        animator.SetFloat("YSpeed", (myRigidbody.velocity.y));
-
-        //footsteps Particle System
-        if (Input.GetAxisRaw("Horizontal") != 0 && isGrounded)
-        {
-            footEmission.rateOverTime = Random.Range(40, 50);
-        }
-        else
-        {
-            footEmission.rateOverTime = 0;
-        }
-
-        //showing impact particles
-        if(!wasOnGround && isGrounded)
-        {
-            impactEffect.gameObject.SetActive(true);
-            impactEffect.Stop();
-            impactEffect.transform.position = footsteps.transform.position;
-            impactEffect.Play();
-        }
-        wasOnGround = isGrounded;
-
-        //obsolete?
-        //controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-
+        
         if (knockbackCounter > 0)
         {
             //time it counts down
@@ -220,33 +193,31 @@ public class PlayerMovement : MonoBehaviour
                 myRigidbody.velocity = new Vector3(knockbackForce, 0f, 0f);
             }
         }
-    }
 
-    void RunningSound()
-    {
-        runSound.pitch = (Random.Range(0.5f, 1f));
-        runSound.Play();
-        /*if ((Mathf.Abs(horizontalMove) > 0.1f) && isGrounded == true)
+        //Set animator parameters. mathf ensures the value is always positive
+        animator.SetFloat("Speed", Mathf.Abs(myRigidbody.velocity.x));
+        animator.SetBool("Grounded", isGrounded);
+        animator.SetFloat("YSpeed", (myRigidbody.velocity.y));
+
+        //showing impact particles
+        if(!wasOnGround && isGrounded)
         {
-            runSound.enabled = true;
-            runSound.loop = true;
+            impactEffect.gameObject.SetActive(true);
+            impactEffect.Stop();
+            impactEffect.transform.position = footsteps.transform.position;
+            impactEffect.Play();
+        }
+        wasOnGround = isGrounded;
+
+        //footsteps Particle System
+        if (Input.GetAxisRaw("Horizontal") != 0 && isGrounded)
+        {
+            footEmission.rateOverTime = Random.Range(40, 50);
         }
         else
         {
-            runSound.enabled = false;
-            runSound.loop = false;
-        }*/
-    }
-
-    public void Knockback()
-    {
-        knockbackCounter = knockbackLength;
-        //invincibilityCounter = invincibilityLength;
-
-        //sets the invincibility in the level manager script
-        levelManager.invincible = true;
-
-        //StartCoroutine(cameraShake.Shake(0.5f, 2f, 200f));
+            footEmission.rateOverTime = 0;
+        }
     }
 
     void PlayerJump()
@@ -288,6 +259,16 @@ public class PlayerMovement : MonoBehaviour
             playerCombat.currentStamina -= rollCost;
         }
     }
+    public void Knockback()
+    {
+        knockbackCounter = knockbackLength;
+        //invincibilityCounter = invincibilityLength;
+
+        //sets the invincibility in the level manager script
+        levelManager.invincible = true;
+
+        //StartCoroutine(cameraShake.Shake(0.5f, 2f, 200f));
+    }
 
     void Interact()
     {
@@ -312,6 +293,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void RunningSound()
+    {
+        runSound.pitch = (Random.Range(0.5f, 1f));
+        runSound.Play();
+        /*if ((Mathf.Abs(horizontalMove) > 0.1f) && isGrounded == true)
+        {
+            runSound.enabled = true;
+            runSound.loop = true;
+        }
+        else
+        {
+            runSound.enabled = false;
+            runSound.loop = false;
+        }*/
+    }
+
     void JumpSound()
     {
         jumpSound.pitch = (Random.Range(0.95f, 1f));
@@ -322,7 +319,6 @@ public class PlayerMovement : MonoBehaviour
     {
         controls.PlayerGameplay.Enable();
     }
-
     private void OnDisable()
     {
         controls.PlayerGameplay.Disable();

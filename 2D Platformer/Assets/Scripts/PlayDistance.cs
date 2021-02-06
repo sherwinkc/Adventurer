@@ -21,11 +21,11 @@ public class PlayDistance : MonoBehaviour
     {
         if(Vector2.Distance(transform.position, playerMovement.transform.position) < distanceFromSound)
         {
-            Debug.Log("less than 6");
+            //Debug.Log("less than 6");
         }
         else
         {
-            Debug.Log("greater than 6");
+            //Debug.Log("greater than 6");
         }
 
         //Debug.Log(playerNew.transform.position.x - transform.position.x);
