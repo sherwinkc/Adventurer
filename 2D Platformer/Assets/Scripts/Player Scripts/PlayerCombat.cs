@@ -29,8 +29,7 @@ public class PlayerCombat : MonoBehaviour
     public AudioSource swordSwipe, superSFX;
 
     //Camera Shake
-    public CameraShake cameraShake;
-    //public CinemachineVirtualCamera cam;
+    //TODO
 
     //Controller Movement
     PlayerControls controls;
@@ -65,7 +64,6 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
-        //cameraShake = FindObjectOfType<CameraShake>();
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
         upgrades = FindObjectOfType<Upgrades>();
@@ -81,9 +79,6 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("FindObjectOfType<CameraShake>() =" + FindObjectOfType<CameraShake>());
-        //Debug.Log("cam =" + cam);
-        //cameraShake = FindObjectOfType<CameraShake>();
 
         superAmount += superRechargeRate * Time.deltaTime;
 
@@ -91,6 +86,7 @@ public class PlayerCombat : MonoBehaviour
         {
             superAmount = superMax;
             PlaySuperSFX();
+
             // increase movement speed when super is full?
             //upgrades.playerMovement.moveSpeed += 1f;
             //upgrades.playerMovement.jumpSpeed += 1f;
@@ -119,19 +115,17 @@ public class PlayerCombat : MonoBehaviour
             {
                 //play an attack animation
                 animator.SetTrigger(randomAttack);
-                StartCoroutine(cameraShake.Shake(0.3f, 1f, 100f));
-                SwordSipe();          
                 nextAttackTime = Time.time + 1f / attackRate;
                 currentStamina -= attackCost;
+                SwordSipe();          
             }
             else if ((Time.time >= nextAttackTime && !playerMovement.isGrounded))
             {
                     //play an attack animation
                     animator.SetTrigger("airAttack");
-                    StartCoroutine(cameraShake.Shake(0.3f, 1f, 100f));
-                    SwordSipe();
                     nextAttackTime = Time.time + 1f / attackRate;
                     currentStamina -= attackCost;
+                    SwordSipe();
             }
         }
     }
@@ -161,7 +155,6 @@ public class PlayerCombat : MonoBehaviour
 
     public IEnumerator SlowTimeCo()
     {
-        //Debug.Log("SlowTimeCo Activated");
         Time.timeScale = 0.01f;
 
         yield return new WaitForSeconds(0.001f);
@@ -212,7 +205,6 @@ public class PlayerCombat : MonoBehaviour
         Time.timeScale = 0.5f;
         animator.SetTrigger("isSuper");
         SwordSipe();        
-        //StartCoroutine(cameraShake.Shake(0.3f, 10f, 250f));
 
         yield return new WaitForSeconds(0.25f);
 

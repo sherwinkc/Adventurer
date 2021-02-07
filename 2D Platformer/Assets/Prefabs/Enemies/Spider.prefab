@@ -278,6 +278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
   canMove: 0
+  isKnockback: 0
+  animator: {fileID: 0}
   myRigidbody: {fileID: 0}
 --- !u!114 &1362077428813790600
 MonoBehaviour:
@@ -297,11 +299,14 @@ MonoBehaviour:
   destroyOverTime: {fileID: 1380801157}
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
     type: 3}
-  maxHealth: 50
+  playerCombat: {fileID: 0}
+  rb: {fileID: 0}
+  upgrades: {fileID: 0}
+  spider: {fileID: 0}
+  maxHealth: 20
   currentHealth: 0
   enemyGrunt1: {fileID: 5641650965580064448}
   bloodSquelch: {fileID: 1362077428224641507}
-  cameraShake: {fileID: 0}
   findCameraUsed: 0
 --- !u!114 &1380801157
 MonoBehaviour:
@@ -553,6 +558,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -603,6 +609,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   canMove: 0
+  isKnockback: 0
+  animator: {fileID: 0}
   myRigidbody: {fileID: 0}
 --- !u!1 &8555678864252109828
 GameObject:

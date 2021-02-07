@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public bool canMove;
     public bool chestNear;
+    public bool limitMovement = false;
 
     //Jump
     public float jumpSpeed;
@@ -52,8 +53,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 move;
 
     //Camera shake
-    public CameraShake cameraShake;    
-    public bool camBoolUsed;
+    //TODO
+
 
     //movement costs for stamina
     public float jumpCost, rollCost;
@@ -89,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        cameraShake = FindObjectOfType<CameraShake>();
         levelManager = FindObjectOfType<LevelManager>();
         upgrades = FindObjectOfType<Upgrades>();
         playerCombat = FindObjectOfType<PlayerCombat>();
@@ -104,8 +104,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //cameraShake = FindObjectOfType<CameraShake>();
-
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
         if (knockbackCounter <= 0 && canMove)
@@ -114,10 +112,12 @@ public class PlayerMovement : MonoBehaviour
             if ((animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Attack1")) || (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Attack2")))
             {
                 myRigidbody.velocity = new Vector2((move.x * moveSpeed) / 3, myRigidbody.velocity.y);
+                limitMovement = true; // limiting player left and right movement whena attacking
             }
             else if ((!animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Attack1")) || (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Attack2")))
             {
                 myRigidbody.velocity = new Vector2(move.x * moveSpeed, myRigidbody.velocity.y);
+                limitMovement = false;
             }
 
             //Dodge Roll - when roll anim is playing increase velocity by dash speed
@@ -126,19 +126,19 @@ public class PlayerMovement : MonoBehaviour
                 myRigidbody.velocity = new Vector2(move.x * dashSpeed, myRigidbody.velocity.y);
             }
 
-            //Trying to make the jump small if the playe releases the button early
+            //Trying to make the jump small if the player releases the button early
             /*if(Input.GetButtonUp("Jump") && myRigidbody.velocity.y > 0)
             {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, myRigidbody.velocity.y * 0.5f);
             }*/
 
             //If moving left or right change the direction of the scale
-            if (move.x > 0.3)
+            if (move.x > 0.3 && !limitMovement) // limiting player left and right movement whena attacking
             {
                 transform.localScale = new Vector3(5f, 5f, 1f);
                 //RunningSound();
             }
-            else if (move.x < -0.3)
+            else if (move.x < -0.3 && !limitMovement) // limiting player left and right movement whena attacking
             {
                 transform.localScale = new Vector3(-5f, 5f, 1f);
                 //playerCombat.attackPoint.transform.localScale = new Vector3(0f, 180f, 0f);
@@ -230,7 +230,6 @@ public class PlayerMovement : MonoBehaviour
                 canDoubleJump = true;
             }            
                 myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
-                //StartCoroutine(cameraShake.Shake(0.08f, 2f, 100f));
                 JumpSound();
                 playerCombat.currentStamina -= jumpCost;
         }
@@ -240,7 +239,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0f);
                 animator.SetTrigger("Flip");
-                StartCoroutine(cameraShake.Shake(0.08f, 2f, 100f));
                 canDoubleJump = false;
                 JumpSound();
                 playerCombat.currentStamina -= jumpCost;
@@ -253,7 +251,6 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && canDash && Mathf.Abs(myRigidbody.velocity.x) >= 3 && canMove && playerCombat.currentStamina >= rollCost)
         {
             animator.SetTrigger("Roll");
-            StartCoroutine(cameraShake.Shake(0.08f, 2f, 100f));
             canDash = false;
             rollSound.Play();
             playerCombat.currentStamina -= rollCost;
@@ -266,8 +263,6 @@ public class PlayerMovement : MonoBehaviour
 
         //sets the invincibility in the level manager script
         levelManager.invincible = true;
-
-        //StartCoroutine(cameraShake.Shake(0.5f, 2f, 200f));
     }
 
     void Interact()

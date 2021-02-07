@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     //Enemies
     public SpiderController spider;
 
-    public int maxHealth = 100;
+    public int maxHealth;
     public int currentHealth;
 
     //Audio
@@ -25,7 +25,6 @@ public class Enemy : MonoBehaviour
     public AudioSource bloodSquelch;
 
     //Camera Shake
-    public CameraShake cameraShake;
     public bool findCameraUsed;    
 
 
@@ -34,7 +33,6 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
         destroyOverTime = GetComponentInParent<DestroyOverTime>();
-        //cameraShake = FindObjectOfType<CameraShake>();
         playerCombat = FindObjectOfType<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         upgrades = FindObjectOfType<Upgrades>();
@@ -48,14 +46,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //TODO - probably expensive being in the update loop
-        cameraShake = FindObjectOfType<CameraShake>();        
+
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        //StartCoroutine(cameraShake.Shake(0.5f, 2f, 200f));
 
         if (currentHealth >= 0)
         {
@@ -78,7 +74,6 @@ public class Enemy : MonoBehaviour
             for (int i = 0; i < Random.Range(2f, 4f); i++)
             {
                 Instantiate(orbsOnDeath, new Vector2(transform.position.x, transform.position.y + 1), transform.rotation);
-                //Debug.Log("Orb spawned");
             }
 
             playerCombat.superAmount += upgrades.superAmountReturned;
@@ -88,7 +83,6 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         animator.SetBool("isDead", true);
-        StartCoroutine(cameraShake.Shake(0.75f, 5f, 800f));//this breaks when the camera is not the main camera
 
         //Disable this Enemy Script component
         this.enabled = false;

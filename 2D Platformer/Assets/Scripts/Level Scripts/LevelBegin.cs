@@ -25,10 +25,6 @@ public class LevelBegin : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
         enemy = FindObjectOfType<Enemy>();
-        
-        //parralaxNew = FindObjectOfType<ParallaxNew>();
-        //theLevelManager = FindObjectOfType<LevelManager>();
-        //virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
 
         runInTime = 1.8f;
         movePlayer = true;
@@ -47,11 +43,6 @@ public class LevelBegin : MonoBehaviour
         {
             playerMovement.myRigidbody.velocity = new Vector2(playerMovement.moveSpeed, playerMovement.myRigidbody.velocity.y);
         }
-
-        //Debug.Log("playerMovement.myRigidbody.velocity = " + playerMovement.myRigidbody.velocity);
-        //Debug.Log("playerMovement.moveSpeed = " + playerMovement.moveSpeed);
-        //Debug.Log("playerMovement.canMove = " + playerMovement.canMove);
-        //Debug.Log("playerCombat.canMove = " + playerCombat.canMove);
     }
 
     public IEnumerator LevelBeginCo()
@@ -72,12 +63,7 @@ public class LevelBegin : MonoBehaviour
         playerCombat.canMove = true;
 
         virtualCamera1.gameObject.SetActive(true);
-        virtualCamera2.gameObject.SetActive(false);
-
-        //Camera on camerashake component need to be set again at the end of level begin
-        playerCombat.cameraShake = FindObjectOfType<CameraShake>();
-        playerMovement.cameraShake = FindObjectOfType<CameraShake>();
-        enemy.cameraShake = FindObjectOfType<CameraShake>();        
+        virtualCamera2.gameObject.SetActive(false);     
 
         levelBeginCoUsed = true;
 

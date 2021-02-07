@@ -50,10 +50,11 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b638e6991eb3d4d4cba2a13bc82cbe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  playerTrans: {fileID: 0}
+  playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   coinValue: 5
+  triggerActive: 0
+  moveTowardPlayer: 0
 --- !u!114 &-5850119694170144332
 MonoBehaviour:
   m_ObjectHideFlags: 0

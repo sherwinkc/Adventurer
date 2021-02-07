@@ -43,7 +43,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fe18a31192584664abafa741dc78cd55, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -172,7 +172,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -297,7 +297,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 503017367fe3ad34986743a13fab207f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -428,18 +428,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2867561533c8fa4ab7c15094a716894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitToRespawn: 3
   thePlayer: {fileID: 0}
   playerMovement: {fileID: 0}
   playerCombat: {fileID: 0}
   virtualCamera: {fileID: 0}
+  upgrades: {fileID: 0}
   deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
     type: 3}
+  gameOverScreen: {fileID: 0}
   coinCount: 0
-  bonusLifeThreshold: 100
+  bonusLifeThreshold: 20
   keyCount: 0
   coinText: {fileID: 0}
   keyCountText: {fileID: 0}
+  superText: {fileID: 0}
   heart1: {fileID: 0}
   heart2: {fileID: 0}
   heart3: {fileID: 0}
@@ -451,7 +453,9 @@ MonoBehaviour:
     type: 3}
   maxHealth: 6
   healthCount: 0
+  waitToRespawn: 3
   objectsToReset: []
+  respawnCoActive: 0
   invincible: 0
   livesText: {fileID: 0}
   startingLives: 5
@@ -459,14 +463,11 @@ MonoBehaviour:
   skillPointsText: {fileID: 0}
   skillPoints: 0
   startingSkillPoints: 0
-  superText: {fileID: 0}
-  gameOverScreen: {fileID: 0}
   coinSound: {fileID: 1476051983}
   levelMusic: {fileID: 1514119820458950996}
   gameOverMusic: {fileID: 1475729213538278218}
   hurtSound: {fileID: 0}
-  levelUpSound: {fileID: 0}
-  respawnCoActive: 0
+  levelUpSound: {fileID: 1210943197873351698}
 --- !u!1 &6278850172655464559
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +511,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e1be96f0b84cccc4fb15768894cff05f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
