@@ -6690,6 +6690,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_AmplitudeGain
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_FrequencyGain
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_SustainTime
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[1].time
+      value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[1].value
+      value: 0.91988516
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[0].inSlope
+      value: -0.09730828
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[1].inSlope
+      value: -0.09730828
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[0].outSlope
+      value: -0.09730828
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[1].outSlope
+      value: -0.09730828
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113518072, guid: 6d43b0927ca38994e85e8e3a4fcad32b, type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_AttackShape.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
     - target: {fileID: 3290980256496980840, guid: 6d43b0927ca38994e85e8e3a4fcad32b,
         type: 3}
       propertyPath: m_Name
@@ -6903,7 +6955,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2005588211}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2005588212}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
@@ -8754,7 +8806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1870993748
 Transform:
   m_ObjectHideFlags: 0
@@ -9324,7 +9376,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2064995500, guid: d132aaac9f0dc1241b4c8635909396e9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2064995501, guid: d132aaac9f0dc1241b4c8635909396e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9341,7 +9393,7 @@ PrefabInstance:
     - target: {fileID: 3430115953656996733, guid: d132aaac9f0dc1241b4c8635909396e9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4705196242022096786, guid: d132aaac9f0dc1241b4c8635909396e9,
         type: 3}
@@ -9418,6 +9470,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798855340236465187, guid: d132aaac9f0dc1241b4c8635909396e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8798855340236465198, guid: d132aaac9f0dc1241b4c8635909396e9,
         type: 3}
       propertyPath: m_Follow
@@ -9425,6 +9482,27 @@ PrefabInstance:
       objectReference: {fileID: 441414109}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d132aaac9f0dc1241b4c8635909396e9, type: 3}
+--- !u!1 &2005588212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8798855340236465187, guid: d132aaac9f0dc1241b4c8635909396e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2005588211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2005588213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005588212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 1
 --- !u!1001 &2006886966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9802,6 +9880,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5324599592045633278, guid: 8cb5df1fc6aaa564a8c4bca5d0bb4e7c,
         type: 3}
+      propertyPath: levelToLoad
+      value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324599592045633278, guid: 8cb5df1fc6aaa564a8c4bca5d0bb4e7c,
+        type: 3}
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 1515977642}
@@ -10056,7 +10139,7 @@ PrefabInstance:
     - target: {fileID: 1153676247362663872, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1333365180250152542, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
@@ -10278,6 +10361,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockNextAttackDamage
       objectReference: {fileID: 0}
+    - target: {fileID: 6512294306614684860, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7006301993884637996, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10316,7 +10404,7 @@ PrefabInstance:
     - target: {fileID: 8110951270912400855, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8110951271380462528, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
@@ -10766,7 +10854,7 @@ PrefabInstance:
     - target: {fileID: 8910089892427757526, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9023944084620266691, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}

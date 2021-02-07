@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove;
     public bool chestNear;
     public bool limitMovement = false;
+    public bool canCancelJump = true;
 
     //Jump
     public float jumpSpeed;
@@ -72,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Jump
         controls.PlayerGameplay.Jump.performed += ctx => PlayerJump();
+        controls.PlayerGameplay.Jump.canceled += ctx => PlayerJumpCancel();
 
         //Stick Movement
         controls.PlayerGameplay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
@@ -154,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
             //player hang time check
             if (isGrounded)
             {
-                hangCounter = jumpHangTime;
+                hangCounter = jumpHangTime; 
             }
             else
             {
@@ -201,6 +203,15 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Grounded", isGrounded);
         animator.SetFloat("YSpeed", (myRigidbody.velocity.y));
 
+        /*if(canDoubleJump && !isGrounded)
+        {
+            canCancelJump = true;
+        } else 
+        if(canDoubleJump && isGrounded)
+        {
+            canCancelJump = false;
+        }*/
+
         //showing impact particles
         if(!wasOnGround && isGrounded)
         {
@@ -246,6 +257,14 @@ public class PlayerMovement : MonoBehaviour
                 playerCombat.currentStamina -= jumpCost;
             }
         }
+    }
+
+    void PlayerJumpCancel()
+    {
+        /*if(!isGrounded && canCancelJump)
+        {
+            myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed * 0.5f, 0f);
+        }*/
     }
 
     void Dodge()

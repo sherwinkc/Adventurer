@@ -25,6 +25,9 @@ public class PlayerCombat : MonoBehaviour
     public float attackRate = 2.5f;
     public float nextAttackTime = 0f;
 
+    //cinemachine
+    public CinemachineImpulseSource m_impulseSource;
+
     //Audio
     public AudioSource swordSwipe, superSFX;
 
@@ -66,13 +69,15 @@ public class PlayerCombat : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
-        upgrades = GetComponent<Upgrades>();
+        upgrades = GetComponent<Upgrades>();        
+        m_impulseSource = FindObjectOfType<CinemachineImpulseSource>();
 
         canMove = true;
         playSuperOnce = false;
 
         superStartAmount = 0;
         superMax = 100;
+
     }
 
     void Update()
@@ -114,7 +119,8 @@ public class PlayerCombat : MonoBehaviour
                 animator.SetTrigger(randomAttack);
                 nextAttackTime = Time.time + 1f / attackRate;
                 currentStamina -= attackCost;
-                SwordSipe();          
+                SwordSipe();
+                m_impulseSource.GenerateImpulse(0.5f);
             }
             else if ((Time.time >= nextAttackTime && !playerMovement.isGrounded))
             {
@@ -123,6 +129,7 @@ public class PlayerCombat : MonoBehaviour
                     nextAttackTime = Time.time + 1f / attackRate;
                     currentStamina -= attackCost;
                     SwordSipe();
+                    m_impulseSource.GenerateImpulse(0.5f);
             }
         }
     }
@@ -140,11 +147,13 @@ public class PlayerCombat : MonoBehaviour
             if (enemy.GetComponentInParent<Enemy>() != null)
             {
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+                m_impulseSource.GenerateImpulse(1f);
                 StartCoroutine(SlowTimeCo());
             }
             else if (enemy.GetComponent<Enemy>() != null)
             {
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+                m_impulseSource.GenerateImpulse(1f);
                 StartCoroutine(SlowTimeCo());
             }
         }
@@ -167,6 +176,7 @@ public class PlayerCombat : MonoBehaviour
         {
             StartCoroutine(SuperAttackSequence());
             playSuperOnce = false; //for sfx
+            m_impulseSource.GenerateImpulse(1f);
         }
     }
 
@@ -184,6 +194,7 @@ public class PlayerCombat : MonoBehaviour
     {
         swordSwipe.pitch = (Random.Range(0.92f, 1f));
         swordSwipe.Play();
+        m_impulseSource.GenerateImpulse(0.1f);
     }
 
 
