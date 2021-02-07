@@ -11,8 +11,6 @@ public class ParallaxNew : MonoBehaviour
 
     public CinemachineVirtualCamera cam;
     public LevelBegin levelBegin;
-    //public CinemachineVirtualCamera virtualCamera1;
-    //public CinemachineVirtualCamera virtualCamera2;
 
     public float relativeMove = 0f;
     public bool lockY = false;
@@ -32,22 +30,34 @@ public class ParallaxNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (levelBegin.virtualCamera2.gameObject.activeSelf == true)
+        if(levelBegin) //check if level begin exists
         {
-            cam = levelBegin.virtualCamera2;
-        }
-        else if ((levelBegin.virtualCamera1.gameObject.activeSelf == true))
-        {
-            cam = levelBegin.virtualCamera1;
-        }
+            //setting the camera
+            if (levelBegin.virtualCamera3.gameObject.activeSelf == true)
+            {
+                cam = levelBegin.virtualCamera3;
+            }
+            else if ((levelBegin.virtualCamera2.gameObject.activeSelf == true))
+            {
+                cam = levelBegin.virtualCamera2;
+            }
+            else if ((levelBegin.virtualCamera1.gameObject.activeSelf == true))
+            {
+                cam = levelBegin.virtualCamera1;
+            }
+            else
+            {
+                return;
+            }
 
-        if (lockY)
-        {
-            transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
-        } 
-        else
-        {
-            transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+            if (lockY)
+            {
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+            }
         }
     }
 }

@@ -437,7 +437,7 @@ MonoBehaviour:
     type: 3}
   gameOverScreen: {fileID: 0}
   coinCount: 0
-  bonusLifeThreshold: 20
+  bonusLifeThreshold: 50
   keyCount: 0
   coinText: {fileID: 0}
   keyCountText: {fileID: 0}

@@ -10,10 +10,6 @@ public class Upgrades : MonoBehaviour
     public PlayerCombat playerCombat;
     public LevelManager levelManager;
 
-    public AudioSource upgradeSFX; 
-
-    //public Button button;
-
     //jump
     public bool doubleJumpUnlocked;
     public int doubleJumpInt;
@@ -36,11 +32,12 @@ public class Upgrades : MonoBehaviour
     public float staminaJumpCostDefault, staminaJumpCostT1, staminaJumpCostT2, staminaJumpCostT3;
     public float staminaDashCostDefault, staminaDashCostT1, staminaDashCostT2, staminaDashCostT3;
 
-    // Start is called before the first frame update
+    //Audio
+    public AudioSource upgradeSFX;
 
     private void Awake()
     {
-        DeleteExistingPlayerPrefs();
+        DeleteExistingPlayerPrefs(); // deletes player prefs if level1_1
 
         playerMovement = GetComponent<PlayerMovement>();
         playerCombat = GetComponent<PlayerCombat>();
@@ -153,8 +150,7 @@ public class Upgrades : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug
-        //Debug.Log("Double Jump PP = " + PlayerPrefs.GetInt("DoubleJump"));
+
     }
 
     void DeleteExistingPlayerPrefs()
@@ -162,7 +158,6 @@ public class Upgrades : MonoBehaviour
         //delete existing player prefs in the first level
         if (SceneManager.GetActiveScene().name == "Level1_1")
         {
-            //Debug.Log("Deleting existing player prefs");
             PlayerPrefs.DeleteAll();
         }
     }

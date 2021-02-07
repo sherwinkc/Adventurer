@@ -4,27 +4,31 @@ using UnityEngine;
 
 public class ChestScript : MonoBehaviour
 {
-    public bool playerOpen;
     public Animator animator;
     public GameObject orbPrefab;
-    public AudioSource chestOpen, chestJingle, orbSFX;
 
+    public bool openTheChest;
+    public bool openedByPlayer;
     private bool playOnce = false;
 
-    // Start is called before the first frame update
+    //Audio
+    public AudioSource chestOpen, chestJingle, orbSFX;
+
+
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        playerOpen = false;
+        openedByPlayer = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerOpen)
+        if(openTheChest && !openedByPlayer)
         {
             StartCoroutine(OrbShowerCo());
-            if(!playOnce)
+
+            if (!playOnce)
             {
                 ChestSounds();
                 playOnce = true;
@@ -36,12 +40,14 @@ public class ChestScript : MonoBehaviour
     {
         OrbShower();
 
-        yield return new WaitForSeconds(10f * Time.deltaTime);        
+        yield return new WaitForSeconds(10f * Time.deltaTime);
 
-        playerOpen = false;
+        openedByPlayer = true;
+        openTheChest = false;
 
         yield return null;
     }
+   
 
     void OrbShower()
     {
@@ -54,7 +60,4 @@ public class ChestScript : MonoBehaviour
         chestOpen.Play();
         chestJingle.Play();
     }
-
-    
-
 }

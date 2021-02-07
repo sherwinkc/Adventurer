@@ -4,49 +4,50 @@ using UnityEngine;
 
 public class Debug_Cheats : MonoBehaviour
 {
+    //components
     public LevelManager levelManager;
     public Upgrades upgrades;
     public PlayerCombat playerCombat;
 
+    public int coinsToAdd_Debug;
+    public int keysToAdd_Debug;
 
-    // Start is called before the first frame update
     void Start()
     {
-        levelManager = FindObjectOfType<LevelManager>();
-        upgrades = FindObjectOfType<Upgrades>();
+        upgrades = GetComponent<Upgrades>();
         playerCombat = GetComponent<PlayerCombat>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //increase/decrease orbs/coins
         if (Input.GetKeyDown(KeyCode.P))
         {
-            levelManager.AddCoins(50);
+            levelManager.AddCoins(coinsToAdd_Debug);
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            levelManager.AddCoins(-50);
+            levelManager.AddCoins(-coinsToAdd_Debug);
         }
 
         //coinCount does not go below 0
-        if (levelManager.coinCount < 0)
+        if (levelManager.coinCount <= 0)
         {
             levelManager.coinCount = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            levelManager.AddKeys(1);
+            levelManager.AddKeys(keysToAdd_Debug);
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            levelManager.AddKeys(-1);
+            levelManager.AddKeys(-keysToAdd_Debug);
         }
 
-        //coinCount does not go below 0
-        if (levelManager.keyCount < 0)
+        //keyCount does not go below 0
+        if (levelManager.keyCount <= 0)
         {
             levelManager.keyCount = 0;
         }
@@ -64,10 +65,10 @@ public class Debug_Cheats : MonoBehaviour
             }
         }
 
-        //super
+        //Instant super
         if(Input.GetKeyDown(KeyCode.B))
         {
-            upgrades.playerCombat.superAmount = 100f;
+            upgrades.playerCombat.superAmount = upgrades.playerCombat.superMax;
         }
 
         //super recharge rate -/+

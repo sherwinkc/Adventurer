@@ -78,10 +78,6 @@ public class LevelManager : MonoBehaviour
         //set up an array to put all objects that need to reset on respawn
         objectsToReset = FindObjectsOfType<ResetOnRespawn>();
 
-        //skillpoints
-        //skillPoints = startingSkillPoints;
-        //skillPointsText.text = "Skill Points: " + skillPoints;
-
         superText.text = "Super %: " + playerCombat.superAmount;
 
     }
@@ -100,7 +96,6 @@ public class LevelManager : MonoBehaviour
             currentLives += 1;            
             coinBonusLifeCount -= bonusLifeThreshold; // reset the bonus life count to zero
             skillPoints += 1;
-            //skillPointsText.text = "Skill Points: " + skillPoints;
             levelUpSound.Play();
         }
 
@@ -108,6 +103,7 @@ public class LevelManager : MonoBehaviour
         livesText.text = "Lives x" + currentLives;
         skillPointsText.text = "Skill Points: " + skillPoints;
         superText.text = "Super %: " + playerCombat.superAmount;
+        keyCountText.text = "Keys: " + keyCount;
     }
 
     //Check Player Prefs
@@ -140,8 +136,6 @@ public class LevelManager : MonoBehaviour
         }
         //starting skill points is 0
         skillPointsText.text = "Skill Points: " + skillPoints;
-
-
     }
 
     public void PlayerPrefChecksUpgrades()

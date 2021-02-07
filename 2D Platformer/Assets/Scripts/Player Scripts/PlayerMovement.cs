@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashCounter;
 
     //Movement
-    float horizontalMove = 0f;
+    //float horizontalMove = 0f; //??
     public float moveSpeed;
 
     //knockback
@@ -54,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
 
     //Camera shake
     //TODO
-
 
     //movement costs for stamina
     public float jumpCost, rollCost;
@@ -88,12 +87,15 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Get Component
         myRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerCombat = GetComponent<PlayerCombat>();
+
+        //Find Component
         levelManager = FindObjectOfType<LevelManager>();
         upgrades = FindObjectOfType<Upgrades>();
-        playerCombat = FindObjectOfType<PlayerCombat>();
-        //chest = FindObjectOfType<ChestScript>();
+        //playerCombat = FindObjectOfType<PlayerCombat>();
 
         footEmission = footsteps.emission;
         canMove = true;
@@ -271,7 +273,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetTrigger("isInteract");
             chest.animator.SetTrigger("isOpen");            
-            chest.playerOpen = true;
+            chest.openTheChest = true;
         }        
     }
 
@@ -292,16 +294,6 @@ public class PlayerMovement : MonoBehaviour
     {
         runSound.pitch = (Random.Range(0.5f, 1f));
         runSound.Play();
-        /*if ((Mathf.Abs(horizontalMove) > 0.1f) && isGrounded == true)
-        {
-            runSound.enabled = true;
-            runSound.loop = true;
-        }
-        else
-        {
-            runSound.enabled = false;
-            runSound.loop = false;
-        }*/
     }
 
     void JumpSound()

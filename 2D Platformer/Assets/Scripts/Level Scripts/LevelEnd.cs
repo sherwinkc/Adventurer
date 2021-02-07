@@ -8,8 +8,9 @@ public class LevelEnd : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     private PlayerCombat playerCombat;
-    public CinemachineVirtualCamera virtualCamera;
     private LevelManager theLevelManager;
+
+    public CinemachineVirtualCamera virtualCamera;
     public Animator animator;
     public FadeToBlack fadeToBlack;
     public Upgrades upgrades;
@@ -17,21 +18,17 @@ public class LevelEnd : MonoBehaviour
     public string levelToLoad;
     public float waitToMove, waitToLoad;
     private bool movePlayer;
-    public bool coActive;
+    public bool coActive = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
         theLevelManager = FindObjectOfType<LevelManager>();
-        animator = GetComponent<Animator>();
         upgrades = FindObjectOfType<Upgrades>();
-        //virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
-
         fadeToBlack = FindObjectOfType<FadeToBlack>();
-
-        coActive = false;
     }
 
     // Update is called once per frame
@@ -54,7 +51,6 @@ public class LevelEnd : MonoBehaviour
 
     public IEnumerator LevelEndCo()
     {
-        //Debug.Log("LevelEndCo Started");
         coActive = true;
         playerMovement.canMove = false;
         playerCombat.canMove = false;

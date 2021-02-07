@@ -25,10 +25,8 @@ public class Enemy : MonoBehaviour
     public AudioSource bloodSquelch;
 
     //Camera Shake
-    public bool findCameraUsed;    
+    public bool findCameraUsed;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;

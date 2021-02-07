@@ -14,12 +14,13 @@ public class CoinScript : MonoBehaviour
     public bool triggerActive;
     public bool moveTowardPlayer;
     private float coinLifetime;
+    private bool canBeCollected;
 
     // Start is called before the first frame update
     void Start()
     {
-        theLevelManager = FindObjectOfType<LevelManager>();
         rb = GetComponent<Rigidbody2D>();
+        theLevelManager = FindObjectOfType<LevelManager>();
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
 
@@ -27,6 +28,7 @@ public class CoinScript : MonoBehaviour
 
         triggerActive = false;
         moveTowardPlayer = false;
+        canBeCollected = false;
 
         coinLifetime = 20;
     }
@@ -50,32 +52,31 @@ public class CoinScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" && triggerActive == false)
+        if (other.tag == "Player" && triggerActive == false && canBeCollected)
         {
             triggerActive = true;
 
             //stop Audio in child component
             //playDistance.audioSource.enabled = false;
 
-            //Debug.Log("Coin trigger");
             theLevelManager.AddCoins(coinValue);
 
-            //TODO coins are cloning themselves in the hierachy
-            //Instead of destroying the object we are setting it to inactive
             Destroy(gameObject);
-            //gameObject.SetActive(false);
 
             triggerActive = false;
-
             moveTowardPlayer = false;
         }
     }
 
     public IEnumerator CoinBehaviour()
     {
-        rb.velocity = new Vector2(Random.Range(2f,5f),Random.Range(2f,5f));
+        rb.velocity = new Vector2(Random.Range(-1f,2f),Random.Range(1f,3f));
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.25f);
+
+        canBeCollected = true;
+
+        yield return new WaitForSeconds(5f);
 
         moveTowardPlayer = true;
 

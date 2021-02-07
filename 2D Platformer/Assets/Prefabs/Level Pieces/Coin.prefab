@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3792299865967030}
+  - component: {fileID: 3792299865967031}
   - component: {fileID: 3792299865967029}
   - component: {fileID: 3792299865967028}
-  - component: {fileID: 3792299865967031}
-  - component: {fileID: -8098727933599711538}
   - component: {fileID: 3661802829050047035}
   - component: {fileID: 5930975568785796694}
   m_Layer: 0
@@ -40,6 +39,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3792299865967031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792299865967027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b638e6991eb3d4d4cba2a13bc82cbe89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  playerTrans: {fileID: 0}
+  playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
+  coinValue: 1
+  triggerActive: 0
+  moveTowardPlayer: 0
 --- !u!212 &3792299865967029
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -107,38 +125,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.54
---- !u!114 &3792299865967031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3792299865967027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b638e6991eb3d4d4cba2a13bc82cbe89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  playerTrans: {fileID: 0}
-  playerMovement: {fileID: 0}
-  playerCombat: {fileID: 0}
-  coinValue: 1
-  triggerActive: 0
-  moveTowardPlayer: 0
---- !u!114 &-8098727933599711538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3792299865967027}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db11f5b1dd2015499bfdf654c2b998c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 0.36
 --- !u!95 &3661802829050047035
 Animator:
   serializedVersion: 3

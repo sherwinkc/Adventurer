@@ -44,7 +44,8 @@ public class PlayerCombat : MonoBehaviour
     public GameObject superBullet;
 
     //checks
-    public bool canMove, playSuperOnce;
+    public bool canMove;
+    bool playSuperOnce;
 
     //stamina
     public float staminaMax, currentStamina, staminaRechargeRate, attackCost;
@@ -60,13 +61,12 @@ public class PlayerCombat : MonoBehaviour
         controls.PlayerGameplay.Super.performed += ctx => SuperAttack();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
-        upgrades = FindObjectOfType<Upgrades>();
+        upgrades = GetComponent<Upgrades>();
 
         canMove = true;
         playSuperOnce = false;
@@ -76,7 +76,6 @@ public class PlayerCombat : MonoBehaviour
         //superRechargeRate = 1f; //set in upgrade
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -101,7 +100,6 @@ public class PlayerCombat : MonoBehaviour
         {
             currentStamina = staminaMax;
         }
-
     }
 
     void Attack()
@@ -173,8 +171,8 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-        //draws the overlap circle when selecting it
-        void OnDrawGizmosSelected()
+    //draws the overlap circle when selecting it
+    void OnDrawGizmosSelected()
     {
         //returns null if there is not sphere. Prevents errors
         if (attackPoint == null)
@@ -189,15 +187,6 @@ public class PlayerCombat : MonoBehaviour
         swordSwipe.Play();
     }
 
-    private void OnEnable()
-    {
-        controls.PlayerGameplay.Enable();
-    }
-
-    private void OnDisable()
-    {
-        controls.PlayerGameplay.Disable();
-    }
 
     public IEnumerator SuperAttackSequence()
     {
@@ -206,11 +195,9 @@ public class PlayerCombat : MonoBehaviour
         animator.SetTrigger("isSuper");
         SwordSipe();        
 
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
 
         Instantiate(superBullet, attackPoint.position, attackPoint.rotation);
-
-        //yield return new WaitForSeconds(0.25f);
 
         Time.timeScale = 1f;        
 
@@ -228,6 +215,16 @@ public class PlayerCombat : MonoBehaviour
             superSFX.Play();
             playSuperOnce = true;
         }        
+    }
+
+    private void OnEnable()
+    {
+        controls.PlayerGameplay.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.PlayerGameplay.Disable();
     }
 }
 

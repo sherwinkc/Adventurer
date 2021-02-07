@@ -17,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - cam1
+  - cam2
   - Ground
   - Player
   - Enemies
@@ -26,7 +26,7 @@ TagManager:
   - Background
   - Enemy_Body
   - Trees
-  - 
+  - PostProcessing
   - 
   - 
   - 

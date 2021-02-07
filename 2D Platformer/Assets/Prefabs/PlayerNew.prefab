@@ -10871,14 +10871,13 @@ GameObject:
   - component: {fileID: 5670088738202447208}
   - component: {fileID: 5670088738202447187}
   - component: {fileID: 7128154179106794175}
-  - component: {fileID: 5449588942806780131}
   - component: {fileID: 5670088738202447209}
+  - component: {fileID: 3389465345162623861}
   - component: {fileID: 5670088738202447211}
   - component: {fileID: 5670088738202447215}
-  - component: {fileID: 5670088738202447212}
   - component: {fileID: 5670088738202447214}
   - component: {fileID: 5670088738202447213}
-  - component: {fileID: 3389465345162623861}
+  - component: {fileID: 5670088738202447212}
   - component: {fileID: 1211778486}
   - component: {fileID: 1211778487}
   m_Layer: 9
@@ -10988,7 +10987,6 @@ MonoBehaviour:
   superBullet: {fileID: 7767972587225191758, guid: 80ccfb19ff90f824db8f765427be3605,
     type: 3}
   canMove: 0
-  playSuperOnce: 0
   staminaMax: 0
   currentStamina: 0
   staminaRechargeRate: 0
@@ -11008,7 +11006,6 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   playerCombat: {fileID: 0}
   levelManager: {fileID: 0}
-  upgradeSFX: {fileID: 3242590907083699903}
   doubleJumpUnlocked: 0
   doubleJumpInt: 0
   moveUpgradeDefault: 0
@@ -11070,24 +11067,7 @@ MonoBehaviour:
   staminaDashCostT1: 0
   staminaDashCostT2: 0
   staminaDashCostT3: 0
---- !u!114 &5449588942806780131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5670088738202447184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2764438152e68244b2c55986b455e1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virtualCamera1: {fileID: 0}
-  virtualCamera2: {fileID: 0}
-  enemy: {fileID: 0}
-  runInTime: 1.8
-  movePlayer: 0
-  levelBeginCoUsed: 0
+  upgradeSFX: {fileID: 3242590907083699903}
 --- !u!114 &5670088738202447209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11104,6 +11084,23 @@ MonoBehaviour:
   theLevelManager: {fileID: 0}
   respawnPosition: {x: 0, y: 0, z: 0}
   onPlatformSpeedModifier: 0
+--- !u!114 &3389465345162623861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5670088738202447184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49395a467ad5d834daa7e9970d1946c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
+  upgrades: {fileID: 0}
+  playerCombat: {fileID: 0}
+  coinsToAdd_Debug: 25
+  keysToAdd_Debug: 1
 --- !u!212 &5670088738202447211
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11176,25 +11173,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!95 &5670088738202447212
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5670088738202447184}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 17a5d8acb086deb4d90cc9559f62b307, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &5670088738202447214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11237,21 +11215,25 @@ CircleCollider2D:
   m_Offset: {x: -0, y: 0.082}
   serializedVersion: 2
   m_Radius: 0.07
---- !u!114 &3389465345162623861
-MonoBehaviour:
+--- !u!95 &5670088738202447212
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5670088738202447184}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49395a467ad5d834daa7e9970d1946c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelManager: {fileID: 0}
-  upgrades: {fileID: 0}
-  playerCombat: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17a5d8acb086deb4d90cc9559f62b307, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1211778486
 MonoBehaviour:
   m_ObjectHideFlags: 0
