@@ -278,8 +278,8 @@ Camera:
   m_GameObject: {fileID: 224298216}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.045656823, g: 0.30886483, b: 0.3584906, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.3760235, g: 0.4716981, b: 0.40228713, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -415,10 +415,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The \nAdventurer"
+  m_text: 'The
+
+    Adventurer'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b2b644348f3abee44b8b6533f766b12a, type: 2}
-  m_sharedMaterial: {fileID: -2094251376703164339, guid: b2b644348f3abee44b8b6533f766b12a,
+  m_fontAsset: {fileID: 11400000, guid: 39f62ad942453d34ca5db74771fe30ca, type: 2}
+  m_sharedMaterial: {fileID: -4700185320209511571, guid: 39f62ad942453d34ca5db74771fe30ca,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -443,8 +445,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 226.6
-  m_fontSizeBase: 226.6
+  m_fontSize: 233.2
+  m_fontSizeBase: 233.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -534,7 +536,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2f85a52f22aa9524c9065989eb7b93a5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 05083bbc767ad004e91ef93f28ba40f6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -826,11 +828,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 64aeda0ee191934408f48fa8391ed2c0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2b5567c4126884a499cf152952d9538e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.9
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1284,7 +1286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -277}
+  m_AnchoredPosition: {x: 0, y: -250}
   m_SizeDelta: {x: -1577.8899, y: -1033.1597}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135801685

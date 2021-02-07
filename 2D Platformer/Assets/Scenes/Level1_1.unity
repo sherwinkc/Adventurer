@@ -10053,6 +10053,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockNextJumpSpeed
       objectReference: {fileID: 0}
+    - target: {fileID: 1153676247362663872, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1333365180250152542, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}
       propertyPath: pauseScreen
@@ -10307,6 +10312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockNextSuperReturnedValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110951270912400855, guid: 68052065c05385b40a73bfce7f298382,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8110951271380462528, guid: 68052065c05385b40a73bfce7f298382,
         type: 3}

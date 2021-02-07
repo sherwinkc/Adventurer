@@ -19,6 +19,7 @@ public class LevelEnd : MonoBehaviour
     public float waitToMove, waitToLoad;
     private bool movePlayer;
     public bool coActive = false;
+    public bool fadingOutMusic = false;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,17 @@ public class LevelEnd : MonoBehaviour
         if(movePlayer)
         {
             playerMovement.myRigidbody.velocity = new Vector2(playerMovement.moveSpeed, playerMovement.myRigidbody.velocity.y);
+        }
+
+        if(fadingOutMusic)
+        {
+            theLevelManager.levelMusic.volume -= Time.deltaTime / 50f; 
+        }
+
+        if(theLevelManager.levelMusic.volume <= 0)
+        {
+            theLevelManager.levelMusic.volume = 0;
+            fadingOutMusic = false;
         }
     }
 
@@ -65,7 +77,8 @@ public class LevelEnd : MonoBehaviour
 
         if (theLevelManager != null)
         {
-            theLevelManager.levelMusic.Stop();
+            //theLevelManager.levelMusic.Stop();
+            fadingOutMusic = true;
             theLevelManager.gameOverMusic.Play();
         }
 

@@ -40,7 +40,7 @@ public class ChestScript : MonoBehaviour
     {
         OrbShower();
 
-        yield return new WaitForSeconds(10f * Time.deltaTime);
+        yield return new WaitForSeconds(20f * Time.deltaTime);
 
         openedByPlayer = true;
         openTheChest = false;
@@ -51,7 +51,7 @@ public class ChestScript : MonoBehaviour
 
     void OrbShower()
     {
-        Instantiate(orbPrefab, new Vector2(transform.position.x, transform.position.y + 1.6f), transform.rotation);
+        Instantiate(orbPrefab, new Vector2(transform.position.x, transform.position.y + 1.2f), transform.rotation);
         orbSFX.Play();
     }
 

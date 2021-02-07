@@ -73,7 +73,6 @@ public class PlayerCombat : MonoBehaviour
 
         superStartAmount = 0;
         superMax = 100;
-        //superRechargeRate = 1f; //set in upgrade
     }
 
     void Update()

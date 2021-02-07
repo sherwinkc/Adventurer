@@ -49,7 +49,7 @@ public class LevelManager : MonoBehaviour
     public int skillPoints, startingSkillPoints;    
 
     // Audio
-    public AudioSource coinSound, levelMusic, gameOverMusic, hurtSound, levelUpSound;
+    public AudioSource coinSound, levelMusic, gameOverMusic, hurtSound, levelUpSound, deathSound;
 
     #endregion
 
@@ -185,6 +185,7 @@ public class LevelManager : MonoBehaviour
 
         //Create explosion particle effect after deactivating/killing the player
         Instantiate(deathSplosion, thePlayer.transform.position, thePlayer.transform.rotation);
+        deathSound.Play();
 
         //delays the respawn by an amount of seconds
         yield return new WaitForSeconds(waitToRespawn);
