@@ -522,6 +522,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -644,15 +645,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274d421d4e98dfa4bb01eb6ebfc689fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   animator: {fileID: 106963400657392960}
+  enemyBehaviour: {fileID: 0}
+  playerCombat: {fileID: 0}
+  upgrades: {fileID: 0}
+  destroyOverTime: {fileID: 0}
   deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
     type: 3}
-  destroyOverTime: {fileID: 0}
+  orbsOnDeath: {fileID: 0}
   maxHealth: 100
   currentHealth: 0
   enemyGrunt1: {fileID: 1659722371}
   bloodSquelch: {fileID: 1932770193}
-  cameraShake: {fileID: 0}
 --- !u!1 &6249572965286336032
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +699,7 @@ GameObject:
   - component: {fileID: 2341854503593699654}
   - component: {fileID: 251449603146884548}
   - component: {fileID: 3303863254256677124}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: Enemy_Body Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,15 +758,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274d421d4e98dfa4bb01eb6ebfc689fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   animator: {fileID: 106963400657392960}
+  enemyBehaviour: {fileID: 0}
+  playerCombat: {fileID: 0}
+  upgrades: {fileID: 0}
+  destroyOverTime: {fileID: 1167424185}
   deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
     type: 3}
-  destroyOverTime: {fileID: 1167424185}
+  orbsOnDeath: {fileID: 0}
   maxHealth: 150
   currentHealth: 0
   enemyGrunt1: {fileID: 1659722371}
   bloodSquelch: {fileID: 1932770193}
-  cameraShake: {fileID: 0}
 --- !u!1 &6958008074037428344
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,12 +852,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4446443348692480042}
+  - component: {fileID: 200029049420701055}
   - component: {fileID: 9213567489138216150}
   - component: {fileID: 1167424185}
   - component: {fileID: 3654378430154641194}
   - component: {fileID: 106963400657392960}
   - component: {fileID: 729133908}
-  - component: {fileID: 200029049420701055}
   m_Layer: 10
   m_Name: Skeleton_1 (Patrol)
   m_TagString: Untagged
@@ -877,6 +886,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &200029049420701055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663103283514409148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274d421d4e98dfa4bb01eb6ebfc689fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  animator: {fileID: 106963400657392960}
+  enemyBehaviour: {fileID: 0}
+  playerCombat: {fileID: 0}
+  upgrades: {fileID: 0}
+  destroyOverTime: {fileID: 1167424185}
+  deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
+    type: 3}
+  orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
+    type: 3}
+  maxHealth: 100
+  currentHealth: 0
+  enemyGrunt1: {fileID: 1659722371}
+  bloodSquelch: {fileID: 1932770193}
 --- !u!114 &9213567489138216150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,7 +934,7 @@ MonoBehaviour:
   timer: 3
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}
-  enemySwipe: {fileID: 0}
+  enemySwipe: {fileID: 7176099555898776465}
 --- !u!114 &1167424185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,27 +1001,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &200029049420701055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7663103283514409148}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274d421d4e98dfa4bb01eb6ebfc689fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 106963400657392960}
-  deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
-    type: 3}
-  destroyOverTime: {fileID: 1167424185}
-  maxHealth: 300
-  currentHealth: 0
-  enemyGrunt1: {fileID: 1659722371}
-  bloodSquelch: {fileID: 1932770193}
-  cameraShake: {fileID: 0}
 --- !u!1 &7798839070283790743
 GameObject:
   m_ObjectHideFlags: 0

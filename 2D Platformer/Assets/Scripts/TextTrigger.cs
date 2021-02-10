@@ -7,11 +7,14 @@ public class TextTrigger : MonoBehaviour
 {
     public Text text;
     public bool coActive;
+    public float timeOnScreen;
+
     // Start is called before the first frame update
     void Start()
     {
-        //text = GetComponentInParent<Text>();   
         coActive = false;
+
+        timeOnScreen = 4f;
     }
 
     // Update is called once per frame
@@ -33,7 +36,7 @@ public class TextTrigger : MonoBehaviour
         coActive = true;
         text.enabled = true;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(timeOnScreen);
 
         text.enabled = false;
 

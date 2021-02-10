@@ -554,8 +554,8 @@ MonoBehaviour:
   m_ImpulseDefinition:
     m_ImpulseChannel: -1
     m_RawSignal: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
-    m_AmplitudeGain: 2
-    m_FrequencyGain: 2
+    m_AmplitudeGain: 7.5
+    m_FrequencyGain: 7.5
     m_RepeatMode: 0
     m_Randomize: 1
     m_TimeEnvelope:
@@ -564,21 +564,21 @@ MonoBehaviour:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 1
-          outSlope: 1
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
           value: 1
-          inSlope: 1
-          outSlope: 1
+          inSlope: -0.09730828
+          outSlope: -0.09730828
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.99999994
+          value: 0.91988516
+          inSlope: -0.09730828
+          outSlope: -0.09730828
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -608,8 +608,8 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       m_AttackTime: 0
-      m_SustainTime: 0.2
-      m_DecayTime: 0.7
+      m_SustainTime: 0.01
+      m_DecayTime: 0.05
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
@@ -696,7 +696,7 @@ MonoBehaviour:
   respawnCoActive: 0
   invincible: 0
   livesText: {fileID: 0}
-  startingLives: 5
+  startingLives: 3
   currentLives: 0
   skillPointsText: {fileID: 0}
   skillPoints: 0

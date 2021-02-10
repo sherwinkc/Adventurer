@@ -22,7 +22,7 @@ public class CoinScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         theLevelManager = FindObjectOfType<LevelManager>();
         playerMovement = FindObjectOfType<PlayerMovement>();
-        playerCombat = FindObjectOfType<PlayerCombat>();
+        //playerCombat = FindObjectOfType<PlayerCombat>();
 
         StartCoroutine(CoinBehaviour());
 
@@ -39,7 +39,7 @@ public class CoinScript : MonoBehaviour
         //checking distance and moving toward player if close enough
         if(moveTowardPlayer && Vector2.Distance(transform.position, playerMovement.transform.position) < 6f)
         {
-            rb.transform.position = Vector3.MoveTowards(transform.position, playerCombat.attackPoint.transform.position, Random.Range(20f, 30f) * Time.deltaTime);
+            rb.transform.position = Vector3.MoveTowards(transform.position, playerMovement.transform.position, Random.Range(10f, 20f) * Time.deltaTime);
         }
 
         //destroys object over a period of time
@@ -76,7 +76,7 @@ public class CoinScript : MonoBehaviour
 
         canBeCollected = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
         moveTowardPlayer = true;
 

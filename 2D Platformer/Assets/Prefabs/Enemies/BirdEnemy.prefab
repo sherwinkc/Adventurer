@@ -431,6 +431,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -602,9 +603,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8842029222137587457}
-  - component: {fileID: 3509462588697946927}
   - component: {fileID: 8803288219776719453}
   - component: {fileID: 3676974330768336872}
+  - component: {fileID: 5550572861233809548}
   m_Layer: 13
   m_Name: Colliders
   m_TagString: Untagged
@@ -626,29 +627,6 @@ Transform:
   m_Father: {fileID: 2266079410339306809}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3509462588697946927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6629876324990237969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274d421d4e98dfa4bb01eb6ebfc689fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 864224296023107169}
-  deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
-    type: 3}
-  destroyOverTime: {fileID: 5153468216634002882}
-  orbsOnDeath: {fileID: 0}
-  maxHealth: 40
-  currentHealth: 0
-  enemyGrunt1: {fileID: 4985489038003527410}
-  bloodSquelch: {fileID: 4569084592465194665}
-  cameraShake: {fileID: 0}
-  findCameraUsed: 0
 --- !u!114 &8803288219776719453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,6 +657,18 @@ CircleCollider2D:
   m_Offset: {x: -0.01, y: 0.06}
   serializedVersion: 2
   m_Radius: 0.53
+--- !u!114 &5550572861233809548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6629876324990237969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ae9a3642edc5845b5b9d106787a6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7524617344748993453
 GameObject:
   m_ObjectHideFlags: 0

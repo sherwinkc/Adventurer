@@ -120,7 +120,6 @@ public class PlayerCombat : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
                 currentStamina -= attackCost;
                 SwordSipe();
-                m_impulseSource.GenerateImpulse(0.5f);
             }
             else if ((Time.time >= nextAttackTime && !playerMovement.isGrounded))
             {
@@ -129,8 +128,9 @@ public class PlayerCombat : MonoBehaviour
                     nextAttackTime = Time.time + 1f / attackRate;
                     currentStamina -= attackCost;
                     SwordSipe();
-                    m_impulseSource.GenerateImpulse(0.5f);
             }
+
+            m_impulseSource.GenerateImpulse(1f); // impulse on every sword swipe
         }
     }
 
@@ -143,17 +143,22 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             //Debug.Log("We hit " + enemy.name);
+
             //Checking if the enemy script is on the same object as the enemy or the hitBox
             if (enemy.GetComponentInParent<Enemy>() != null)
             {
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                m_impulseSource.GenerateImpulse(1f);
                 StartCoroutine(SlowTimeCo());
             }
             else if (enemy.GetComponent<Enemy>() != null)
             {
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-                m_impulseSource.GenerateImpulse(1f);
+                StartCoroutine(SlowTimeCo());
+            }
+            //Check if we hit spider script
+            else if (enemy.GetComponentInParent<Spider_Script>() != null)
+            {
+                enemy.GetComponentInParent<Spider_Script>().TakeDamage(attackDamage);
                 StartCoroutine(SlowTimeCo());
             }
         }

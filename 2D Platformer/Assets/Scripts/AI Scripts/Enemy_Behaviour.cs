@@ -13,6 +13,7 @@ public class Enemy_Behaviour : MonoBehaviour
     public float timer;
     public Transform leftLimit;
     public Transform rightLimit;
+    
     //Audio
     public AudioSource enemySwipe;
     #endregion
@@ -116,6 +117,8 @@ public class Enemy_Behaviour : MonoBehaviour
         
         anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
+
+        enemySwipe.Play();
     }
 
     void Cooldown()

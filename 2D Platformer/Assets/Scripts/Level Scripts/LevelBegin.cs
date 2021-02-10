@@ -10,7 +10,7 @@ public class LevelBegin : MonoBehaviour
 
     public CinemachineVirtualCamera virtualCamera1, virtualCamera2, virtualCamera3;
 
-    public float cameraHoldTime_1, cameraHoldTime_2;
+    public float cameraHoldTime_1, cameraHoldTime_2, cameraHoldTime_3;
     public bool movePlayer;
     public bool levelBeginCoUsed;
 
@@ -65,6 +65,8 @@ public class LevelBegin : MonoBehaviour
         virtualCamera1.gameObject.SetActive(true);
         virtualCamera2.gameObject.SetActive(false);
         virtualCamera3.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(cameraHoldTime_3);
 
         movePlayer = false;
 

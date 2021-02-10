@@ -7,14 +7,20 @@ public class SpiderController : MonoBehaviour
     public float moveSpeed;
     public bool canMove = false;
     public bool isKnockback = false;
+
+    public bool movingLeft = true;
+    public bool movingRight = false;
+
+    public float timeCount = 0f;
+    public float movingTime;
     
     public Animator animator;
-    public Rigidbody2D myRigidbody;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        myRigidbody = GetComponentInParent<Rigidbody2D>();
+        rb = GetComponentInParent<Rigidbody2D>();
         animator = GetComponentInParent<Animator>();
     }
 
@@ -23,12 +29,40 @@ public class SpiderController : MonoBehaviour
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderHurt"))
         {
-            myRigidbody.velocity = new Vector3(2f, myRigidbody.velocity.y, 0f);
-        } 
+            rb.velocity = new Vector3(2f, rb.velocity.y, 0f);
+        }
         else if (canMove) //if in vicinity of the player, move to the left (y and z stay the same)
         {
-            myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f);
+            rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
         }
+
+        /*if (timeCount <= movingTime)
+        {
+            timeCount += Time.deltaTime;
+            rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
+
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderHurt"))
+            {
+                rb.velocity = new Vector3(2f, rb.velocity.y, 0f);
+            }
+            else if (canMove) //if in vicinity of the player, move to the left (y and z stay the same)
+            {
+                rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
+            }
+        }
+        
+        if (timeCount > movingTime)
+        {
+            timeCount = 0f;
+            rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
+            //transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+
+        /*if(rb.velocity.x <= 0 && movingLeft)
+        {
+            rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }*/
 
         //knock broken
         /*if(canMove && !isKnockback)
@@ -60,5 +94,10 @@ public class SpiderController : MonoBehaviour
     private void OnEnable()
     {
         canMove = false;
+    }
+
+    void FlipSpider()
+    {
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 }
