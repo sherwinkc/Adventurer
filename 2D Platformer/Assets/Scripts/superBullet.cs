@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class superBullet : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed;
     public Rigidbody2D rb;
-    public PlayerMovement playerMovement;
     public PlayerCombat playerCombat;
-    public Enemy enemy;
+    //public Enemy enemy;
 
     //Attack
-    public int attackDamage = 200;
+    public int attackDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +30,20 @@ public class superBullet : MonoBehaviour
             //Checking if the enemy script is on the same object as the enemy or the hitBox
             if (enemy.GetComponentInParent<Enemy>() != null)
             {
-                enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
+                enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage); 
             }
             else if (enemy.GetComponent<Enemy>() != null)
             {
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
+            //Check if we hit spider script
+            else if (enemy.GetComponentInParent<Spider_Script>() != null)
+            {
+                enemy.GetComponentInParent<Spider_Script>().TakeDamage(attackDamage);
+            }
+            else if (enemy.GetComponent<Fire_Skel_Script>() != null)
+            {
+                enemy.GetComponentInParent<Fire_Skel_Script>().TakeDamage(attackDamage);
             }
         }
     }

@@ -7,6 +7,7 @@ public class LevelBegin : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     private PlayerCombat playerCombat;
+    public Canvas canvasMain, canvasWorld;
 
     public CinemachineVirtualCamera virtualCamera1, virtualCamera2, virtualCamera3;
 
@@ -51,6 +52,9 @@ public class LevelBegin : MonoBehaviour
         virtualCamera2.gameObject.SetActive(true);
         virtualCamera3.gameObject.SetActive(false);
 
+        canvasMain.enabled = false;
+        canvasWorld.enabled = false;
+
         playerMovement.canMove = false;
         playerCombat.canMove = false;        
 
@@ -72,6 +76,9 @@ public class LevelBegin : MonoBehaviour
 
         playerMovement.canMove = true;
         playerCombat.canMove = true;
+
+        canvasMain.enabled = true;
+        canvasWorld.enabled = true;
 
         yield return null;
     }

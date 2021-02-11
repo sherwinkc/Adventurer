@@ -5,7 +5,6 @@ using Cinemachine;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
-
 public class PlayerCombat : MonoBehaviour
 {
     //Components
@@ -29,7 +28,7 @@ public class PlayerCombat : MonoBehaviour
     public CinemachineImpulseSource m_impulseSource;
 
     //Audio
-    public AudioSource swordSwipe, superSFX;
+    public AudioSource swordSwipe, superSFX, attackDud;
 
     //Camera Shake
     //TODO
@@ -45,6 +44,7 @@ public class PlayerCombat : MonoBehaviour
     //super
     public float superAmount, superStartAmount, superMax, superRechargeRate;
     public GameObject superBullet;
+    public GameObject superReadyText;
 
     //checks
     public bool canMove;
@@ -77,6 +77,7 @@ public class PlayerCombat : MonoBehaviour
 
         superStartAmount = 0;
         superMax = 100;
+        superReadyText.SetActive(false);
 
     }
 
@@ -104,10 +105,25 @@ public class PlayerCombat : MonoBehaviour
         {
             currentStamina = staminaMax;
         }
+
+        if(superAmount == superMax)
+        {
+            superReadyText.SetActive(true);
+        }
+        else if (superAmount < superMax)
+        {
+            superReadyText.SetActive(false); ;
+        }
     }
 
     void Attack()
     {
+        // Play attack dud sound if not enough stamina
+        if (playerMovement.knockbackCounter <= 0 && canMove && currentStamina < attackCost && Time.time > nextAttackTime)
+        {
+            attackDud.Play();
+        }
+
         //randomize attack animation
         randomAttack = attackTriggers[Random.Range(0, attackTriggers.Length)];
 

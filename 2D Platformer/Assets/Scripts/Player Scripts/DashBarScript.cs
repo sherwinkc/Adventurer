@@ -5,21 +5,22 @@ using UnityEngine.UI;
 
 public class DashBarScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    PlayerMovement playerMovement;
+    Upgrades upgrades;
     public Slider slider;
-    public PlayerMovement playerMovement;
-    public Upgrades upgrades;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        slider = GetComponent<Slider>();
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        upgrades = FindObjectOfType<Upgrades>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         slider.maxValue = upgrades.playerMovement.dashCooldownAmount;
         slider.value = upgrades.playerMovement.dashCounter;
+
+        transform.position = new Vector3(playerMovement.transform.position.x, playerMovement.transform.position.y + (float)1.9f, playerMovement.transform.position.z);
     }
 }
