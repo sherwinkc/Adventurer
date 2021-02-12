@@ -201,7 +201,7 @@ public class PlayerCombat : MonoBehaviour
         if(superAmount >= superMax)
         {
             StartCoroutine(SuperAttackSequence());
-            playSuperOnce = false; //for sfx
+            playSuperOnce = false; //for UI sfx
             m_impulseSource.GenerateImpulse(1f);
         }
     }
@@ -229,7 +229,7 @@ public class PlayerCombat : MonoBehaviour
         superAmount = superStartAmount;
         Time.timeScale = 0.5f;
         animator.SetTrigger("isSuper");
-        SwordSipe();        
+        //SwordSipe();        
 
         yield return new WaitForSeconds(0.2f);
 

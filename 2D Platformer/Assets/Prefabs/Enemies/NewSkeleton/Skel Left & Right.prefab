@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5827253347644229924}
   - component: {fileID: 5827253347644229850}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Enemy_Body Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 5827253347789751919}
   - component: {fileID: 5827253347789751916}
   - component: {fileID: 5827253347789751917}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: Skeleton_1Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

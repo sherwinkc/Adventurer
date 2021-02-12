@@ -452,7 +452,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 33
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1119,6 +1119,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86848467bf7e18444980e3e2e18cd7b6, type: 3}
+--- !u!1 &1666238352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1816588125664976, guid: 86848467bf7e18444980e3e2e18cd7b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1666238351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1666238353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666238352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3e7778c7455bc49b6d456584a68696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationTime: 12
+  coInUse: 0
+  moveRight: 0
+  moveLeft: 0
 --- !u!1 &1755367794
 GameObject:
   m_ObjectHideFlags: 0

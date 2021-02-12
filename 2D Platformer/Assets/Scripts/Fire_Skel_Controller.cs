@@ -4,78 +4,93 @@ using UnityEngine;
 
 public class Fire_Skel_Controller : MonoBehaviour
 {
-    public float moveSpeed;
-    public bool canMove = false;
-    public bool isKnockback = false;
-
-    public bool movingLeft = true;
-    public bool movingRight = false;
-
-    public float timeCount = 0f;
-    public float movingTime;
-
     public Animator animator;
     public Rigidbody2D rb;
+    public PlayerMovement playerMovement;
+    public LevelManager levelManager;
 
-    // Start is called before the first frame update
+    public float moveSpeed;
+    public bool canMove = false;
+
+    public bool attacking = false;
+
+    public float attackCooldown;
+    public float attackCounter;
+    public bool startCooldown = false;
+
+    public float distanceToPlayer;
+
+
     void Start()
     {
         rb = GetComponentInParent<Rigidbody2D>();
         animator = GetComponentInParent<Animator>();
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderHurt"))
+        // Move towards the player
+        
+        if(levelManager.healthCount > 0 )
         {
-            rb.velocity = new Vector3(2f, rb.velocity.y, 0f);
-        }
-        else if (canMove) //if in vicinity of the player, move to the left (y and z stay the same)
-        {
-            rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
-        }
-
-        /*if (timeCount <= movingTime)
-        {
-            timeCount += Time.deltaTime;
-            rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
-
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderHurt"))
-            {
-                rb.velocity = new Vector3(2f, rb.velocity.y, 0f);
-            }
-            else if (canMove) //if in vicinity of the player, move to the left (y and z stay the same)
+            if (playerMovement.transform.position.x < transform.position.x && canMove && !attacking)
             {
                 rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
+                transform.localScale = new Vector3(3, transform.localScale.y, transform.localScale.y);
+            }
+            else if (playerMovement.transform.position.x > transform.position.x && canMove && !attacking )
+            {
+                rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
+                transform.localScale = new Vector3(-3, transform.localScale.y, transform.localScale.y);
+            }
+            else
+            {
+                rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.y);
             }
         }
-        
-        if (timeCount > movingTime)
+  
+        if (Vector2.Distance(transform.position, playerMovement.transform.position) < distanceToPlayer && attackCounter <= 0)
         {
-            timeCount = 0f;
-            rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
-            //transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            if(levelManager.healthCount > 0)
+            {
+                if (playerMovement.transform.position.x < transform.position.x)      
+                {
+                    animator.SetTrigger("Attack1");
+                    startCooldown = true;
+                }
+                else if (playerMovement.transform.position.x > transform.position.x)
+                {
+                    animator.SetTrigger("Attack1");
+                    startCooldown = true;
+                }
+            }
         }
 
-        /*if(rb.velocity.x <= 0 && movingLeft)
+        if (attackCounter >= attackCooldown)
         {
-            rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }*/
+            attackCounter = 0f;
+            startCooldown = false;
+        }
 
-        //knock broken
-        /*if(canMove && !isKnockback)
+        if (startCooldown)
         {
-            myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0f); 
-        } 
-        else if (isKnockback)
+            attackCounter += Time.deltaTime;
+        }
+
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1"))
         {
-            myRigidbody.velocity = new Vector3(5f, 0f, 0f);
-        }*/
+            attacking = true;
+        }
+        else
+        {
+            attacking = false;
+        }
     }
 
-    //built in unity function. When something is visible on screen. There is also OnBecameInvisible
     private void OnBecameVisible()
     {
         canMove = true;
@@ -94,10 +109,5 @@ public class Fire_Skel_Controller : MonoBehaviour
     private void OnEnable()
     {
         canMove = false;
-    }
-
-    void FlipSpider()
-    {
-        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 }

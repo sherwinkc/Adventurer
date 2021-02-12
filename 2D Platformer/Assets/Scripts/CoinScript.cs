@@ -36,7 +36,7 @@ public class CoinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //checking distance and moving toward player if close enough
+        //checking distance and move toward player if close enough
         if(moveTowardPlayer && Vector2.Distance(transform.position, playerMovement.transform.position) < 6f)
         {
             rb.transform.position = Vector3.MoveTowards(transform.position, playerMovement.transform.position, Random.Range(10f, 20f) * Time.deltaTime);
