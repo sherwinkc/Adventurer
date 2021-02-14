@@ -26,6 +26,8 @@ public class Fire_Skel_Controller : MonoBehaviour
     string state;
     string[] stateList = { "Attack1", "Guard" };
 
+    //Audio
+    public AudioSource swipe, idle, skel_steps;
 
     void Start()
     {
@@ -109,6 +111,7 @@ public class Fire_Skel_Controller : MonoBehaviour
     private void OnBecameVisible()
     {
         canMove = true;
+        idle.Play();
     }
 
     //destroy enemy if colliding with the Kill Plane
@@ -124,5 +127,16 @@ public class Fire_Skel_Controller : MonoBehaviour
     private void OnEnable()
     {
         canMove = false;
+    }
+
+    public void Skel_SwipeSFX()
+    {
+        swipe.Play();
+    }
+
+    public void Skel_FootstepSFX()
+    {        
+        skel_steps.pitch = (Random.Range(0.7f, 1.2f));
+        skel_steps.Play();
     }
 }

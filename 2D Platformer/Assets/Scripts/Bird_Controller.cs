@@ -61,6 +61,7 @@ public class Bird_Controller : MonoBehaviour
             animator.SetTrigger("FlyFaster");
             if(!crow2.isPlaying)
             {
+                crow2.pitch = Random.Range(0.85f, 1f);
                 crow2.Play();
             }
         } 
@@ -113,7 +114,7 @@ public class Bird_Controller : MonoBehaviour
             if(!crow1.isPlaying)
             {
                 crow2.Stop();
-                crow1.pitch = (Random.Range(0.95f, 1f));
+                crow1.pitch = (Random.Range(0.9f, 1f));
                 crow1.Play();
             }
         }

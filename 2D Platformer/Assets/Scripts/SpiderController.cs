@@ -10,7 +10,9 @@ public class SpiderController : MonoBehaviour
 
     public float moveSpeed;
     public bool canMove = false;
-    public bool isKnockback = false;    
+    public bool isKnockback = false;
+
+    public AudioSource churp, scurry;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,7 @@ public class SpiderController : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderHurt")) // if spider is hurt he is pushed back - interesting
         {
             rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
+            //scurry.Stop();
         }
 
         //knock broken
@@ -53,16 +56,27 @@ public class SpiderController : MonoBehaviour
     //built in unity function. When something is visible on screen. There is also OnBecameInvisible
     private void OnBecameVisible()
     {
-        canMove = true;        
+        canMove = true;
+        churp.Play();
+        scurry.Play();
     }
 
     //destroy enemy if colliding with the Kill Plane
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "KillPlane")
+        if (other.tag == "KillPlane")
         {
             gameObject.SetActive(false);
         }
+
+        if (other.tag == "Player")
+        {
+            if(!churp.isPlaying)
+            {                
+                churp.Play();
+            }
+        }
+
     }
 
     //spider resets to original position when the game resets

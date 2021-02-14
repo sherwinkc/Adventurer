@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 3792299865967028}
   - component: {fileID: 3661802829050047035}
   - component: {fileID: 5930975568785796694}
-  m_Layer: 0
+  - component: {fileID: 3677885172253501854}
+  m_Layer: 17
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,6 +167,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &3677885172253501854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792299865967027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2068c8ededc7efe4a8e614e8250883e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &60503441035484960
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4615337686394227928}
   - component: {fileID: 287539179605141212}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +283,7 @@ GameObject:
   - component: {fileID: 1753590455385749918}
   - component: {fileID: 8017793294013551169}
   - component: {fileID: 8996035019058300067}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5085,7 +5098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6660516662905600659}
   - component: {fileID: 5085402104863627481}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5131,7 +5144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718579163457617953}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5164,7 +5177,7 @@ GameObject:
   - component: {fileID: 5436297784389487567}
   - component: {fileID: 408083479284103016}
   - component: {fileID: 7113855699551115450}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Pulsate
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -65,6 +65,13 @@ public class Bird_Script : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            //turn off pathfinding && colliders here - will crash otherwise
+            GetComponentInChildren<CircleCollider2D>().enabled = false;
+            aiPath.canMove = false;
+            aiPath.enabled = false;
+            aiDestSetter.enabled = false;
+            birdController.enabled = false;
+
             Instantiate(deathSplosion, transform.position, transform.rotation);
 
             for (int i = 0; i < Random.Range(4f, 5f); i++)
@@ -72,8 +79,9 @@ public class Bird_Script : MonoBehaviour
                 Instantiate(orbsOnDeath, new Vector2(transform.position.x, transform.position.y), transform.rotation);
             }
 
-            Die();
             playerCombat.superAmount += upgrades.superAmountReturned;
+
+            Die();
         }
 
         crow.Play();
@@ -93,14 +101,15 @@ public class Bird_Script : MonoBehaviour
         die.Play();
 
         //turn off all pathfinding
-        //aiPath.canMove = false;
+        aiPath.canMove = false;
         aiPath.enabled = false;
         aiDestSetter.enabled = false;
         birdController.enabled = false;
 
-        //Disable Box Colliders
-        //GetComponentInChildren<CircleCollider2D>().enabled = false;
-        //GetComponent<CircleCollider2D>().enabled = false;
+        //Disable Colliders
+        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponentInChildren<CircleCollider2D>().enabled = false;
+        GetComponentInChildren<BoxCollider2D>().enabled = false;
 
         //rb.simulated = true;
         //boxCollider2D.enabled = true;

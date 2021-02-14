@@ -21,8 +21,7 @@ public class Spider_Script : MonoBehaviour
     public int currentHealth;
 
     //Audio
-    public AudioSource enemyGrunt;
-    public AudioSource bloodSquelch;
+    public AudioSource enemyGrunt, bloodSquelch;
 
     // Start is called before the first frame update
     void Start()
@@ -74,13 +73,15 @@ public class Spider_Script : MonoBehaviour
         {
             enemyGrunt.Play();
         }
-
-        bloodSquelch.Play(); 
+        bloodSquelch.Play();
     }
 
     void Die()
     {
+
         animator.SetBool("isDead", true);
+        spiderController.churp.Stop();
+        spiderController.scurry.Stop();
 
         spiderController.canMove = false;
 

@@ -9,26 +9,38 @@ public class PlayDistance : MonoBehaviour
 
     public float distanceFromSound;
 
+    public float maxVolume;
+
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        playerMovement= FindObjectOfType<PlayerMovement>();
+        playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(transform.position, playerMovement.transform.position) < distanceFromSound)
+        if (Vector2.Distance(transform.position, playerMovement.transform.position) < distanceFromSound)
         {
-            //Debug.Log("less than 6");
+            audioSource.volume += Time.deltaTime / 5;
+
+            if (audioSource.volume >= maxVolume)
+            {
+                audioSource.volume = maxVolume;
+            }
         }
         else
         {
-            //Debug.Log("greater than 6");
-        }
+            if (audioSource.volume > 0)
+            {
+                audioSource.volume -= Time.deltaTime / 5;
+            }
 
-        //Debug.Log(playerNew.transform.position.x - transform.position.x);
-        //Debug.Log(Mathf.Abs(playerNew.transform.position.x - transform.position.x));
+            if (audioSource.volume <= 0)
+            {
+                audioSource.volume = 0f;
+            }
+        }
     }
 }

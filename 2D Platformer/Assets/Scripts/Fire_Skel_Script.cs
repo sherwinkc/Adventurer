@@ -15,14 +15,13 @@ public class Fire_Skel_Script : MonoBehaviour
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
 
-    public GameObject fireVFX;
+    //public GameObject fireVFX;
 
     public int maxHealth;
     public int currentHealth;
 
     //Audio
-    public AudioSource enemyGrunt1;
-    public AudioSource bloodSquelch;
+    public AudioSource enemyGrunt1, bloodSquelch, dead;
 
     void Start()
     {
@@ -35,7 +34,7 @@ public class Fire_Skel_Script : MonoBehaviour
         playerCombat = FindObjectOfType<PlayerCombat>();
         upgrades = FindObjectOfType<Upgrades>();
 
-        fireVFX.gameObject.SetActive(true);
+        //fireVFX.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -62,6 +61,8 @@ public class Fire_Skel_Script : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            fire_Skel_Controller.idle.Stop();
+            dead.Play();
             Instantiate(deathSplosion, transform.position, transform.rotation);
 
             for (int i = 0; i < Random.Range(4f, 5f); i++)
@@ -70,6 +71,7 @@ public class Fire_Skel_Script : MonoBehaviour
             }
 
             Die();
+
             playerCombat.superAmount += upgrades.superAmountReturned; //???
         }
     }
@@ -82,7 +84,7 @@ public class Fire_Skel_Script : MonoBehaviour
 
         rb.simulated = false;
 
-        fireVFX.gameObject.SetActive(false);
+        //fireVFX.gameObject.SetActive(false);
 
         //Disable Box Colliders
         GetComponent<BoxCollider2D>().enabled = false;

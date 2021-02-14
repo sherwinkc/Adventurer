@@ -53,7 +53,9 @@ public class Sludge_Script : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            sludgeController.idle.Stop();
             Die();
+
             Instantiate(deathSplosion, transform.position, transform.rotation);
 
             for (int i = 0; i < Random.Range(2f, 4f); i++)

@@ -15,7 +15,7 @@ public class Enemy_Behaviour : MonoBehaviour
     public Transform rightLimit;
     
     //Audio
-    public AudioSource enemySwipe;
+    public AudioSource swipe, skel_steps, idle;
     #endregion
 
     #region Private Variables
@@ -32,6 +32,11 @@ public class Enemy_Behaviour : MonoBehaviour
         SelectTarget();
         intTimer = timer;
         anim = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        idle.Play();
     }
 
     // Update is called once per frame
@@ -117,8 +122,6 @@ public class Enemy_Behaviour : MonoBehaviour
         
         anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
-
-        enemySwipe.Play();
     }
 
     void Cooldown()
@@ -192,4 +195,18 @@ public class Enemy_Behaviour : MonoBehaviour
 
         transform.eulerAngles = rotation;
     }
+
+    public void SwipeSFX()
+    {
+        swipe.pitch = Random.Range(0.8f, 1f);
+        swipe.Play();
+    }
+
+    public void SkelStepsSFX()
+    {
+        skel_steps.pitch = Random.Range(0.8f, 1f);
+        skel_steps.Play();
+    }
+
+
 }

@@ -14,7 +14,7 @@ public class Sludge_Controller : MonoBehaviour
     public bool startCooldown = false;
 
     //audio
-    public AudioSource swipe;
+    public AudioSource swipe, idle, moan;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +58,13 @@ public class Sludge_Controller : MonoBehaviour
 
     public void SwipeSFX()
     {
+        swipe.pitch = Random.Range(0.8f, 1f);
         swipe.Play();
+    }
+
+    public void SludgeMoan()
+    {
+        moan.pitch = Random.Range(0.8f, 1f);
+        moan.Play();
     }
 }

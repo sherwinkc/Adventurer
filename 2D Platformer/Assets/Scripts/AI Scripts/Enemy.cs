@@ -19,8 +19,7 @@ public class Enemy : MonoBehaviour
     public int currentHealth;
 
     //Audio
-    public AudioSource enemyGrunt1;
-    public AudioSource bloodSquelch;
+    public AudioSource enemyGrunt1, bloodSquelch, die;
 
     void Start()
     {
@@ -47,17 +46,15 @@ public class Enemy : MonoBehaviour
         if (currentHealth >= 0)
         {
             animator.SetTrigger("Hurt");
-        }
- 
-        if (enemyGrunt1 != null)
-        {
-            enemyGrunt1.Play();
-        }
+        } 
 
+        enemyGrunt1.Play();
         bloodSquelch.Play();
 
         if (currentHealth <= 0)
         {
+            enemyBehaviour.idle.Stop();
+
             Instantiate(deathSplosion, transform.position, transform.rotation);
 
             for (int i = 0; i < Random.Range(4f, 5f); i++)
@@ -66,6 +63,7 @@ public class Enemy : MonoBehaviour
             }
 
             Die();
+
             playerCombat.superAmount += upgrades.superAmountReturned; //???
 
         }
@@ -74,6 +72,8 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         animator.SetBool("isDead", true);
+
+        die.Play();
 
         rb.simulated = false;
         enemyBehaviour.enabled = false;
