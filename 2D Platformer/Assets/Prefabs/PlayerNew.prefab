@@ -11105,7 +11105,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 8192
-  attackDamage: 45
+  attackDamage: 0
   attackRate: 2.75
   nextAttackTime: 0
   m_impulseSource: {fileID: 0}

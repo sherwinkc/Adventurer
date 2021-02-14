@@ -10,6 +10,7 @@ public class Fire_Skel_Script : MonoBehaviour
     public PlayerCombat playerCombat;
     public Upgrades upgrades;
     public DestroyOverTime destroyOverTime;
+    public Fire_Skel_Controller fire_Skel_Controller;
 
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
@@ -30,12 +31,11 @@ public class Fire_Skel_Script : MonoBehaviour
         animator = GetComponent<Animator>();
         destroyOverTime = GetComponentInParent<DestroyOverTime>();
         rb = GetComponent<Rigidbody2D>();
-
+        fire_Skel_Controller = GetComponent<Fire_Skel_Controller>();
         playerCombat = FindObjectOfType<PlayerCombat>();
         upgrades = FindObjectOfType<Upgrades>();
 
-        fireVFX.SetActive(true);
-        //fireVFX = GetComponentInChildren<ParticleSystem>();
+        fireVFX.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -71,22 +71,22 @@ public class Fire_Skel_Script : MonoBehaviour
 
             Die();
             playerCombat.superAmount += upgrades.superAmountReturned; //???
-
         }
     }
 
     void Die()
     {
-        animator.SetBool("isDead", true);
+        animator.SetTrigger("isDead 0");
+
+        fire_Skel_Controller.canMove = false;
 
         rb.simulated = false;
 
-        //TODO disable particle systems
-        //GetComponentInChildren<ParticleSystem>().emission.enabled = false;
-        fireVFX.SetActive(false);
+        fireVFX.gameObject.SetActive(false);
 
         //Disable Box Colliders
         GetComponent<BoxCollider2D>().enabled = false;
+        GetComponentInChildren<BoxCollider2D>().enabled = false;
 
         //Disable any capsule collders
         GetComponent<CapsuleCollider2D>().enabled = false;

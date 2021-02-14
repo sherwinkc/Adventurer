@@ -158,29 +158,37 @@ public class PlayerCombat : MonoBehaviour
         //damage them
         foreach (Collider2D enemy in hitEnemies)
         {
-            //Debug.Log("We hit " + enemy.name);
+            Debug.Log("We hit " + enemy.name);
 
             //Checking if the enemy script is on the same object as the enemy or the hitBox
-            if (enemy.GetComponentInParent<Enemy>() != null)
+            if(enemy.GetComponentInParent<Enemy>() != null)
             {
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                StartCoroutine(SlowTimeCo());
+                //StartCoroutine(SlowTimeCo());
             }
-            else if (enemy.GetComponent<Enemy>() != null)
+            else if(enemy.GetComponent<Enemy>() != null)
             {
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-                StartCoroutine(SlowTimeCo());
+                //StartCoroutine(SlowTimeCo());
             }
             //Check if we hit spider script
-            else if (enemy.GetComponentInParent<Spider_Script>() != null)
+            else if(enemy.GetComponentInParent<Spider_Script>() != null)
             {
                 enemy.GetComponentInParent<Spider_Script>().TakeDamage(attackDamage);
-                StartCoroutine(SlowTimeCo());
+                //StartCoroutine(SlowTimeCo());
             }
-            else if (enemy.GetComponent<Fire_Skel_Script>() != null)
+            else if(enemy.GetComponentInParent<Fire_Skel_Script>() != null)
             {
                 enemy.GetComponentInParent<Fire_Skel_Script>().TakeDamage(attackDamage);
-                StartCoroutine(SlowTimeCo());
+                //StartCoroutine(SlowTimeCo());
+            }
+            else if(enemy.GetComponentInParent<Sludge_Script>() !=null)
+            {
+                enemy.GetComponentInParent<Sludge_Script>().TakeDamage(attackDamage);
+            }
+            else if (enemy.GetComponentInParent<Bird_Script>() != null)
+            {
+                enemy.GetComponentInParent<Bird_Script>().TakeDamage(attackDamage);
             }
         }
     }

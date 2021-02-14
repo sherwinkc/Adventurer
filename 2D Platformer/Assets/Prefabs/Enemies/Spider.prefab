@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176378993327671431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.245, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4361688055717076643}
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 8361775311412087238}
   - {fileID: 1661615774956162261}
   m_Father: {fileID: 176378994773146727}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176378994309367870
 GameObject:
@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 176378994773146733}
   - component: {fileID: 176378994773146726}
   - component: {fileID: 176378994773146728}
+  - component: {fileID: 2701252154616873118}
   m_Layer: 10
   m_Name: Spider
   m_TagString: Enemy
@@ -191,17 +192,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176378994773146723}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -82.16, y: 9.1, z: 4.9765625}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 5436193994156292885}
-  - {fileID: 1162534722547514524}
   - {fileID: 1523481324428466984}
   - {fileID: 176378993327671430}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &176378994773146722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,11 +214,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d55eccb8a60c52346891b17b2e0d8d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
+  animator: {fileID: 0}
+  rb: {fileID: 0}
+  playerMovement: {fileID: 0}
+  moveSpeed: 1
   canMove: 0
   isKnockback: 0
-  animator: {fileID: 0}
-  myRigidbody: {fileID: 0}
 --- !u!114 &1773573820148679861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +235,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   playerCombat: {fileID: 0}
   rb: {fileID: 0}
+  spiderController: {fileID: 0}
   deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
     type: 3}
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
@@ -241,7 +243,7 @@ MonoBehaviour:
   destroyOverTime: {fileID: 0}
   upgrades: {fileID: 0}
   spider: {fileID: 0}
-  maxHealth: 20
+  maxHealth: 55
   currentHealth: 0
   enemyGrunt: {fileID: 6836084211387819810}
   bloodSquelch: {fileID: 176378994309367809}
@@ -311,6 +313,58 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!212 &2701252154616873118
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176378994773146723}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1750281027
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 3873087697204469031, guid: 82e26e0cb80638d44a6bd8fdd51c6dd7,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &260406597899497807
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5436193994156292885}
   - component: {fileID: 4927382349085983644}
+  - component: {fileID: 5267649784122552937}
   m_Layer: 10
   m_Name: Spider Colliders
   m_TagString: Untagged
@@ -358,6 +413,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.2}
   serializedVersion: 2
   m_Radius: 0.19
+--- !u!114 &5267649784122552937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260406597899497807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2068c8ededc7efe4a8e614e8250883e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662627504881802673
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +485,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 176378994773146727}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &6549012819049411085
 CircleCollider2D:
@@ -637,104 +704,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &9013224232353596094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1162534722547514524}
-  - component: {fileID: 6261064967417337807}
-  - component: {fileID: 1195017366403370331}
-  m_Layer: 10
-  m_Name: Spider Sprites
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1162534722547514524
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9013224232353596094}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 176378994773146727}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6261064967417337807
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9013224232353596094}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1750281027
-  m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 3873087697204469031, guid: 82e26e0cb80638d44a6bd8fdd51c6dd7,
-    type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &1195017366403370331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9013224232353596094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d55eccb8a60c52346891b17b2e0d8d64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  canMove: 0
-  isKnockback: 0
-  animator: {fileID: 0}
-  myRigidbody: {fileID: 0}

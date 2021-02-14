@@ -5153,7 +5153,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   playerCombat: {fileID: 0}
   attackDamage: 200
-  superSFX1: {fileID: 0}
+  superSFX1: {fileID: 8122513054473596421}
 --- !u!212 &7767972587225191753
 SpriteRenderer:
   m_ObjectHideFlags: 0

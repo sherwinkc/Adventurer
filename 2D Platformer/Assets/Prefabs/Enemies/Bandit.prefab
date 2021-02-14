@@ -188,7 +188,7 @@ Transform:
   - {fileID: 1384202150648715835}
   - {fileID: 6842084226311810700}
   m_Father: {fileID: 1519920251121098411}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &844901115424727180
 GameObject:
@@ -219,7 +219,7 @@ Transform:
   m_Children:
   - {fileID: 2788129832208996958}
   m_Father: {fileID: 1519920251121098411}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519920250087135042
 GameObject:
@@ -381,7 +381,7 @@ Transform:
   - {fileID: 126224815767978249}
   - {fileID: 1310762302459719896}
   m_Father: {fileID: 1519920251121098411}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519920251121098413
 GameObject:
@@ -402,7 +402,8 @@ GameObject:
   - component: {fileID: 1519920251121098423}
   - component: {fileID: 1519920251121098418}
   - component: {fileID: 1519920251121098408}
-  m_Layer: 13
+  - component: {fileID: 5438835966011439220}
+  m_Layer: 10
   m_Name: Bandit
   m_TagString: Enemy
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -420,6 +421,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
+  - {fileID: 8450399675950011141}
+  - {fileID: 1784650836248098904}
   - {fileID: 2783070431893453859}
   - {fileID: 1429284893725257760}
   - {fileID: 1519920250357147598}
@@ -443,12 +446,13 @@ MonoBehaviour:
   playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   destroyOverTime: {fileID: 0}
+  fire_Skel_Controller: {fileID: 0}
   deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
     type: 3}
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
     type: 3}
   fireVFX: {fileID: 837718435151428472}
-  maxHealth: 200
+  maxHealth: 125
   currentHealth: 0
   enemyGrunt1: {fileID: 1519920250087135043}
   bloodSquelch: {fileID: 7083295668330537461}
@@ -468,9 +472,11 @@ MonoBehaviour:
   rb: {fileID: 0}
   playerMovement: {fileID: 0}
   levelManager: {fileID: 0}
-  moveSpeed: 2
+  fireSkelScript: {fileID: 0}
+  moveSpeed: 1.5
   canMove: 0
   attacking: 0
+  guarding: 0
   attackCooldown: 2
   attackCounter: 0
   startCooldown: 0
@@ -488,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 0}
-  damageToGive: 2
+  damageToGive: 1
 --- !u!114 &1519920251121098419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,13 +620,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519920251121098413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.255}
+  m_Offset: {x: -0.021908194, y: 0.255}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -631,7 +637,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38, y: 0.2}
+  m_Size: {x: 0.3361836, y: 0.19999999}
   m_EdgeRadius: 0
 --- !u!70 &1519920251121098408
 CapsuleCollider2D:
@@ -649,6 +655,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.255}
   m_Size: {x: 0.24, y: 0.51}
   m_Direction: 0
+--- !u!114 &5438835966011439220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519920251121098413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2068c8ededc7efe4a8e614e8250883e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2346647992686382997
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +697,135 @@ Transform:
   m_Father: {fileID: 1519920250357147598}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3130872533457924837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8450399675950011141}
+  - component: {fileID: 2084187873125372657}
+  m_Layer: 13
+  m_Name: EB_Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8450399675950011141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3130872533457924837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1519920251121098411}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2084187873125372657
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3130872533457924837}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0318845, y: 0.25004163}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32539105, y: 0.49991673}
+  m_EdgeRadius: 0
+--- !u!1 &3585072665548023672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784650836248098904}
+  - component: {fileID: 5925536896279075185}
+  - component: {fileID: 3783821127350125236}
+  m_Layer: 10
+  m_Name: Hit Box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1784650836248098904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585072665548023672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1519920251121098411}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5925536896279075185
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585072665548023672}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10875018, y: 0.3503825}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.07174349, y: 0.16033411}
+  m_EdgeRadius: 0
+--- !u!114 &3783821127350125236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585072665548023672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c7a288ab3d6f54688f9d91d6f0a285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 0}
+  damageToGive: 1
 --- !u!1 &4292444505156450550
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2788129832208996958}
   - component: {fileID: 6432276934368878812}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,9 +935,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429284893725257760}
     m_Modifications:
+    - target: {fileID: 1115173267173484, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376085398422128, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526051853505956, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1991208074445590, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
       propertyPath: m_Name
       value: PF FX Torch Fire (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991208074445590, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4254698137153634, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
       propertyPath: m_RootOrder
@@ -851,9 +1014,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429284893725257760}
     m_Modifications:
+    - target: {fileID: 1115173267173484, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376085398422128, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526051853505956, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1991208074445590, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
       propertyPath: m_Name
       value: PF FX Torch Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991208074445590, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4254698137153634, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
       propertyPath: m_RootOrder
@@ -929,9 +1108,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429284893725257760}
     m_Modifications:
+    - target: {fileID: 1115173267173484, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376085398422128, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526051853505956, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1991208074445590, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
       propertyPath: m_Name
       value: PF FX Torch Fire (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991208074445590, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4254698137153634, guid: 4cfc0b96b77f5374a9242d6779dd65bf, type: 3}
       propertyPath: m_RootOrder

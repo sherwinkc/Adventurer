@@ -18,7 +18,7 @@ public class DestroyOverTime : MonoBehaviour
     {
         if (isOn)
         {
-            lifetime = lifetime - Time.deltaTime;
+            lifetime -= Time.deltaTime;
 
             if (lifetime <= 0f)
             {

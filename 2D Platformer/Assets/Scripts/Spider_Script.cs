@@ -8,6 +8,7 @@ public class Spider_Script : MonoBehaviour
     public Animator animator;
     public PlayerCombat playerCombat;
     public Rigidbody2D rb;
+    public SpiderController spiderController;
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
     public DestroyOverTime destroyOverTime;
@@ -31,7 +32,8 @@ public class Spider_Script : MonoBehaviour
 
         //Get Components
         animator = GetComponent<Animator>();
-        destroyOverTime = GetComponentInParent<DestroyOverTime>();        
+        destroyOverTime = GetComponentInParent<DestroyOverTime>();
+        spiderController = GetComponent<SpiderController>();
         playerCombat = FindObjectOfType<PlayerCombat>();
         upgrades = FindObjectOfType<Upgrades>();
         spider = FindObjectOfType<SpiderController>();
@@ -51,7 +53,7 @@ public class Spider_Script : MonoBehaviour
         if (currentHealth >= 0)
         {
             animator.SetTrigger("Hurt");
-            spider.isKnockback = true;
+            //spider.isKnockback = true;
         }
 
         if (currentHealth <= 0)
@@ -80,8 +82,10 @@ public class Spider_Script : MonoBehaviour
     {
         animator.SetBool("isDead", true);
 
-        //Disable Rigidbody on Parent  
-        GetComponent<Rigidbody2D>().simulated = false;
+        spiderController.canMove = false;
+
+        //Disable Rigidbody  
+        rb.simulated = false;
 
         //Disable Circle Collider in Children 
         GetComponentInChildren<CircleCollider2D>().enabled = false;
