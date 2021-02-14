@@ -99,12 +99,11 @@ public class Bird_Script : MonoBehaviour
         birdController.enabled = false;
 
         //Disable Box Colliders
-        GetComponentInChildren<CircleCollider2D>().enabled = false;
-        GetComponent<CircleCollider2D>().enabled = false;
+        //GetComponentInChildren<CircleCollider2D>().enabled = false;
+        //GetComponent<CircleCollider2D>().enabled = false;
 
         //rb.simulated = true;
         //boxCollider2D.enabled = true;
-
 
         //Destroy Parent object over time
         destroyOverTime.isOn = true;

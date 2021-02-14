@@ -158,7 +158,7 @@ public class PlayerCombat : MonoBehaviour
         //damage them
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("We hit " + enemy.name);
+            //Debug.Log("We hit " + enemy.name);
 
             //Checking if the enemy script is on the same object as the enemy or the hitBox
             if(enemy.GetComponentInParent<Enemy>() != null)
