@@ -33,17 +33,15 @@ public class RadialStaminaBar : MonoBehaviour
 
         transform.position = new Vector3(playerMovement.transform.position.x, playerMovement.transform.position.y + (float)2.25, playerMovement.transform.position.z);
 
-        if (playerCombat.currentStamina >= upgrades.playerCombat.staminaMax)
+        //add transparency if bar is full
+        /*if (playerCombat.currentStamina >= upgrades.playerCombat.staminaMax)
         {
             image.color = new Color(1f, 0f, 0f, 0.5f);
         }
         else
         {
             image.color = new Color(1f, 0f, 0f, 1f);
-        }
-
-
-
+        }*/
 
     }
 }
