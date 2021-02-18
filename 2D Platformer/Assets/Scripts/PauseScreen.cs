@@ -29,7 +29,7 @@ public class PauseScreen : MonoBehaviour
             {
                 upgrades.SetActive(true);
                 settings.SetActive(false);
-                Time.timeScale = 0f;
+                Time.timeScale = 0.01f;
                 playerMovement.enabled = false;
                 playerCombat.enabled = false;
             }
