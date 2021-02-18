@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public Upgrades upgrades;
     public DestroyOverTime destroyOverTime;
     
+    public Transform squibTransform;
+    public GameObject squib;
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
 
@@ -19,7 +21,7 @@ public class Enemy : MonoBehaviour
     public int currentHealth;
 
     //Audio
-    public AudioSource enemyGrunt1, bloodSquelch, die;
+    public AudioSource enemyGrunt1, grunt2, bloodSquelch, die;
 
     void Start()
     {
@@ -46,6 +48,8 @@ public class Enemy : MonoBehaviour
         if (currentHealth >= 0)
         {
             animator.SetTrigger("Hurt");
+            Instantiate(squib, squibTransform.transform.position, squibTransform.transform.rotation);
+            grunt2.Play();
         } 
 
         enemyGrunt1.Play();
@@ -55,11 +59,11 @@ public class Enemy : MonoBehaviour
         {
             enemyBehaviour.idle.Stop();
 
-            Instantiate(deathSplosion, transform.position, transform.rotation);
+            Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
 
             for (int i = 0; i < Random.Range(4f, 5f); i++)
             {
-                Instantiate(orbsOnDeath, new Vector2(transform.position.x, transform.position.y), transform.rotation);
+                Instantiate(orbsOnDeath, new Vector2(squibTransform.transform.position.x, squibTransform.transform.position.y), squibTransform.transform.rotation);
             }
 
             Die();

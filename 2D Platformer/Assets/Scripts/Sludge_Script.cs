@@ -10,6 +10,9 @@ public class Sludge_Script : MonoBehaviour
     public Rigidbody2D rb;
     public Sludge_Controller sludgeController;
 
+    public Transform squibTransform;
+    public GameObject squib;
+
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
     public DestroyOverTime destroyOverTime;
@@ -49,6 +52,7 @@ public class Sludge_Script : MonoBehaviour
         if (currentHealth >= 0)
         {
             animator.SetTrigger("Hurt");
+            Instantiate(squib, squibTransform.transform.position, squibTransform.transform.rotation);
         }
 
         if (currentHealth <= 0)
@@ -56,11 +60,11 @@ public class Sludge_Script : MonoBehaviour
             sludgeController.idle.Stop();
             Die();
 
-            Instantiate(deathSplosion, transform.position, transform.rotation);
+            Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
 
             for (int i = 0; i < Random.Range(2f, 4f); i++)
             {
-                Instantiate(orbsOnDeath, new Vector2(transform.position.x, transform.position.y + 1), transform.rotation);
+                Instantiate(orbsOnDeath, new Vector2(squibTransform.transform.position.x, squibTransform.transform.position.y + 1), squibTransform.transform.rotation);
             }
 
             playerCombat.superAmount += upgrades.superAmountReturned; // returns the upgraded amount of super energy

@@ -14,6 +14,9 @@ public class Spider_Script : MonoBehaviour
     public DestroyOverTime destroyOverTime;
     public Upgrades upgrades; //kills add to super amount
 
+    public Transform squibTransform;
+    public GameObject squib;
+
     //Enemies
     public SpiderController spider;
 
@@ -52,17 +55,17 @@ public class Spider_Script : MonoBehaviour
         if (currentHealth >= 0)
         {
             animator.SetTrigger("Hurt");
-            //spider.isKnockback = true;
+            Instantiate(squib, squibTransform.transform.position, squibTransform.transform.rotation);
         }
 
         if (currentHealth <= 0)
         {
             Die();
-            Instantiate(deathSplosion, transform.position, transform.rotation);
+            Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
 
             for (int i = 0; i < Random.Range(2f, 4f); i++)
             {
-                Instantiate(orbsOnDeath, new Vector2(transform.position.x, transform.position.y + 1), transform.rotation);
+                Instantiate(orbsOnDeath, new Vector2(squibTransform.transform.position.x, squibTransform.transform.position.y + 1), squibTransform.transform.rotation);
             }
 
             playerCombat.superAmount += upgrades.superAmountReturned; // What is happening here???

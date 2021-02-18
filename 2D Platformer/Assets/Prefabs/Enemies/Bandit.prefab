@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &39646947413668583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3086665530840799578}
+  m_Layer: 10
+  m_Name: Squib_Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3086665530840799578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39646947413668583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 0.329, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1519920251121098411}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &223784160953602679
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +332,7 @@ Transform:
   - {fileID: 1384202150648715835}
   - {fileID: 6842084226311810700}
   m_Father: {fileID: 1519920251121098411}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &844901115424727180
 GameObject:
@@ -333,7 +363,7 @@ Transform:
   m_Children:
   - {fileID: 2788129832208996958}
   m_Father: {fileID: 1519920251121098411}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519920250087135042
 GameObject:
@@ -496,7 +526,7 @@ Transform:
   - {fileID: 1310762302459719896}
   - {fileID: 705973704498937963}
   m_Father: {fileID: 1519920251121098411}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519920251121098413
 GameObject:
@@ -538,6 +568,7 @@ Transform:
   m_Children:
   - {fileID: 8450399675950011141}
   - {fileID: 1784650836248098904}
+  - {fileID: 3086665530840799578}
   - {fileID: 2783070431893453859}
   - {fileID: 1429284893725257760}
   - {fileID: 1519920250357147598}
@@ -562,8 +593,10 @@ MonoBehaviour:
   upgrades: {fileID: 0}
   destroyOverTime: {fileID: 0}
   fire_Skel_Controller: {fileID: 0}
+  squibTransform: {fileID: 3086665530840799578}
   deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
     type: 3}
+  squib: {fileID: 7769350992981078548, guid: 2560f6df3d072cc4eb52c1eede9f463c, type: 3}
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
     type: 3}
   maxHealth: 125

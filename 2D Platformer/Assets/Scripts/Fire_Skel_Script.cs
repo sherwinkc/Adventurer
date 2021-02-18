@@ -12,7 +12,8 @@ public class Fire_Skel_Script : MonoBehaviour
     public DestroyOverTime destroyOverTime;
     public Fire_Skel_Controller fire_Skel_Controller;
 
-    public GameObject deathSplosion;
+    public Transform squibTransform;
+    public GameObject deathSplosion, squib;
     public GameObject orbsOnDeath;
 
     //public GameObject fireVFX;
@@ -50,6 +51,7 @@ public class Fire_Skel_Script : MonoBehaviour
         if (currentHealth >= 0)
         {
             animator.SetTrigger("Hurt");
+            Instantiate(squib, squibTransform.transform.position, squibTransform.transform.rotation);
         }
 
         if (enemyGrunt1 != null)
@@ -63,11 +65,11 @@ public class Fire_Skel_Script : MonoBehaviour
         {
             fire_Skel_Controller.idle.Stop();
             dead.Play();
-            Instantiate(deathSplosion, transform.position, transform.rotation);
+            Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
 
             for (int i = 0; i < Random.Range(4f, 5f); i++)
             {
-                Instantiate(orbsOnDeath, new Vector2(transform.position.x, transform.position.y), transform.rotation);
+                Instantiate(orbsOnDeath, new Vector2(squibTransform.transform.position.x, squibTransform.transform.position.y), squibTransform.transform.rotation);
             }
 
             Die();

@@ -43,8 +43,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ec2235d1ae133074f9fb699ddb20df0e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
-  m_Pitch: 1
+  m_Volume: 1
+  m_Pitch: 1.2
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -349,7 +349,7 @@ Transform:
   - {fileID: 5775161101043453577}
   - {fileID: 57952843787551751}
   m_Father: {fileID: 5827253348081981354}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5827253347644229925
 GameObject:
@@ -642,6 +642,7 @@ Transform:
   - {fileID: 5827253348908394765}
   - {fileID: 5827253347700784641}
   - {fileID: 5827253347384846942}
+  - {fileID: 7859284455465390035}
   - {fileID: 5827253347585812188}
   m_Father: {fileID: 5827253347118583133}
   m_RootOrder: 2
@@ -664,6 +665,8 @@ MonoBehaviour:
   playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   destroyOverTime: {fileID: 5827253348081981353}
+  squibTransform: {fileID: 7859284455465390035}
+  squib: {fileID: 7769350992981078548, guid: 2560f6df3d072cc4eb52c1eede9f463c, type: 3}
   deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
     type: 3}
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
@@ -671,6 +674,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   enemyGrunt1: {fileID: 4792507351141006988}
+  grunt2: {fileID: 5827253348292258694}
   bloodSquelch: {fileID: 5827253349033672940}
   die: {fileID: 8934617819219731555}
 --- !u!114 &5827253348081981356
@@ -755,7 +759,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -817,10 +821,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b4c38d51cc96141479af9ddd37042040, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 60d0823ecbdbe7d4b920d3ec0dec0619, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
-  m_Pitch: 1
+  m_Volume: 0.4
+  m_Pitch: 0.66
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1599,3 +1603,33 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   distanceFromSound: 10
   maxVolume: 0.6
+--- !u!1 &7940065184505474479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7859284455465390035}
+  m_Layer: 10
+  m_Name: Squib_Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7859284455465390035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7940065184505474479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.087, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5827253348081981354}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

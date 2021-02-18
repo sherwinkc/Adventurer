@@ -19,6 +19,7 @@ public class Bird_Script : MonoBehaviour
     //public Rigidbody2D rb;
     //public BoxCollider2D boxCollider2D;
 
+    public GameObject squib;
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
 
@@ -61,6 +62,7 @@ public class Bird_Script : MonoBehaviour
         if (currentHealth >= 0)
         {
             animator.SetTrigger("Hurt");
+            Instantiate(squib, transform.position, transform.rotation);
         }
 
         if (currentHealth <= 0)

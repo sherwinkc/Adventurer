@@ -33,7 +33,7 @@ Transform:
   - {fileID: 1661615774956162261}
   - {fileID: 2673342226269307305}
   m_Father: {fileID: 176378994773146727}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176378994309367870
 GameObject:
@@ -199,6 +199,7 @@ Transform:
   m_Children:
   - {fileID: 5436193994156292885}
   - {fileID: 1523481324428466984}
+  - {fileID: 3376044715274869523}
   - {fileID: 176378993327671430}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -245,6 +246,8 @@ MonoBehaviour:
     type: 3}
   destroyOverTime: {fileID: 0}
   upgrades: {fileID: 0}
+  squibTransform: {fileID: 3376044715274869523}
+  squib: {fileID: 7769350992981078548, guid: 2560f6df3d072cc4eb52c1eede9f463c, type: 3}
   spider: {fileID: 0}
   maxHealth: 55
   currentHealth: 0
@@ -917,3 +920,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &8260518620823923073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3376044715274869523}
+  m_Layer: 10
+  m_Name: Squib_Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3376044715274869523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260518620823923073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.059, y: 0.216, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 176378994773146727}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
