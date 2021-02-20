@@ -42,12 +42,12 @@ public class LevelEnd : MonoBehaviour
 
         if(fadingOutMusic)
         {
-            theLevelManager.levelMusic.volume -= Time.deltaTime / 25f; 
+            theLevelManager.levelMusic_1_1.volume -= Time.deltaTime / 25f; 
         }
 
-        if(theLevelManager.levelMusic.volume <= 0)
+        if(theLevelManager.levelMusic_1_1.volume <= 0)
         {
-            theLevelManager.levelMusic.volume = 0;
+            theLevelManager.levelMusic_1_1.volume = 0;
             fadingOutMusic = false;
         }
     }

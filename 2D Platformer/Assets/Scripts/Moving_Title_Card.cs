@@ -46,6 +46,8 @@ public class Moving_Title_Card : MonoBehaviour
         moveRight = false;
         moveLeft = true;
 
+        rotationTime = 24f;
+
         yield return new WaitForSeconds(rotationTime);
 
         coInUse = false;

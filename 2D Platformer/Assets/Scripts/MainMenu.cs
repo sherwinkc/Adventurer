@@ -6,13 +6,10 @@ using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
-
     public string firstLevel;
-    //public string levelSelect;
 
     //audio
-    public AudioSource menuMusic;
-    public AudioSource selectSound;
+    public AudioSource menuMusic, selectSound;    
 
     // Start is called before the first frame update
     void Start()
@@ -25,23 +22,38 @@ public class MainMenu : MonoBehaviour
     {
         
     }
-
     public void NewGame()
     {
         menuMusic.Stop();
         selectSound.Play();
         SceneManager.LoadScene(firstLevel);
-    }
-
-    public void Continue()
-    {
-
-    }
-
+    }    
+    
     public void QuitGame()
     {
         selectSound.Play();
         menuMusic.Stop();
         Application.Quit();
+    }
+
+    public void Prologue()
+    {
+        menuMusic.Stop();
+        selectSound.Play();
+        SceneManager.LoadScene("Prologue");
+    }
+
+    public void Village()
+    {
+        menuMusic.Stop();
+        selectSound.Play();
+        SceneManager.LoadScene("Village");
+    }
+
+    public void TheForest()
+    {
+        menuMusic.Stop();
+        selectSound.Play();
+        SceneManager.LoadScene("Level1_1");
     }
 }

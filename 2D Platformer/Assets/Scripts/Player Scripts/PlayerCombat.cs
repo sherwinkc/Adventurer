@@ -137,7 +137,7 @@ public class PlayerCombat : MonoBehaviour
                 animator.SetTrigger(randomAttack);
                 nextAttackTime = Time.time + 1f / attackRate;
                 currentStamina -= attackCost;
-                radialChunkBar.barFillAmount =+ attackCost/100;
+                //radialChunkBar.barFillAmount =+ attackCost/100; // TODO
                 SwordSipe();
             }
             else if ((Time.time >= nextAttackTime && !playerMovement.isGrounded))
@@ -146,7 +146,7 @@ public class PlayerCombat : MonoBehaviour
                 animator.SetTrigger("airAttack");
                 nextAttackTime = Time.time + 1f / attackRate;
                 currentStamina -= attackCost;
-                radialChunkBar.barFillAmount =+ attackCost/100;
+                //radialChunkBar.barFillAmount =+ attackCost/100; // TODO
                 SwordSipe();
             }
 

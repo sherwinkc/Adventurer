@@ -5,22 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class PauseScreen : MonoBehaviour
 {
-    public GameObject upgrades, settings;
+    public GameObject upgrades, settings, HUD;
     public PlayerMovement playerMovement;
     public PlayerCombat playerCombat;
 
-    public bool inMenu;
     public string mainMenu;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
+
+        upgrades.SetActive(false);
+        settings.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button7))
@@ -29,6 +28,7 @@ public class PauseScreen : MonoBehaviour
             {
                 upgrades.SetActive(true);
                 settings.SetActive(false);
+                HUD.SetActive(false);
                 Time.timeScale = 0f;
                 playerMovement.enabled = false;
                 playerCombat.enabled = false;
@@ -40,6 +40,7 @@ public class PauseScreen : MonoBehaviour
                 Time.timeScale = 1f;
                 playerMovement.enabled = true;
                 playerCombat.enabled = true;
+                HUD.SetActive(true);
             }
         }
 
@@ -49,7 +50,6 @@ public class PauseScreen : MonoBehaviour
             {
                 upgrades.SetActive(false);
                 settings.SetActive(true);
-                //Time.timeScale = 0f;
             }            
         }
         else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.Joystick1Button4))
@@ -58,7 +58,6 @@ public class PauseScreen : MonoBehaviour
             {
                 upgrades.SetActive(true);
                 settings.SetActive(false);
-                //Time.timeScale = 0f;
             }
         }
     }
@@ -70,11 +69,6 @@ public class PauseScreen : MonoBehaviour
         Time.timeScale = 1f;
         playerMovement.enabled = true;
         playerCombat.enabled = true;
-    }
-
-    public void LevelSelect()
-    {
-
     }
 
     public void QuitToMainMenu()

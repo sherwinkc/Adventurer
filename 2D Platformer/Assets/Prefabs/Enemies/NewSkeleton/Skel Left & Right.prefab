@@ -671,7 +671,7 @@ MonoBehaviour:
     type: 3}
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
     type: 3}
-  maxHealth: 100
+  maxHealth: 175
   currentHealth: 0
   enemyGrunt1: {fileID: 4792507351141006988}
   grunt2: {fileID: 5827253348292258694}

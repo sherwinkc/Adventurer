@@ -30,7 +30,7 @@ public class ParallaxNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(levelBegin) //check if level begin exists
+        if (levelBegin) //check if level begin exists
         {
             //setting the camera
             if (levelBegin.virtualCamera3.gameObject.activeSelf == true)
