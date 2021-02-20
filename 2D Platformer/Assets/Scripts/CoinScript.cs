@@ -6,9 +6,7 @@ public class CoinScript : MonoBehaviour
 {
     private LevelManager theLevelManager;
     public Rigidbody2D rb;
-    public Transform playerTrans;
-    public PlayerMovement playerMovement;
-    public PlayerCombat playerCombat;
+    public PlayerCoin_Trans playerTransform;
 
     public int coinValue;
     public bool triggerActive;
@@ -21,8 +19,7 @@ public class CoinScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         theLevelManager = FindObjectOfType<LevelManager>();
-        playerMovement = FindObjectOfType<PlayerMovement>();
-        //playerCombat = FindObjectOfType<PlayerCombat>();
+        playerTransform = FindObjectOfType<PlayerCoin_Trans>();
 
         StartCoroutine(CoinBehaviour());
 
@@ -33,17 +30,16 @@ public class CoinScript : MonoBehaviour
         coinLifetime = 20;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //checking distance and move toward player if close enough
-        if(moveTowardPlayer && Vector2.Distance(transform.position, playerMovement.transform.position) < 6f)
+        if(moveTowardPlayer && Vector2.Distance(transform.position, playerTransform.transform.position) < 6f)
         {
-            rb.transform.position = Vector3.MoveTowards(transform.position, playerMovement.transform.position, Random.Range(10f, 20f) * Time.deltaTime);
+            rb.transform.position = Vector3.MoveTowards(transform.position, playerTransform.transform.position, Random.Range(10f, 15f) * Time.deltaTime);
         }
 
         //destroys object over a period of time
-        coinLifetime -= 1 * Time.deltaTime;
+        coinLifetime -= Time.deltaTime;
         if(coinLifetime <= 0)
         {
             Destroy(gameObject);
@@ -61,10 +57,10 @@ public class CoinScript : MonoBehaviour
 
             theLevelManager.AddCoins(coinValue);
 
-            Destroy(gameObject);
-
             triggerActive = false;
             moveTowardPlayer = false;
+
+            Destroy(gameObject);
         }
     }
 
@@ -76,7 +72,7 @@ public class CoinScript : MonoBehaviour
 
         canBeCollected = true;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
 
         moveTowardPlayer = true;
 

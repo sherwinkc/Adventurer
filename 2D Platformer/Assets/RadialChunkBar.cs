@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RadialStaminaBar : MonoBehaviour
+public class RadialChunkBar : MonoBehaviour
 {
     public Image image;
 
     private PlayerMovement playerMovement;
     private PlayerCombat playerCombat;
     private Upgrades upgrades;
+    private LevelManager levelManager;
+
+    public float barFillAmount;
 
     void Start()
     {
@@ -26,21 +29,20 @@ public class RadialStaminaBar : MonoBehaviour
         //slider.maxValue = upgrades.playerCombat.staminaMax;
         //slider.value = playerCombat.currentStamina;
 
-        image.fillAmount = (playerCombat.currentStamina / upgrades.playerCombat.staminaMax);
+        //image.fillAmount = (playerCombat.currentStamina / upgrades.playerCombat.staminaMax);
+
+        barFillAmount = (playerCombat.currentStamina / 100);
+        image.fillAmount = barFillAmount;
 
         //Debug.Log("current stam = " + playerCombat.currentStamina);
         //Debug.Log("max stam = " + upgrades.playerCombat.staminaMax);
 
         transform.position = new Vector3(playerMovement.transform.position.x, playerMovement.transform.position.y + (float)2.25, playerMovement.transform.position.z);
+    }
 
-        //add transparency if bar is full
-        /*if (playerCombat.currentStamina >= upgrades.playerCombat.staminaMax)
-        {
-            image.color = new Color(1f, 0f, 0f, 0.5f);
-        }
-        else
-        {
-            image.color = new Color(1f, 0f, 0f, 1f);
-        }*/
+    public void WhiteBar()
+    {
+        //barFillAmount = (playerCombat.currentStamina / 100);
+        //image.fillAmount = barFillAmount;
     }
 }

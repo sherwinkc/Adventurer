@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469378804296178952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.32, y: -0.27, z: 0}
+  m_LocalPosition: {x: 5.32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469378805416893269}
@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8809484c43352e4885feac21db3474a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerOpen: 0
   animator: {fileID: 0}
   orbPrefab: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb, type: 3}
+  openTheChest: 0
+  openedByPlayer: 0
   chestOpen: {fileID: 3304169453073642583}
   chestJingle: {fileID: 27618888556248220}
   orbSFX: {fileID: 6943634897339560298}
@@ -105,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 469378805416893268}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 469378804296178953}
   m_RootOrder: 0
@@ -125,6 +126,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

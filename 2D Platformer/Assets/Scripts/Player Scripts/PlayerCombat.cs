@@ -13,6 +13,9 @@ public class PlayerCombat : MonoBehaviour
     public PlayerMovement playerMovement;
     public Upgrades upgrades;
 
+    //chunk bar
+    public RadialChunkBar radialChunkBar;
+
     //Animations
     public Animator animator;
     public Transform attackPoint;
@@ -71,6 +74,7 @@ public class PlayerCombat : MonoBehaviour
         animator = GetComponent<Animator>();
         upgrades = GetComponent<Upgrades>();        
         m_impulseSource = FindObjectOfType<CinemachineImpulseSource>();
+        radialChunkBar = FindObjectOfType<RadialChunkBar>();
 
         canMove = true;
         playSuperOnce = false;
@@ -78,12 +82,10 @@ public class PlayerCombat : MonoBehaviour
         superStartAmount = 0;
         superMax = 100;
         superReadyText.SetActive(false);
-
     }
 
     void Update()
     {
-
         superAmount += superRechargeRate * Time.deltaTime;
 
         if (superAmount >= superMax)
@@ -135,15 +137,17 @@ public class PlayerCombat : MonoBehaviour
                 animator.SetTrigger(randomAttack);
                 nextAttackTime = Time.time + 1f / attackRate;
                 currentStamina -= attackCost;
+                radialChunkBar.barFillAmount =+ attackCost/100;
                 SwordSipe();
             }
             else if ((Time.time >= nextAttackTime && !playerMovement.isGrounded))
             {
-                    //play an attack animation
-                    animator.SetTrigger("airAttack");
-                    nextAttackTime = Time.time + 1f / attackRate;
-                    currentStamina -= attackCost;
-                    SwordSipe();
+                //play an attack animation
+                animator.SetTrigger("airAttack");
+                nextAttackTime = Time.time + 1f / attackRate;
+                currentStamina -= attackCost;
+                radialChunkBar.barFillAmount =+ attackCost/100;
+                SwordSipe();
             }
 
             m_impulseSource.GenerateImpulse(1f); // impulse on every sword swipe
