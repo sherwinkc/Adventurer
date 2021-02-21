@@ -53,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
     PlayerControls controls;
     public Vector2 move;
 
+    //Dialogues
+    public bool isTalking = false;
+    public bool signIsNear = false;
+    public Sign_Script signScript;
+
     //Camera shake
     //TODO
 
@@ -298,16 +303,6 @@ public class PlayerMovement : MonoBehaviour
         levelManager.invincible = true;
     }
 
-    void Interact()
-    {
-        if(isGrounded && chestNear)
-        {
-            animator.SetTrigger("isInteract");
-            chest.animator.SetTrigger("isOpen");            
-            chest.openTheChest = true;
-        }        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Chest")
@@ -319,7 +314,35 @@ public class PlayerMovement : MonoBehaviour
             chestNear = false;
             chest = null;
         }
+
+        if(other.tag == "Signs")
+        {
+            signScript = other.GetComponent<Sign_Script>();
+            signIsNear = true;
+        }
+        else
+        {
+            signIsNear = false;
+            signScript = null;
+        }
     }
+
+    void Interact()
+    {
+        if(isGrounded && chestNear)
+        {
+            animator.SetTrigger("isInteract");
+            chest.animator.SetTrigger("isOpen");            
+            chest.openTheChest = true;
+        }
+
+        if (isGrounded && signIsNear)
+        {
+            //animator.SetTrigger("isInteract");
+            signScript.textShowing = true;
+        }
+    }
+
 
     void RunningSound()
     {

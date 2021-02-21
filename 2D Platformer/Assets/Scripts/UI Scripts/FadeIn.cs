@@ -33,7 +33,7 @@ public class FadeIn : MonoBehaviour
     }
     IEnumerator FadeInCo()
     {
-        for (float i = 1; i >= 0; i -= Time.deltaTime / 3)
+        for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
             // set color with i as alpha
             blackScreen.color = new Color(0, 0, 0, i);

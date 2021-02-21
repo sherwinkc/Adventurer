@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Enemy_Parent
   - Chest
+  - Signs
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - PostProcessing
   - BirdLayer
   - Coins
-  - 
+  - Signs
   - 
   - 
   - 

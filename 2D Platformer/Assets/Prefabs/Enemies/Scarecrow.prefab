@@ -213,7 +213,7 @@ MonoBehaviour:
     type: 3}
   squibTransform: {fileID: 0}
   destroyOverTime: {fileID: 0}
-  maxHealth: 190
+  maxHealth: 90
   currentHealth: 0
   squelch: {fileID: 1539462139011574882}
 --- !u!212 &8330476526440824635
