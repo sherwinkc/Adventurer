@@ -7,6 +7,8 @@ public class TMP_TimeOnScreen : MonoBehaviour
     public GameObject prologue_Text;
     public float displayTime;
 
+    public AudioSource display;
+
     void Start()
     {
         prologue_Text.SetActive(false);
@@ -24,6 +26,7 @@ public class TMP_TimeOnScreen : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         prologue_Text.SetActive(true);
+        display.Play();
 
         yield return new WaitForSeconds(displayTime);
 

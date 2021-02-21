@@ -64,7 +64,7 @@ public class TextManager : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToLoad);
 
-        fade.fadeToBlack = true;
+        //fade.fadeToBlack = true;
 
         yield return new WaitForSeconds(fade.fadeTime * 2f);
 

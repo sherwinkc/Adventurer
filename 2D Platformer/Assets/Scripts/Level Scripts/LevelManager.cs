@@ -49,7 +49,7 @@ public class LevelManager : MonoBehaviour
     public int skillPoints, startingSkillPoints;    
 
     // Audio
-    public AudioSource coinSound, prologue_Music, village_music, levelMusic_1_1, gameOverMusic, hurtSound, levelUpSound, deathSound;
+    public AudioSource coinSound, gameOverMusic, hurtSound, levelUpSound, deathSound;
 
     #endregion
 
@@ -79,21 +79,6 @@ public class LevelManager : MonoBehaviour
         objectsToReset = FindObjectsOfType<ResetOnRespawn>();
 
         superText.text = "Super %: " + playerCombat.superAmount;
-
-        if (SceneManager.GetActiveScene().name == "Prologue")
-        {
-            prologue_Music.Play();
-        }
-
-        if (SceneManager.GetActiveScene().name == "Village")
-        {
-            village_music.Play();
-        }
-
-        if (SceneManager.GetActiveScene().name == "Level1_1")
-        {
-            levelMusic_1_1.Play();
-        }
     }
 
     // Update is called once per frame
@@ -185,7 +170,7 @@ public class LevelManager : MonoBehaviour
                 gameOverScreen.SetActive(true);
 
                 //stop level music audio, and play game over music
-                levelMusic_1_1.Stop();
+                //levelMusic_1_1.Stop();
                 //gameOverMusic.Play();
             }
         }

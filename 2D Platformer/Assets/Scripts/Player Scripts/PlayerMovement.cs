@@ -223,7 +223,7 @@ public class PlayerMovement : MonoBehaviour
         wasOnGround = isGrounded;
 
         //footsteps Particle System
-        if (Input.GetAxisRaw("Horizontal") != 0 && isGrounded)
+        if (Input.GetAxisRaw("Horizontal") != 0 && isGrounded && (Mathf.Abs(myRigidbody.velocity.x) > 0.01))
         {
             footEmission.rateOverTime = Random.Range(40, 50);
         }

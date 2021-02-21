@@ -11,6 +11,7 @@ public class ParallaxNew : MonoBehaviour
 
     public CinemachineVirtualCamera cam;
     public LevelBegin levelBegin;
+    public LevelBegin_Prologue levelBegin_P;
 
     public float relativeMove = 0f;
     public bool lockY = false;
@@ -25,6 +26,7 @@ public class ParallaxNew : MonoBehaviour
     {
         offset = transform.position.x;
         levelBegin = FindObjectOfType<LevelBegin>();
+        levelBegin_P = FindObjectOfType<LevelBegin_Prologue>();
     }
 
     // Update is called once per frame
@@ -37,11 +39,11 @@ public class ParallaxNew : MonoBehaviour
             {
                 cam = levelBegin.virtualCamera3;
             }
-            else if ((levelBegin.virtualCamera2.gameObject.activeSelf == true))
+            else if (levelBegin.virtualCamera2.gameObject.activeSelf == true)
             {
                 cam = levelBegin.virtualCamera2;
             }
-            else if ((levelBegin.virtualCamera1.gameObject.activeSelf == true))
+            else if (levelBegin.virtualCamera1.gameObject.activeSelf == true)
             {
                 cam = levelBegin.virtualCamera1;
             }
@@ -49,6 +51,35 @@ public class ParallaxNew : MonoBehaviour
             {
                 return;
             }
+
+            if (lockY)
+            {
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+            }
+        }
+
+        if (levelBegin_P) //check if level begin exists
+        {
+            //setting the camera
+            /*if (levelBegin_P.virtualCamera2.gameObject.activeSelf == true)
+            {
+                cam = levelBegin_P.virtualCamera2;
+                //cam = levelBegin_P.virtualCamera1;
+            }
+            else if (levelBegin_P.virtualCamera1.gameObject.activeSelf == true)
+            {
+                cam = levelBegin_P.virtualCamera1;
+            }
+            else
+            {
+                return;
+            }*/
+
+            cam = levelBegin_P.virtualCamera1;
 
             if (lockY)
             {

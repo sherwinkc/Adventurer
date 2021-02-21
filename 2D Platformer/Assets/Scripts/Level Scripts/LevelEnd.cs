@@ -9,17 +9,19 @@ public class LevelEnd : MonoBehaviour
     private PlayerMovement playerMovement;
     private PlayerCombat playerCombat;
     private LevelManager theLevelManager;
+    public LevelMusicManager levelMusicMan;
 
     public CinemachineVirtualCamera virtualCamera;
     public Animator animator;
-    public FadeToBlack fadeToBlack;
+    //public FadeToBlack fadeToBlack;
     public Upgrades upgrades;
 
     public string levelToLoad;
     public float waitToMove, waitToLoad;
     private bool movePlayer;
     public bool coActive = false;
-    public bool fadingOutMusic = false;
+    
+    //public bool fadingOutMusic = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,8 @@ public class LevelEnd : MonoBehaviour
         playerCombat = FindObjectOfType<PlayerCombat>();
         theLevelManager = FindObjectOfType<LevelManager>();
         upgrades = FindObjectOfType<Upgrades>();
-        fadeToBlack = FindObjectOfType<FadeToBlack>();
+        //fadeToBlack = FindObjectOfType<FadeToBlack>();
+        levelMusicMan = FindObjectOfType<LevelMusicManager>();
     }
 
     // Update is called once per frame
@@ -40,16 +43,30 @@ public class LevelEnd : MonoBehaviour
             playerMovement.myRigidbody.velocity = new Vector2(playerMovement.moveSpeed, playerMovement.myRigidbody.velocity.y);
         }
 
-        if(fadingOutMusic)
+        /*if(fadingOutMusic)
         {
             theLevelManager.levelMusic_1_1.volume -= Time.deltaTime / 25f; 
+            theLevelManager.prologue_Music.volume -= Time.deltaTime / 25f;
+            theLevelManager.village_music.volume -= Time.deltaTime / 25f;
         }
 
-        if(theLevelManager.levelMusic_1_1.volume <= 0)
+        if(theLevelManager.levelMusic_1_1.volume <= 0f)
         {
-            theLevelManager.levelMusic_1_1.volume = 0;
+            theLevelManager.levelMusic_1_1.volume = 0f;
             fadingOutMusic = false;
         }
+
+        if (theLevelManager.prologue_Music.volume <= 0f)
+        {
+            theLevelManager.prologue_Music.volume = 0f;
+            fadingOutMusic = false;
+        }
+
+        if (theLevelManager.village_music.volume <= 0f)
+        {
+            theLevelManager.village_music.volume = 0f;
+            fadingOutMusic = false;
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -69,16 +86,13 @@ public class LevelEnd : MonoBehaviour
 
         //TODO - Not working now, the camera is now following the player on exit
         virtualCamera.Follow = null;
-        //Debug.Log("camera = " + virtualCamera);
-
-        //theCamera.followTarget = false; //Needs to change to the new camera
 
         theLevelManager.invincible = true;
 
         if (theLevelManager != null)
         {
             //theLevelManager.levelMusic.Stop();
-            fadingOutMusic = true;
+            levelMusicMan. fadingOutMusic = true;
             theLevelManager.gameOverMusic.Play();
         }
 
@@ -91,10 +105,10 @@ public class LevelEnd : MonoBehaviour
 
         movePlayer = true;
 
-        if (fadeToBlack != null) //checking if there is a black screen game object
+        /*if (fadeToBlack != null) //checking if there is a black screen game object
         {
-            fadeToBlack.fadeToBlack = true;
-        }
+            //fadeToBlack.fadeToBlack = true;
+        }*/
 
         yield return new WaitForSeconds(waitToLoad);
 

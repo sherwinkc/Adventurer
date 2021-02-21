@@ -5,18 +5,20 @@ using UnityEngine.UI;
 
 public class FadeToBlack : MonoBehaviour
 {
-    private Image blackScreen;
-    //private LevelEnd levelEnd;
+    public Image blackScreen;
     public float fadeTime;
-
     public bool fadeToBlack = false;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         blackScreen = GetComponent<Image>();
-
         blackScreen.canvasRenderer.SetAlpha(0.0f);
+        blackScreen.enabled = false;
+    }
+
+    void Start()
+    {
+
     }
 
     // Update is called once per frame
@@ -24,12 +26,26 @@ public class FadeToBlack : MonoBehaviour
     {
         if (fadeToBlack)
         {
-            blackScreen.CrossFadeAlpha(1.2f, fadeTime, false);
+            blackScreen.enabled = true;
+            StartCoroutine(FadeOutCo());            
+        }
+    }
+
+    IEnumerator FadeOutCo()
+    {
+        for (float i = 0; i <= 1; i += Time.deltaTime / 3)
+        {
+            // set color with i as alpha
+            blackScreen.color = new Color(0, 0, 0, i);
+
+            yield return null;
+
+            /*if (i >= 1)
+            {
+                gameObject.SetActive(false);
+            }*/
         }
 
-        if (blackScreen.color.a == 1.2f)
-        {
-            gameObject.SetActive(false);
-        }
+        yield return null;
     }
 }

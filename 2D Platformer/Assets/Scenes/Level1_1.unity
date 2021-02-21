@@ -675,6 +675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1 &31549008
@@ -1166,6 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &65758565
@@ -1341,6 +1343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &102042804
@@ -1441,6 +1444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &105398645
@@ -1619,6 +1623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &129746910
@@ -1759,6 +1764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1001 &155953293
@@ -2000,6 +2006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!1001 &169788743
@@ -2601,6 +2608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &256175253
@@ -2733,6 +2741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &275982230
@@ -2781,6 +2790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &275982233
@@ -3349,6 +3359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &330260170
@@ -3437,7 +3448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cfbb04a776b944aa93cbebb7953d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 1
   blackScreen: {fileID: 0}
 --- !u!114 &332632393
 MonoBehaviour:
@@ -3615,6 +3625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!1 &333551725
@@ -4053,6 +4064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &355684529
@@ -4424,6 +4436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.95
   lockY: 1
 --- !u!114 &381452561
@@ -4810,6 +4823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &411376318
@@ -4991,6 +5005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &434525009
@@ -5470,6 +5485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &549618519
@@ -6015,6 +6031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &657861272
@@ -6132,6 +6149,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676213920}
   m_CullTransparentMesh: 0
+--- !u!1001 &682107834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042517788231468609, guid: 9ac989c97aa050a489099ed1c364ab6d,
+        type: 3}
+      propertyPath: m_Name
+      value: Level Music Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ac989c97aa050a489099ed1c364ab6d, type: 3}
 --- !u!1 &683076092
 GameObject:
   m_ObjectHideFlags: 0
@@ -6181,6 +6267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.96
   lockY: 1
 --- !u!1001 &722638370
@@ -6281,6 +6368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &729198399
@@ -6381,6 +6469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &732132721 stripped
@@ -6409,6 +6498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &746449987
@@ -6509,6 +6599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &763894600
@@ -7037,6 +7128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!4 &821135396 stripped
@@ -7205,6 +7297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &841006900
@@ -7852,6 +7945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &875111652
@@ -8355,6 +8449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &999649915
@@ -8620,6 +8715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!114 &1032227375 stripped
@@ -8732,6 +8828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1051667691 stripped
@@ -8760,8 +8857,148 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+--- !u!1001 &1058303262
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178654500701896, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas (Level Name)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178655167413595, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_text
+      value: Forest Dark
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178655167413595, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 366.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178655167413595, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 366.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814178655167413596, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddf0f4fd3a9b40e41b973a250d3ee449, type: 3}
 --- !u!1001 &1067882478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8860,6 +9097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1080400645
@@ -9111,6 +9349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1103964795
@@ -9735,6 +9974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &1195427458
@@ -10022,6 +10262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1217933292
@@ -10202,6 +10443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1229187498
@@ -10464,6 +10706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1 &1283385006 stripped
@@ -10492,6 +10735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1285270105
@@ -10919,6 +11163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1352793793
@@ -11288,6 +11533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1365022094
@@ -11498,6 +11744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1421325007 stripped
@@ -11526,6 +11773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1432374642
@@ -11863,6 +12111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1462575028
@@ -11963,6 +12212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1464404323
@@ -12729,6 +12979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &1540019760
@@ -13045,6 +13296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1001 &1571471780
@@ -13214,6 +13466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!20 &1604014431 stripped
@@ -13615,6 +13868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &1732682224
@@ -13917,6 +14171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1765698886
@@ -14017,6 +14272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1768212267
@@ -14422,6 +14678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1806146820
@@ -14790,6 +15047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1831404894
@@ -14890,6 +15148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1831443211
@@ -15053,6 +15312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1841020302
@@ -15308,6 +15568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1856159316
@@ -15527,6 +15788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &1870993747
@@ -16008,6 +16270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1942559053
@@ -16690,6 +16953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1988359525
@@ -17094,6 +17358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1 &2012543543
@@ -17276,6 +17541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &2044260121
@@ -17391,6 +17657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prologue_Text: {fileID: 434525009}
   displayTime: 5
+  display: {fileID: 0}
 --- !u!1001 &2051117588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17489,6 +17756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &2051558144
@@ -17682,6 +17950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
+  levelBegin_P: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!114 &2104833467 stripped

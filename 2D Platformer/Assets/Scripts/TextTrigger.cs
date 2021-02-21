@@ -9,11 +9,15 @@ public class TextTrigger : MonoBehaviour
     public bool coActive;
     public float timeOnScreen;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        text.enabled = false;
+    }
+
+
     void Start()
     {
         coActive = false;
-
         timeOnScreen = 4f;
     }
 

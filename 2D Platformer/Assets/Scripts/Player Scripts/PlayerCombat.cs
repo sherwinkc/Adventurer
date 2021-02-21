@@ -194,6 +194,10 @@ public class PlayerCombat : MonoBehaviour
             {
                 enemy.GetComponentInParent<Bird_Script>().TakeDamage(attackDamage);
             }
+            else if (enemy.GetComponentInParent<Scarecrow_Script>() != null)
+            {
+                enemy.GetComponentInParent<Scarecrow_Script>().TakeDamage(attackDamage);
+            }
         }
     }
 

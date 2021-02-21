@@ -6,7 +6,14 @@ using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
+    public FadeToBlack fade;
+    
     public string firstLevel;
+    public float timeToLoad;
+
+    //public AudioSource levelMusic;
+    public bool turnDownMusic = false;
+    public float volumeRate; 
 
     //audio
     public AudioSource menuMusic, selectSound;    
@@ -14,19 +21,24 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //fade = FindObjectOfType<FadeToBlack>();
         menuMusic.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (turnDownMusic)
+        {
+            menuMusic.volume -= volumeRate * Time.deltaTime;
+        }
+
     }
     public void NewGame()
     {
-        menuMusic.Stop();
-        selectSound.Play();
-        SceneManager.LoadScene(firstLevel);
+        StartCoroutine(NewGameCo());
+        fade.fadeToBlack = true;
+
     }    
     
     public void QuitGame()
@@ -55,5 +67,18 @@ public class MainMenu : MonoBehaviour
         menuMusic.Stop();
         selectSound.Play();
         SceneManager.LoadScene("Level1_1");
+    }
+
+    public IEnumerator NewGameCo()
+    {
+        turnDownMusic = true;
+        selectSound.Play();
+
+        yield return new WaitForSeconds(timeToLoad);
+
+        menuMusic.Stop();
+        SceneManager.LoadScene(firstLevel);
+
+        yield return null;
     }
 }

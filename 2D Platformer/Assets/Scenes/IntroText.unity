@@ -1272,7 +1272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52bb3f2c2e10614298fe59f2f552d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fade: {fileID: 0}
   firstLevel: Level1_1
+  timeToLoad: 0
+  turnDownMusic: 0
+  volumeRate: 0
   menuMusic: {fileID: 62399367}
   selectSound: {fileID: 361908169}
 --- !u!4 &440225120
@@ -1792,6 +1796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307b2c0582948b44c9060130183569ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackScreen: {fileID: 0}
   fadeTime: 0.5
   fadeToBlack: 0
 --- !u!114 &660143190
@@ -4217,9 +4222,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Word has come of a great threat in a distant land. \n\nBlood and bones
-    tarnish the once lush, green fields.\n\nA lowly wanderer, searches the forest
-    dark for the unholy truth.\n\nGather orbs and find the keys.\n\nPurge this land
-    of evil and end the skeleton King."
+    tarnish the once lush, green fields.\n\nA lowly wanderer searches the forest
+    dark for the unholy truth.\n\nHe must gather orbs and find the keys, \nto purge
+    this land of evil and end the skeleton King."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3186f8a5e316774392053083e97613d, type: 2}
   m_sharedMaterial: {fileID: -4700185320209511571, guid: a3186f8a5e316774392053083e97613d,
