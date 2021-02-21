@@ -222,6 +222,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!43 &14906614
@@ -415,6 +416,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &22134925
@@ -741,6 +743,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &42240192
@@ -1154,6 +1157,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &68171273
@@ -1305,7 +1309,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Attack: X / Mouse Left'
+  m_Text: 'Attack: X / Mouse L'
 --- !u!222 &71439166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1413,6 +1417,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &106285410
@@ -1913,6 +1918,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &134369283 stripped
@@ -1942,6 +1948,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &148822647
@@ -2240,6 +2247,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1 &178919701
@@ -2349,7 +2357,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &180409484
 SpriteRenderer:
@@ -2501,6 +2509,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &182394384
@@ -2554,6 +2563,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.96
   lockY: 1
 --- !u!1 &188532153
@@ -2686,7 +2696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4821205880391182, guid: ff1f4660836be8d498b29e1a296b3587, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4821205880391182, guid: ff1f4660836be8d498b29e1a296b3587, type: 3}
       propertyPath: m_LocalScale.x
@@ -2991,6 +3001,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &208990821
@@ -3092,6 +3103,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &209979446
@@ -3193,6 +3205,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &219767245
@@ -3224,7 +3237,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 30
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 86.215}
 --- !u!212 &219767247
 SpriteRenderer:
@@ -3511,6 +3524,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!1 &251339067
@@ -3701,7 +3715,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &272712153
 SpriteRenderer:
@@ -4487,6 +4501,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &330680031
@@ -4851,6 +4866,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &354618814
@@ -4952,6 +4968,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &355462823
@@ -5162,6 +5179,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &368304320 stripped
@@ -5191,6 +5209,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &388130999
@@ -5382,6 +5401,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &403198948
@@ -5752,6 +5772,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &428304037
@@ -6176,7 +6197,7 @@ Transform:
   m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 31
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 84.707}
 --- !u!212 &471664957
 SpriteRenderer:
@@ -6258,7 +6279,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 21
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &472400753
 SpriteRenderer:
@@ -6812,6 +6833,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &517618533
@@ -7294,6 +7316,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &576991604 stripped
@@ -7323,6 +7346,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &582091264 stripped
@@ -7352,6 +7376,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &583306690
@@ -8565,6 +8590,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &641206833
@@ -8926,6 +8952,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &657999682
@@ -8988,7 +9015,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 27
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &659666155
 SpriteRenderer:
@@ -9315,6 +9342,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &671248961
@@ -9774,6 +9802,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &716903750
@@ -9905,7 +9934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4033095644097894, guid: e67adb7132275fc4a8d5c22408fd905f, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4033095644097894, guid: e67adb7132275fc4a8d5c22408fd905f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10120,6 +10149,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &726492623
@@ -10151,7 +10181,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 22
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &726492625
 SpriteRenderer:
@@ -10233,7 +10263,7 @@ Transform:
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &731087960
 SpriteRenderer:
@@ -11193,6 +11223,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &794328008
@@ -11328,6 +11359,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &802069094
@@ -11441,6 +11473,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1001 &822387033
@@ -11542,6 +11575,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &823975328
@@ -11683,6 +11717,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &823987063
@@ -12286,7 +12321,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 24
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &894743296
 SpriteRenderer:
@@ -12493,6 +12528,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &915879067
@@ -12532,6 +12568,88 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &915884769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 915884770}
+  - component: {fileID: 915884771}
+  m_Layer: 0
+  m_Name: TX Village Props Statue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &915884770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915884769}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 182.32, y: 6.6380467, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2016076173}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &915884771
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915884769}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -2124577221
+  m_SortingLayer: -1
+  m_SortingOrder: -5
+  m_Sprite: {fileID: 21300150, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.09375, y: 2.40625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &916281003
 GameObject:
   m_ObjectHideFlags: 0
@@ -12611,6 +12729,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916281003}
   m_CullTransparentMesh: 0
+--- !u!1 &917302865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 917302866}
+  - component: {fileID: 917302867}
+  m_Layer: 0
+  m_Name: TX Village Props Statue (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &917302866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917302865}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 180.7, y: 6.54, z: 0}
+  m_LocalScale: {x: -2.5, y: 2.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2016076173}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &917302867
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917302865}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -2124577221
+  m_SortingLayer: -1
+  m_SortingOrder: -4
+  m_Sprite: {fileID: 21300150, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.09375, y: 2.40625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &919691110
 GameObject:
   m_ObjectHideFlags: 0
@@ -13575,7 +13775,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 29
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 94.579}
 --- !u!212 &996705595
 SpriteRenderer:
@@ -13675,6 +13875,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &1004822004
@@ -13976,7 +14177,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1021323676
 SpriteRenderer:
@@ -14058,7 +14259,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1026946382
 SpriteRenderer:
@@ -14385,6 +14586,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1042524676
@@ -14496,7 +14698,7 @@ Transform:
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1043225056
 SpriteRenderer:
@@ -14660,6 +14862,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1001 &1069882428
@@ -14761,6 +14964,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1079208937 stripped
@@ -14790,6 +14994,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1087992509
@@ -15168,6 +15373,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1116662934
@@ -15519,7 +15725,7 @@ Transform:
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1143383030
 SpriteRenderer:
@@ -15671,6 +15877,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1147355203
@@ -16016,7 +16223,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Dodge Roll: B / Mouse Right'
+  m_Text: 'Dash Roll: B / Mouse R'
 --- !u!222 &1177986085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16437,7 +16644,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191293550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 178.93703, y: 6.6380467, z: 0}
+  m_LocalPosition: {x: 178.93703, y: 6.48, z: 0}
   m_LocalScale: {x: -2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
@@ -17760,6 +17967,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!1001 &1301086082
@@ -18050,6 +18258,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.95
   lockY: 1
 --- !u!114 &1309214412
@@ -18323,7 +18532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4337340910481760, guid: 035693e16ddd96f41a1089d2fa515c6b, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 4337340910481760, guid: 035693e16ddd96f41a1089d2fa515c6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -18485,6 +18694,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1349732858
@@ -18841,6 +19051,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1368641526
@@ -18969,6 +19180,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &1370272732
@@ -19051,7 +19263,7 @@ Transform:
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1371572640
 SpriteRenderer:
@@ -19174,7 +19386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move: Left Stick / A, D'
+  m_Text: 'Move: LS / A, D'
 --- !u!222 &1378475045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19404,6 +19616,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1398466077
@@ -19615,6 +19828,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1428210041
@@ -19716,6 +19930,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1434873135
@@ -19731,7 +19946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4359706673412770, guid: b01c925e1c228ea478417b996f8803bf, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4359706673412770, guid: b01c925e1c228ea478417b996f8803bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19968,6 +20183,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1458256720
@@ -20069,6 +20285,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1463897059 stripped
@@ -20098,6 +20315,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1465208496
@@ -20199,6 +20417,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1465999775
@@ -20230,7 +20449,7 @@ Transform:
   m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 28
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.75}
 --- !u!212 &1465999777
 SpriteRenderer:
@@ -20308,11 +20527,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474753261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 102.442055, y: 1.4199886, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 102.442055, y: 1.396, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1474753263
 SpriteRenderer:
@@ -20504,6 +20723,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1001 &1490988383
@@ -20617,6 +20837,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1001 &1497517802
@@ -20718,6 +20939,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1502186535 stripped
@@ -20747,6 +20969,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1522205707
@@ -21231,6 +21454,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!1 &1604858910
@@ -21407,6 +21631,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1610100212
@@ -21456,6 +21681,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &1610100215
@@ -21538,7 +21764,7 @@ Transform:
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1617633609
 SpriteRenderer:
@@ -21971,6 +22197,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1664383743
@@ -22428,6 +22655,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1701948919
@@ -23046,7 +23274,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 25
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1722012228
 SpriteRenderer:
@@ -23201,7 +23429,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1732124915
 SpriteRenderer:
@@ -23528,6 +23756,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1754708390
@@ -23704,6 +23933,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1761772349
@@ -23810,7 +24040,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 26
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1772723296
 SpriteRenderer:
@@ -23927,6 +24157,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1798015837
@@ -24266,6 +24497,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1860065921
@@ -24442,6 +24674,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1911570460
@@ -24575,6 +24808,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1917931754
@@ -24867,6 +25101,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1933461294
@@ -25672,6 +25907,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &2016076172
@@ -25711,6 +25947,8 @@ Transform:
   - {fileID: 1933461295}
   - {fileID: 1576861560}
   - {fileID: 1191293551}
+  - {fileID: 915884770}
+  - {fileID: 917302866}
   - {fileID: 1143383029}
   - {fileID: 1043225055}
   - {fileID: 1371572639}
@@ -26106,6 +26344,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!1001 &2042077124
@@ -26207,6 +26446,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &2044305940
@@ -26308,6 +26548,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &2058522869
@@ -26861,6 +27102,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &2096090051
@@ -27096,6 +27338,7 @@ MonoBehaviour:
   cam: {fileID: 8798855340517653919}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &2128336821
@@ -27247,7 +27490,7 @@ MonoBehaviour:
   virtualCamera1: {fileID: 8798855340517653919}
   virtualCamera2: {fileID: 352765848}
   cameraHoldTime_1: 2
-  cameraHoldTime_2: 2
+  cameraHoldTime_2: 10
   levelBeginCoUsed: 0
 --- !u!4 &2135322639
 Transform:
@@ -27292,7 +27535,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2016076173}
-  m_RootOrder: 23
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2145269745
 SpriteRenderer:

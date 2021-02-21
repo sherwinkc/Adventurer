@@ -1927,6 +1927,7 @@ MonoBehaviour:
   textSFX: {fileID: 804865070}
   levelMusic: {fileID: 1006604486}
   fade: {fileID: 0}
+  decreasingVol: 0
 --- !u!1 &749538089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,7 +2744,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3e854f729a3f60d4e889485313467e1a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4222,12 +4223,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Word has come of a great threat in a distant land. \n\nBlood and bones
-    tarnish the once lush, green fields.\n\nA lowly wanderer searches the forest
+    tarnish the once lush, green landscape.\n\nA lowly wanderer searches the forest
     dark for the unholy truth.\n\nHe must gather orbs and find the keys, \nto purge
-    this land of evil and end the skeleton King."
+    the land of evil...\n\n...and end the skeleton King."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a3186f8a5e316774392053083e97613d, type: 2}
-  m_sharedMaterial: {fileID: -4700185320209511571, guid: a3186f8a5e316774392053083e97613d,
+  m_fontAsset: {fileID: 11400000, guid: b4ff360ddeafb4d4e97eb011d1f5f42d, type: 2}
+  m_sharedMaterial: {fileID: -4700185320209511571, guid: b4ff360ddeafb4d4e97eb011d1f5f42d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

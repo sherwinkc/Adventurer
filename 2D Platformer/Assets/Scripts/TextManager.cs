@@ -20,6 +20,8 @@ public class TextManager : MonoBehaviour
 
     public FadeToBlack fade;
 
+    public bool decreasingVol = false;
+
     private bool coActive = false;
 
     void Start()
@@ -28,13 +30,21 @@ public class TextManager : MonoBehaviour
         levelMusic.Play();
         StartCoroutine(ShowText());
         StartCoroutine(LoadNextLevel());
-
     }
 
 
     void Update()
     {
+        if(decreasingVol)
+        {
+            levelMusic.volume -= Time.deltaTime / 2;
+        }
 
+        if(levelMusic.volume <= 0)
+        {
+            levelMusic.volume = 0f;
+            decreasingVol = false;
+        }
     }
 
     IEnumerator ShowText()
@@ -63,6 +73,7 @@ public class TextManager : MonoBehaviour
     IEnumerator LoadNextLevel()
     {
         yield return new WaitForSeconds(timeToLoad);
+        decreasingVol = true;
 
         //fade.fadeToBlack = true;
 

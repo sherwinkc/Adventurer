@@ -676,6 +676,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1 &31549008
@@ -1168,6 +1169,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &65758565
@@ -1344,6 +1346,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &102042804
@@ -1445,6 +1448,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &105398645
@@ -1624,6 +1628,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &129746910
@@ -1765,6 +1770,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1001 &155953293
@@ -2007,6 +2013,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!1001 &169788743
@@ -2026,7 +2033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4638306879568360, guid: 5012ac2cce9d7734d85d3aaec70097e7, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4638306879568360, guid: 5012ac2cce9d7734d85d3aaec70097e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2609,6 +2616,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &256175253
@@ -2742,6 +2750,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &275982230
@@ -2791,6 +2800,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &275982233
@@ -3182,7 +3192,7 @@ RectTransform:
   - {fileID: 2712246669221075827}
   - {fileID: 1356194867}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3253,7 +3263,7 @@ Transform:
   - {fileID: 1682691727}
   - {fileID: 1847074507}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &322910972 stripped
 AudioSource:
@@ -3360,6 +3370,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &330260170
@@ -3431,10 +3442,10 @@ RectTransform:
   m_Father: {fileID: 1945324807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2490, y: 1515.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 20.327148, y: 33.37915}
+  m_SizeDelta: {x: 496.8628, y: 367.354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332632392
 MonoBehaviour:
@@ -3626,6 +3637,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!1 &333551725
@@ -4065,6 +4077,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &355684529
@@ -4437,6 +4450,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.95
   lockY: 1
 --- !u!114 &381452561
@@ -4824,6 +4838,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &411376318
@@ -5006,6 +5021,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &434525009
@@ -5486,6 +5502,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &549618519
@@ -6032,6 +6049,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &657861272
@@ -6159,7 +6177,7 @@ PrefabInstance:
     - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8042517788231468608, guid: 9ac989c97aa050a489099ed1c364ab6d,
         type: 3}
@@ -6268,6 +6286,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.96
   lockY: 1
 --- !u!1001 &722638370
@@ -6369,6 +6388,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &729198399
@@ -6470,6 +6490,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &732132721 stripped
@@ -6499,6 +6520,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &746449987
@@ -6600,6 +6622,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &763894600
@@ -6640,7 +6663,7 @@ Transform:
   - {fileID: 1219425721}
   - {fileID: 65758566}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &770370959
 GameObject:
@@ -6751,7 +6774,7 @@ Transform:
   - {fileID: 256175254}
   - {fileID: 668209524}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &780638407
 GameObject:
@@ -7129,6 +7152,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
 --- !u!4 &821135396 stripped
@@ -7298,6 +7322,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &841006900
@@ -7946,6 +7971,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &875111652
@@ -8450,6 +8476,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &999649915
@@ -8716,6 +8743,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!114 &1032227375 stripped
@@ -8829,6 +8857,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1051667691 stripped
@@ -8858,6 +8887,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1058303262
@@ -8880,7 +8910,7 @@ PrefabInstance:
     - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7814178654500701892, guid: ddf0f4fd3a9b40e41b973a250d3ee449,
         type: 3}
@@ -8999,6 +9029,106 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddf0f4fd3a9b40e41b973a250d3ee449, type: 3}
+--- !u!1 &1059480611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059480615}
+  - component: {fileID: 1059480614}
+  - component: {fileID: 1059480613}
+  - component: {fileID: 1059480612}
+  m_Layer: 5
+  m_Name: Canvas (Black Screen)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1059480612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059480611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1059480613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059480611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1059480614
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059480611}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1059480615
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059480611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 2230112365939452383}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &1067882478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9098,6 +9228,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1080400645
@@ -9350,6 +9481,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1103964795
@@ -9975,6 +10107,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &1195427458
@@ -10011,7 +10144,6 @@ RectTransform:
   - {fileID: 4849841656658263226}
   - {fileID: 3895753311983476713}
   - {fileID: 1352793795}
-  - {fileID: 2230112365939452383}
   - {fileID: 4360292182131537081}
   - {fileID: 7263464035158843050}
   - {fileID: 7260749990393815500}
@@ -10263,6 +10395,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1217933292
@@ -10444,6 +10577,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1229187498
@@ -10707,6 +10841,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1 &1283385006 stripped
@@ -10736,6 +10871,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1285270105
@@ -11164,6 +11300,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1352793793
@@ -11534,6 +11671,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1365022094
@@ -11565,7 +11703,7 @@ Transform:
   m_Children:
   - {fileID: 411376319}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400264377
 GameObject:
@@ -11745,6 +11883,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1421325007 stripped
@@ -11774,6 +11913,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1432374642
@@ -12112,6 +12252,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1462575028
@@ -12213,6 +12354,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1464404323
@@ -12283,7 +12425,7 @@ Transform:
   - {fileID: 427508948}
   - {fileID: 1743094028}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475181326
 GameObject:
@@ -12980,6 +13122,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &1540019760
@@ -13074,7 +13217,7 @@ Transform:
   m_Children:
   - {fileID: 504878802}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1568339889
 PrefabInstance:
@@ -13297,6 +13440,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1001 &1571471780
@@ -13467,6 +13611,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!20 &1604014431 stripped
@@ -13869,6 +14014,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!212 &1732682224
@@ -14071,7 +14217,7 @@ Transform:
   m_Children:
   - {fileID: 1568339890}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1755605423
 PrefabInstance:
@@ -14172,6 +14318,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1765698886
@@ -14273,6 +14420,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1768212267
@@ -14679,6 +14827,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1806146820
@@ -15048,6 +15197,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &1831404894
@@ -15149,6 +15299,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1831443211
@@ -15313,6 +15464,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1841020302
@@ -15569,6 +15721,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1856159316
@@ -15789,6 +15942,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
 --- !u!1 &1870993747
@@ -15820,7 +15974,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1870993749
 MonoBehaviour:
@@ -16271,6 +16425,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1942559053
@@ -16525,10 +16680,10 @@ RectTransform:
   m_Father: {fileID: 2230112365939452383}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2490, y: 1515.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -2.1721191, y: 13.551025}
+  m_SizeDelta: {x: 289.69385, y: 228.45801}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1954539788
 GameObject:
@@ -16954,6 +17109,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &1988359525
@@ -17359,6 +17515,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
 --- !u!1 &2012543543
@@ -17542,6 +17699,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1 &2044260121
@@ -17757,6 +17915,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!1001 &2051558144
@@ -17951,6 +18110,7 @@ MonoBehaviour:
   cam: {fileID: 1515977642}
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
+  levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
 --- !u!114 &2104833467 stripped
@@ -18469,7 +18629,7 @@ PrefabInstance:
     - target: {fileID: 469378804296178953, guid: 0125102065dc863418b9262f279afa1e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 469378804296178953, guid: 0125102065dc863418b9262f279afa1e,
         type: 3}
@@ -18674,7 +18834,7 @@ PrefabInstance:
     - target: {fileID: 631806890673747781, guid: 3b1b640bc96431f4cab3bfa894a9e8f1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 631806890673747781, guid: 3b1b640bc96431f4cab3bfa894a9e8f1,
         type: 3}
@@ -18787,7 +18947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &847138075405836523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20060,17 +20220,17 @@ RectTransform:
   m_GameObject: {fileID: 804205592917550855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.26302084, y: 0.26302084, z: 0.26302084}
   m_Children:
   - {fileID: 1945324807}
   - {fileID: 8107545751545485733}
-  m_Father: {fileID: 1195427459}
-  m_RootOrder: 4
+  m_Father: {fileID: 1059480615}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00048828125}
-  m_SizeDelta: {x: 569.99, y: 435.014}
+  m_AnchoredPosition: {x: -0.001953125, y: 0.0018920898}
+  m_SizeDelta: {x: 5379.8, y: 3025.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2251655463850458939
 MonoBehaviour:
@@ -21326,7 +21486,7 @@ RectTransform:
   - {fileID: 9202956550982964994}
   - {fileID: 4928073871944834970}
   m_Father: {fileID: 1195427459}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -23161,7 +23321,7 @@ PrefabInstance:
     - target: {fileID: 6497609489132799995, guid: 8d2456e8e43cc7e4d854ab68e343fcd6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6497609489132799995, guid: 8d2456e8e43cc7e4d854ab68e343fcd6,
         type: 3}
@@ -23873,7 +24033,7 @@ Transform:
   - {fileID: 891003616740471229}
   - {fileID: 2130905937395778761}
   m_Father: {fileID: 1195427459}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &7263464035158843050
 RectTransform:
@@ -23887,7 +24047,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1195427459}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25556,7 +25716,7 @@ RectTransform:
   m_Children:
   - {fileID: 5302450062017650283}
   m_Father: {fileID: 1195427459}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

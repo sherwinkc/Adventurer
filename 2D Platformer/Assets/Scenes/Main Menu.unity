@@ -903,9 +903,10 @@ MonoBehaviour:
 
     Music by One Man Symphony
 
+    Freesound.org
 
-    Art - 2D Forest
-    Sprite Pack
+    Art
+    - 2D Forest Sprite Pack
 
 '
   m_isRightToLeft: 0
@@ -1071,7 +1072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &633079262
 RectTransform:
   m_ObjectHideFlags: 0

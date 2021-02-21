@@ -5,21 +5,17 @@ using Cinemachine;
 
 public class NewCamController : MonoBehaviour
 {
-    public bool followTarget;
-    public CinemachineVirtualCamera virtualCamera;
+    public CinemachineVirtualCamera virtualCamera_NPC, virtualCamera_Player;
 
     void Start()
     {
-        //virtualCamera = GetComponent<CinemachineVirtualCamera>();
-        //followTarget = true;
+
     }
 
     void Update()
     {
-        if(!followTarget)
-        {
-            //virtualCamera.Follow = null;
-            //virtualCamera.enabled = true;
-        }
+       
     }
+
+
 }
