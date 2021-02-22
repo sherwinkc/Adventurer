@@ -33,7 +33,6 @@ public class Sign_Script : MonoBehaviour
 
     public IEnumerator TextTimer()
     {
-
         yield return new WaitForSeconds(waitTime);
 
         text.enabled = false;

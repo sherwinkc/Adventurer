@@ -13,6 +13,7 @@ public class Dialogue_Manager : MonoBehaviour
     private string currentText = "";
 
     public bool startCo = false;
+    public bool dialogueComplete = true;
     public AudioSource textSFX;
 
 
@@ -29,11 +30,12 @@ public class Dialogue_Manager : MonoBehaviour
 
     void Update()
     {
-        if (startCo)
+        if (startCo && dialogueComplete && text.enabled == false)
         {
             text.enabled = true;
             StartCoroutine(ShowText());
-            startCo = false;   
+            startCo = false;
+            dialogueComplete = false;
         }
     }
 
@@ -54,5 +56,7 @@ public class Dialogue_Manager : MonoBehaviour
 
             yield return new WaitForSeconds(delay);
         }
+
+        dialogueComplete = true;
     }
 }

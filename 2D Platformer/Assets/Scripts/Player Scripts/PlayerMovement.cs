@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     //Dodge
     public float dashSpeed;
     private bool canDash = true;
+    private bool canSetZero = true;
     public float dashCooldownAmount;
     public float dashCounter;
 
@@ -171,13 +172,19 @@ public class PlayerMovement : MonoBehaviour
             //Dash logic and cooldown
             if (!canDash)
             {
-                dashCounter -= Time.deltaTime;
+                if(canSetZero)
+                {
+                    dashCounter = 0;
+                    canSetZero = false;
+                }
+                dashCounter += Time.deltaTime;
             }
 
-            if (dashCounter < 0)
+            if (dashCounter > dashCooldownAmount)
             {
                 dashCounter = dashCooldownAmount;
                 canDash = true;
+                canSetZero = true;
             }
 
             //set invincible to false as knockback is false
