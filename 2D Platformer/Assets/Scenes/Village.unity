@@ -200,7 +200,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5b318d84de032034a8cafbfedb90535f, type: 3}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -10559,7 +10559,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5b318d84de032034a8cafbfedb90535f, type: 3}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -10570,7 +10570,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "We are the last. \nIt was a... a massacre. \nIf only the dead could speak..."
+  m_Text: 'We are the last!
+
+    If only the dead could speak...
+
+    Beware traveller,
+    they lie up ahead...'
 --- !u!222 &688426551
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28376,7 +28381,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5b318d84de032034a8cafbfedb90535f, type: 3}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -28387,7 +28392,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome to The Village
+  m_Text: St. Hope Village
 --- !u!224 &1424516957099055400
 RectTransform:
   m_ObjectHideFlags: 0

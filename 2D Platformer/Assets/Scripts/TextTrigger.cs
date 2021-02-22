@@ -18,7 +18,6 @@ public class TextTrigger : MonoBehaviour
     void Start()
     {
         coActive = false;
-        timeOnScreen = 4f;
     }
 
     // Update is called once per frame

@@ -18,18 +18,17 @@ public class LevelBegin_Village : MonoBehaviour
     private void Awake()
     {
         virtualCamera1.gameObject.SetActive(true);
-        //virtualCamera2.gameObject.SetActive(true);
+
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerCombat = FindObjectOfType<PlayerCombat>();
+
+        movePlayer = true;
     }
 
     void Start()
     {
-        playerMovement = FindObjectOfType<PlayerMovement>();
-        playerCombat = FindObjectOfType<PlayerCombat>();
-
         playerMovement.canMove = false;
         playerCombat.canMove = false;
-
-        movePlayer = true;
 
         StartCoroutine(LevelBeginCo());
     }
@@ -47,7 +46,7 @@ public class LevelBegin_Village : MonoBehaviour
     {
         yield return new WaitForSeconds(cameraHoldTime_1);
 
-        virtualCamera1.gameObject.SetActive(true);
+        //virtualCamera1.gameObject.SetActive(true);
         //virtualCamera2.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(cameraHoldTime_2);
