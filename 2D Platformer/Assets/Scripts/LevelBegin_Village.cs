@@ -15,6 +15,8 @@ public class LevelBegin_Village : MonoBehaviour
 
     public bool movePlayer = false;
 
+    public bool coUsed = false;
+
     public void Awake()
     {
         virtualCamera1.gameObject.SetActive(false);
@@ -23,12 +25,17 @@ public class LevelBegin_Village : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(LevelBeginCo());
+
     }
 
 
     void Update()
     {
+        if(!coUsed)
+        {
+            StartCoroutine(LevelBeginCo());
+        }
+
         if (movePlayer)
         {   
             playerMovement.myRigidbody.velocity = new Vector2(5f, playerMovement.myRigidbody.velocity.y);
@@ -37,6 +44,7 @@ public class LevelBegin_Village : MonoBehaviour
 
     public IEnumerator LevelBeginCo()
     {
+        coUsed = true;
 
         movePlayer = true;
 
