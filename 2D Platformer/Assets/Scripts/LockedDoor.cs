@@ -49,10 +49,14 @@ public class LockedDoor : MonoBehaviour
 
     void PlayStoneSound()
     {
-        if (!stoneOpen.isPlaying)
+        if(stoneOpen)
         {
-            stoneOpen.Play();
+            if (!stoneOpen.isPlaying)
+            {
+                stoneOpen.Play();
+            }
         }
+
     }
 
     public IEnumerator ChangeCamera()
