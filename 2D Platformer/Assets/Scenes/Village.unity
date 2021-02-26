@@ -6956,7 +6956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391117055}
   - component: {fileID: 391117056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18093,7 +18093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1150045785}
   - component: {fileID: 1150045786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18336,7 +18336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187548403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19063,7 +19063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270375473}
   - component: {fileID: 1270375474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19461,16 +19461,6 @@ PrefabInstance:
       propertyPath: superReadyText
       value: 
       objectReference: {fileID: 1253422092}
-    - target: {fileID: 5670088738202447208, guid: 2b92fcea7db71f44b91d0a46df867cc5,
-        type: 3}
-      propertyPath: knockbackForce
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5670088738202447208, guid: 2b92fcea7db71f44b91d0a46df867cc5,
-        type: 3}
-      propertyPath: knockbackLength
-      value: 0.25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b92fcea7db71f44b91d0a46df867cc5, type: 3}
 --- !u!4 &1295532191 stripped
@@ -22996,6 +22986,7 @@ MonoBehaviour:
   cameraHoldTime_1: 2
   cameraHoldTime_2: 2
   movePlayer: 1
+  coUsed: 0
 --- !u!4 &1540349427
 Transform:
   m_ObjectHideFlags: 0

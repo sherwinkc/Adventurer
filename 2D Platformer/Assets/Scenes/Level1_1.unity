@@ -10937,7 +10937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
-  unlockSpeed: 4
+  unlockSpeed: 6
   keysRequired: 1
   virtualCamera1: {fileID: 1515977642}
   virtualCamera2: {fileID: 1580070832}

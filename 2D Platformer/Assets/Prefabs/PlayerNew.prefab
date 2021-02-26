@@ -45,21 +45,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.789
+  m_FalloffIntensity: 0.7
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.75
+  m_Intensity: 0.8
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 3b865d81
   m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
+  m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.84
-  m_PointLightOuterRadius: 2.4
+  m_PointLightInnerRadius: 1.29
+  m_PointLightOuterRadius: 5
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -11114,12 +11114,15 @@ MonoBehaviour:
   dashCooldownAmount: 0
   dashCounter: 0
   moveSpeed: 5
-  knockbackForce: 5
-  knockbackLength: 0.5
+  knockbackForce: 2.5
+  knockbackLength: 0.25
   knockbackCounter: 0
   footsteps: {fileID: 5670088737121908544}
   impactEffect: {fileID: 5670088738110656398}
   move: {x: 0, y: 0}
+  isTalking: 0
+  signIsNear: 0
+  signScript: {fileID: 0}
   jumpCost: 0
   rollCost: 0
   chest: {fileID: 0}
@@ -11143,6 +11146,7 @@ MonoBehaviour:
   thePlayer: {fileID: 0}
   playerMovement: {fileID: 0}
   upgrades: {fileID: 0}
+  radialChunkBar: {fileID: 0}
   animator: {fileID: 5670088738202447212}
   attackPoint: {fileID: 5670088736319406647}
   attackRange: 0.85
