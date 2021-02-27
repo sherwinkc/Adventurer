@@ -14,6 +14,7 @@ public class Fire_Skel_Script : MonoBehaviour
 
     public Transform squibTransform;
     public GameObject deathSplosion, squib;
+    public GameObject swordSwipeVFX;
     public GameObject orbsOnDeath;
 
     //public GameObject fireVFX;
@@ -24,21 +25,22 @@ public class Fire_Skel_Script : MonoBehaviour
     //Audio
     public AudioSource enemyGrunt1, bloodSquelch, dead;
 
-    void Start()
+    void Awake()
     {
-        currentHealth = maxHealth;
-
         animator = GetComponent<Animator>();
         destroyOverTime = GetComponentInParent<DestroyOverTime>();
         rb = GetComponent<Rigidbody2D>();
         fire_Skel_Controller = GetComponent<Fire_Skel_Controller>();
         playerCombat = FindObjectOfType<PlayerCombat>();
         upgrades = FindObjectOfType<Upgrades>();
+    }
 
+    void Start()
+    {
+        currentHealth = maxHealth;
         //fireVFX.gameObject.SetActive(true);
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -47,6 +49,7 @@ public class Fire_Skel_Script : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Instantiate(swordSwipeVFX, squibTransform.transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
 
         if (currentHealth >= 0)
         {

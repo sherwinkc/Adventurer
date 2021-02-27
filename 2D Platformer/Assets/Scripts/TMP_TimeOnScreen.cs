@@ -9,9 +9,13 @@ public class TMP_TimeOnScreen : MonoBehaviour
 
     public AudioSource display;
 
-    void Start()
+    private void Awake()
     {
         prologue_Text.SetActive(false);
+    }
+
+    void Start()
+    {
         StartCoroutine(DisplayTime());
     }
 

@@ -16,6 +16,7 @@ public class Spider_Script : MonoBehaviour
 
     public Transform squibTransform;
     public GameObject squib;
+    public GameObject swordSwipeVFX;
 
     //Enemies
     public SpiderController spider;
@@ -26,12 +27,8 @@ public class Spider_Script : MonoBehaviour
     //Audio
     public AudioSource enemyGrunt, bloodSquelch;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        //set currentHealth to max health
-        currentHealth = maxHealth;
-
         //Get Components
         animator = GetComponent<Animator>();
         destroyOverTime = GetComponentInParent<DestroyOverTime>();
@@ -42,15 +39,21 @@ public class Spider_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        //set currentHealth to max health
+        currentHealth = maxHealth;
+    }
+
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Instantiate(swordSwipeVFX, squibTransform.transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
 
         if (currentHealth >= 0)
         {

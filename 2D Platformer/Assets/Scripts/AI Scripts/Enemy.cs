@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     
     public Transform squibTransform;
     public GameObject squib;
+    public GameObject swordSwipeVFX;
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
 
@@ -23,16 +24,18 @@ public class Enemy : MonoBehaviour
     //Audio
     public AudioSource enemyGrunt1, grunt2, bloodSquelch, die;
 
-    void Start()
+    void Awake()
     {
-        currentHealth = maxHealth;
-
         enemyBehaviour = GetComponent<Enemy_Behaviour>();
         destroyOverTime = GetComponentInParent<DestroyOverTime>();
         rb = GetComponent<Rigidbody2D>();
-
         playerCombat = FindObjectOfType<PlayerCombat>();
         upgrades = FindObjectOfType<Upgrades>();
+    }
+
+    void Start()
+    {
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Instantiate(swordSwipeVFX, squibTransform.transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
 
         if (currentHealth >= 0)
         {
@@ -68,7 +72,7 @@ public class Enemy : MonoBehaviour
 
             Die();
 
-            playerCombat.superAmount += upgrades.superAmountReturned; //???
+            playerCombat.superAmount += upgrades.superAmountReturned;
 
         }
     }

@@ -12,6 +12,7 @@ public class Sludge_Script : MonoBehaviour
 
     public Transform squibTransform;
     public GameObject squib;
+    public GameObject swordSwipeVFX;
 
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
@@ -22,13 +23,10 @@ public class Sludge_Script : MonoBehaviour
     public int currentHealth;
 
     //Audio
-    public AudioSource grunt;    
+    public AudioSource grunt;
 
-    void Start()
+    void Awake()
     {
-        //set currentHealth to max health
-        currentHealth = maxHealth;
-
         //Get Components
         animator = GetComponent<Animator>();
         destroyOverTime = GetComponentInParent<DestroyOverTime>();
@@ -37,6 +35,12 @@ public class Sludge_Script : MonoBehaviour
 
         playerCombat = FindObjectOfType<PlayerCombat>();
         upgrades = FindObjectOfType<Upgrades>();
+    }
+
+    void Start()
+    {
+        //set currentHealth to max health
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -48,6 +52,7 @@ public class Sludge_Script : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Instantiate(swordSwipeVFX, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
 
         if (currentHealth >= 0)
         {

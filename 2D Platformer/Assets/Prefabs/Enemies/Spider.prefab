@@ -249,6 +249,8 @@ MonoBehaviour:
   upgrades: {fileID: 0}
   squibTransform: {fileID: 3376044715274869523}
   squib: {fileID: 7769350992981078548, guid: 2560f6df3d072cc4eb52c1eede9f463c, type: 3}
+  swordSwipeVFX: {fileID: 1730016912316983591, guid: 0fefb71c083bb9848876624ba67fb391,
+    type: 3}
   spider: {fileID: 0}
   maxHealth: 55
   currentHealth: 0

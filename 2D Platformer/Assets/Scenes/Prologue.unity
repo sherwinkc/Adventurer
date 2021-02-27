@@ -225,6 +225,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!43 &14906614
 Mesh:
   m_ObjectHideFlags: 0
@@ -419,6 +421,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &22134925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 631806890673747781, guid: 3b1b640bc96431f4cab3bfa894a9e8f1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 631806890673747781, guid: 3b1b640bc96431f4cab3bfa894a9e8f1,
         type: 3}
@@ -746,6 +750,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &42240192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1166,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &68171273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,6 +1428,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &106285410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,6 +1931,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &134369283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358354915103446, guid: 6ba04090de011704bb4751459f87e0cd,
@@ -1951,6 +1963,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &148822647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2264,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &178919701
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,6 +2601,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &182394384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +2619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &182394385
 Transform:
   m_ObjectHideFlags: 0
@@ -2639,6 +2657,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.96
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &188532153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,6 +3097,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &208990821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3179,6 +3201,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &209979446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3281,6 +3305,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &219767245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,6 +3626,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &251339067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,6 +4605,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &330680031
 GameObject:
   m_ObjectHideFlags: 0
@@ -4942,6 +4972,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &354618814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5044,6 +5076,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &355462823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5255,6 +5289,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &368304320 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358354915103446, guid: 6ba04090de011704bb4751459f87e0cd,
@@ -5285,6 +5321,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &388130999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5477,6 +5515,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &403198948
 GameObject:
   m_ObjectHideFlags: 0
@@ -5848,6 +5888,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &428304037
 GameObject:
   m_ObjectHideFlags: 0
@@ -6599,7 +6641,7 @@ PrefabInstance:
     - target: {fileID: 5324599592045633279, guid: 8cb5df1fc6aaa564a8c4bca5d0bb4e7c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 135.21
+      value: 135.08
       objectReference: {fileID: 0}
     - target: {fileID: 5324599592045633279, guid: 8cb5df1fc6aaa564a8c4bca5d0bb4e7c,
         type: 3}
@@ -6910,6 +6952,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &517618533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7393,6 +7437,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &576991604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358354915103446, guid: 6ba04090de011704bb4751459f87e0cd,
@@ -7423,6 +7469,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &582091264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358354915103446, guid: 6ba04090de011704bb4751459f87e0cd,
@@ -7453,6 +7501,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &583306690
 GameObject:
   m_ObjectHideFlags: 0
@@ -8667,6 +8717,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &641206833
 GameObject:
   m_ObjectHideFlags: 0
@@ -9029,6 +9081,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &657999682
 GameObject:
   m_ObjectHideFlags: 0
@@ -9419,6 +9473,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &671248961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9434,7 +9490,7 @@ PrefabInstance:
     - target: {fileID: 6497609489132799995, guid: 8d2456e8e43cc7e4d854ab68e343fcd6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6497609489132799995, guid: 8d2456e8e43cc7e4d854ab68e343fcd6,
         type: 3}
@@ -9879,6 +9935,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &716903750
 GameObject:
   m_ObjectHideFlags: 0
@@ -10231,6 +10289,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &726492623
 GameObject:
   m_ObjectHideFlags: 0
@@ -11305,6 +11365,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &794328008
 GameObject:
   m_ObjectHideFlags: 0
@@ -11441,6 +11503,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &802069094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11555,6 +11619,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &822387033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11657,6 +11723,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &823975328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11799,6 +11867,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &823987063
 GameObject:
   m_ObjectHideFlags: 0
@@ -12610,6 +12680,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &915879067
 GameObject:
   m_ObjectHideFlags: 0
@@ -13957,6 +14029,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!212 &1004822004
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14668,6 +14742,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1042524676
 GameObject:
   m_ObjectHideFlags: 0
@@ -14944,6 +15020,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1069882428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15046,6 +15124,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1079208937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358354915103446, guid: 6ba04090de011704bb4751459f87e0cd,
@@ -15076,6 +15156,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1087992509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15260,7 +15342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.2416992, y: -37.990356}
+  m_AnchoredPosition: {x: 3.2416992, y: -37.990234}
   m_SizeDelta: {x: -1226.5972, y: 0.016113281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1112530849
@@ -15455,6 +15537,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1116662934
 GameObject:
   m_ObjectHideFlags: 0
@@ -15959,6 +16043,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1147355203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18128,6 +18214,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1301086082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18419,6 +18507,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.95
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!114 &1309214412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18855,6 +18945,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1349732858
 GameObject:
   m_ObjectHideFlags: 0
@@ -19212,6 +19304,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1368641526
 GameObject:
   m_ObjectHideFlags: 0
@@ -19341,6 +19435,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!212 &1370272732
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19778,6 +19874,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1398466077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19990,6 +20088,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1428210041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20092,6 +20192,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1434873135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20350,6 +20452,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1458256720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20452,6 +20556,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1463897059 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358354915103446, guid: 6ba04090de011704bb4751459f87e0cd,
@@ -20482,6 +20588,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1465208496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20584,6 +20692,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1465999775
 GameObject:
   m_ObjectHideFlags: 0
@@ -20890,6 +21000,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1490988383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21004,6 +21116,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1497517802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21106,6 +21220,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1502186535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358354915103446, guid: 6ba04090de011704bb4751459f87e0cd,
@@ -21136,6 +21252,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1522205707
 GameObject:
   m_ObjectHideFlags: 0
@@ -21184,7 +21302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1553461392
 Transform:
   m_ObjectHideFlags: 0
@@ -21621,6 +21739,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1604858910
 GameObject:
   m_ObjectHideFlags: 0
@@ -21798,6 +21918,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1610100212
 GameObject:
   m_ObjectHideFlags: 0
@@ -21848,6 +21970,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!212 &1610100215
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22364,6 +22488,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1664383743
 GameObject:
   m_ObjectHideFlags: 0
@@ -22822,6 +22948,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1701948919
 GameObject:
   m_ObjectHideFlags: 0
@@ -23351,7 +23479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1715189470
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23923,6 +24051,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1754708390
 GameObject:
   m_ObjectHideFlags: 0
@@ -24100,6 +24230,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &1761772349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24324,6 +24456,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1798015837
 GameObject:
   m_ObjectHideFlags: 0
@@ -24664,6 +24798,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1860065921
 GameObject:
   m_ObjectHideFlags: 0
@@ -24841,6 +24977,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1911570460
 GameObject:
   m_ObjectHideFlags: 0
@@ -24975,6 +25113,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1917931754
 GameObject:
   m_ObjectHideFlags: 0
@@ -25268,6 +25408,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &1933461294
 GameObject:
   m_ObjectHideFlags: 0
@@ -26074,6 +26216,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &2016076172
 GameObject:
   m_ObjectHideFlags: 0
@@ -26511,6 +26655,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &2042077124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26613,6 +26759,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &2044305940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26715,6 +26863,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &2058522869
 GameObject:
   m_ObjectHideFlags: 0
@@ -27269,6 +27419,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1001 &2096090051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27505,6 +27657,8 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &2128336821
 GameObject:
   m_ObjectHideFlags: 0

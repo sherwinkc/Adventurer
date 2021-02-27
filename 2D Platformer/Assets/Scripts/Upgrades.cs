@@ -110,7 +110,7 @@ public class Upgrades : MonoBehaviour
         staminaMaxT3 = staminaMaxUpgradeDefault * 1.75f;
 
         //stamina recharge rate
-        staminaRechargeRateDefault = 10f;
+        staminaRechargeRateDefault = 15f; // Originally 10f
         staminaRechargeRateT1 = staminaRechargeRateDefault * 1.25f;
         staminaRechargeRateT2 = staminaRechargeRateDefault * 1.5f;
         staminaRechargeRateT3 = staminaRechargeRateDefault * 2f;

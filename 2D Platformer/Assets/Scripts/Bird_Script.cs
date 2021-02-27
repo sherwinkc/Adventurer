@@ -20,6 +20,7 @@ public class Bird_Script : MonoBehaviour
     //public BoxCollider2D boxCollider2D;
 
     public GameObject squib;
+    public GameObject swordSwipeVFX;
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
 
@@ -29,10 +30,8 @@ public class Bird_Script : MonoBehaviour
     //Audio
     public AudioSource crow, squelch, die;
 
-    void Start()
+    void Awake()
     {
-        currentHealth = maxHealth;
-
         animator = GetComponent<Animator>();
         destroyOverTime = GetComponent<DestroyOverTime>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -48,6 +47,11 @@ public class Bird_Script : MonoBehaviour
         aiDestSetter = GetComponent<AIDestinationSetter>();
 
         birdController = GetComponent<Bird_Controller>();
+    }
+
+    void Start()
+    {
+        currentHealth = maxHealth;
 
         spriteRenderer.enabled = true;
         detectBirds.enabled = true;
@@ -58,6 +62,7 @@ public class Bird_Script : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Instantiate(swordSwipeVFX, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
 
         if (currentHealth >= 0)
         {

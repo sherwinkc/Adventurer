@@ -13,22 +13,24 @@ public class ParallaxNew : MonoBehaviour
     public LevelBegin levelBegin;
     public LevelBegin_Prologue levelBegin_P;
     public LevelBegin_Village levelBegin_V;
+    public LevelBegin_Floating levelBegin_F;
 
-    public float relativeMove = 0f;
-    public bool lockY = false;
-    private float offset;
+    public float relativeMove;
+    public bool lockY;
+    public float offsetX, offsetY;
 
     private void Awake()
     {
-
+        levelBegin = FindObjectOfType<LevelBegin>();
+        levelBegin_P = FindObjectOfType<LevelBegin_Prologue>();
+        levelBegin_V = FindObjectOfType<LevelBegin_Village>();
+        levelBegin_F = FindObjectOfType<LevelBegin_Floating>();
     }
 
     private void Start()
     {
-        offset = transform.position.x;
-        levelBegin = FindObjectOfType<LevelBegin>();
-        levelBegin_P = FindObjectOfType<LevelBegin_Prologue>();
-        levelBegin_V = FindObjectOfType<LevelBegin_Village>();
+        offsetX = transform.position.x;
+        offsetY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -56,11 +58,11 @@ public class ParallaxNew : MonoBehaviour
 
             if (lockY)
             {
-                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, transform.position.y, transform.position.z);
             }
             else
             {
-                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, (cam.transform.position.y + offsetY) / 2f, transform.position.z);
             }
         }
 
@@ -70,7 +72,6 @@ public class ParallaxNew : MonoBehaviour
             /*if (levelBegin_P.virtualCamera2.gameObject.activeSelf == true)
             {
                 cam = levelBegin_P.virtualCamera2;
-                //cam = levelBegin_P.virtualCamera1;
             }
             else if (levelBegin_P.virtualCamera1.gameObject.activeSelf == true)
             {
@@ -82,14 +83,16 @@ public class ParallaxNew : MonoBehaviour
             }*/
 
             cam = levelBegin_P.virtualCamera1;
+            //offset = cam.transform.position.x - transform.position.x;
 
             if (lockY)
             {
-                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+                //transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, transform.position.y, transform.position.z);
             }
             else
             {
-                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, (cam.transform.position.y + offsetY) / 2f, transform.position.z);
             }
         }
 
@@ -114,11 +117,40 @@ public class ParallaxNew : MonoBehaviour
 
             if (lockY)
             {
-                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, transform.position.y, transform.position.z);
             }
             else
             {
-                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offset, transform.position.y, transform.position.z);
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, (cam.transform.position.y + offsetY) / 2f, transform.position.z);
+            }
+        }
+
+        if (levelBegin_F) //check if level begin exists
+        {
+            //setting the camera
+            /*if (levelBegin_P.virtualCamera2.gameObject.activeSelf == true)
+            {
+                cam = levelBegin_P.virtualCamera2;
+                //cam = levelBegin_P.virtualCamera1;
+            }
+            else if (levelBegin_P.virtualCamera1.gameObject.activeSelf == true)
+            {
+                cam = levelBegin_P.virtualCamera1;
+            }
+            else
+            {
+                return;
+            }*/
+
+            cam = levelBegin_F.virtualCamera1;
+
+            if (lockY)
+            {
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, (cam.transform.position.y + offsetY) / 2f, transform.position.z);
             }
         }
     }

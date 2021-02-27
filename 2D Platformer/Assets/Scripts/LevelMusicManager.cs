@@ -7,7 +7,7 @@ public class LevelMusicManager : MonoBehaviour
 {
     public bool fadingOutMusic = false;
 
-    public AudioSource prologue_Music, village_Music, forestDark_Music;
+    public AudioSource prologue_Music, village_Music, forestDark_Music, floatingIsles_Music;
 
     private void Awake()
     {
@@ -24,6 +24,11 @@ public class LevelMusicManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level1_1")
         {
             forestDark_Music.Play();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level1_2")
+        {
+            floatingIsles_Music.Play();
         }
     }
 
@@ -50,6 +55,11 @@ public class LevelMusicManager : MonoBehaviour
             {
                 forestDark_Music.volume -= Time.deltaTime / 25f;
             }
+
+            if (floatingIsles_Music != null)
+            {
+                floatingIsles_Music.volume -= Time.deltaTime / 25f;
+            }
         }
 
         if (prologue_Music.volume <= 0f && SceneManager.GetActiveScene().name == "Prologue")
@@ -67,6 +77,12 @@ public class LevelMusicManager : MonoBehaviour
         if (forestDark_Music.volume <= 0f && SceneManager.GetActiveScene().name == "Level1_1")
         {
             forestDark_Music.volume = 0f;
+            fadingOutMusic = false;
+        }
+
+        if (floatingIsles_Music.volume <= 0f && SceneManager.GetActiveScene().name == "Level1_2")
+        {
+            floatingIsles_Music.volume = 0f;
             fadingOutMusic = false;
         }
     }
