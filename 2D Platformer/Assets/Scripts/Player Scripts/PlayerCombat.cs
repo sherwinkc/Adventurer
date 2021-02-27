@@ -150,7 +150,7 @@ public class PlayerCombat : MonoBehaviour
                 SwordSipe();
             }
 
-            m_impulseSource.GenerateImpulse(1f); // impulse on every sword swipe
+            //m_impulseSource.GenerateImpulse(1f); // impulse on every sword swipe
         }
     }
 
@@ -168,35 +168,38 @@ public class PlayerCombat : MonoBehaviour
             if(enemy.GetComponentInParent<Enemy>() != null)
             {
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                //StartCoroutine(SlowTimeCo());
+                StartCoroutine(SlowTimeCo());
             }
             else if(enemy.GetComponent<Enemy>() != null)
             {
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-                //StartCoroutine(SlowTimeCo());
+                StartCoroutine(SlowTimeCo());
             }
             //Check if we hit spider script
             else if(enemy.GetComponentInParent<Spider_Script>() != null)
             {
                 enemy.GetComponentInParent<Spider_Script>().TakeDamage(attackDamage);
-                //StartCoroutine(SlowTimeCo());
+                StartCoroutine(SlowTimeCo());
             }
             else if(enemy.GetComponentInParent<Fire_Skel_Script>() != null)
             {
                 enemy.GetComponentInParent<Fire_Skel_Script>().TakeDamage(attackDamage);
-                //StartCoroutine(SlowTimeCo());
+                StartCoroutine(SlowTimeCo());
             }
             else if(enemy.GetComponentInParent<Sludge_Script>() !=null)
             {
                 enemy.GetComponentInParent<Sludge_Script>().TakeDamage(attackDamage);
+                StartCoroutine(SlowTimeCo());
             }
             else if (enemy.GetComponentInParent<Bird_Script>() != null)
             {
                 enemy.GetComponentInParent<Bird_Script>().TakeDamage(attackDamage);
+                StartCoroutine(SlowTimeCo());
             }
             else if (enemy.GetComponentInParent<Scarecrow_Script>() != null)
             {
                 enemy.GetComponentInParent<Scarecrow_Script>().TakeDamage(attackDamage);
+                StartCoroutine(SlowTimeCo());
             }
         }
     }
@@ -205,7 +208,7 @@ public class PlayerCombat : MonoBehaviour
     {
         Time.timeScale = 0.01f;
 
-        yield return new WaitForSeconds(0.001f);
+        yield return new WaitForSeconds(0.00075f);
 
         Time.timeScale = 1f;
 
@@ -218,7 +221,7 @@ public class PlayerCombat : MonoBehaviour
         {
             StartCoroutine(SuperAttackSequence());
             playSuperOnce = false; //for UI sfx
-            m_impulseSource.GenerateImpulse(1f);
+            //m_impulseSource.GenerateImpulse(1f);
         }
     }
 
@@ -236,7 +239,7 @@ public class PlayerCombat : MonoBehaviour
     {
         swordSwipe.pitch = (Random.Range(0.92f, 1f));
         swordSwipe.Play();
-        m_impulseSource.GenerateImpulse(0.1f);
+        //m_impulseSource.GenerateImpulse(0.1f);
     }
 
 

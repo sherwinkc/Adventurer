@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public PlayerCombat playerCombat;
     public CinemachineVirtualCamera virtualCamera;
     public Upgrades upgrades;
+    public Canvas worldCanvas;
 
     //Game Objects
     public GameObject deathSplosion;
@@ -181,6 +182,8 @@ public class LevelManager : MonoBehaviour
     {
         respawnCoActive = true;
 
+        worldCanvas.enabled = false;
+
         //sets player inactive in the world
         thePlayer.gameObject.SetActive(false);
 
@@ -218,6 +221,7 @@ public class LevelManager : MonoBehaviour
 
         //sets player active in the world
         thePlayer.gameObject.SetActive(true);
+        worldCanvas.enabled = true;
 
         //reset knockback counter
         playerMovement.knockbackCounter = 0;

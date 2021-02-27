@@ -5,17 +5,20 @@ using UnityEngine;
 public class KeyScript : MonoBehaviour
 {
     private LevelManager theLevelManager;
-    //public PlayDistance playDistance;
+    private CircleCollider2D circleColl;
 
     public int keyValue;
-    public bool triggerActive;
-    // Start is called before the first frame update
-    void Start()
+    public bool triggerActive = false;
+
+    void Awake()
     {
         theLevelManager = FindObjectOfType<LevelManager>();
-        //playDistance = GetComponentInChildren<PlayDistance>();
+        circleColl = GetComponent<CircleCollider2D>();
+    }
 
-        triggerActive = false;
+    void Start()
+    {
+
     }
 
     // Update is called once per frame
@@ -25,9 +28,11 @@ public class KeyScript : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" && triggerActive == false)
+        if (other.tag == "KeyCollider" && triggerActive == false)
         {
             triggerActive = true;
+
+            circleColl.enabled = false;
 
             //stop Audio in child component
             //playDistance.audioSource.enabled = false;

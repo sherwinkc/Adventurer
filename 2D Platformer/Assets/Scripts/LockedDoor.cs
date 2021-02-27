@@ -6,6 +6,9 @@ using Cinemachine;
 public class LockedDoor : MonoBehaviour
 {
     public LevelManager levelManager;
+    public PlayerMovement playerMov;
+    public PlayerCombat playerCom;
+
     public float unlockSpeed;
     public float startTime;
     public int keysRequired;
@@ -23,6 +26,8 @@ public class LockedDoor : MonoBehaviour
     void Awake()
     {
         levelManager = FindObjectOfType<LevelManager>();
+        playerMov = FindObjectOfType<PlayerMovement>();
+        playerCom = FindObjectOfType<PlayerCombat>();
     }
 
     // Start is called before the first frame update
@@ -96,6 +101,9 @@ public class LockedDoor : MonoBehaviour
         canPlayCo = false;
 
         levelManager.invincible = true;
+        //playerMov.moveSpeed = 0f;
+        //playerMov.canMove = false;
+        //playerCom.canMove = false;
 
         PlayStoneSound();
 
@@ -112,6 +120,8 @@ public class LockedDoor : MonoBehaviour
         virtualCamera1.gameObject.SetActive(true);
 
         levelManager.invincible = false;
+        //playerMov.canMove = true;
+        //playerCom.canMove = true;
 
         yield return null;
     }

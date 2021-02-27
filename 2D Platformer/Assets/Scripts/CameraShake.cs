@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class CameraShake : MonoBehaviour
 {
-    public CinemachineVirtualCamera VirtualCamera;
+    /*public CinemachineVirtualCamera VirtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
     private void Awake()
@@ -46,5 +46,5 @@ public class CameraShake : MonoBehaviour
         virtualCameraNoise.m_FrequencyGain = 0f;
 
         yield return 0;
-    }
+    }*/
 }

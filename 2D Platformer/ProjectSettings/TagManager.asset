@@ -11,6 +11,7 @@ TagManager:
   - Enemy_Parent
   - Chest
   - Signs
+  - KeyCollider
   layers:
   - Default
   - TransparentFX

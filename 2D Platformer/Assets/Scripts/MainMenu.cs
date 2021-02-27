@@ -69,6 +69,13 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Level1_1");
     }
 
+    public void FloatingIsles()
+    {
+        menuMusic.Stop();
+        selectSound.Play();
+        SceneManager.LoadScene("Level1_2");
+    }
+
     public IEnumerator NewGameCo()
     {
         turnDownMusic = true;
