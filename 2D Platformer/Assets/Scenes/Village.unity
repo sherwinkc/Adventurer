@@ -534,9 +534,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 21659187}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &21659187
 MonoBehaviour:
@@ -1429,7 +1431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &55965944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2662,7 +2664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &122422747
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3464,7 +3466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &189354870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5358,7 +5360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &277822054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6053,9 +6055,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 1777850506}
   button: {fileID: 324041293}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &324041293
 MonoBehaviour:
@@ -6274,7 +6278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &331604605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7680,9 +7684,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 1777850506}
   button: {fileID: 445425153}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &445425153
 MonoBehaviour:
@@ -7937,9 +7943,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 455163921}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &455163921
 MonoBehaviour:
@@ -8288,7 +8296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &504389062
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8728,9 +8736,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 534817623}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &534817623
 MonoBehaviour:
@@ -9785,9 +9795,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 606364537}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &606364537
 MonoBehaviour:
@@ -11579,9 +11591,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 730663715}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &730663715
 MonoBehaviour:
@@ -13739,9 +13753,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 859298494}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &859298494
 MonoBehaviour:
@@ -14027,9 +14043,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 881850943}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &881850943
 MonoBehaviour:
@@ -14420,9 +14438,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 890456746}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &890456746
 MonoBehaviour:
@@ -14922,7 +14942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &909342497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15629,7 +15649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &977062638
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18474,7 +18494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1178651068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19654,9 +19674,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1293349859}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &1293349859
 MonoBehaviour:
@@ -20631,7 +20653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1391911174
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21415,7 +21437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1434184348
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22150,9 +22172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1464503623}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &1464503623
 MonoBehaviour:
@@ -22693,7 +22717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1501837816
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24148,9 +24172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1589765907}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &1589765907
 MonoBehaviour:
@@ -26478,9 +26504,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1803858973}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &1803858973
 MonoBehaviour:
@@ -26911,7 +26939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1843638776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28286,7 +28314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1957567724
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28814,7 +28842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2063654381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29094,9 +29122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 2100192421}
+  text: {fileID: 0}
   errorSFX: {fileID: 604607022}
 --- !u!114 &2100192421
 MonoBehaviour:
@@ -29420,7 +29450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2119521120
 RectTransform:
   m_ObjectHideFlags: 0

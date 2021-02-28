@@ -223,6 +223,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -419,6 +420,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -748,6 +750,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -769,7 +772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &42240193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -961,7 +964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &55596381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1164,6 +1167,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
   offsetX: 0
@@ -1426,6 +1430,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -1929,6 +1934,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -1961,6 +1967,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -2262,6 +2269,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -2599,6 +2607,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -2655,6 +2664,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.96
   lockY: 1
   offsetX: 0
@@ -3095,6 +3105,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -3199,6 +3210,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -3303,6 +3315,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -3624,6 +3637,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
   offsetX: 0
@@ -3645,7 +3659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &251339068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4381,9 +4395,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 322667799}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &322667799
 MonoBehaviour:
@@ -4603,6 +4619,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -4970,6 +4987,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -5074,6 +5092,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -5287,6 +5306,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -5319,6 +5339,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -5513,6 +5534,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -5886,6 +5908,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
   offsetX: 0
@@ -6950,6 +6973,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -7115,7 +7139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &532683678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7194,7 +7218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &539282707
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7435,6 +7459,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -7467,6 +7492,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -7499,6 +7525,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -8715,6 +8742,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -8772,9 +8800,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 119631152}
   button: {fileID: 641206836}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &641206836
 MonoBehaviour:
@@ -9079,6 +9109,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -9249,9 +9280,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 662753056}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &662753056
 MonoBehaviour:
@@ -9471,6 +9504,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -9933,6 +9967,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -10287,6 +10322,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -10674,9 +10710,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 742628543}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &742628543
 MonoBehaviour:
@@ -11363,6 +11401,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -11501,6 +11540,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -11617,6 +11657,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -11721,6 +11762,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -11865,6 +11907,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
   offsetX: 0
@@ -12305,7 +12348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &861554817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12678,6 +12721,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -13108,9 +13152,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 951369163}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &951369163
 MonoBehaviour:
@@ -13356,9 +13402,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 119631152}
   button: {fileID: 966507943}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &966507943
 MonoBehaviour:
@@ -13495,7 +13543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &968141981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13775,9 +13823,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 991273304}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &991273304
 MonoBehaviour:
@@ -14027,6 +14077,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -14518,9 +14569,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1037786884}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &1037786884
 MonoBehaviour:
@@ -14740,6 +14793,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -14761,7 +14815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1042524677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15018,6 +15072,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -15122,6 +15177,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -15154,6 +15210,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -15535,6 +15592,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -16041,6 +16099,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -17255,9 +17314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1226941332}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &1226941332
 MonoBehaviour:
@@ -17568,7 +17629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1238548777
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18212,6 +18273,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
   offsetX: 0
@@ -18313,7 +18375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1302395656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18505,6 +18567,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.95
   lockY: 1
   offsetX: 0
@@ -18943,6 +19006,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -18964,7 +19028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1349732859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19080,9 +19144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1350579596}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &1350579596
 MonoBehaviour:
@@ -19302,6 +19368,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -19433,6 +19500,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -19872,6 +19940,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -20086,6 +20155,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -20190,6 +20260,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -20450,6 +20521,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -20554,6 +20626,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -20586,6 +20659,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -20690,6 +20764,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -20998,6 +21073,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.98
   lockY: 1
   offsetX: 0
@@ -21114,6 +21190,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -21218,6 +21295,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -21250,6 +21328,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -21737,6 +21816,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
   offsetX: 0
@@ -21916,6 +21996,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -21968,6 +22049,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -22395,7 +22477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1658956181
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22486,6 +22568,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -22543,9 +22626,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1664383746}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &1664383746
 MonoBehaviour:
@@ -22946,6 +23031,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -23003,9 +23089,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1701948922}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &1701948922
 MonoBehaviour:
@@ -23321,7 +23409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1707369108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23401,7 +23489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1708870786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23827,9 +23915,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1739782403}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &1739782403
 MonoBehaviour:
@@ -24049,6 +24139,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -24228,6 +24319,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -24454,6 +24546,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -24475,7 +24568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1798015838
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24796,6 +24889,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -24975,6 +25069,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -25111,6 +25206,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -25406,6 +25502,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -25958,9 +26055,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 1990949600}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &1990949600
 MonoBehaviour:
@@ -26214,6 +26313,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -26653,6 +26753,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: 0.97
   lockY: 1
   offsetX: 0
@@ -26757,6 +26858,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -26861,6 +26963,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -27008,9 +27111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  playerCombat: {fileID: 0}
   upgrades: {fileID: 0}
   levelManager: {fileID: 0}
   button: {fileID: 2062331578}
+  text: {fileID: 0}
   errorSFX: {fileID: 700859442}
 --- !u!114 &2062331578
 MonoBehaviour:
@@ -27417,6 +27522,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -27655,6 +27761,7 @@ MonoBehaviour:
   levelBegin: {fileID: 0}
   levelBegin_P: {fileID: 0}
   levelBegin_V: {fileID: 0}
+  levelBegin_F: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -27713,7 +27820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2131821420
 RectTransform:
   m_ObjectHideFlags: 0

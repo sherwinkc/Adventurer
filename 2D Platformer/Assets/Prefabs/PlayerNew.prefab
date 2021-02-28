@@ -126,7 +126,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0072723925, y: -0.018192008}
@@ -11275,6 +11275,21 @@ MonoBehaviour:
   staminaDashCostT1: 0
   staminaDashCostT2: 0
   staminaDashCostT3: 0
+  maxStamina: {fileID: 0}
+  staminaRecharge: {fileID: 0}
+  staminaAttackCost: {fileID: 0}
+  staminaJumpCost: {fileID: 0}
+  staminaDashCost: {fileID: 0}
+  doubleJump: {fileID: 0}
+  moveSpeed: {fileID: 0}
+  jumpSpeed: {fileID: 0}
+  dashSpeed: {fileID: 0}
+  dashCool: {fileID: 0}
+  attackDmg: {fileID: 0}
+  attackRate: {fileID: 0}
+  attackRange: {fileID: 0}
+  superRecharge: {fileID: 0}
+  superFromKills: {fileID: 0}
   upgradeSFX: {fileID: 3242590907083699903}
 --- !u!114 &5670088738202447209
 MonoBehaviour:

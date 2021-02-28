@@ -32,6 +32,9 @@ public class Upgrades : MonoBehaviour
     public float staminaJumpCostDefault, staminaJumpCostT1, staminaJumpCostT2, staminaJumpCostT3;
     public float staminaDashCostDefault, staminaDashCostT1, staminaDashCostT2, staminaDashCostT3;
 
+    public Text maxStamina, staminaRecharge, staminaAttackCost, staminaJumpCost, staminaDashCost, doubleJump, moveSpeed, jumpSpeed,
+    dashSpeed, dashCool, attackDmg, attackRate, attackRange, superRecharge, superFromKills;
+
     //Audio
     public AudioSource upgradeSFX;
 
@@ -66,9 +69,9 @@ public class Upgrades : MonoBehaviour
 
         //dash cooldown
         dashCooldownUpgradeDefault = 3f;
-        dashCooldownUpgradeT1 = dashCooldownUpgradeDefault * 0.8f;
-        dashCooldownUpgradeT2 = dashCooldownUpgradeDefault * 0.5f;
-        dashCooldownUpgradeT3 = dashCooldownUpgradeDefault * 0.2f;
+        dashCooldownUpgradeT1 = dashCooldownUpgradeDefault * 0.9f;
+        dashCooldownUpgradeT2 = dashCooldownUpgradeDefault * 0.8f;
+        dashCooldownUpgradeT3 = dashCooldownUpgradeDefault * 0.7f;
 
         //Attack Damage
         attackDamageUpgradeDefault = 40;
@@ -117,21 +120,21 @@ public class Upgrades : MonoBehaviour
 
         //stamina attack cost
         staminaAttackCostDefault = 30f;
-        staminaAttackCostT1 = staminaAttackCostDefault * 0.8f;
-        staminaAttackCostT2 = staminaAttackCostDefault * 0.6f;
-        staminaAttackCostT3 = staminaAttackCostDefault * 0.4f;
+        staminaAttackCostT1 = staminaAttackCostDefault * 0.9f;
+        staminaAttackCostT2 = staminaAttackCostDefault * 0.8f;
+        staminaAttackCostT3 = staminaAttackCostDefault * 0.7f;
 
         //stamina jump cost
         staminaJumpCostDefault = 25f;
-        staminaJumpCostT1 = staminaJumpCostDefault * 0.8f;
-        staminaJumpCostT2 = staminaJumpCostDefault * 0.6f;
-        staminaJumpCostT3 = staminaJumpCostDefault * 0.4f;
+        staminaJumpCostT1 = staminaJumpCostDefault * 0.9f;
+        staminaJumpCostT2 = staminaJumpCostDefault * 0.8f;
+        staminaJumpCostT3 = staminaJumpCostDefault * 0.7f;
 
         //stamina dash cost
         staminaDashCostDefault = 20f;
-        staminaDashCostT1 = staminaDashCostDefault * 0.75f;
-        staminaDashCostT2 = staminaDashCostDefault * 0.6f;
-        staminaDashCostT3 = staminaDashCostDefault * 0.4f;
+        staminaDashCostT1 = staminaDashCostDefault * 0.8f;
+        staminaDashCostT2 = staminaDashCostDefault * 0.7f;
+        staminaDashCostT3 = staminaDashCostDefault * 0.6f;
 
         PlayerPrefsLoadingFunction();
     }
@@ -144,7 +147,8 @@ public class Upgrades : MonoBehaviour
         //stamina       
         playerCombat.currentStamina = playerCombat.staminaMax; // setting the bar full
 
-        //Distance which orbs are drawn to the player //TODO
+        //set the upgrade UI
+        SetUIAtLevelStart();
     }
 
     // Update is called once per frame
@@ -349,11 +353,12 @@ public class Upgrades : MonoBehaviour
 
     public void UnlockDoubleJump()
     {
-        if (levelManager.skillPoints >= 1)
+        if (levelManager.skillPoints >= 1 && !doubleJumpUnlocked)
         {
             doubleJumpUnlocked = true;
-            PlayerPrefs.SetInt("DoubleJump", 1);
             DeductSkillPointsAndAudio();
+            PlayerPrefs.SetInt("DoubleJump", 1);
+            doubleJump.text = "MAX";
         }
     }
 
@@ -363,16 +368,19 @@ public class Upgrades : MonoBehaviour
         {
             playerMovement.moveSpeed = moveUpgradeT1;
             DeductSkillPointsAndAudio();
+            moveSpeed.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.moveSpeed == moveUpgradeT1)
         {
             playerMovement.moveSpeed = moveUpgradeT2;
             DeductSkillPointsAndAudio();
+            moveSpeed.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.moveSpeed == moveUpgradeT2)
         {
             playerMovement.moveSpeed = moveUpgradeT3;
             DeductSkillPointsAndAudio();
+            moveSpeed.text = "MAX";
         }
     }
 
@@ -382,16 +390,19 @@ public class Upgrades : MonoBehaviour
         {
             playerMovement.jumpSpeed = jumpUpgradeT1;
             DeductSkillPointsAndAudio();
+            jumpSpeed.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.jumpSpeed == jumpUpgradeT1)
         {
             playerMovement.jumpSpeed = jumpUpgradeT2;
             DeductSkillPointsAndAudio();
+            jumpSpeed.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.jumpSpeed == jumpUpgradeT2)
         {
             playerMovement.jumpSpeed = jumpUpgradeT3;
             DeductSkillPointsAndAudio();
+            jumpSpeed.text = "MAX";
         }
     }
 
@@ -401,16 +412,19 @@ public class Upgrades : MonoBehaviour
         {
             playerMovement.dashSpeed = dashSpeedUpgradeT1;
             DeductSkillPointsAndAudio();
+            dashSpeed.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.dashSpeed == dashSpeedUpgradeT1)
         {
             playerMovement.dashSpeed = dashSpeedUpgradeT2;
             DeductSkillPointsAndAudio();
+            dashSpeed.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.dashSpeed == dashSpeedUpgradeT2)
         {
             playerMovement.dashSpeed = dashSpeedUpgradeT3;
             DeductSkillPointsAndAudio();
+            dashSpeed.text = "MAX";
         }
     }
 
@@ -421,18 +435,21 @@ public class Upgrades : MonoBehaviour
             playerMovement.dashCooldownAmount = dashCooldownUpgradeT1;
             playerMovement.dashCounter = dashCooldownUpgradeT1;
             DeductSkillPointsAndAudio();
+            dashCool.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.dashCooldownAmount == dashCooldownUpgradeT1)
         {
             playerMovement.dashCooldownAmount = dashCooldownUpgradeT2;
             playerMovement.dashCounter = dashCooldownUpgradeT2;
             DeductSkillPointsAndAudio();
+            dashCool.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.dashCooldownAmount == dashCooldownUpgradeT2)
         {
             playerMovement.dashCooldownAmount = dashCooldownUpgradeT3;
             playerMovement.dashCounter = dashCooldownUpgradeT3;
             DeductSkillPointsAndAudio();
+            dashCool.text = "MAX";
         }
     }
 
@@ -442,26 +459,31 @@ public class Upgrades : MonoBehaviour
         {
             playerCombat.attackDamage = attackDamageT1;
             DeductSkillPointsAndAudio();
+            attackDmg.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackDamage == attackDamageT1)
         {
             playerCombat.attackDamage = attackDamageT2;
             DeductSkillPointsAndAudio();
+            attackDmg.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackDamage == attackDamageT2)
         {
             playerCombat.attackDamage = attackDamageT3;
             DeductSkillPointsAndAudio();
+            attackDmg.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackDamage == attackDamageT3)
         {
             playerCombat.attackDamage = attackDamageT4;
             DeductSkillPointsAndAudio();
+            attackDmg.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackDamage == attackDamageT4)
         {
             playerCombat.attackDamage = attackDamageT5;
             DeductSkillPointsAndAudio();
+            attackDmg.text = "MAX";
         }
     }
 
@@ -471,16 +493,19 @@ public class Upgrades : MonoBehaviour
         {
             playerCombat.attackRate = attackTimeT1;
             DeductSkillPointsAndAudio();
+            attackRate.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackRate == attackTimeT1)
         {
             playerCombat.attackRate = attackTimeT2;
             DeductSkillPointsAndAudio();
+            attackRate.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackRate == attackTimeT2)
         {
             playerCombat.attackRate = attackTimeT3;
             DeductSkillPointsAndAudio();
+            attackRate.text = "MAX";
         }
     }
 
@@ -490,16 +515,19 @@ public class Upgrades : MonoBehaviour
         {
             playerCombat.attackRange = attackRangeT1;
             DeductSkillPointsAndAudio();
+            attackRange.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackRange == attackRangeT1)
         {
             playerCombat.attackRange = attackRangeT2;
             DeductSkillPointsAndAudio();
+            attackRange.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackRange == attackRangeT2)
         {
             playerCombat.attackRange = attackRangeT3;
             DeductSkillPointsAndAudio();
+            attackRange.text = "MAX";
         }
     }
 
@@ -509,16 +537,19 @@ public class Upgrades : MonoBehaviour
         {
             playerCombat.superRechargeRate = superRechargeT1;
             DeductSkillPointsAndAudio();
+            superRecharge.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.superRechargeRate == superRechargeT1)
         {
             playerCombat.superRechargeRate = superRechargeT2;
             DeductSkillPointsAndAudio();
+            superRecharge.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.superRechargeRate == superRechargeT2)
         {
             playerCombat.superRechargeRate = superRechargeT3;
             DeductSkillPointsAndAudio();
+            superRecharge.text = "MAX";
         }
     }
 
@@ -528,16 +559,19 @@ public class Upgrades : MonoBehaviour
         {
             superAmountReturned = superAmountReturnedT1;
             DeductSkillPointsAndAudio();
+            superFromKills.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && superAmountReturned == superAmountReturnedT1)
         {
             superAmountReturned = superAmountReturnedT2;
             DeductSkillPointsAndAudio();
+            superFromKills.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && superAmountReturned == superAmountReturnedT2)
         {
             superAmountReturned = superAmountReturnedT3;
             DeductSkillPointsAndAudio();
+            superFromKills.text = "MAX";
         }
     }
 
@@ -548,18 +582,21 @@ public class Upgrades : MonoBehaviour
             playerCombat.staminaMax = staminaMaxT1;
             playerCombat.currentStamina = playerCombat.staminaMax;
             DeductSkillPointsAndAudio();
+            maxStamina.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.staminaMax == staminaMaxT1)
         {
             playerCombat.staminaMax = staminaMaxT2;
             playerCombat.currentStamina = playerCombat.staminaMax;
             DeductSkillPointsAndAudio();
+            maxStamina.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.staminaMax == staminaMaxT2)
         {
             playerCombat.staminaMax = staminaMaxT3;
             playerCombat.currentStamina = playerCombat.staminaMax;
             DeductSkillPointsAndAudio();
+            maxStamina.text = "MAX";
         }
     }
 
@@ -569,16 +606,19 @@ public class Upgrades : MonoBehaviour
         {
             playerCombat.staminaRechargeRate = staminaRechargeRateT1;
             DeductSkillPointsAndAudio();
+            staminaRecharge.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.staminaRechargeRate == staminaRechargeRateT1)
         {
             playerCombat.staminaRechargeRate = staminaRechargeRateT2;
             DeductSkillPointsAndAudio();
+            staminaRecharge.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.staminaRechargeRate == staminaRechargeRateT2)
         {
             playerCombat.staminaRechargeRate = staminaRechargeRateT3;
             DeductSkillPointsAndAudio();
+            staminaRecharge.text = "MAX";
         }
     }
 
@@ -588,16 +628,19 @@ public class Upgrades : MonoBehaviour
         {
             playerCombat.attackCost = staminaAttackCostT1;
             DeductSkillPointsAndAudio();
+            staminaAttackCost.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackCost == staminaAttackCostT1)
         {
             playerCombat.attackCost = staminaAttackCostT2;
             DeductSkillPointsAndAudio();
+            staminaAttackCost.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerCombat.attackCost == staminaAttackCostT2)
         {
             playerCombat.attackCost = staminaAttackCostT3;
             DeductSkillPointsAndAudio();
+            staminaAttackCost.text = "MAX";
         }
     }
 
@@ -607,16 +650,19 @@ public class Upgrades : MonoBehaviour
         {
             playerMovement.jumpCost = staminaJumpCostT1;
             DeductSkillPointsAndAudio();
+            staminaJumpCost.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.jumpCost == staminaJumpCostT1)
         {
             playerMovement.jumpCost = staminaJumpCostT2;
             DeductSkillPointsAndAudio();
+            staminaJumpCost.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.jumpCost == staminaJumpCostT2)
         {
             playerMovement.jumpCost = staminaJumpCostT3;
             DeductSkillPointsAndAudio();
+            staminaJumpCost.text = "MAX";
         }
     }
 
@@ -626,17 +672,97 @@ public class Upgrades : MonoBehaviour
         {
             playerMovement.rollCost = staminaDashCostT1;
             DeductSkillPointsAndAudio();
+            staminaDashCost.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.rollCost == staminaDashCostT1)
         {
             playerMovement.rollCost = staminaDashCostT2;
             DeductSkillPointsAndAudio();
+            staminaDashCost.text = "UPGRADE";
         }
         else if (levelManager.skillPoints >= 1 && playerMovement.rollCost == staminaDashCostT2)
         {
             playerMovement.rollCost = staminaDashCostT3;
             DeductSkillPointsAndAudio();
+            staminaDashCost.text = "MAX";
         }
     }
 
+    public void SetUIAtLevelStart()
+    {
+        if (doubleJumpUnlocked)
+        {
+            doubleJump.text = "MAX";
+        }
+
+        if (playerMovement.moveSpeed == moveUpgradeT3)
+        {
+            moveSpeed.text = "MAX";
+        }
+
+        if (playerMovement.jumpSpeed == jumpUpgradeT3)
+        {
+            jumpSpeed.text = "MAX";
+        }
+
+        if (playerMovement.dashSpeed == dashSpeedUpgradeT3)
+        {
+            dashSpeed.text = "MAX";
+        }
+
+        if (playerMovement.dashCooldownAmount == dashCooldownUpgradeT3)
+        {
+            dashCool.text = "MAX";
+        }
+
+        if (playerCombat.attackDamage == attackDamageT5)
+        {
+            attackDmg.text = "MAX";
+        }
+
+        if (playerCombat.attackRate == attackTimeT3)
+        {
+            attackRate.text = "MAX";
+        }
+
+        if (playerCombat.attackRange == attackRangeT3)
+        {
+            attackRange.text = "MAX";
+        }
+
+        if (playerCombat.superRechargeRate == superRechargeT3)
+        {
+            superRecharge.text = "MAX";
+        }
+
+        if (superAmountReturned == superAmountReturnedT2)
+        {
+            superFromKills.text = "MAX";
+        }
+
+        if (playerCombat.staminaMax == staminaMaxT3)
+        {
+            maxStamina.text = "MAX";
+        }
+
+        if (playerCombat.staminaRechargeRate == staminaRechargeRateT3)
+        {
+            staminaRecharge.text = "MAX";
+        }
+
+        if (playerCombat.attackCost == staminaAttackCostT3)
+        {
+            staminaAttackCost.text = "MAX";
+        }
+
+        if (playerMovement.jumpCost == staminaJumpCostT3)
+        {
+            staminaJumpCost.text = "MAX";
+        }
+
+        if (playerMovement.rollCost == staminaDashCostT3)
+        {
+            staminaDashCost.text = "MAX";
+        }
+    }
 }
