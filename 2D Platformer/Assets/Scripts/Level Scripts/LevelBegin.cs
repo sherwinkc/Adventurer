@@ -7,7 +7,9 @@ public class LevelBegin : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     private PlayerCombat playerCombat;
-    public Canvas canvasMain, canvasWorld;
+    public Canvas canvasWorld; //canvasMain;
+
+    public GameObject HUD_GO, bars_GO;
 
     public CinemachineVirtualCamera virtualCamera1, virtualCamera2, virtualCamera3;
 
@@ -15,9 +17,7 @@ public class LevelBegin : MonoBehaviour
     public bool movePlayer;
     public bool levelBeginCoUsed;
 
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
@@ -25,7 +25,10 @@ public class LevelBegin : MonoBehaviour
         virtualCamera1.gameObject.SetActive(false);
         virtualCamera2.gameObject.SetActive(true);
         virtualCamera3.gameObject.SetActive(false);
-
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
         //runInTime = 1.8f;
         movePlayer = true;
         levelBeginCoUsed = false;
@@ -52,8 +55,10 @@ public class LevelBegin : MonoBehaviour
         virtualCamera2.gameObject.SetActive(true);
         virtualCamera3.gameObject.SetActive(false);
 
-        canvasMain.enabled = false;
+        //canvasMain.enabled = false;
         canvasWorld.enabled = false;
+        HUD_GO.SetActive(false);
+        bars_GO.SetActive(false);
 
         playerMovement.canMove = false;
         playerCombat.canMove = false;        
@@ -77,8 +82,10 @@ public class LevelBegin : MonoBehaviour
         playerMovement.canMove = true;
         playerCombat.canMove = true;
 
-        canvasMain.enabled = true;
+        //canvasMain.enabled = true;
         canvasWorld.enabled = true;
+        HUD_GO.SetActive(true);
+        bars_GO.SetActive(true);
 
         yield return null;
     }

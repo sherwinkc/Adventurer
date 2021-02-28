@@ -1704,7 +1704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1036725055}
   textShowing: 0
-  waitTime: 5
+  waitTime: 4
   dialogueMan: {fileID: 1036725052}
 --- !u!61 &71781338
 BoxCollider2D:
@@ -3563,8 +3563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: -538}
-  m_SizeDelta: {x: 1924.5, y: 160.51001}
+  m_AnchoredPosition: {x: 2.443, y: -556.006}
+  m_SizeDelta: {x: 1918.564, y: 138.195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194723550
 MonoBehaviour:
@@ -16358,7 +16358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 688426550}
   textShowing: 0
-  waitTime: 5
+  waitTime: 4
   dialogueMan: {fileID: 688426549}
 --- !u!61 &1011473860
 BoxCollider2D:
@@ -17717,7 +17717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 8581259}
   textShowing: 0
-  waitTime: 5
+  waitTime: 4
   dialogueMan: {fileID: 8581258}
 --- !u!61 &1096613341
 BoxCollider2D:
@@ -23440,6 +23440,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackScreen: {fileID: 0}
+  blackScreen_GO: {fileID: 1962292900}
+  usedCo: 0
 --- !u!114 &1534752605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23592,10 +23594,10 @@ RectTransform:
   m_Father: {fileID: 1560487581}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0075772, y: 463.831}
-  m_SizeDelta: {x: 1973.1, y: 147.086}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 2.716, y: -583.558}
+  m_SizeDelta: {x: 1920.732, y: 139.86304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543434462
 MonoBehaviour:

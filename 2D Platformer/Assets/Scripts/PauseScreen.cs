@@ -50,7 +50,23 @@ public class PauseScreen : MonoBehaviour
             }
         }
 
-        Debug.Log(SceneManager.GetActiveScene().name);
+        if(Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            if (upgrades.activeSelf == true || settings.activeSelf == true)
+            {
+                upgrades.SetActive(false);
+                settings.SetActive(false);
+                Time.timeScale = 1f;
+                playerMovement.enabled = true;
+                playerCombat.enabled = true;
+                if (SceneManager.GetActiveScene().name != "Prologue" && SceneManager.GetActiveScene().name != "Village")
+                {
+                    HUD.SetActive(true);
+                }
+            }
+        }
+
+        //Debug.Log(SceneManager.GetActiveScene().name);
 
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.Joystick1Button5))
         {

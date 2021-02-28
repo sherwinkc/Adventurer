@@ -11,10 +11,16 @@ public class FadeIn : MonoBehaviour
     //public float alpha;
     //public Color alpha;
 
+    public GameObject blackScreen_GO;
+
+    public bool usedCo = false;
+
     // Start is called before the first frame update
     void Start()
     {
         blackScreen = GetComponent<Image>();
+
+        Invoke("KillGameObject", 2.0f);
     }
 
     // Update is called once per frame
@@ -27,12 +33,17 @@ public class FadeIn : MonoBehaviour
         //blackScreen.color.a = alpha;
         //Debug.Log(blackScreen.color.a);
 
-        StartCoroutine(FadeInCo());
+        if(!usedCo)
+        {
+            StartCoroutine(FadeInCo());
+        }
 
         //Debug.Log(blackScreen.color.a);
     }
     IEnumerator FadeInCo()
     {
+        usedCo = true;
+
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
             // set color with i as alpha
@@ -40,13 +51,18 @@ public class FadeIn : MonoBehaviour
 
             yield return null;
 
-            if (i <= 0)
+            /*if (i <= 0)
             {
-                gameObject.SetActive(false);
-            }
+                blackScreen_GO.SetActive(false);
+            }*/
         }
 
         yield return null;
+    }
+
+    void KillGameObject()
+    {
+        blackScreen_GO.SetActive(false);
     }
 }
     

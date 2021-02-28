@@ -7,7 +7,8 @@ public class LevelBegin_Floating : MonoBehaviour
 {
     //private PlayerMovement playerMovement;
     //private PlayerCombat playerCombat;
-    //public Canvas canvasMain, canvasWorld;
+    public Canvas canvasWorld; //canvasMain;
+    public GameObject HUD_GO, bars_GO;
 
     public CinemachineVirtualCamera virtualCamera1; // virtualCamera2, virtualCamera3;
 

@@ -26,7 +26,8 @@ public class LevelBegin_Prologue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        virtualCamera1.gameObject.SetActive(false);
+        virtualCamera2.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
