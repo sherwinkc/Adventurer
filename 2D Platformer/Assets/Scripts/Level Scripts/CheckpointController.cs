@@ -36,7 +36,6 @@ public class CheckpointController : MonoBehaviour
         if(other.tag == "Player" && checkpointActive == false)
         {
             //theSpriteRenderer.sprite = flagOpen;
-            //anim = anim.
             anim.SetBool("isFlagOpen", true);
             checkpointActive = true;
             checkpointSound.Play();

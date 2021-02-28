@@ -201,6 +201,11 @@ public class PlayerCombat : MonoBehaviour
                 enemy.GetComponentInParent<Scarecrow_Script>().TakeDamage(attackDamage);
                 StartCoroutine(SlowTimeCo());
             }
+            else if (enemy.GetComponentInParent<Skel_King_Script>() != null)
+            {
+                enemy.GetComponentInParent<Skel_King_Script>().TakeDamage(attackDamage);
+                StartCoroutine(SlowTimeCo());
+            }
         }
     }
 

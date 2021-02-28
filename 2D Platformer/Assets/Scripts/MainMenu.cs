@@ -76,6 +76,13 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Level1_2");
     }
 
+    public void TheSkeletonKing()
+    {
+        menuMusic.Stop();
+        selectSound.Play();
+        SceneManager.LoadScene("Boss_Level");
+    }
+
     public IEnumerator NewGameCo()
     {
         turnDownMusic = true;

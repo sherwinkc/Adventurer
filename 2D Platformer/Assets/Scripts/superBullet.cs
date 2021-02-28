@@ -63,6 +63,10 @@ public class superBullet : MonoBehaviour
                 enemy.GetComponentInParent<CircleCollider2D>().enabled = false;
                 enemy.GetComponentInParent<Bird_Script>().TakeDamage(attackDamage);
             }
+            else if (enemy.GetComponentInParent<Skel_King_Script>() != null)
+            {
+                enemy.GetComponentInParent<Skel_King_Script>().TakeDamage(attackDamage);
+            }
         }
     }
 

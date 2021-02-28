@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Checkpoint")
         {
             respawnPosition = other.transform.position;
+            //Debug.Log("Hit Checkpoint");
+            //Debug.Log(respawnPosition);
         }
     }
 

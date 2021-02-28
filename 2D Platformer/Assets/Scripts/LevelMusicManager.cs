@@ -7,7 +7,9 @@ public class LevelMusicManager : MonoBehaviour
 {
     public bool fadingOutMusic = false;
 
-    public AudioSource prologue_Music, village_Music, forestDark_Music, floatingIsles_Music;
+    public AudioSource prologue_Music, village_Music, forestDark_Music, floatingIsles_Music, level_BossMusic;
+
+    public Skel_King_Script skel_King_Script;
 
     private void Awake()
     {
@@ -30,6 +32,13 @@ public class LevelMusicManager : MonoBehaviour
         {
             floatingIsles_Music.Play();
         }
+
+        if (SceneManager.GetActiveScene().name == "Boss_Level")
+        {
+            level_BossMusic.Play();
+        }
+
+        skel_King_Script = FindObjectOfType<Skel_King_Script>();
     }
 
     void Start()
@@ -60,6 +69,11 @@ public class LevelMusicManager : MonoBehaviour
             {
                 floatingIsles_Music.volume -= Time.deltaTime / 25f;
             }
+
+            if (level_BossMusic != null)
+            {
+                level_BossMusic.volume -= Time.deltaTime / 25f;
+            }
         }
 
         if (prologue_Music.volume <= 0f && SceneManager.GetActiveScene().name == "Prologue")
@@ -85,5 +99,24 @@ public class LevelMusicManager : MonoBehaviour
             floatingIsles_Music.volume = 0f;
             fadingOutMusic = false;
         }
+
+        if (level_BossMusic.volume <= 0f && SceneManager.GetActiveScene().name == "Boss_Level")
+        {
+            level_BossMusic.volume = 0f;
+            fadingOutMusic = false;
+        }
+
+        if(skel_King_Script != null)
+        {
+            if(skel_King_Script.currentHealth <= 0)
+            {
+                level_BossMusic.Stop();
+            }
+        }
+        else
+        {
+            return;
+        }
+
     }
 }
