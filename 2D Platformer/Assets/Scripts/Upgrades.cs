@@ -690,9 +690,12 @@ public class Upgrades : MonoBehaviour
 
     public void SetUIAtLevelStart()
     {
-        if (doubleJumpUnlocked)
+        if (doubleJump != null) // check to see if it exists in prologue and village
         {
-            doubleJump.text = "MAX";
+            if (doubleJumpUnlocked)
+            {
+                doubleJump.text = "MAX";
+            }
         }
 
         if (playerMovement.moveSpeed == moveUpgradeT3)

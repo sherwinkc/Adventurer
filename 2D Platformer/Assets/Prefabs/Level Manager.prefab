@@ -958,11 +958,12 @@ MonoBehaviour:
   playerCombat: {fileID: 0}
   virtualCamera: {fileID: 0}
   upgrades: {fileID: 0}
+  worldCanvas: {fileID: 0}
   deathSplosion: {fileID: 7769350992981078548, guid: 3af5f9fb23c4e854f99c24114cb5e380,
     type: 3}
   gameOverScreen: {fileID: 0}
   coinCount: 0
-  bonusLifeThreshold: 50
+  bonusLifeThreshold: 30
   keyCount: 0
   coinText: {fileID: 0}
   keyCountText: {fileID: 0}
@@ -970,12 +971,9 @@ MonoBehaviour:
   heart1: {fileID: 0}
   heart2: {fileID: 0}
   heart3: {fileID: 0}
-  heartFull: {fileID: 6477595132130286724, guid: 27e4936de29e7ca4aac3451a9382169e,
-    type: 3}
-  heartHalf: {fileID: -8572306839742728933, guid: 27e4936de29e7ca4aac3451a9382169e,
-    type: 3}
-  heartEmpty: {fileID: -2923836686723806832, guid: 27e4936de29e7ca4aac3451a9382169e,
-    type: 3}
+  heartFull: {fileID: 21300000, guid: a38d2aafca6235f49aacac2f29313f7e, type: 3}
+  heartHalf: {fileID: 21300000, guid: 80ca61d7ad73bf04abc26a0b6b4b26ba, type: 3}
+  heartEmpty: {fileID: 21300000, guid: 2bed62ca7d4497a4f884c58b620fa022, type: 3}
   maxHealth: 6
   healthCount: 0
   waitToRespawn: 3
@@ -989,9 +987,6 @@ MonoBehaviour:
   skillPoints: 0
   startingSkillPoints: 0
   coinSound: {fileID: 1476051983}
-  prologue_Music: {fileID: 4595875928380956339}
-  village_music: {fileID: 4839286309249521041}
-  levelMusic_1_1: {fileID: 1514119820458950996}
   gameOverMusic: {fileID: 1475729213538278218}
   hurtSound: {fileID: 0}
   levelUpSound: {fileID: 1210943197873351698}
