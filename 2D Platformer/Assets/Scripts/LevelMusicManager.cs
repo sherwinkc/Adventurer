@@ -33,10 +33,10 @@ public class LevelMusicManager : MonoBehaviour
             floatingIsles_Music.Play();
         }
 
-        if (SceneManager.GetActiveScene().name == "Boss_Level")
+        /*if (SceneManager.GetActiveScene().name == "Boss_Level")
         {
             level_BossMusic.Play();
-        }
+        }*/
 
         skel_King_Script = FindObjectOfType<Skel_King_Script>();
     }
@@ -117,6 +117,10 @@ public class LevelMusicManager : MonoBehaviour
         {
             return;
         }
+    }
 
+    public void PlayBossMusic()
+    {
+        level_BossMusic.Play();
     }
 }

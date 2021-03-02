@@ -17,13 +17,15 @@ public class Skel_King_Script : MonoBehaviour
     public GameObject swordSwipeVFX;
     public GameObject orbsOnDeath;
 
+    public ForceFieldScript forceFieldScript;
+
     //public GameObject fireVFX;
 
     public int maxHealth;
     public int currentHealth;
 
     //Audio
-    public AudioSource grunt, squelch, dead;
+    public AudioSource grunt, squelch, dead, loopingGrunt;
 
     void Awake()
     {
@@ -86,6 +88,11 @@ public class Skel_King_Script : MonoBehaviour
     void Die()
     {
         animator.SetTrigger("isDead");
+        loopingGrunt.Stop();
+
+        //skel_King_Controller.forceField.SetActive(false); // this is disabling the prefab??? WTF
+        forceFieldScript = FindObjectOfType<ForceFieldScript>();
+        forceFieldScript.isOn = true;
 
         skel_King_Controller.canMove = false;
 

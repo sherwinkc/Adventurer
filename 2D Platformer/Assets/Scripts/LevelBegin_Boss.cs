@@ -9,6 +9,7 @@ public class LevelBegin_Boss : MonoBehaviour
     //private PlayerCombat playerCombat;
     public Canvas canvasWorld; //canvasMain;
     public GameObject HUD_GO, bars_GO;
+    public LevelMusicManager levelMusicMan;
 
     public Skel_King_Script skel_King_Script;
     public GameObject collider_L, collider_R;
@@ -25,6 +26,7 @@ public class LevelBegin_Boss : MonoBehaviour
     private void Awake()
     {
         skel_King_Script = FindObjectOfType<Skel_King_Script>();
+        levelMusicMan = FindObjectOfType<LevelMusicManager>();
 
         virtualCamera1.gameObject.SetActive(true);
         virtualCamera2.gameObject.SetActive(false);
@@ -116,6 +118,7 @@ public class LevelBegin_Boss : MonoBehaviour
             collider_L.SetActive(true);
             collider_R.SetActive(true);
             bossBar.SetActive(true);
+            levelMusicMan.PlayBossMusic();
         }
     }
 
