@@ -35,23 +35,23 @@ public class superBullet : MonoBehaviour
             if (enemy.GetComponentInParent<Enemy>() != null)
             {
                 enemy.GetComponentInParent<Enemy>().TakeDamage(attackDamage);
-                //StartCoroutine(SlowTimeCo());
+
             }
             else if (enemy.GetComponent<Enemy>() != null)
             {
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-                //StartCoroutine(SlowTimeCo());
+
             }
             //Check if we hit spider script
             else if (enemy.GetComponentInParent<Spider_Script>() != null)
             {
                 enemy.GetComponentInParent<Spider_Script>().TakeDamage(attackDamage);
-                //StartCoroutine(SlowTimeCo());
+
             }
             else if (enemy.GetComponentInParent<Fire_Skel_Script>() != null)
             {
                 enemy.GetComponentInParent<Fire_Skel_Script>().TakeDamage(attackDamage);
-                //StartCoroutine(SlowTimeCo());
+
             }
             else if (enemy.GetComponentInParent<Sludge_Script>() != null)
             {
