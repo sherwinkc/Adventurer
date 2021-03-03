@@ -51,15 +51,15 @@ public class Upgrades : MonoBehaviour
 
         //move
         moveUpgradeDefault = 5f;
-        moveUpgradeT1 = moveUpgradeDefault * 1.1f;
-        moveUpgradeT2 = moveUpgradeDefault * 1.2f;
-        moveUpgradeT3 = moveUpgradeDefault * 1.3f;
+        moveUpgradeT1 = moveUpgradeDefault * 1.025f;
+        moveUpgradeT2 = moveUpgradeDefault * 1.050f;
+        moveUpgradeT3 = moveUpgradeDefault * 1.075f;
 
         //jump
         jumpUpgradeDefault = 10f;
-        jumpUpgradeT1 = jumpUpgradeDefault * 1.05f;
-        jumpUpgradeT2 = jumpUpgradeDefault * 1.1f;
-        jumpUpgradeT3 = jumpUpgradeDefault * 1.15f;
+        jumpUpgradeT1 = jumpUpgradeDefault * 1.025f;
+        jumpUpgradeT2 = jumpUpgradeDefault * 1.05f;
+        jumpUpgradeT3 = jumpUpgradeDefault * 1.075f;
 
         //dash speed
         dashSpeedUpgradeDefault = 11f;
@@ -113,10 +113,10 @@ public class Upgrades : MonoBehaviour
         staminaMaxT3 = staminaMaxUpgradeDefault * 1.75f;
 
         //stamina recharge rate
-        staminaRechargeRateDefault = 15f; // Originally 10f
+        staminaRechargeRateDefault = 12.5f; // Originally 10f
         staminaRechargeRateT1 = staminaRechargeRateDefault * 1.25f;
         staminaRechargeRateT2 = staminaRechargeRateDefault * 1.5f;
-        staminaRechargeRateT3 = staminaRechargeRateDefault * 2f;
+        staminaRechargeRateT3 = staminaRechargeRateDefault * 1.75f;
 
         //stamina attack cost
         staminaAttackCostDefault = 30f;

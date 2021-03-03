@@ -29,8 +29,65 @@ Transform:
   m_Children:
   - {fileID: 1992262245793229293}
   m_Father: {fileID: 6590276407954564559}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1754898089625413524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6521978071164342544}
+  - component: {fileID: 939299977725791899}
+  m_Layer: 10
+  m_Name: Push Back Box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6521978071164342544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754898089625413524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.159, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6590276407954564559}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &939299977725791899
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754898089625413524}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0016336655, y: -0.1649972}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.029620742, y: 0.323675}
+  m_EdgeRadius: 0
 --- !u!1 &3693354163474174065
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +480,7 @@ Transform:
   - {fileID: 6217561860071003029}
   - {fileID: 1579183053292949678}
   m_Father: {fileID: 6590276407954564559}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6590276406185666782
 GameObject:
@@ -1117,6 +1174,7 @@ Transform:
   - {fileID: 6590276407088752932}
   - {fileID: 6590276407426169295}
   - {fileID: 6590276408179227081}
+  - {fileID: 6521978071164342544}
   - {fileID: 6590276406160403445}
   - {fileID: 8155635461641805241}
   m_Father: {fileID: 0}
@@ -1148,6 +1206,7 @@ MonoBehaviour:
     type: 3}
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
     type: 3}
+  forceFieldScript: {fileID: 0}
   maxHealth: 1000
   currentHealth: 0
   grunt: {fileID: 6590276407853064191}
@@ -1171,6 +1230,8 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   levelManager: {fileID: 0}
   skel_King_Script: {fileID: 0}
+  flameMan: {fileID: 0}
+  boxCollider2D: {fileID: 939299977725791899}
   moveSpeed: 1.5
   canMove: 0
   attacking: 0
@@ -1189,13 +1250,22 @@ MonoBehaviour:
   isForceFieldActive: 0
   activatedForceFieldOnce: 0
   canMoveToPosition: 0
+  canMoveToPositionUsed: 0
+  canStopMajorAttack: 1
+  majorAttackUsed_1: 0
+  majorAttackUsed_2: 0
   waitTime_plat: 0
   waitTime_1: 0
   waitTime_2: 0
   waitTime_3: 0
   forceField: {fileID: 6870713731665443761, guid: 844015950d9ae8f49b71ba52aba3bc08,
     type: 3}
+  forceFieldScript: {fileID: 0}
   canPlay: 1
+  flameHolder: {fileID: 0}
+  startFlamesOnce: 0
+  pushBackTimerActive: 0
+  pushBackCounter: 0
   distanceToPlayer: 3
   swipe: {fileID: 6590276406185666752}
   forceFieldActivate: {fileID: 6252890584132672294}
@@ -1215,12 +1285,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flameTime: 0
   flameTurnOffTime: 0
+  flameStartTime: 0
   flame_1: {fileID: 0}
   flame_2: {fileID: 0}
   flame_3: {fileID: 0}
   flame_4: {fileID: 0}
   flame_5: {fileID: 0}
   flame_6: {fileID: 0}
+  bird_1: {fileID: 0}
+  bird_2: {fileID: 0}
+  bird_3: {fileID: 0}
+  bird_4: {fileID: 0}
+  bird_5: {fileID: 0}
+  skel_King_Controller: {fileID: 0}
 --- !u!212 &6590276407954564592
 SpriteRenderer:
   m_ObjectHideFlags: 0

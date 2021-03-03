@@ -10,6 +10,7 @@ public class Skel_King_Controller : MonoBehaviour
     public LevelManager levelManager;
     public Skel_King_Script skel_King_Script;
     public FlameManager flameMan;
+    public BoxCollider2D boxCollider2D;
 
     public float moveSpeed;
     public bool canMove = false;
@@ -47,6 +48,9 @@ public class Skel_King_Controller : MonoBehaviour
     //flames
     public bool startFlamesOnce = false;
 
+    public bool pushBackTimerActive = false;
+    public float pushBackCounter = 0f;
+
     public float distanceToPlayer;
 
     //choose a state/anim
@@ -68,6 +72,7 @@ public class Skel_King_Controller : MonoBehaviour
         platform_L.SetActive(false); platform_R.SetActive(false); platform_C.SetActive(false);
 
         //forceField.gameObject.SetActive(true);
+        boxCollider2D.gameObject.SetActive(false);
     }
 
     void Start()
@@ -120,6 +125,25 @@ public class Skel_King_Controller : MonoBehaviour
         {
             forceFieldScript = FindObjectOfType<ForceFieldScript>();
         }
+
+        //push back timer TODO
+        /*if(pushBackTimerActive)
+        {
+            pushBackCounter += Time.deltaTime * 10f;
+
+            if (pushBackCounter > 1f)
+            {
+                pushBackTimerActive = false;
+                boxCollider2D.size = new Vector2(0.1f, 0.1f);
+                boxCollider2D.gameObject.SetActive(false);
+            }
+
+            if(pushBackCounter < 1f)
+            {
+                boxCollider2D.size = new Vector2(pushBackCounter, 0.1f);
+                boxCollider2D.gameObject.SetActive(true);
+            }
+        }*/
     }
 
     private void OnBecameVisible()
@@ -205,6 +229,7 @@ public class Skel_King_Controller : MonoBehaviour
         {
             ActivateForceField();
             activatedForceFieldOnce = true;
+            pushBackTimerActive = true;
         }
 
         //isForceFieldActive = true;
@@ -325,6 +350,19 @@ public class Skel_King_Controller : MonoBehaviour
         {
             majorAttackUsed_1 = true;
         }
+    }
+
+    public void CircleColliderFunction()
+    {
+
+    }
+
+    public IEnumerator PushBackCo()
+    {
+
+        pushBackTimerActive = true;
+
+        yield return null;
     }
     
     //Animator SFX

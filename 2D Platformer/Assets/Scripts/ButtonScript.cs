@@ -62,7 +62,10 @@ public class ButtonScript : MonoBehaviour
         //no skill points
         if(levelManager.skillPoints <= 0)
         {
-            errorSFX.Play();
+            if(!upgrades.upgradeSFX.isPlaying) //TODO not the most elegant way as the upgrade sfx has a long tail
+            {
+                errorSFX.Play();
+            }
         }
 
         if (upgrades.doubleJumpUnlocked == true)
