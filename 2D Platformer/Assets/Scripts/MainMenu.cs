@@ -76,6 +76,13 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Level1_2");
     }
 
+    public void LandOfTheDead()
+    {
+        menuMusic.Stop();
+        selectSound.Play();
+        SceneManager.LoadScene("Level1_3");
+    }
+
     public void TheSkeletonKing()
     {
         menuMusic.Stop();

@@ -7,7 +7,7 @@ public class LevelMusicManager : MonoBehaviour
 {
     public bool fadingOutMusic = false;
 
-    public AudioSource prologue_Music, village_Music, forestDark_Music, floatingIsles_Music, level_BossMusic;
+    public AudioSource prologue_Music, village_Music, forestDark_Music, floatingIsles_Music, land_Music, level_BossMusic;
 
     public Skel_King_Script skel_King_Script;
 
@@ -31,6 +31,11 @@ public class LevelMusicManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level1_2")
         {
             floatingIsles_Music.Play();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Level1_3")
+        {
+            land_Music.Play();
         }
 
         /*if (SceneManager.GetActiveScene().name == "Boss_Level")
@@ -70,6 +75,11 @@ public class LevelMusicManager : MonoBehaviour
                 floatingIsles_Music.volume -= Time.deltaTime / 25f;
             }
 
+            if (land_Music != null)
+            {
+                land_Music.volume -= Time.deltaTime / 25f;
+            }
+
             if (level_BossMusic != null)
             {
                 level_BossMusic.volume -= Time.deltaTime / 25f;
@@ -97,6 +107,12 @@ public class LevelMusicManager : MonoBehaviour
         if (floatingIsles_Music.volume <= 0f && SceneManager.GetActiveScene().name == "Level1_2")
         {
             floatingIsles_Music.volume = 0f;
+            fadingOutMusic = false;
+        }
+
+        if (land_Music.volume <= 0f && SceneManager.GetActiveScene().name == "Level1_3")
+        {
+            land_Music.volume = 0f;
             fadingOutMusic = false;
         }
 

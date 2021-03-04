@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-
 public class ParallaxNew : MonoBehaviour
 {
     //public Transform cam;
@@ -15,6 +14,7 @@ public class ParallaxNew : MonoBehaviour
     public LevelBegin_Village levelBegin_V;
     public LevelBegin_Floating levelBegin_F;
     public LevelBegin_Boss levelBegin_Boss;
+    public LevelBegin_Land levelBegin_Land;
 
     public float relativeMove;
     public bool lockY;
@@ -27,6 +27,7 @@ public class ParallaxNew : MonoBehaviour
         levelBegin_V = FindObjectOfType<LevelBegin_Village>();
         levelBegin_F = FindObjectOfType<LevelBegin_Floating>();
         levelBegin_Boss = FindObjectOfType<LevelBegin_Boss>();
+        levelBegin_Land = FindObjectOfType<LevelBegin_Land>();
     }
 
     private void Start()
@@ -174,6 +175,35 @@ public class ParallaxNew : MonoBehaviour
             }*/
 
             cam = levelBegin_Boss.virtualCamera1;
+
+            if (lockY)
+            {
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, (cam.transform.position.y + offsetY) / 2f, transform.position.z);
+            }
+        }
+
+        if (levelBegin_Land) //check if level begin exists
+        {
+            //setting the camera
+            /*if (levelBegin_P.virtualCamera2.gameObject.activeSelf == true)
+            {
+                cam = levelBegin_P.virtualCamera2;
+                //cam = levelBegin_P.virtualCamera1;
+            }
+            else if (levelBegin_P.virtualCamera1.gameObject.activeSelf == true)
+            {
+                cam = levelBegin_P.virtualCamera1;
+            }
+            else
+            {
+                return;
+            }*/
+
+            cam = levelBegin_Land.virtualCamera1;
 
             if (lockY)
             {

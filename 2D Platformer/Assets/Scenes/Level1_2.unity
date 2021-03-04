@@ -237,6 +237,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -1141,6 +1142,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.96
   lockY: 0
   offsetX: 0
@@ -1464,6 +1466,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.97
   lockY: 0
   offsetX: 0
@@ -2183,6 +2186,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.98
   lockY: 0
   offsetX: 0
@@ -3060,6 +3064,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -3657,6 +3662,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -4297,7 +4303,7 @@ PrefabInstance:
     - target: {fileID: 5324599592045633278, guid: 8cb5df1fc6aaa564a8c4bca5d0bb4e7c,
         type: 3}
       propertyPath: levelToLoad
-      value: Boss_Level
+      value: Level1_3
       objectReference: {fileID: 0}
     - target: {fileID: 5324599592045633278, guid: 8cb5df1fc6aaa564a8c4bca5d0bb4e7c,
         type: 3}
@@ -6641,6 +6647,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.98
   lockY: 0
   offsetX: 0
@@ -6929,6 +6936,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: -0.5
   lockY: 1
   offsetX: 0
@@ -9729,6 +9737,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -10539,6 +10548,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: -0.5
   lockY: 1
   offsetX: 0
@@ -14374,6 +14384,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: -0.9
   lockY: 1
   offsetX: 0
@@ -14807,6 +14818,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.99
   lockY: 0
   offsetX: 0
@@ -19246,6 +19258,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.99
   lockY: 0
   offsetX: 0
@@ -20605,6 +20618,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.95
   lockY: 1
   offsetX: 0
@@ -24767,6 +24781,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.98
   lockY: 0
   offsetX: 0
@@ -26647,6 +26662,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.99
   lockY: 1
   offsetX: 0
@@ -29662,6 +29678,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: -0.02
   lockY: 1
   offsetX: 0
@@ -31566,6 +31583,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.97
   lockY: 0
   offsetX: 0
@@ -32075,6 +32093,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.96
   lockY: 1
   offsetX: 0
@@ -33311,6 +33330,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: -0.02
   lockY: 1
   offsetX: 0
@@ -34043,6 +34063,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.96
   lockY: 0
   offsetX: 0
@@ -36934,6 +36955,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.97
   lockY: 0
   offsetX: 0
@@ -39343,6 +39365,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.99
   lockY: 0
   offsetX: 0
@@ -39540,6 +39563,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.96
   lockY: 0
   offsetX: 0
@@ -40362,6 +40386,7 @@ MonoBehaviour:
   levelBegin_V: {fileID: 0}
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
+  levelBegin_Land: {fileID: 0}
   relativeMove: 0.98
   lockY: 0
   offsetX: 0
