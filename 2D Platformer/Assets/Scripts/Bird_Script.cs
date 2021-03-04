@@ -24,6 +24,8 @@ public class Bird_Script : MonoBehaviour
     public GameObject deathSplosion;
     public GameObject orbsOnDeath;
 
+    public CircleCollider2D cCollider;
+
     public int maxHealth;
     public int currentHealth;
 
@@ -73,7 +75,11 @@ public class Bird_Script : MonoBehaviour
         if (currentHealth <= 0)
         {
             //turn off pathfinding && colliders here - will crash otherwise
+            cCollider.enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
             GetComponentInChildren<CircleCollider2D>().enabled = false;
+            GetComponentInChildren<BoxCollider2D>().enabled = false;
+
             aiPath.canMove = false;
             aiPath.enabled = false;
             aiDestSetter.enabled = false;

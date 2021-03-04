@@ -389,6 +389,7 @@ MonoBehaviour:
     type: 3}
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
     type: 3}
+  cCollider: {fileID: 3676974330768336872}
   maxHealth: 45
   currentHealth: 0
   crow: {fileID: 4985489038003527410}
