@@ -21,8 +21,11 @@ public class FlameManager : MonoBehaviour
         flame_5.SetActive(false);
         flame_6.SetActive(false);
 
+        //set 1
         bird_1.SetActive(false);
         bird_2.SetActive(false);
+
+        //set 2
         bird_3.SetActive(false);
         bird_4.SetActive(false);
         bird_5.SetActive(false);
@@ -67,11 +70,18 @@ public class FlameManager : MonoBehaviour
 
         flame_6.SetActive(true);
 
-        bird_1.SetActive(true);
-        bird_2.SetActive(true);
-        bird_3.SetActive(true);
-        bird_4.SetActive(true);
-        bird_5.SetActive(true);
+        if (skel_King_Controller.majorAttackUsed_1 && !skel_King_Controller.majorAttackUsed_2)
+        {
+            bird_3.SetActive(true);
+            bird_4.SetActive(true);
+            bird_5.SetActive(true);
+        }
+
+        if (!skel_King_Controller.majorAttackUsed_1 && !skel_King_Controller.majorAttackUsed_2)
+        {
+            bird_1.SetActive(true);
+            bird_2.SetActive(true);
+        }
 
         yield return new WaitForSeconds(flameTurnOffTime);
 

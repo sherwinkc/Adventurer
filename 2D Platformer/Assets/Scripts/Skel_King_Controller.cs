@@ -337,7 +337,7 @@ public class Skel_King_Controller : MonoBehaviour
         isBasicAttacking = true;
         canMoveToPosition = false;
         canMoveToPositionUsed = false;
-        startFlamesOnce = true;
+        startFlamesOnce = false;
         startMajorCo = false;
 
         //check which major attack - major attack 1 or 2
@@ -359,7 +359,6 @@ public class Skel_King_Controller : MonoBehaviour
 
     public IEnumerator PushBackCo()
     {
-
         pushBackTimerActive = true;
 
         yield return null;

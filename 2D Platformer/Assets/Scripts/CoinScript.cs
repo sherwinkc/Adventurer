@@ -35,24 +35,27 @@ public class CoinScript : MonoBehaviour
 
     void Update()
     {
-        //checking distance and move toward player if close enough
-        if(moveTowardPlayer && Vector2.Distance(transform.position, playerTransform.transform.position) < 6f)
-        {
-            rb.transform.position = Vector3.MoveTowards(transform.position, playerTransform.transform.position, Random.Range(10f, 15f) * Time.deltaTime);
-
-            cCollider.enabled = false;
-            
-            //Ignore collisions while moving toward player
-            /*Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<BoxCollider2D>());
-            Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<CircleCollider2D>());
-            Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<CapsuleCollider2D>());*/
-        }
-
         //destroys object over a period of time
         coinLifetime -= Time.deltaTime;
         if(coinLifetime <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //checking distance and move toward player if close enough
+        if (moveTowardPlayer && Vector2.Distance(transform.position, playerTransform.transform.position) < 6f)
+        {
+            rb.transform.position = Vector3.MoveTowards(transform.position, playerTransform.transform.position, Random.Range(10f, 15f) * Time.deltaTime);
+
+            cCollider.enabled = false;
+
+            //Ignore collisions while moving toward player
+            /*Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<CircleCollider2D>());
+            Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<CapsuleCollider2D>());*/
         }
     }
 

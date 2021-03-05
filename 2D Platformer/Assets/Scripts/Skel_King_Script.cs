@@ -92,7 +92,10 @@ public class Skel_King_Script : MonoBehaviour
 
         //skel_King_Controller.forceField.SetActive(false); // this is disabling the prefab??? WTF
         forceFieldScript = FindObjectOfType<ForceFieldScript>();
-        forceFieldScript.isOn = true;
+        if(forceFieldScript != null)
+        {
+            forceFieldScript.isOn = true;
+        }
 
         skel_King_Controller.canMove = false;
 

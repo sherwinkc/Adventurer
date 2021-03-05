@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroText.unity
     guid: 3cbfdc3b1e27f084297dcb8e7ae8f680
   - enabled: 1
+    path: Assets/Scenes/IntroText_2.unity
+    guid: ccc2dde097c6c6d439c7f029dfa5b5d5
+  - enabled: 1
     path: Assets/Scenes/Prologue.unity
     guid: e7e4eea295b4bb84b9f7bf7e66131f61
   - enabled: 1
