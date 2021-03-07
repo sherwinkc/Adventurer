@@ -47,7 +47,10 @@ public class LevelManager : MonoBehaviour
 
     //Skill Points
     public Text skillPointsText;
-    public int skillPoints, startingSkillPoints;    
+    public int skillPoints, startingSkillPoints;
+
+    //Locked Door
+    public LockedDoor lockedDoor;
 
     // Audio
     public AudioSource coinSound, gameOverMusic, hurtSound, levelUpSound, deathSound, keySound;
@@ -56,6 +59,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
+        lockedDoor = FindObjectOfType<LockedDoor>();
         //Delete - this is so the player starts with 0 skill points
         skillPoints = 3;
     }
@@ -80,6 +84,12 @@ public class LevelManager : MonoBehaviour
         objectsToReset = FindObjectsOfType<ResetOnRespawn>();
 
         superText.text = "Super %: " + playerCombat.superAmount;
+
+        if (lockedDoor != null)
+        {
+            keyCountText.text = "KEYS REQUIRED: " + lockedDoor.keysRequired; //get keys required from the locked door script
+            keyCount = lockedDoor.keysRequired;
+        }
     }
 
     // Update is called once per frame
@@ -100,10 +110,14 @@ public class LevelManager : MonoBehaviour
         }
 
         //update UI every frame
-        livesText.text = "Lives x" + currentLives;
-        skillPointsText.text = "Skill Points: " + skillPoints;
+        livesText.text = "LIVES x" + currentLives;
+        skillPointsText.text = "SKILL POINTS: " + skillPoints;
         superText.text = "Super %: " + playerCombat.superAmount;
-        keyCountText.text = "Keys: " + keyCount;
+
+        if (lockedDoor != null)
+        {
+            keyCountText.text = "KEYS REQUIRED: " + keyCount;
+        }
     }
 
     //Check Player Prefs
@@ -114,7 +128,7 @@ public class LevelManager : MonoBehaviour
             coinCount = PlayerPrefs.GetInt("OrbCount");
         }
         //starting coin count is 0
-        coinText.text = "Coins: " + coinCount;
+        coinText.text = "ORBS: " + coinCount;
 
         //Player Lives
         if (PlayerPrefs.HasKey("PlayerLives"))
@@ -127,7 +141,7 @@ public class LevelManager : MonoBehaviour
             currentLives = startingLives;
         }
         //starting lives = 5
-        livesText.text = "Lives x" + currentLives;
+        livesText.text = "LIVES x" + currentLives;
 
         //skill points
         if (PlayerPrefs.HasKey("SkillPoints"))
@@ -135,7 +149,7 @@ public class LevelManager : MonoBehaviour
             skillPoints = PlayerPrefs.GetInt("SkillPoints");
         }
         //starting skill points is 0
-        skillPointsText.text = "Skill Points: " + skillPoints;
+        skillPointsText.text = "SKILL POINTS: " + skillPoints;
     }
 
     public void PlayerPrefChecksUpgrades()
@@ -154,7 +168,7 @@ public class LevelManager : MonoBehaviour
         {
             //minus one life and update UI        
             currentLives -= 1;
-            livesText.text = "Lives x" + currentLives;
+            livesText.text = "LIVES x" + currentLives;
 
             //check if lives is greater that to call respawn coroutine function. Else the player is inactive and the game overs screen shows
             if (currentLives >= 0)
@@ -165,7 +179,7 @@ public class LevelManager : MonoBehaviour
             else
             {
                 currentLives = 0;
-                livesText.text = "Lives x" + currentLives;
+                livesText.text = "LIVES x" + currentLives;
                 deathSound.Play(); // not playing because game object is deactivated
                 thePlayer.gameObject.SetActive(false);
                 gameOverScreen.SetActive(true);
@@ -207,11 +221,11 @@ public class LevelManager : MonoBehaviour
 
         //key
         //keyCount = 0; //Keys shouldn't reset upon death
-        keyCountText.text = "Keys: " + keyCount;
+        keyCountText.text = "KEYS REQUIRED: " + keyCount;
 
         //reset orb count and bonus life count to zero and update UI
         coinCount /= 2; // Do we need to divide the count count on death ???
-        coinText.text = "Orbs: " + coinCount;
+        coinText.text = "ORBS: " + coinCount;
         coinBonusLifeCount = 0;
 
         //reset player position and reset camera
@@ -243,7 +257,7 @@ public class LevelManager : MonoBehaviour
         coinBonusLifeCount += coinsToAdd; 
 
         //update UI when collecting a coin
-        coinText.text = "Orbs: " + coinCount;
+        coinText.text = "ORBS: " + coinCount;
 
         //play coin sound
         coinSound.Play();
@@ -253,9 +267,9 @@ public class LevelManager : MonoBehaviour
 
     public void AddKeys(int keysToAdd)
     {
-        keyCount += keysToAdd;
+        keyCount -= keysToAdd;
 
-        keyCountText.text = "Keys: " + keyCount;
+        keyCountText.text = "KEYS REQUIRED " + keyCount;
 
         //TODO change to a different sound
         keySound.Play();

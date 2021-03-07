@@ -4443,8 +4443,8 @@ MonoBehaviour:
     constant struggle as to which one will win. \n\nAnd one cannot exist without
     the other. \n\n\n - E Burdon -\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b4ff360ddeafb4d4e97eb011d1f5f42d, type: 2}
-  m_sharedMaterial: {fileID: -4700185320209511571, guid: b4ff360ddeafb4d4e97eb011d1f5f42d,
+  m_fontAsset: {fileID: 11400000, guid: 7a96f0e90839fda48bded7afc36dca30, type: 2}
+  m_sharedMaterial: {fileID: -554987577858178154, guid: 7a96f0e90839fda48bded7afc36dca30,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4475,7 +4475,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 8
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

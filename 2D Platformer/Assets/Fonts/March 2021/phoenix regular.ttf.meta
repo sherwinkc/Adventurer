@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 76a1d10a64cf77240a09ec4155a80ce4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - phoenix regular
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 16598c1ffa6fbf34f862e986dcc1303c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

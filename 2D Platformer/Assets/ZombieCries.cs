@@ -22,7 +22,7 @@ public class ZombieCries : MonoBehaviour
         {
             timerCount = 0;
             zombieSFX.pitch = Random.Range(0.7f, 1.2f);
-            zombieSFX.panStereo = Random.Range(-0.5f, 0.5f);
+            zombieSFX.panStereo = Random.Range(-0.75f, 0.75f);
             zombieSFX.Play();
         }
     }

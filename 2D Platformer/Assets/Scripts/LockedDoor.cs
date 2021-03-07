@@ -46,7 +46,7 @@ public class LockedDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(levelManager.keyCount >= keysRequired)
+        if(levelManager.keyCount <= 0)
         {
             if(moveDoor)
             {

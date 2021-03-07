@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: dcff72e95f5c19c45a8f6f2769f7f8f3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Drakoheart Leiend
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b5dd053a573f97d45a61f878c13dc779, type: 3}
+  - {fileID: 12800000, guid: 36eb51f856ba86a4c83e952a412f1433, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
