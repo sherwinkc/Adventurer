@@ -9,6 +9,8 @@ public class LockedDoor : MonoBehaviour
     public PlayerMovement playerMov;
     public PlayerCombat playerCom;
 
+    public GameObject mountain;
+
     public float unlockSpeed;
     public float startTime;
     public int keysRequired;
@@ -28,6 +30,11 @@ public class LockedDoor : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
         playerMov = FindObjectOfType<PlayerMovement>();
         playerCom = FindObjectOfType<PlayerCombat>();
+        
+        if(mountain != null)
+        {
+            mountain.SetActive(true);
+        }
     }
 
     // Start is called before the first frame update
@@ -122,6 +129,13 @@ public class LockedDoor : MonoBehaviour
         levelManager.invincible = false;
         //playerMov.canMove = true;
         //playerCom.canMove = true;
+
+        yield return new WaitForSecondsRealtime(2f);
+
+        if (mountain != null)
+        {
+            mountain.SetActive(false);
+        }
 
         yield return null;
     }

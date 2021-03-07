@@ -60,6 +60,8 @@ public class Skel_King_Script : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            skel_King_Controller.ebCollider.SetActive(false);
+            skel_King_Controller.forceField.SetActive(false);
             dead.Play();
             Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
 

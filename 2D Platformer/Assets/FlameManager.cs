@@ -10,6 +10,8 @@ public class FlameManager : MonoBehaviour
 
     public Skel_King_Controller skel_King_Controller;
 
+    public AudioSource flameOn;
+
     public void Awake()
     {
         skel_King_Controller = GetComponent<Skel_King_Controller>();
@@ -49,26 +51,38 @@ public class FlameManager : MonoBehaviour
         yield return new WaitForSeconds(flameStartTime);
 
         flame_1.SetActive(true);
+        flameOn.pitch = (Random.Range(0.9f, 1.1f));
+        flameOn.Play();
 
         yield return new WaitForSeconds(flameTime);
 
         flame_2.SetActive(true);
+        flameOn.pitch = (Random.Range(0.9f, 1.1f));
+        flameOn.Play();
 
         yield return new WaitForSeconds(flameTime);
 
         flame_3.SetActive(true);
+        flameOn.pitch = (Random.Range(0.9f, 1.1f));
+        flameOn.Play();
 
         yield return new WaitForSeconds(flameTime);
 
         flame_4.SetActive(true);
+        flameOn.pitch = (Random.Range(0.9f, 1.1f));
+        flameOn.Play();
 
         yield return new WaitForSeconds(flameTime);
 
         flame_5.SetActive(true);
+        flameOn.pitch = (Random.Range(0.9f, 1.1f));
+        flameOn.Play();
 
         yield return new WaitForSeconds(flameTime);
 
         flame_6.SetActive(true);
+        flameOn.pitch = (Random.Range(0.9f, 1.1f));
+        flameOn.Play();
 
         if (skel_King_Controller.majorAttackUsed_1 && !skel_King_Controller.majorAttackUsed_2)
         {

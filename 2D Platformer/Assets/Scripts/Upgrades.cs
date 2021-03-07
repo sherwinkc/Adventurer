@@ -745,12 +745,18 @@ public class Upgrades : MonoBehaviour
 
         if (playerCombat.staminaMax == staminaMaxT3)
         {
-            maxStamina.text = "MAX";
+            if(maxStamina != null)
+            {
+                maxStamina.text = "MAX";
+            }
         }
 
         if (playerCombat.staminaRechargeRate == staminaRechargeRateT3)
         {
-            staminaRecharge.text = "MAX";
+            if(staminaRecharge != null)
+            {
+                staminaRecharge.text = "MAX";
+            }
         }
 
         if (playerCombat.attackCost == staminaAttackCostT3)

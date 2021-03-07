@@ -4440,8 +4440,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Inside each of us, there is the seed of both good and evil. \n\nIt's a
-    constant struggle as to which one will win. \n\n\nAnd one cannot exist without
-    the other. \n\n - E Burdon -\r\n\r\n"
+    constant struggle as to which one will win. \n\nAnd one cannot exist without
+    the other. \n\n\n - E Burdon -\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ff360ddeafb4d4e97eb011d1f5f42d, type: 2}
   m_sharedMaterial: {fileID: -4700185320209511571, guid: b4ff360ddeafb4d4e97eb011d1f5f42d,

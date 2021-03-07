@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour
     public int skillPoints, startingSkillPoints;    
 
     // Audio
-    public AudioSource coinSound, gameOverMusic, hurtSound, levelUpSound, deathSound;
+    public AudioSource coinSound, gameOverMusic, hurtSound, levelUpSound, deathSound, keySound;
 
     #endregion
 
@@ -157,7 +157,7 @@ public class LevelManager : MonoBehaviour
             livesText.text = "Lives x" + currentLives;
 
             //check if lives is greater that to call respawn coroutine function. Else the player is inactive and the game overs screen shows
-            if (currentLives > 0)
+            if (currentLives >= 0)
             {
                 respawning = true;
                 StartCoroutine(RespawnCo());
@@ -210,7 +210,7 @@ public class LevelManager : MonoBehaviour
         keyCountText.text = "Keys: " + keyCount;
 
         //reset orb count and bonus life count to zero and update UI
-        coinCount /= 2;
+        coinCount /= 2; // Do we need to divide the count count on death ???
         coinText.text = "Orbs: " + coinCount;
         coinBonusLifeCount = 0;
 
@@ -248,7 +248,7 @@ public class LevelManager : MonoBehaviour
         //play coin sound
         coinSound.Play();
 
-        playerCombat.superAmount += 0.25f;
+        playerCombat.superAmount += 0.1f;
     }
 
     public void AddKeys(int keysToAdd)
@@ -258,7 +258,7 @@ public class LevelManager : MonoBehaviour
         keyCountText.text = "Keys: " + keyCount;
 
         //TODO change to a different sound
-        coinSound.Play();
+        keySound.Play();
     }
 
     //hurt player function
@@ -352,7 +352,7 @@ public class LevelManager : MonoBehaviour
         livesText.text = "Lives x" + currentLives;
 
         //play coin sound
-        coinSound.Play();
+        //coinSound.Play();
     }
 
     void HurtSound()

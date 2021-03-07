@@ -2624,10 +2624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'THE END
-
-
-    Thanks for playing!'
+  m_text: THE END
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ff360ddeafb4d4e97eb011d1f5f42d, type: 2}
   m_sharedMaterial: {fileID: -4700185320209511571, guid: b4ff360ddeafb4d4e97eb011d1f5f42d,
@@ -3592,7 +3589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 108.30835, y: -31.486877}
+  m_AnchoredPosition: {x: 108.30835, y: -31.486938}
   m_SizeDelta: {x: 227.7, y: -69.364}
   m_Pivot: {x: 0.47565168, y: 0.5294509}
 --- !u!1001 &920854138

@@ -44,6 +44,7 @@ public class Skel_King_Controller : MonoBehaviour
     public bool canPlay = true;
 
     public GameObject flameHolder;
+    public GameObject ebCollider;
 
     //flames
     public bool startFlamesOnce = false;
@@ -73,6 +74,7 @@ public class Skel_King_Controller : MonoBehaviour
 
         //forceField.gameObject.SetActive(true);
         boxCollider2D.gameObject.SetActive(false);
+        ebCollider.SetActive(true);
     }
 
     void Start()
@@ -218,14 +220,17 @@ public class Skel_King_Controller : MonoBehaviour
         {
             attacking = false;
         }
+
+        ebCollider.SetActive(true);
     }
 
     public void MoveToPosition()
     {
         Debug.Log("Move to position");
+        ebCollider.SetActive(false);
 
         //activate force field
-        if(!activatedForceFieldOnce)
+        if (!activatedForceFieldOnce)
         {
             ActivateForceField();
             activatedForceFieldOnce = true;

@@ -113,12 +113,15 @@ public class LevelBegin_Boss : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            virtualCamera1.gameObject.SetActive(false);
-            virtualCamera2.gameObject.SetActive(true);
-            collider_L.SetActive(true);
-            collider_R.SetActive(true);
-            bossBar.SetActive(true);
-            levelMusicMan.PlayBossMusic();
+            if(skel_King_Script.currentHealth > 0) //check if boss has been killed or not
+            {
+                virtualCamera1.gameObject.SetActive(false);
+                virtualCamera2.gameObject.SetActive(true);
+                collider_L.SetActive(true);
+                collider_R.SetActive(true);
+                bossBar.SetActive(true);
+                levelMusicMan.PlayBossMusic();
+            }
         }
     }
 

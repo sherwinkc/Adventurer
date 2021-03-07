@@ -16,8 +16,8 @@ public class LevelBegin_Prologue : MonoBehaviour
 
     private void Awake()
     {
-        virtualCamera1.gameObject.SetActive(false);
         virtualCamera2.gameObject.SetActive(true);
+        virtualCamera1.gameObject.SetActive(false);
 
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
@@ -26,8 +26,8 @@ public class LevelBegin_Prologue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        virtualCamera1.gameObject.SetActive(false);
         virtualCamera2.gameObject.SetActive(true);
+        virtualCamera1.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
