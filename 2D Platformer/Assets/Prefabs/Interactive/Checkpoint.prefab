@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3577336033694284066}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3242364766535682375}
   - component: {fileID: 6561173778215514683}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,8 +226,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1004513093
-  m_SortingLayer: 2
+  m_SortingLayerID: 1750281027
+  m_SortingLayer: 1
   m_SortingOrder: -2
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f,
     type: 3}
@@ -314,8 +314,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1004513093
-  m_SortingLayer: 2
+  m_SortingLayerID: 1750281027
+  m_SortingLayer: 1
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 56714cb67a853b545a6ef515e6055f78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -49,7 +49,7 @@ public class Fire_Skel_Script : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Instantiate(swordSwipeVFX, squibTransform.transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+        Instantiate(swordSwipeVFX, squibTransform.transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360))); //Instantiate Swipe VFX
 
         if (currentHealth >= 0)
         {

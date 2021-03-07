@@ -17,7 +17,7 @@ public class ZombieAmbience : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ambience.volume = 0.05f;
+        ambience.volume = 0.04f;
     }
 
     // Update is called once per frame
@@ -25,12 +25,12 @@ public class ZombieAmbience : MonoBehaviour
     {
         if (skel_King_Script.currentHealth <= skel_King_Script.maxHealth * 0.75f && skel_King_Script.currentHealth > skel_King_Script.maxHealth * 0.25f)
         {
-            ambience.volume = 0.075f;
+            ambience.volume = 0.06f;
         }
 
         if (skel_King_Script.currentHealth <= skel_King_Script.maxHealth * 0.25f)
         {
-            ambience.volume = 0.1f;
+            ambience.volume = 0.08f;
         }
 
         if (skel_King_Script.currentHealth <= 0)

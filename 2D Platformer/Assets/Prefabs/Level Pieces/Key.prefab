@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.9111111, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.03459108, b: 0.29282224, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4922,7 +4922,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 2723176700914664728, guid: fa4476a3dcfa73a4fb1b3a3595e97aed,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.8524437, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5044,10 +5044,10 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.763
-  m_Color: {r: 0.98765564, g: 1, b: 0, a: 1}
-  m_Intensity: 1.25
+  m_Color: {r: 0.9339623, g: 0.36712345, b: 0.535464, a: 1}
+  m_Intensity: 2.01
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000003b865d81
+  m_ApplyToSortingLayers: 0b399890a712045cf9b9179fb7b008c93b865d8100000000432b536845a7df3bbd301662bb38aaac
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0

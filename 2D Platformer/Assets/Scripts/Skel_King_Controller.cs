@@ -59,7 +59,7 @@ public class Skel_King_Controller : MonoBehaviour
     string[] stateList = { "Attack1", "Attack2" };
 
     //Audio
-    public AudioSource swipe, forceFieldActivate, forceFieldLoop, platformCreation; // idle, skel_steps;
+    public AudioSource swipe, forceFieldActivate, forceFieldLoop, platformCreation, step1, step2, stopShieldSFX; // idle, skel_steps;
 
     void Awake()
     {
@@ -337,6 +337,7 @@ public class Skel_King_Controller : MonoBehaviour
         activatedForceFieldOnce = false;
         forceFieldActivate.Stop();
         forceFieldLoop.Stop();
+        stopShieldSFX.Play();
 
         // restart basic loop
         isBasicAttacking = true;
@@ -378,5 +379,13 @@ public class Skel_King_Controller : MonoBehaviour
     {
         //skel_steps.pitch = (Random.Range(0.7f, 1.2f));
         //skel_steps.Play();
+    }
+
+    public void StepSFX()
+    {
+        step1.pitch = Random.Range(0.8f, 1.2f);
+        step2.pitch = Random.Range(0.8f, 1.2f);
+        step1.Play();
+        step2.Play();
     }
 }

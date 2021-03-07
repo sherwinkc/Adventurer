@@ -9,6 +9,7 @@ public class Fire_Skel_Controller : MonoBehaviour
     public PlayerMovement playerMovement;
     public LevelManager levelManager;
     public Fire_Skel_Script fireSkelScript;
+    public GameObject ebCollider, shieldCollider;
 
     public float moveSpeed;
     public bool canMove = false;
@@ -21,6 +22,8 @@ public class Fire_Skel_Controller : MonoBehaviour
     public bool startCooldown = false;
 
     public float distanceToPlayer;
+
+    public bool isHurt = false;
 
     //choose a state/anim
     string state;
@@ -35,34 +38,20 @@ public class Fire_Skel_Controller : MonoBehaviour
         animator = GetComponentInParent<Animator>();
         fireSkelScript = GetComponent<Fire_Skel_Script>();
         playerMovement = FindObjectOfType<PlayerMovement>();
-        levelManager = FindObjectOfType<LevelManager>();        
+        levelManager = FindObjectOfType<LevelManager>();
+
+        ebCollider.SetActive(true);
+        shieldCollider.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move towards the player
-        if (playerMovement.transform.position.x < transform.position.x && canMove && !attacking && levelManager.healthCount > 0 && !guarding )
+        if(!guarding)
         {
-            rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
-            transform.localScale = new Vector3(3, transform.localScale.y, transform.localScale.y);
+            BasicMovement();
         }
-        else if (playerMovement.transform.position.x > transform.position.x && canMove && !attacking && levelManager.healthCount > 0 && !guarding)
-        {
-            rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
-            transform.localScale = new Vector3(-3, transform.localScale.y, transform.localScale.y);
-        }
-        else
-        {
-            rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.y);
-            animator.SetTrigger("Idle");
-        }
-
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt")) // TODO: if Bandit is hurt he is pushed back
-        {
-            rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
-        }  
 
         // check if player is in close proximity and either attack or guard
         if (Vector2.Distance(transform.position, playerMovement.transform.position) < distanceToPlayer && attackCounter <= 0 && canMove)
@@ -98,14 +87,55 @@ public class Fire_Skel_Controller : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Guard"))
         {
             guarding = true;
+            ebCollider.SetActive(false);
+            shieldCollider.SetActive(true);
         }
         else
         {
             guarding = false;
+            ebCollider.SetActive(true);
+            shieldCollider.SetActive(false);
         }
 
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
+    }
+
+    public void BasicMovement()
+    {
+        if(!isHurt)
+        {
+            //Debug.Log("Basic Movement");
+            // Move towards the player
+            if (playerMovement.transform.position.x < transform.position.x && canMove && !attacking && levelManager.healthCount > 0 && !guarding)
+            {
+                rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
+                transform.localScale = new Vector3(3, transform.localScale.y, transform.localScale.y);
+            }
+            else if (playerMovement.transform.position.x > transform.position.x && canMove && !attacking && levelManager.healthCount > 0 && !guarding)
+            {
+                rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
+                transform.localScale = new Vector3(-3, transform.localScale.y, transform.localScale.y);
+            }
+            else
+            {
+                rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.y);
+                animator.SetTrigger("Idle");
+            }
+        }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyHurt")) // TODO: if Bandit is hurt he is pushed back
+        {
+            rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
+            isHurt = true;
+            //Debug.Log("is Hurt");
+        }
+        else
+        {
+            isHurt = false;
+            //Debug.Log("!is Hurt");
+        }
     }
 
     private void OnBecameVisible()

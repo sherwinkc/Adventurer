@@ -181,6 +181,11 @@ public class PlayerCombat : MonoBehaviour
                 enemy.GetComponentInParent<Spider_Script>().TakeDamage(attackDamage);
                 StartCoroutine(SlowTimeCo());
             }
+            else if (enemy.GetComponent<ShieldGuard>() != null)
+            {
+                enemy.GetComponent<ShieldGuard>().InstantBlockVFX();
+                StartCoroutine(SlowTimeCo());
+            }
             else if(enemy.GetComponentInParent<Fire_Skel_Script>() != null)
             {
                 enemy.GetComponentInParent<Fire_Skel_Script>().TakeDamage(attackDamage);

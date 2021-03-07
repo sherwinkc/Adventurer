@@ -2538,7 +2538,7 @@ MonoBehaviour:
   levelBegin_F: {fileID: 0}
   levelBegin_Boss: {fileID: 0}
   levelBegin_Land: {fileID: 0}
-  relativeMove: 0.96
+  relativeMove: 0.995
   lockY: 0
   offsetX: 0
   offsetY: 0
