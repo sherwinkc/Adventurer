@@ -28,7 +28,7 @@ public class Skel_King_Controller : MonoBehaviour
     public float attackStateCounter, attackStateCooldown;
     public bool startAttackStateCooldown = false;
     public GameObject majorAttackPosition;
-    public GameObject platform_L, platform_R, platform_C;
+    public GameObject platform_1, platform_2, platform_3, platform_4, platform_5;
     public bool startMajorCo = false;
     public bool isForceFieldActive = false;
     public bool activatedForceFieldOnce = false;
@@ -70,7 +70,11 @@ public class Skel_King_Controller : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
         flameMan = GetComponent<FlameManager>();
 
-        platform_L.SetActive(false); platform_R.SetActive(false); platform_C.SetActive(false);
+        platform_1.SetActive(false); 
+        platform_2.SetActive(false); 
+        platform_3.SetActive(false);
+        platform_4.SetActive(false);
+        platform_5.SetActive(false);
 
         //forceField.gameObject.SetActive(true);
         boxCollider2D.gameObject.SetActive(false);
@@ -270,17 +274,27 @@ public class Skel_King_Controller : MonoBehaviour
 
         yield return new WaitForSeconds(waitTime_plat);
 
-        platform_L.SetActive(true);
+        platform_1.SetActive(true);
         platformCreation.Play();
 
         yield return new WaitForSeconds(waitTime_plat);
 
-        platform_R.SetActive(true);
+        platform_2.SetActive(true);
         platformCreation.Play();
 
         yield return new WaitForSeconds(waitTime_plat);
 
-        platform_C.SetActive(true);
+        platform_3.SetActive(true);
+        platformCreation.Play();
+
+        yield return new WaitForSeconds(waitTime_plat);
+
+        platform_4.SetActive(true);
+        platformCreation.Play();
+
+        yield return new WaitForSeconds(waitTime_plat);
+
+        platform_5.SetActive(true);
         platformCreation.Play();
 
         if (!startFlamesOnce)
@@ -324,9 +338,11 @@ public class Skel_King_Controller : MonoBehaviour
         flameHolder.SetActive(false);
 
         //deactivate platforms
-        platform_L.SetActive(false);
-        platform_R.SetActive(false);
-        platform_C.SetActive(false);
+        platform_1.SetActive(false);
+        platform_2.SetActive(false);
+        platform_3.SetActive(false);
+        platform_4.SetActive(false);
+        platform_5.SetActive(false);
 
         //force field
         //Destroy(forceField);

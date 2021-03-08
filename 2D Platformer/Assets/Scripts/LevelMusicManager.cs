@@ -137,6 +137,9 @@ public class LevelMusicManager : MonoBehaviour
 
     public void PlayBossMusic()
     {
-        level_BossMusic.Play();
+        if(!level_BossMusic.isPlaying)
+        {
+            level_BossMusic.Play();
+        }
     }
 }

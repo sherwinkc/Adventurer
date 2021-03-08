@@ -22,11 +22,11 @@ public class Debug_Cheats : MonoBehaviour
     void Update()
     {
         //increase/decrease orbs/coins
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Y))
         {
             levelManager.AddCoins(coinsToAdd_Debug);
         }
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             levelManager.AddCoins(-coinsToAdd_Debug);
         }

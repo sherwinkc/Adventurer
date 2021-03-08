@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
     public Upgrades upgrades;
     public Canvas worldCanvas;
+    public TextFlashManager textFlashMan;
 
     //Game Objects
     public GameObject deathSplosion;
@@ -72,6 +73,7 @@ public class LevelManager : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerCombat = FindObjectOfType<PlayerCombat>();
         upgrades = FindObjectOfType<Upgrades>();
+        textFlashMan = GetComponent<TextFlashManager>();
 
         //check if player prefs has been set
         PlayerPrefsChecks();
@@ -106,6 +108,7 @@ public class LevelManager : MonoBehaviour
             currentLives += 1;            
             coinBonusLifeCount -= bonusLifeThreshold; // reset the bonus life count to zero
             skillPoints += 1;
+            StartCoroutine(textFlashMan.FlashText_Skill());
             levelUpSound.Play();
         }
 
@@ -258,6 +261,7 @@ public class LevelManager : MonoBehaviour
 
         //update UI when collecting a coin
         coinText.text = "ORBS: " + coinCount;
+        StartCoroutine(textFlashMan.FlashText_Orb());
 
         //play coin sound
         coinSound.Play();
@@ -270,6 +274,7 @@ public class LevelManager : MonoBehaviour
         keyCount -= keysToAdd;
 
         keyCountText.text = "KEYS REQUIRED " + keyCount;
+        StartCoroutine(textFlashMan.FlashText_Key());
 
         //TODO change to a different sound
         keySound.Play();

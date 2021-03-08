@@ -4342,8 +4342,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b4ff360ddeafb4d4e97eb011d1f5f42d, type: 2}
-  m_sharedMaterial: {fileID: -4700185320209511571, guid: b4ff360ddeafb4d4e97eb011d1f5f42d,
+  m_fontAsset: {fileID: 11400000, guid: 7a96f0e90839fda48bded7afc36dca30, type: 2}
+  m_sharedMaterial: {fileID: -554987577858178154, guid: 7a96f0e90839fda48bded7afc36dca30,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
