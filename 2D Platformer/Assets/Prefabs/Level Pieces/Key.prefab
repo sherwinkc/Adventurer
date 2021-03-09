@@ -4845,7 +4845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3081832299483458178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.17, y: 1.33, z: 6.2753906}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 3647816794143824559}
@@ -5043,9 +5043,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.763
+  m_FalloffIntensity: 0.597
   m_Color: {r: 0.9339623, g: 0.36712345, b: 0.535464, a: 1}
-  m_Intensity: 2.01
+  m_Intensity: 3
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 0b399890a712045cf9b9179fb7b008c93b865d8100000000432b536845a7df3bbd301662bb38aaac
   m_LightCookieSprite: {fileID: 0}
@@ -5056,7 +5056,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.26
+  m_PointLightInnerRadius: 0.8
   m_PointLightOuterRadius: 2.13
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -5109,12 +5109,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8886831951821664051}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 691477547a7156c43a8f59187389cf5f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f812dfdffbc94c64bb2fece47c87d4a6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0
   m_Pitch: 0.75
   Loop: 1
   Mute: 0
@@ -5212,5 +5212,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 3413846119506170969}
   playerMovement: {fileID: 0}
-  distanceFromSound: 10
-  maxVolume: 0
+  distanceFromSound: 5
+  maxVolume: 0.75

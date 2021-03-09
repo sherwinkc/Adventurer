@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 1987240560698234215}
   - component: {fileID: 1539462139011574882}
   m_Layer: 0
-  m_Name: Squelch
+  m_Name: Hay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,9 +186,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e3fcb559b74828645b11931f72c9eecf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b30db64f845506944aec3d279a46c2a7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -324,13 +324,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  deathSplosion: {fileID: 7769350992981078548, guid: 47309ae989a408e44b212a88a14e7530,
+  deathSplosion: {fileID: 7769350992981078548, guid: 2560f6df3d072cc4eb52c1eede9f463c,
     type: 3}
   squibTransform: {fileID: 0}
   destroyOverTime: {fileID: 0}
-  maxHealth: 90
+  maxHealth: 110
   currentHealth: 0
-  squelch: {fileID: 1539462139011574882}
+  hay: {fileID: 1539462139011574882}
 --- !u!212 &8330476526440824635
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -418,7 +418,7 @@ Animator:
   m_GameObject: {fileID: 8330476526440824637}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6f1826b34f2c732459a9aed0c831164e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -12,7 +12,7 @@ public class Scarecrow_Script : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
 
-    public AudioSource squelch;
+    public AudioSource hay;
 
 
     void Start()
@@ -37,43 +37,27 @@ public class Scarecrow_Script : MonoBehaviour
         if (currentHealth >= 0)
         {
             animator.SetTrigger("Hurt");
-            //Instantiate(squib, squibTransform.transform.position, squibTransform.transform.rotation);
+        }
+
+        if(hay)
+        {
+            hay.Play();
         }
 
         if (currentHealth <= 0)
         {
             Die();
             Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
-
-            /*for (int i = 0; i < Random.Range(2f, 4f); i++)
-            {
-                //Instantiate(orbsOnDeath, new Vector2(squibTransform.transform.position.x, squibTransform.transform.position.y + 1), squibTransform.transform.rotation);
-            }*/
         }
 
-        squelch.Play();
     }
 
     void Die()
     {
-        //animator.SetBool("isDead", true);
-        //spiderController.churp.Stop();
-        //spiderController.scurry.Stop();
-
-        //spiderController.canMove = false;
-
-        //Disable Rigidbody  
-        //rb.simulated = false;
-
-        //Disable Circle Collider in Children 
-        //GetComponentInChildren<BoxCollider2D>().enabled = false;
-
         destroyOverTime.isOn = true;
 
         //Disable this Spider_Script component
         this.enabled = false;
         this.gameObject.SetActive(false);
-
-
     }
 }

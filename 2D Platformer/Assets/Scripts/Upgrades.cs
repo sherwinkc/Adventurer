@@ -97,7 +97,7 @@ public class Upgrades : MonoBehaviour
         superRechargeRateDefault = 0.5f;
         superRechargeT1 = superRechargeRateDefault * 1.5f;
         superRechargeT2 = superRechargeRateDefault * 2f;
-        superRechargeT3 = superRechargeRateDefault * 3f;
+        superRechargeT3 = superRechargeRateDefault * 2.5f;
 
         //Super Amount returned
         superAmountReturnedDefault = 10f;
@@ -113,7 +113,7 @@ public class Upgrades : MonoBehaviour
         staminaMaxT3 = staminaMaxUpgradeDefault * 1.75f;
 
         //stamina recharge rate
-        staminaRechargeRateDefault = 12.5f; // Originally 10f
+        staminaRechargeRateDefault = 14f; // Originally 10f
         staminaRechargeRateT1 = staminaRechargeRateDefault * 1.25f;
         staminaRechargeRateT2 = staminaRechargeRateDefault * 1.5f;
         staminaRechargeRateT3 = staminaRechargeRateDefault * 1.75f;
@@ -160,7 +160,7 @@ public class Upgrades : MonoBehaviour
     void DeleteExistingPlayerPrefs()
     {
         //delete existing player prefs in the first level
-        if (SceneManager.GetActiveScene().name == "Level1_1")
+        if (SceneManager.GetActiveScene().name == "Prologue")
         {
             PlayerPrefs.DeleteAll();
         }
