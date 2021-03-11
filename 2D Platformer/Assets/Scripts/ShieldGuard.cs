@@ -22,6 +22,7 @@ public class ShieldGuard : MonoBehaviour
     public void InstantBlockVFX()
     {
         Instantiate(block, blockTransform.transform.position, blockTransform.transform.rotation);
+        blockSFX.pitch = Random.Range(0.9f, 1.1f);
         blockSFX.Play();
     }
 }

@@ -97,7 +97,9 @@ public class Bird_Script : MonoBehaviour
             Die();
         }
 
+        crow.pitch = Random.Range(0.95f, 1.05f);
         crow.Play();
+        squelch.pitch = Random.Range(0.95f, 1.05f);
         squelch.Play();
     }
 

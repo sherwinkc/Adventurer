@@ -41,6 +41,7 @@ public class Scarecrow_Script : MonoBehaviour
 
         if(hay)
         {
+            hay.pitch = Random.Range(0.9f, 1.1f);
             hay.Play();
         }
 

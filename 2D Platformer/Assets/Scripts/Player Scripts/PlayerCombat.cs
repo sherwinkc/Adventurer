@@ -48,6 +48,8 @@ public class PlayerCombat : MonoBehaviour
     public float superAmount, superStartAmount, superMax, superRechargeRate;
     public GameObject superBullet;
     public GameObject superReadyText;
+    public GameObject superIMG;
+    public bool superTextActive = false;
 
     //checks
     public bool canMove;
@@ -82,6 +84,7 @@ public class PlayerCombat : MonoBehaviour
         superStartAmount = 0;
         superMax = 100;
         superReadyText.SetActive(false);
+        superIMG.SetActive(false);
     }
 
     void Update()
@@ -108,13 +111,20 @@ public class PlayerCombat : MonoBehaviour
             currentStamina = staminaMax;
         }
 
-        if(superAmount == superMax)
+        if(superAmount >= superMax)
         {
             superReadyText.SetActive(true);
+            if(!superTextActive)
+            {
+                superIMG.SetActive(true);
+                superTextActive = true;
+            }
         }
         else if (superAmount < superMax)
         {
-            superReadyText.SetActive(false); ;
+            superReadyText.SetActive(false);
+            superIMG.SetActive(false);
+            superTextActive = false;
         }
     }
 

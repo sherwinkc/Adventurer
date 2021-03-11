@@ -20495,7 +20495,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Time Between Attacks
+  m_Text: Attack Rate
 --- !u!222 &1053799075
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26712,9 +26712,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1000
+  m_MaxValue: 1250
   m_WholeNumbers: 0
-  m_Value: 1000
+  m_Value: 1250
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -27374,7 +27374,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stamina Recharge Rate
+  m_Text: Stamina Charge Rate
 --- !u!222 &1404559078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30646,7 +30646,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Super Recharge Rate
+  m_Text: Super Charge Rate
 --- !u!222 &1574875728
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34056,7 +34056,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Super From Kills
+  m_Text: Super Gained From Kills
 --- !u!222 &1767409431
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35439,7 +35439,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stamina Attack Cost
+  m_Text: Attack Stamina Cost
 --- !u!222 &1813152710
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40607,7 +40607,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stamina Dash Cost
+  m_Text: Dash Stamina Cost
 --- !u!222 &1995980678
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41871,7 +41871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stamina Jump Cost
+  m_Text: Jump Stamina Cost
 --- !u!222 &2077235240
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43272,11 +43272,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6590276407954564593, guid: 980acf1e903ebed4ebb30d1700cd37e5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6590276407954564595, guid: 980acf1e903ebed4ebb30d1700cd37e5,
         type: 3}
       propertyPath: platform_1
@@ -43337,11 +43332,6 @@ PrefabInstance:
       propertyPath: majorAttackPosition
       value: 
       objectReference: {fileID: 504731602}
-    - target: {fileID: 6590276407954564596, guid: 980acf1e903ebed4ebb30d1700cd37e5,
-        type: 3}
-      propertyPath: maxHealth
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 980acf1e903ebed4ebb30d1700cd37e5, type: 3}
 --- !u!4 &9185672947228893570 stripped

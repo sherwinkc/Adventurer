@@ -77,7 +77,7 @@ public class LevelMusicManager : MonoBehaviour
 
             if (land_Music != null)
             {
-                land_Music.volume -= Time.deltaTime / 25f;
+                land_Music.volume -= Time.deltaTime;
             }
 
             if (level_BossMusic != null)

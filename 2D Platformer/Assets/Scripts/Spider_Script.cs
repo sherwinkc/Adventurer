@@ -77,8 +77,10 @@ public class Spider_Script : MonoBehaviour
         //SFX        
         if (enemyGrunt != null)
         {
+            enemyGrunt.pitch = Random.Range(0.95f, 1.05f);
             enemyGrunt.Play();
         }
+        bloodSquelch.pitch = Random.Range(0.95f, 1.05f);
         bloodSquelch.Play();
     }
 

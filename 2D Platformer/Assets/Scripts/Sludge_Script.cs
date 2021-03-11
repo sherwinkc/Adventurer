@@ -78,6 +78,7 @@ public class Sludge_Script : MonoBehaviour
         //SFX        
         if (grunt != null)
         {
+            grunt.pitch = Random.Range(0.95f, 1.05f);
             grunt.Play();
         }
     }

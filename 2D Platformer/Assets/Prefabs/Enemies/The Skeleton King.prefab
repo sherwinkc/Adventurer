@@ -1783,7 +1783,7 @@ MonoBehaviour:
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
     type: 3}
   forceFieldScript: {fileID: 0}
-  maxHealth: 1000
+  maxHealth: 1250
   currentHealth: 0
   grunt: {fileID: 6590276407853064191}
   squelch: {fileID: 6590276408105255955}
@@ -1819,9 +1819,11 @@ MonoBehaviour:
   attackStateCooldown: 0
   startAttackStateCooldown: 0
   majorAttackPosition: {fileID: 0}
-  platform_L: {fileID: 0}
-  platform_R: {fileID: 0}
-  platform_C: {fileID: 0}
+  platform_1: {fileID: 0}
+  platform_2: {fileID: 0}
+  platform_3: {fileID: 0}
+  platform_4: {fileID: 0}
+  platform_5: {fileID: 0}
   startMajorCo: 0
   isForceFieldActive: 0
   activatedForceFieldOnce: 0
@@ -1961,7 +1963,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

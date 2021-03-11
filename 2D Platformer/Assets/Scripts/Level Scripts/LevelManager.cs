@@ -111,6 +111,8 @@ public class LevelManager : MonoBehaviour
             StartCoroutine(textFlashMan.FlashText_Skill());
             levelUpSound.Play();
         }
+        
+        // TODO gain extra life, when it's double the amount of coins
 
         //update UI every frame
         livesText.text = "LIVES x" + currentLives;
@@ -264,9 +266,10 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(textFlashMan.FlashText_Orb());
 
         //play coin sound
+        coinSound.pitch = Random.Range(0.95f, 1.05f);
         coinSound.Play();
 
-        playerCombat.superAmount += 0.1f;
+        playerCombat.superAmount += 0.33f;
     }
 
     public void AddKeys(int keysToAdd)

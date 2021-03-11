@@ -247,11 +247,6 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerJump()
     {
-        //play dud sound if there's not enough stamina
-        if (playerCombat.currentStamina < jumpCost && (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump")))
-        {
-            jumpRollDud.Play();
-        }
 
         //check if hang counter 
         if (hangCounter >= 0f && knockbackCounter <= 0 && canMove && (!animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump")) && playerCombat.currentStamina >= jumpCost)
@@ -275,6 +270,12 @@ public class PlayerMovement : MonoBehaviour
                 playerCombat.currentStamina -= jumpCost;
             }
         }
+
+        //play dud sound if there's not enough stamina
+        if (playerCombat.currentStamina < jumpCost && isGrounded && canMove && !animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Jump"))
+        {
+            jumpRollDud.Play();
+        }
     }
 
     void PlayerJumpCancel()
@@ -296,7 +297,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //play dud sound if there's not enough stamina
-        if (isGrounded && canDash && Mathf.Abs(myRigidbody.velocity.x) >= 3 && canMove && playerCombat.currentStamina < rollCost)
+        if (isGrounded && canDash && canMove && playerCombat.currentStamina < rollCost)
         {
             jumpRollDud.Play();
         }
@@ -349,7 +350,6 @@ public class PlayerMovement : MonoBehaviour
             signScript.textShowing = true;
         }
     }
-
 
     void RunningSound()
     {

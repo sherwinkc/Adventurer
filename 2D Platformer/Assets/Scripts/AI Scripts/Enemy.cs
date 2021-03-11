@@ -56,7 +56,9 @@ public class Enemy : MonoBehaviour
             grunt2.Play();
         } 
 
+        enemyGrunt1.pitch = Random.Range(0.9f, 1.1f);
         enemyGrunt1.Play();
+        bloodSquelch.pitch = Random.Range(0.9f, 1.1f);
         bloodSquelch.Play();
 
         if (currentHealth <= 0)
