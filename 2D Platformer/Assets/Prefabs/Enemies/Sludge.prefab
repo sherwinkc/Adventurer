@@ -1125,7 +1125,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   playerMovement: {fileID: 0}
   distanceFromSound: 10
-  maxVolume: 0.3
+  maxVolume: 0.6
 --- !u!1 &9003138531611303607
 GameObject:
   m_ObjectHideFlags: 0

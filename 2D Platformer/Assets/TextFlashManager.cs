@@ -6,12 +6,6 @@ using UnityEngine.UI;
 public class TextFlashManager : MonoBehaviour
 {
     public Text orb_Text, key_Text, skill_text;
-    public GameObject flashingSuperImage;
-
-    private void Awake()
-    {
-        flashingSuperImage.SetActive(false);
-    }
 
     public IEnumerator FlashText_Orb()
     {
@@ -36,12 +30,8 @@ public class TextFlashManager : MonoBehaviour
     {
         skill_text.fontSize = 50;
 
-        flashingSuperImage.SetActive(true);
-
         yield return new WaitForSeconds(10f);
 
         skill_text.fontSize = 35;
-
-        flashingSuperImage.SetActive(false);
     }
 }

@@ -127,7 +127,7 @@ public class LockedDoor : MonoBehaviour
 
         moveDoor = true;
 
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSecondsRealtime(2f);
 
         virtualCamera2.gameObject.SetActive(false);
         virtualCamera1.gameObject.SetActive(true);

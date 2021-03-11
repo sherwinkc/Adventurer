@@ -32,9 +32,9 @@ public class Parallax2 : MonoBehaviour
             transform.position = new Vector3((cam.transform.position.x * relativeMove) + offsetX, transform.position.y, transform.position.z);
         }
 
-        Debug.Log("OffsetX : " + offsetX);
-        Debug.Log("transform.position.x : " + transform.position.x);
-        Debug.Log("cam.transform.position.x : " + cam.transform.position.x);
-        Debug.Log("transform.position.x - cam.transform.position.x : " + (transform.position.x - cam.transform.position.x));
+        //Debug.Log("OffsetX : " + offsetX);
+        //Debug.Log("transform.position.x : " + transform.position.x);
+        //Debug.Log("cam.transform.position.x : " + cam.transform.position.x);
+        //Debug.Log("transform.position.x - cam.transform.position.x : " + (transform.position.x - cam.transform.position.x));
     }
 }
