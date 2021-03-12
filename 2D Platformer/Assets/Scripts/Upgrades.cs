@@ -160,7 +160,7 @@ public class Upgrades : MonoBehaviour
     void DeleteExistingPlayerPrefs()
     {
         //delete existing player prefs in the first level
-        if (SceneManager.GetActiveScene().name == "Prologue")
+        if (SceneManager.GetActiveScene().name == "Prologue" || SceneManager.GetActiveScene().name == "Level1_1")
         {
             PlayerPrefs.DeleteAll();
         }

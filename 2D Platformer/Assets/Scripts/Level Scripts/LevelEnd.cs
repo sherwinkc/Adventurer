@@ -20,6 +20,8 @@ public class LevelEnd : MonoBehaviour
     public float waitToMove, waitToLoad;
     private bool movePlayer;
     public bool coActive = false;
+
+    public bool fadingOutMusic = false;
     
     //public bool fadingOutMusic = false;
 
@@ -41,6 +43,11 @@ public class LevelEnd : MonoBehaviour
         if(movePlayer)
         {
             playerMovement.myRigidbody.velocity = new Vector2(playerMovement.moveSpeed, playerMovement.myRigidbody.velocity.y);
+        }
+
+        if(fadingOutMusic)
+        {
+            theLevelManager.gameOverMusic.volume -= Time.deltaTime / 5f;
         }
 
         /*if(fadingOutMusic)
@@ -94,6 +101,7 @@ public class LevelEnd : MonoBehaviour
             //theLevelManager.levelMusic.Stop();
             levelMusicMan. fadingOutMusic = true;
             theLevelManager.gameOverMusic.Play();
+            fadingOutMusic = true;
         }
 
         playerMovement.myRigidbody.velocity = Vector3.zero;

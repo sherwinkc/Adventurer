@@ -57,22 +57,22 @@ public class LevelMusicManager : MonoBehaviour
         {
             if(prologue_Music != null)
             {
-                prologue_Music.volume -= Time.deltaTime / 2f;
+                prologue_Music.volume -= Time.deltaTime / 3f;
             }
 
             if(village_Music != null)
             {
-                village_Music.volume -= Time.deltaTime / 2f;
+                village_Music.volume -= Time.deltaTime / 5f;
             }
 
             if(forestDark_Music != null)
             {
-                forestDark_Music.volume -= Time.deltaTime / 25f;
+                forestDark_Music.volume -= Time.deltaTime / 5f;
             }
 
             if (floatingIsles_Music != null)
             {
-                floatingIsles_Music.volume -= Time.deltaTime / 25f;
+                floatingIsles_Music.volume -= Time.deltaTime / 5f;
             }
 
             if (land_Music != null)
@@ -82,7 +82,7 @@ public class LevelMusicManager : MonoBehaviour
 
             if (level_BossMusic != null)
             {
-                level_BossMusic.volume -= Time.deltaTime / 25f;
+                level_BossMusic.volume -= Time.deltaTime / 5f;
             }
         }
 

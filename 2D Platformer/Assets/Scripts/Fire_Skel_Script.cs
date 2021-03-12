@@ -72,7 +72,7 @@ public class Fire_Skel_Script : MonoBehaviour
             dead.Play();
             Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
 
-            for (int i = 0; i < Random.Range(4f, 5f); i++)
+            for (int i = 0; i < Random.Range(1f, 5f); i++)
             {
                 Instantiate(orbsOnDeath, new Vector2(squibTransform.transform.position.x, squibTransform.transform.position.y), squibTransform.transform.rotation);
             }

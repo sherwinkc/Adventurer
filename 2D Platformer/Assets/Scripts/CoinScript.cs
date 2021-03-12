@@ -9,6 +9,7 @@ public class CoinScript : MonoBehaviour
     public PlayerCoin_Trans playerTransform;
     //public CoinScript coinScript;
     public CircleCollider2D cCollider;
+    public CircleCollider2D tCollider;
 
     public int coinValue;
     public bool triggerActive;
@@ -51,18 +52,15 @@ public class CoinScript : MonoBehaviour
             rb.transform.position = Vector3.MoveTowards(transform.position, playerTransform.transform.position, Random.Range(10f, 15f) * Time.deltaTime);
 
             cCollider.enabled = false;
-
-            //Ignore collisions while moving toward player
-            /*Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<BoxCollider2D>());
-            Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<CircleCollider2D>());
-            Physics2D.IgnoreCollision(coinScript.GetComponentInChildren<CircleCollider2D>(), GetComponent<CapsuleCollider2D>());*/
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" && triggerActive == false && canBeCollected)
+        if (other.tag == "Player" && triggerActive == false && canBeCollected && tCollider.enabled == true)
         {
+            tCollider.enabled = false;
+            
             triggerActive = true;
 
             //stop Audio in child component

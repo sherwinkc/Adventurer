@@ -56,6 +56,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   playerTransform: {fileID: 0}
   cCollider: {fileID: 5085402104863627481}
+  tCollider: {fileID: 3792299865967028}
   coinValue: 1
   triggerActive: 0
   moveTowardPlayer: 0

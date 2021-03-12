@@ -5,10 +5,10 @@ using Cinemachine;
 
 public class LevelBegin_Boss : MonoBehaviour
 {
-    //private PlayerMovement playerMovement;
-    //private PlayerCombat playerCombat;
-    public Canvas canvasWorld; //canvasMain;
-    public GameObject HUD_GO, bars_GO;
+    public PlayerMovement playerMovement;
+    public PlayerCombat playerCombat;
+    //public Canvas canvasWorld;
+    public GameObject HUD_GO, bars_GO, dashBar, radialBar;
     public LevelMusicManager levelMusicMan;
 
     public Skel_King_Script skel_King_Script;
@@ -17,7 +17,7 @@ public class LevelBegin_Boss : MonoBehaviour
     public GameObject bossBar;
     public bool functionUsed = false;
 
-    public CinemachineVirtualCamera virtualCamera1, virtualCamera2; // virtualCamera3;
+    public CinemachineVirtualCamera virtualCamera1, virtualCamera2, virtualCamera3;
 
     public float cameraHoldTime_1, cameraHoldTime_2, cameraHoldTime_3;
     public bool movePlayer;
@@ -28,8 +28,14 @@ public class LevelBegin_Boss : MonoBehaviour
         skel_King_Script = FindObjectOfType<Skel_King_Script>();
         levelMusicMan = FindObjectOfType<LevelMusicManager>();
 
-        virtualCamera1.gameObject.SetActive(true);
-        virtualCamera2.gameObject.SetActive(false);
+        virtualCamera1.gameObject.SetActive(false);
+        virtualCamera3.gameObject.SetActive(true);
+        virtualCamera2.gameObject.SetActive(false); // Boss Cam
+
+        HUD_GO.SetActive(false);
+        bars_GO.SetActive(false);
+        dashBar.SetActive(false);
+        radialBar.SetActive(false);
 
         collider_L.SetActive(false);
         collider_R.SetActive(false);
@@ -37,33 +43,23 @@ public class LevelBegin_Boss : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
     void Start()
     {
-        //playerMovement = FindObjectOfType<PlayerMovement>();
-        //playerCombat = FindObjectOfType<PlayerCombat>();
 
-        //virtualCamera2.gameObject.SetActive(true);
-        //virtualCamera3.gameObject.SetActive(false);
-
-        //runInTime = 1.8f;
-        //movePlayer = true;
-        //levelBeginCoUsed = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*if (!levelBeginCoUsed)
+        if (!levelBeginCoUsed)
         {
-            levelBeginCoUsed = true;
             StartCoroutine(LevelBeginCo());
+            levelBeginCoUsed = true;
         }
 
         if (movePlayer)
         {
-            playerMovement.myRigidbody.velocity = new Vector2(playerMovement.moveSpeed, playerMovement.myRigidbody.velocity.y);
-        }*/
+            playerMovement.myRigidbody.velocity = new Vector2(3f, playerMovement.myRigidbody.velocity.y);
+        }
 
         if (skel_King_Script.currentHealth <= 0 && !functionUsed)
         {
@@ -74,37 +70,34 @@ public class LevelBegin_Boss : MonoBehaviour
 
     public IEnumerator LevelBeginCo()
     {
-        /*virtualCamera1.gameObject.SetActive(false);
-        virtualCamera2.gameObject.SetActive(true);
-        virtualCamera3.gameObject.SetActive(false);
+        movePlayer = true;
 
-        canvasMain.enabled = false;
-        canvasWorld.enabled = false;
+        virtualCamera1.gameObject.SetActive(false);
+        virtualCamera3.gameObject.SetActive(true);
+        virtualCamera2.gameObject.SetActive(false); // Boss Cam
 
         playerMovement.canMove = false;
         playerCombat.canMove = false;
 
         yield return new WaitForSeconds(cameraHoldTime_1);
 
-        virtualCamera1.gameObject.SetActive(false);
-        virtualCamera2.gameObject.SetActive(false);
-        virtualCamera3.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(cameraHoldTime_2);
-
         virtualCamera1.gameObject.SetActive(true);
-        virtualCamera2.gameObject.SetActive(false);
+        virtualCamera2.gameObject.SetActive(false); // Boss Cam
         virtualCamera3.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(cameraHoldTime_3);
+        yield return new WaitForSeconds(cameraHoldTime_2);
 
         movePlayer = false;
 
         playerMovement.canMove = true;
         playerCombat.canMove = true;
 
-        canvasMain.enabled = true;
-        canvasWorld.enabled = true; */
+        yield return new WaitForSeconds(cameraHoldTime_3);
+
+        HUD_GO.SetActive(true);
+        bars_GO.SetActive(true);
+        dashBar.SetActive(true);
+        radialBar.SetActive(true);
 
         yield return null;
     }

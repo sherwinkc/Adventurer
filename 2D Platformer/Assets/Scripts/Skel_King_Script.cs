@@ -35,6 +35,9 @@ public class Skel_King_Script : MonoBehaviour
         upgrades = FindObjectOfType<Upgrades>();
         rb = GetComponent<Rigidbody2D>();
         skel_King_Controller = GetComponent<Skel_King_Controller>();
+
+        skel_King_Controller.ebCollider.SetActive(true);
+        skel_King_Controller.forceField.SetActive(true);
     }
 
     void Start()
@@ -65,7 +68,7 @@ public class Skel_King_Script : MonoBehaviour
             dead.Play();
             Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
 
-            for (int i = 0; i < Random.Range(20f, 30f); i++)
+            for (int i = 0; i < Random.Range(10f, 20f); i++)
             {
                 Instantiate(orbsOnDeath, new Vector2(squibTransform.transform.position.x, squibTransform.transform.position.y), squibTransform.transform.rotation);
             }

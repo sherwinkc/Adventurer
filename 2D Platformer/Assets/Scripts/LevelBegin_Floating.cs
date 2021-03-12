@@ -5,81 +5,75 @@ using Cinemachine;
 
 public class LevelBegin_Floating : MonoBehaviour
 {
-    //private PlayerMovement playerMovement;
-    //private PlayerCombat playerCombat;
-    public Canvas canvasWorld; //canvasMain;
-    public GameObject HUD_GO, bars_GO;
+    public PlayerMovement playerMovement;
+    public PlayerCombat playerCombat;
+    //public Canvas canvasWorld; //canvasMain;
+    public GameObject HUD_GO, bars_GO, dashBar, radialBar ;
 
-    public CinemachineVirtualCamera virtualCamera1; // virtualCamera2, virtualCamera3;
+    public CinemachineVirtualCamera virtualCamera1, virtualCamera2; // virtualCamera3;
 
     public float cameraHoldTime_1, cameraHoldTime_2, cameraHoldTime_3;
     public bool movePlayer;
-    public bool levelBeginCoUsed;
+    public bool coUsed;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        //playerMovement = FindObjectOfType<PlayerMovement>();
-        //playerCombat = FindObjectOfType<PlayerCombat>();
+        virtualCamera1.gameObject.SetActive(false);
+        virtualCamera2.gameObject.SetActive(true);
 
-        virtualCamera1.gameObject.SetActive(true);
-        //virtualCamera2.gameObject.SetActive(true);
-        //virtualCamera3.gameObject.SetActive(false);
-
-        //runInTime = 1.8f;
-        //movePlayer = true;
-        //levelBeginCoUsed = false;
+        HUD_GO.SetActive(false);
+        bars_GO.SetActive(false);
+        dashBar.SetActive(false);
+        radialBar.SetActive(false);
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+
+    }
+
     void Update()
     {
-        /*if (!levelBeginCoUsed)
+        if (!coUsed)
         {
-            levelBeginCoUsed = true;
             StartCoroutine(LevelBeginCo());
+            coUsed = true;
         }
 
         if (movePlayer)
         {
-            playerMovement.myRigidbody.velocity = new Vector2(playerMovement.moveSpeed, playerMovement.myRigidbody.velocity.y);
-        }*/
+            playerMovement.myRigidbody.velocity = new Vector2(4f, playerMovement.myRigidbody.velocity.y);
+        }
     }
 
     public IEnumerator LevelBeginCo()
     {
-        /*virtualCamera1.gameObject.SetActive(false);
+        virtualCamera1.gameObject.SetActive(false);
         virtualCamera2.gameObject.SetActive(true);
-        virtualCamera3.gameObject.SetActive(false);
 
-        canvasMain.enabled = false;
-        canvasWorld.enabled = false;
+        movePlayer = true;
 
         playerMovement.canMove = false;
         playerCombat.canMove = false;
 
         yield return new WaitForSeconds(cameraHoldTime_1);
 
-        virtualCamera1.gameObject.SetActive(false);
-        virtualCamera2.gameObject.SetActive(false);
-        virtualCamera3.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(cameraHoldTime_2);
-
         virtualCamera1.gameObject.SetActive(true);
         virtualCamera2.gameObject.SetActive(false);
-        virtualCamera3.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(cameraHoldTime_3);
+        yield return new WaitForSeconds(cameraHoldTime_2);
 
         movePlayer = false;
 
         playerMovement.canMove = true;
         playerCombat.canMove = true;
 
-        canvasMain.enabled = true;
-        canvasWorld.enabled = true; */
+        yield return new WaitForSeconds(cameraHoldTime_3);
+
+        HUD_GO.SetActive(true);
+        bars_GO.SetActive(true);
+        dashBar.SetActive(true);
+        radialBar.SetActive(true);
 
         yield return null;
     }
