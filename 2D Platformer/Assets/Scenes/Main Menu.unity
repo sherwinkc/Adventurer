@@ -878,8 +878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 494.9, y: 168}
-  m_SizeDelta: {x: 234.082, y: 118.173}
+  m_AnchoredPosition: {x: 494.9, y: 160.7}
+  m_SizeDelta: {x: 462.6769, y: 152.9194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428728825
 MonoBehaviour:
@@ -901,17 +901,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'By Sherwin Claridge
-
-
-    Music by One Man Symphony
-
-    Freesound.org
-
-    Art
-    - 2D Forest Sprite Pack
-
-'
+  m_text: "By Sherwin Claridge\n\nGame made for fun.\r\n\r\nAll art assets are freely
+    available on the Unity Asset Store, OpenGameArt.org & Itch.io:\r\r\nBy: rvros,
+    SanctumPixel, Luiz Melo, Sven Thole, Cainos, Tito Livio, Loreon, Sdazi Art, Simbryo,
+    Saru Rezec.\n\nMusic by One Man Symphony\nFreesound.org\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a96f0e90839fda48bded7afc36dca30, type: 2}
   m_sharedMaterial: {fileID: -554987577858178154, guid: 7a96f0e90839fda48bded7afc36dca30,
@@ -947,7 +940,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 2048
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -1.2
   m_wordSpacing: 0
@@ -975,7 +968,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 46.75637, z: 0, w: -0.69835126}
+  m_margin: {x: 0, y: -0.0014371242, z: 0, w: -0.69835126}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1920,8 +1913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 497, y: 147.69998}
-  m_SizeDelta: {x: 233.3155, y: 121.1612}
+  m_AnchoredPosition: {x: 497, y: 159.6}
+  m_SizeDelta: {x: 386.8797, y: 115.919}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &878110689
 MonoBehaviour:
@@ -1936,7 +1929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.08627451}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.1764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2417,7 +2410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &923857737
 RectTransform:
   m_ObjectHideFlags: 0
