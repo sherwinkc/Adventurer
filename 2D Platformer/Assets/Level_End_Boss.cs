@@ -56,7 +56,7 @@ public class Level_End_Boss : MonoBehaviour
 
         if(playing)
         {
-            zombAm.ambience.volume += Time.deltaTime / 100f;
+            zombAm.ambience.volume += Time.deltaTime / 75f;
         }
     }
 

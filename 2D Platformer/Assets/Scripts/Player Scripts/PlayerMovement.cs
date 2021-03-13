@@ -353,7 +353,7 @@ public class PlayerMovement : MonoBehaviour
 
     void RunningSound()
     {
-        runSound.pitch = (Random.Range(0.5f, 1f));
+        runSound.pitch = (Random.Range(0.75f, 1.1f));
         runSound.Play();
     }
 
