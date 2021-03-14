@@ -454,14 +454,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fd3e0a12da5e449bbc2a81c3b20d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 10
+  waitTime: 5
   levelToLoad: OutroText
   sfx1: {fileID: 140990565}
   sfx2: {fileID: 1664441170}
   sfx3: {fileID: 1113114258}
-  play1: 1
-  play2: 1
-  play3: 1
+  play1: 0
+  play2: 0
+  play3: 0
   volumeRate: 10
 --- !u!4 &1048797428
 Transform:

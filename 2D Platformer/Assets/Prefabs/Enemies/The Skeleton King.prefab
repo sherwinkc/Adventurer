@@ -1783,7 +1783,7 @@ MonoBehaviour:
   orbsOnDeath: {fileID: 3792299865967027, guid: 81bf37cca5522d94d818bd86e38b90fb,
     type: 3}
   forceFieldScript: {fileID: 0}
-  maxHealth: 1250
+  maxHealth: 1000
   currentHealth: 0
   grunt: {fileID: 6590276407853064191}
   squelch: {fileID: 6590276408105255955}

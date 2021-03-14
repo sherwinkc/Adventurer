@@ -26,6 +26,8 @@ public class Bird_Controller : MonoBehaviour
     public float distanceToPlayer;
     public float attackDistance;
 
+    public bool canMoveAndAttack = true;
+
     public AudioSource crow1, crow2, flap;
 
     void Start()
@@ -54,28 +56,38 @@ public class Bird_Controller : MonoBehaviour
         }
 
         //fly fast and move player if within distance
-        if (Vector2.Distance(transform.position, playerMovement.transform.position) < farDistanceToPlayer && Vector2.Distance(transform.position, playerMovement.transform.position) > distanceToPlayer)
+        
+        if (canMoveAndAttack)// can fly and attack during locked door
         {
-            aiPath.canMove = true;
-            aiPath.maxSpeed = flySpeed * 2f;
-            animator.SetTrigger("FlyFaster");
-            if(!crow2.isPlaying)
+            if (Vector2.Distance(transform.position, playerMovement.transform.position) < farDistanceToPlayer && Vector2.Distance(transform.position, playerMovement.transform.position) > distanceToPlayer)
             {
-                crow2.pitch = Random.Range(0.85f, 1f);
-                crow2.Play();
+                aiPath.canMove = true;
+                aiPath.maxSpeed = flySpeed * 2f;
+                animator.SetTrigger("FlyFaster");
+                if(!crow2.isPlaying)
+                {
+                    crow2.pitch = Random.Range(0.85f, 1f);
+                    crow2.Play();
+                }
+            } 
+            else if (Vector2.Distance(transform.position, playerMovement.transform.position) < distanceToPlayer)
+            {
+                aiPath.canMove = true;
+                aiPath.maxSpeed = flySpeed;
+                animator.SetTrigger("FlySlower");
             }
-        } 
-        else if (Vector2.Distance(transform.position, playerMovement.transform.position) < distanceToPlayer)
-        {
-            aiPath.maxSpeed = flySpeed;
-            animator.SetTrigger("FlySlower");
-        }
 
-        //attack if within distance
-        if (Vector2.Distance(transform.position, playerMovement.transform.position) < attackDistance && attackCounter <= 0)
+            //attack if within distance
+            if (Vector2.Distance(transform.position, playerMovement.transform.position) < attackDistance && attackCounter <= 0)
+            {
+                animator.SetTrigger("Attack");
+                startCooldown = true;
+            }
+        }        
+
+        if(!canMoveAndAttack)
         {
-            animator.SetTrigger("Attack");
-            startCooldown = true;
+            aiPath.canMove = false;
         }
 
         if (attackCounter >= attackCooldown)

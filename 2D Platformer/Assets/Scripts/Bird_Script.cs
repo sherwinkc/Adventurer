@@ -87,7 +87,7 @@ public class Bird_Script : MonoBehaviour
 
             Instantiate(deathSplosion, transform.position, transform.rotation);
 
-            for (int i = 0; i < Random.Range(1f, 5f); i++)
+            for (int i = 0; i < Random.Range(2f, 6f); i++)
             {
                 Instantiate(orbsOnDeath, new Vector2(transform.position.x, transform.position.y), transform.rotation);
             }

@@ -19262,6 +19262,10 @@ MonoBehaviour:
   virtualCamera2: {fileID: 1580070832}
   canPlayCo: 1
   moveDoor: 0
+  birds: []
+  spiders: []
+  redSkeletons: []
+  whiteSkeletons: []
   stoneOpen: {fileID: 2037002137}
 --- !u!4 &1083046375 stripped
 Transform:
@@ -23257,7 +23261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 113.85205, y: -29.444153}
+  m_AnchoredPosition: {x: 113.85205, y: -29.444214}
   m_SizeDelta: {x: 2441.035, y: 1425.164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1356194866
@@ -40328,16 +40332,6 @@ PrefabInstance:
       propertyPath: superReadyText
       value: 
       objectReference: {fileID: 770370959}
-    - target: {fileID: 5670088738202447208, guid: 2b92fcea7db71f44b91d0a46df867cc5,
-        type: 3}
-      propertyPath: knockbackForce
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5670088738202447208, guid: 2b92fcea7db71f44b91d0a46df867cc5,
-        type: 3}
-      propertyPath: knockbackLength
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 7128154179106794175, guid: 2b92fcea7db71f44b91d0a46df867cc5,
         type: 3}
       propertyPath: dashCool

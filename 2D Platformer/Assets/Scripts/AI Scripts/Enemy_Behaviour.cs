@@ -11,6 +11,7 @@ public class Enemy_Behaviour : MonoBehaviour
     public float attackDistance;
     public float moveSpeed;
     public float timer;
+    public bool canMoveAndAttack = true;
     public Transform leftLimit;
     public Transform rightLimit;
     
@@ -42,35 +43,38 @@ public class Enemy_Behaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!attackMode)
+        if(canMoveAndAttack)
         {
-            Move();
-        }
+            if(!attackMode)
+            {
+                Move();
+            }
 
-        if(!InsideofLimits() && !inRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Skeleton_1attack1"))
-        {
-            SelectTarget();
-        }
+            if(!InsideofLimits() && !inRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Skeleton_1attack1"))
+            {
+                SelectTarget();
+            }
 
-        if(inRange)
-        {
-            hit = Physics2D.Raycast(rayCast.position, transform.right, rayCastLength, raycastMask);
-            RaycastDebugger();
-        }
+            if(inRange)
+            {
+                hit = Physics2D.Raycast(rayCast.position, transform.right, rayCastLength, raycastMask);
+                RaycastDebugger();
+            }
 
-        //When Player is detected
-        if(hit.collider !=null)
-        {
-            EnemyLogic();
-        }
-        else if(hit.collider == null)
-        {
-            inRange = false;
-        }
+            //When Player is detected
+            if(hit.collider !=null)
+            {
+                EnemyLogic();
+            }
+            else if(hit.collider == null)
+            {
+                inRange = false;
+            }
 
-        if(inRange == false)
-        {
-            StopAttack();
+            if(inRange == false)
+            {
+                StopAttack();
+            }
         }
     }
 

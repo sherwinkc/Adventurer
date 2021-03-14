@@ -23,6 +23,12 @@ public class LockedDoor : MonoBehaviour
     public bool canPlayCo = true;
     public bool moveDoor = false;
 
+    //Find all enemies
+    public Bird_Controller[] birds;
+    public SpiderController[] spiders;
+    public Fire_Skel_Controller[] redSkeletons;
+    public Enemy_Behaviour[] whiteSkeletons;
+
     //Audio
     public AudioSource stoneOpen;
 
@@ -110,7 +116,38 @@ public class LockedDoor : MonoBehaviour
 
         levelManager.invincible = true;
 
-        if(playerRB != null)
+        //Find all enemies and turn them off briefly
+        birds = FindObjectsOfType<Bird_Controller>();
+        spiders = FindObjectsOfType<SpiderController>();
+        redSkeletons = FindObjectsOfType<Fire_Skel_Controller>();
+        whiteSkeletons = FindObjectsOfType<Enemy_Behaviour>();
+
+        //Iterate through Birds
+        for (int i = 0; i < birds.Length; i++)
+        {
+            birds[i].canMoveAndAttack = false;
+        }
+
+        //Iterate through Spiders
+        for (int i = 0; i < spiders.Length; i++)
+        {
+            spiders[i].canMoveAndAttack = false;
+        }
+
+        //iterate through red skeletons
+        for (int i = 0; i < redSkeletons.Length; i++)
+        {
+            redSkeletons[i].canMoveAndAttack = false;
+        }
+
+        //iterate through white skeletons
+        for (int i = 0; i < whiteSkeletons.Length; i++)
+        {
+            whiteSkeletons[i].canMoveAndAttack = false;
+        }
+
+        //stop player from moving
+        if (playerRB != null)
         {
             playerRB.velocity = Vector3.zero;
         }
@@ -141,6 +178,31 @@ public class LockedDoor : MonoBehaviour
 
         playerMov.canMove = true;
         playerCom.canMove = true;
+
+        yield return new WaitForSecondsRealtime(2f);
+
+        //turn on birds
+        for (int i = 0; i < birds.Length; i++)
+        {
+            birds[i].canMoveAndAttack = true;
+        }
+
+        //turn on spiders
+        for (int i = 0; i < spiders.Length; i++)
+        {
+            spiders[i].canMoveAndAttack = true;
+        }
+
+        //turn on red skeletons
+        for (int i = 0; i < redSkeletons.Length; i++)
+        {
+            redSkeletons[i].canMoveAndAttack = true;
+        }
+
+        for (int i = 0; i < whiteSkeletons.Length; i++)
+        {
+            whiteSkeletons[i].canMoveAndAttack = true;
+        }
 
         yield return new WaitForSecondsRealtime(2f);
 

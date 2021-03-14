@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2789636973709438608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7295967101788708696}
+  - component: {fileID: 6220262004280782504}
+  m_Layer: 9
+  m_Name: Enemy Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7295967101788708696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789636973709438608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5670088738202447185}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6220262004280782504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789636973709438608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a572164a78686a448d93095ec1ce186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radiusOrigin: {fileID: 0}
+  range: 15
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  isLockedDoorActive: 0
 --- !u!1 &3664919864590221983
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +347,7 @@ Transform:
   m_Children:
   - {fileID: 6342184361547000221}
   m_Father: {fileID: 5670088738202447185}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5546892237238122468
 GameObject:
@@ -5633,7 +5682,7 @@ Transform:
   - {fileID: 5670088737121908550}
   - {fileID: 5670088738110656396}
   m_Father: {fileID: 5670088738202447185}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5670088737501562396
 GameObject:
@@ -11055,7 +11104,7 @@ Transform:
   - {fileID: 6976819923609786657}
   - {fileID: 2431501350128868608}
   m_Father: {fileID: 5670088738202447185}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5670088738202447184
 GameObject:
@@ -11103,6 +11152,7 @@ Transform:
   - {fileID: 5670088736159515810}
   - {fileID: 5670088737535930339}
   - {fileID: 2397013477752180724}
+  - {fileID: 7295967101788708696}
   - {fileID: 5024137849914196459}
   - {fileID: 5670088737361950226}
   - {fileID: 5670088738161081147}
@@ -11138,7 +11188,7 @@ MonoBehaviour:
   limitMovement: 0
   canCancelJump: 1
   jumpSpeed: 10
-  jumpHangTime: 0.2
+  jumpHangTime: 0
   dashSpeed: 12
   dashCooldownAmount: 0
   dashCounter: 0
@@ -11580,7 +11630,7 @@ Transform:
   m_Children:
   - {fileID: 8878159823942679942}
   m_Father: {fileID: 5670088738202447185}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8200274177791747147
 GameObject:

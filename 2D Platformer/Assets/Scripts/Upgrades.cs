@@ -88,13 +88,13 @@ public class Upgrades : MonoBehaviour
         attackTimeT3 = attackTimeUpgradeDefault * 1.75f;
 
         //attack range
-        attackRangeUpgradeDefault = 0.8f;
+        attackRangeUpgradeDefault = 0.85f;
         attackRangeT1 = attackRangeUpgradeDefault * 1.1f;
         attackRangeT2 = attackRangeUpgradeDefault * 1.2f;
         attackRangeT3 = attackRangeUpgradeDefault * 1.3f;
 
         //Super recharge
-        superRechargeRateDefault = 0.5f;
+        superRechargeRateDefault = 0.55f;
         superRechargeT1 = superRechargeRateDefault * 1.5f;
         superRechargeT2 = superRechargeRateDefault * 2f;
         superRechargeT3 = superRechargeRateDefault * 2.5f;
@@ -113,25 +113,25 @@ public class Upgrades : MonoBehaviour
         staminaMaxT3 = staminaMaxUpgradeDefault * 1.75f;
 
         //stamina recharge rate
-        staminaRechargeRateDefault = 14f; // Originally 10f
+        staminaRechargeRateDefault = 16f; // Originally 10f
         staminaRechargeRateT1 = staminaRechargeRateDefault * 1.25f;
         staminaRechargeRateT2 = staminaRechargeRateDefault * 1.5f;
         staminaRechargeRateT3 = staminaRechargeRateDefault * 1.75f;
 
         //stamina attack cost
-        staminaAttackCostDefault = 30f;
+        staminaAttackCostDefault = 27f;
         staminaAttackCostT1 = staminaAttackCostDefault * 0.9f;
         staminaAttackCostT2 = staminaAttackCostDefault * 0.8f;
         staminaAttackCostT3 = staminaAttackCostDefault * 0.7f;
 
         //stamina jump cost
-        staminaJumpCostDefault = 25f;
+        staminaJumpCostDefault = 22.5f;
         staminaJumpCostT1 = staminaJumpCostDefault * 0.9f;
         staminaJumpCostT2 = staminaJumpCostDefault * 0.8f;
         staminaJumpCostT3 = staminaJumpCostDefault * 0.7f;
 
         //stamina dash cost
-        staminaDashCostDefault = 20f;
+        staminaDashCostDefault = 18f;
         staminaDashCostT1 = staminaDashCostDefault * 0.8f;
         staminaDashCostT2 = staminaDashCostDefault * 0.7f;
         staminaDashCostT3 = staminaDashCostDefault * 0.6f;

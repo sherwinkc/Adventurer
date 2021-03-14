@@ -12,6 +12,8 @@ public class SpiderController : MonoBehaviour
     public bool canMove = false;
     public bool isKnockback = false;
 
+    public bool canMoveAndAttack = true;
+
     public AudioSource churp, scurry;
 
     // Start is called before the first frame update
@@ -25,21 +27,24 @@ public class SpiderController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerMovement.transform.position.x < transform.position.x && canMove)
+        if(canMoveAndAttack)
         {
-            rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
-            transform.localScale = new Vector3(-2f, transform.localScale.y, transform.localScale.y);
-        }
-        else if (playerMovement.transform.position.x > transform.position.x && canMove)
-        {
-            rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
-            transform.localScale = new Vector3(2f, transform.localScale.y, transform.localScale.y);
-        }
+            if (playerMovement.transform.position.x < transform.position.x && canMove)
+            {
+                rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, 0f);
+                transform.localScale = new Vector3(-2f, transform.localScale.y, transform.localScale.y);
+            }
+            else if (playerMovement.transform.position.x > transform.position.x && canMove)
+            {
+                rb.velocity = new Vector3(moveSpeed, rb.velocity.y, 0f);
+                transform.localScale = new Vector3(2f, transform.localScale.y, transform.localScale.y);
+            }
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderHurt")) // if spider is hurt he is pushed back - interesting
-        {
-            rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
-            //scurry.Stop();
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("SpiderHurt")) // if spider is hurt he is pushed back - interesting
+            {
+                rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
+                //scurry.Stop();
+            }
         }
 
         //knock broken

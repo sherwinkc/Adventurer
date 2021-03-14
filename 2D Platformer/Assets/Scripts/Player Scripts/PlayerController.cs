@@ -57,8 +57,11 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "MovingPlatform")
         {
-            transform.parent = null;
-            //onPlatform = false; // ??
+            if(transform.parent)
+            {
+                transform.parent = null;
+                //onPlatform = false; // ??
+            }
         }
     }
 }

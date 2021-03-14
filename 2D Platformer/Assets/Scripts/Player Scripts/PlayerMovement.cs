@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     //Jump
     public float jumpSpeed;
     private bool canDoubleJump;
-    public float jumpHangTime = 0.2f;
+    public float jumpHangTime;
     private float hangCounter;
 
     //Dodge
@@ -109,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
         canMove = true;
 
         dashCounter = dashCooldownAmount;
+
+        jumpHangTime = 0.33f;
     }
 
     // Update is called once per frame

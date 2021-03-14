@@ -67,7 +67,7 @@ public class Sludge_Script : MonoBehaviour
 
             Instantiate(deathSplosion, squibTransform.transform.position, squibTransform.transform.rotation);
 
-            for (int i = 0; i < Random.Range(1f, 5f); i++)
+            for (int i = 0; i < Random.Range(2f, 6f); i++)
             {
                 Instantiate(orbsOnDeath, new Vector2(squibTransform.transform.position.x, squibTransform.transform.position.y + 1), squibTransform.transform.rotation);
             }

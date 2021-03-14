@@ -29,6 +29,8 @@ public class Fire_Skel_Controller : MonoBehaviour
     string state;
     string[] stateList = { "Attack1", "Guard" };
 
+    public bool canMoveAndAttack = true;
+
     //Audio
     public AudioSource swipe, idle, skel_steps;
 
@@ -48,19 +50,22 @@ public class Fire_Skel_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!guarding)
+        if(canMoveAndAttack)
         {
-            BasicMovement();
-        }
-
-        // check if player is in close proximity and either attack or guard
-        if (Vector2.Distance(transform.position, playerMovement.transform.position) < distanceToPlayer && attackCounter <= 0 && canMove)
-        {
-            if (levelManager.healthCount > 0)
+            if(!guarding)
             {
-                state = stateList[Random.Range(0, stateList.Length)];
-                animator.SetTrigger(state);
-                startCooldown = true;
+                BasicMovement();
+            }
+
+            // check if player is in close proximity and either attack or guard
+            if (Vector2.Distance(transform.position, playerMovement.transform.position) < distanceToPlayer && attackCounter <= 0 && canMove)
+            {
+                if (levelManager.healthCount > 0)
+                {
+                    state = stateList[Random.Range(0, stateList.Length)];
+                    animator.SetTrigger(state);
+                    startCooldown = true;
+                }
             }
         }
 
@@ -98,7 +103,6 @@ public class Fire_Skel_Controller : MonoBehaviour
         }
 
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-
     }
 
     public void BasicMovement()
