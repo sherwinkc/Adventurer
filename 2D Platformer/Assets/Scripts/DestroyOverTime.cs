@@ -5,13 +5,7 @@ using UnityEngine;
 public class DestroyOverTime : MonoBehaviour
 {
     public float lifetime;
-    public bool isOn;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        isOn = false;
-    }
+    public bool isOn = false;
 
     // Update is called once per frame
     void Update()

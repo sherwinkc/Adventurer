@@ -4,23 +4,10 @@ using UnityEngine;
 
 public class DestroyAfterTime : MonoBehaviour
 {
-    public float lifetime;
-
-
-    void Start()
-    {
-        
-    }
-
+    public float lifetime = 3f;
 
     void Update()
     {
-        lifetime -= Time.deltaTime;
-
-        if (lifetime <= 0f)
-        {
-            Destroy(gameObject);
-            //gameObject.SetActive(false);
-        }
+        Destroy(gameObject, lifetime);
     }
 }

@@ -256,6 +256,7 @@ public class LevelManager : MonoBehaviour
 
     public void AddCoins(int coinsToAdd)
     {
+        StopCoroutine(textFlashMan.FlashText_Orb());
         coinCount += coinsToAdd;
 
         //Adds to bonus coin count too
