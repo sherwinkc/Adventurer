@@ -24,7 +24,7 @@ public class PlayerCombat : MonoBehaviour
 
     //Attack
     public int attackDamage = 40;
-    public float attackRate = 2.5f;
+    public float attackRate = 2.25f;
     public float nextAttackTime = 0f;
 
     //cinemachine

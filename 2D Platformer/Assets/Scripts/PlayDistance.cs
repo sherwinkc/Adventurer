@@ -23,7 +23,7 @@ public class PlayDistance : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, playerMovement.transform.position) < distanceFromSound)
         {
-            audioSource.volume += Time.deltaTime / 5;
+            audioSource.volume += Time.deltaTime / 4;
 
             if (audioSource.volume >= maxVolume)
             {
@@ -34,7 +34,7 @@ public class PlayDistance : MonoBehaviour
         {
             if (audioSource.volume > 0)
             {
-                audioSource.volume -= Time.deltaTime / 5;
+                audioSource.volume -= Time.deltaTime / 4;
             }
 
             if (audioSource.volume <= 0)

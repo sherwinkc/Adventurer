@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseScreen : MonoBehaviour
 {
     public GameObject upgrades, settings, HUD;
     public PlayerMovement playerMovement;
     public PlayerCombat playerCombat;
+
+    public Button focusFirstButton_Upgrades, focusFirstButton_Settings;
 
     public string mainMenu;
 
@@ -28,6 +31,12 @@ public class PauseScreen : MonoBehaviour
             {
                 upgrades.SetActive(true);
                 settings.SetActive(false);
+
+                if(focusFirstButton_Upgrades != null)
+                {
+                    focusFirstButton_Upgrades.Select();
+                }
+
                 if (SceneManager.GetActiveScene().name != "Prologue" && SceneManager.GetActiveScene().name != "Village")
                 {
                     HUD.SetActive(false);
@@ -72,8 +81,15 @@ public class PauseScreen : MonoBehaviour
         {
             if (upgrades.activeSelf == true || settings.activeSelf == true)
             {
+                Time.timeScale = 1f;
                 upgrades.SetActive(false);
                 settings.SetActive(true);
+
+                if (focusFirstButton_Upgrades != null)
+                {
+                    focusFirstButton_Upgrades.Select();
+                }
+                Time.timeScale = 0f;
             }            
         }
         else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.Joystick1Button4))
@@ -82,6 +98,11 @@ public class PauseScreen : MonoBehaviour
             {
                 upgrades.SetActive(true);
                 settings.SetActive(false);
+
+                if (focusFirstButton_Upgrades != null)
+                {
+                    focusFirstButton_Upgrades.Select();
+                }
             }
         }
     }

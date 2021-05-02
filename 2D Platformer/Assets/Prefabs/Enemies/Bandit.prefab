@@ -784,6 +784,7 @@ MonoBehaviour:
   startCooldown: 0
   distanceToPlayer: 3
   isHurt: 0
+  canMoveAndAttack: 1
   swipe: {fileID: 2147687237963051187}
   idle: {fileID: 1008671274319943101}
   skel_steps: {fileID: 2795153841564941949}
@@ -1368,7 +1369,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 3
   m_FalloffIntensity: 0.929
   m_Color: {r: 0.7735849, g: 0, b: 0, a: 1}
-  m_Intensity: 2.54
+  m_Intensity: 1.25
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 0b399890a712045cf9b9179fb7b008c93b865d8100000000432b536845a7df3bbb38aaacbd301662
   m_LightCookieSprite: {fileID: 0}

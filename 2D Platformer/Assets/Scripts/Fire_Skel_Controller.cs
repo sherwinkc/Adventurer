@@ -43,8 +43,7 @@ public class Fire_Skel_Controller : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
 
         ebCollider.SetActive(true);
-        shieldCollider.SetActive(false);
-        
+        shieldCollider.SetActive(false);        
     }
 
     // Update is called once per frame
